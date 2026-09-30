@@ -74,7 +74,7 @@ By the end you will have:
    ./data/dataverse/import-dataverse.ps1 -EnvironmentUrl https://<your-hle-dev>.crm.dynamics.com -Prefix HLE -SkipData
    ```
 
-8. Set it as the preferred solution so new components land in it: **Solutions** > **...** > **Set preferred solution** > `HLEHarbourlineOps` (UI labels may differ).
+8. Set it as the preferred solution so new components land in it: **Solutions** > **...** > **Set preferred solution** > `HLEHarbourlineOps` (UI labels may differ). Lab 4 step 4 recommended this already, and Lab 5 created the custom connector and both agent flows inside this solution, so several components below may already be listed. Add only what is missing.
 9. Add the existing components: **Add existing** and choose, one type at a time:
 
    | Add existing > | Select | Notes |
@@ -82,7 +82,7 @@ By the end you will have:
    | Agent (may be listed as Chatbot or Copilot) | `HLE Field Ops Assistant` | Adding the agent may offer to add its topics, knowledge and tools as required components. Accept. |
    | Automation > Cloud flow (agent flows may be listed here or under Agent flows) | `HLE Get Outage Status`, `HLE Dispatch Crew` | Include required objects when prompted. |
    | Automation > Custom connector | `HLE Outage API` | |
-   | More > Connection reference | Every connection reference the flows and agent use (at minimum the one for `HLE Outage API`; also Dataverse if Lab 5 used it) | If a flow was created outside a solution it may use a direct connection instead of a reference. Open the flow, edit each action's connection, and pick a connection reference. |
+   | More > Connection reference | Every connection reference the flows and agent use. Lab 5 created two: **HLE Outage API** and **Microsoft Dataverse** (used by `HLE Dispatch Crew`) | A flow created outside a solution uses a direct connection instead of a reference (Lab 5 break-it C-05-c). Do not add the Lab 5 copy `HLE Get Outage Status (outside solution)`. |
 
    Do not add `HLE Front Door`, `HLE HR Assistant` or other Lab 10 agents. They stay in `HLE-Dev`; moving a multi-agent set across environments is out of scope for this lab.
 
@@ -106,7 +106,10 @@ By the end you will have:
 
 14. Open [`solutions/lab-11/deployment-settings.sample.json`](../../solutions/lab-11/deployment-settings.sample.json). It has the shape that `pac solution create-settings` produces: an `EnvironmentVariables` array (`SchemaName`, `Value`) and a `ConnectionReferences` array (`LogicalName`, `ConnectionId`, `ConnectorId`).
 15. You will generate the real file from your own export in Part D (the logical names of connection references include a random suffix, so do not copy them from the sample). For each target you need:
-    - `HLE-Test` and `HLE-Prod` each need a connection to `HLE Outage API` created by the learner: https://make.powerapps.com > environment > **Connections** > **New connection** > `HLE Outage API`. After you create it, the connection ID is the last segment of the connection's URL.
+    - `HLE-Test` and `HLE-Prod` each need their own connections, created by the learner after the first import makes the custom connector exist there (the pipeline's deployment screen can also create them): https://make.powerapps.com > environment > **Connections** > **New connection**.
+      - `HLE Outage API`: Lab 5 runs the API with `AUTH_MODE=apikey`, so the connection asks for the API key. Use the key of the API instance that stage calls (`data/api/run-local.md`, `data/api/deploy-azure.ps1`).
+      - `Microsoft Dataverse`: sign in as the learner.
+      - The connection ID is the last segment of the connection's URL. On the fallback path the custom connector does not exist in the target before the first import, so you cannot create its connection yet; README Part D2 step 19 handles this with `-AllowIncompleteSettings`.
     - The API base URL for that stage. For a course tenant it is fine to use the same Azure Function App for Test and Prod; in a real deployment they would differ.
 
 ### Part D: Deploy with a pipeline, or with the fallback (60 min)
@@ -154,6 +157,7 @@ Use [`solutions/lab-11/Invoke-HleSolutionDeployment.ps1`](../../solutions/lab-11
     On the first run the script exports `HLEHarbourlineOps_1_0_1_0.zip` (unmanaged, for source control) and `HLEHarbourlineOps_1_0_1_0_managed.zip`, runs `pac solution create-settings`, writes `./out/lab-11/deployment-settings.Test.json`, and stops because the values are empty.
 18. Fill in `deployment-settings.Test.json`: the `hle_OutageApiBaseUrl` value and the `ConnectionId` of each connection reference (step 15). Compare with the sample file.
 19. Run the same command again. The script now imports the managed zip into `HLE-Test` with `pac solution import --settings-file ... --skip-lower-version`, then lists the solutions in the target. It never passes `--force-overwrite` (see C-11-c).
+    - First import into a target only: the `HLE Outage API` connection cannot exist yet, so its `ConnectionId` is empty and the script refuses. Add `-AllowIncompleteSettings` (environment variable values must still be filled). After the import, create the `HLE Outage API` connection in the target, open **Solutions** > `HLEHarbourlineOps` > **Connection references** > the HLE Outage API reference, select the new connection, save, and turn both flows on. Put the connection ID into the settings file so later deployments are complete.
 20. Repeat steps 17 to 19 with `-TargetEnvironmentUrl https://<hle-prod>.crm.dynamics.com -Stage Prod`.
 21. Record in your notes that this path has no approval gate, no automatic backup in a pipelines host and no deployment history in the admin center. That is the governance cost of the fallback.
 

@@ -56,6 +56,12 @@
 .PARAMETER ForceExport
     Export again even if zips for the current version exist.
 
+.PARAMETER AllowIncompleteSettings
+    Import even if some ConnectionId values are empty. Use only for the very first import into a
+    target, when the custom connector does not exist there yet so no connection to it can be
+    created. Environment variable values must still be filled. Afterwards create the connection,
+    bind it to the connection reference in the target, and turn the flows on (README Part D2).
+
 .PARAMETER Cleanup
     Delete the solution from the target and remove local files this script created.
 
@@ -92,6 +98,8 @@ param(
     [string]$SettingsFile,
 
     [switch]$ForceExport,
+
+    [switch]$AllowIncompleteSettings,
 
     [switch]$Cleanup,
 
@@ -253,6 +261,13 @@ if (-not (Test-Path $SettingsFile)) {
     return
 }
 $missing = Test-SettingsComplete $SettingsFile
+if ($AllowIncompleteSettings) {
+    $onlyConnections = @($missing | Where-Object { $_ -notlike 'ConnectionReferences:*' })
+    if ($onlyConnections.Count -eq 0 -and $missing.Count -gt 0) {
+        $missing | ForEach-Object { Write-Warning "$_ (allowed by -AllowIncompleteSettings; flows using it may import turned off)" }
+        $missing = @()
+    }
+}
 if ($missing.Count -gt 0) {
     $missing | ForEach-Object { Write-Warning $_ }
     throw "Deployment settings are incomplete in $SettingsFile. Not importing (break-it C-11-f)."
