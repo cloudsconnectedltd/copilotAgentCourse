@@ -1,0 +1,20 @@
+{
+  "EnvironmentVariables": [
+    {
+      "SchemaName": "hle_OutageApiBaseUrl",
+      "Value": "https://hle-outage-api-<suffix>.azurewebsites.net/api"
+    }
+  ],
+  "ConnectionReferences": [
+    {
+      "LogicalName": "hle_sharedhle2doutage2dapi_<random suffix from your export>",
+      "ConnectionId": "<connection id from HLE-Test or HLE-Prod: Power Apps > Connections > HLE Outage API, last segment of the URL>",
+      "ConnectorId": "/providers/Microsoft.PowerApps/apis/<custom connector api name from your export, starts with shared_>"
+    },
+    {
+      "LogicalName": "hle_sharedcommondataserviceforapps_<random suffix from your export>",
+      "ConnectionId": "<connection id of a Microsoft Dataverse connection in the target, only if your flows use Dataverse>",
+      "ConnectorId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+    }
+  ]
+}

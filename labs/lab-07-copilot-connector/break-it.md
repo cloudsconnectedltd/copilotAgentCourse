@@ -203,7 +203,7 @@ https://learn.microsoft.com/en-us/graph/api/resources/externalconnectors-acl
 
 1. Sign in to the Microsoft 365 admin center as Marcus Delaney (no admin role) and try to open **Copilot > Connectors** (or **Search and intelligence > Data sources**).
 2. Sign in as a user with only the Search Administrator role (if you can assign one in your tenant) and repeat. Then try the same with the AI Administrator role.
-3. As the learner in Agent Builder, open HLE Policy Helper > Configure > Knowledge and check whether **Harbourline Tickets (HLE)** is offered.
+3. As the learner in Agent Builder, open HLE Policy Helper > Configure > Knowledge and check whether **HLE Tickets** is offered.
 
 **Symptom you will see**
 

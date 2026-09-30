@@ -60,8 +60,10 @@ function createAdvisor(config, deps = {}) {
     // 2. Grounding you own: local retrieval and the outage API tool.
     const chunks = retriever.search(q, { top: 3 });
     const apiResults = await api.lookup(q);
-    if (chunks.length === 0 && apiResults.length === 0) {
-      return { text: filtersOn ? safety.REFUSALS.out_of_scope : safety.NO_ANSWER, category: 'out_of_scope', cited: [] };
+    // With filters on, never call the model without context. With filters off (break-it C-08-b only),
+    // the question goes to the model anyway, which shows what an unguarded model does.
+    if (filtersOn && chunks.length === 0 && apiResults.length === 0) {
+      return { text: safety.REFUSALS.out_of_scope, category: 'out_of_scope', cited: [] };
     }
 
     // 3. Model call with the context blocks.

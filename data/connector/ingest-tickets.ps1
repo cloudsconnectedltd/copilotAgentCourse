@@ -415,7 +415,7 @@ if (-not $connection) {
     Write-Host "Creating connection $ConnectionId"
     Invoke-Graph POST 'v1.0/external/connections' -Body ([ordered]@{
             id          = $ConnectionId
-            name        = "Harbourline Tickets ($Prefix)"
+            name        = "$Prefix Tickets"
             description = 'Harbourline Energy Co. service tickets: field operations, outages, asset maintenance, safety, IT, facilities, HR and finance requests. Each ticket has a site (depot or station), region (Ontario, New York, Ohio) and optional asset ID such as TX-ON-10423.'
         }) | Out-Null
     $connection = Get-Connection

@@ -3,7 +3,7 @@
 | Item | Value |
 |---|---|
 | Connection ID | `hleTickets` (default; `<prefix>Tickets` with another `-Prefix`) |
-| Connection name | Harbourline Tickets (HLE) |
+| Connection name | HLE Tickets |
 | Source | SQL Server database `HarbourlineTickets` (`tickets-seed.sql`) or the flat export `tickets.csv` |
 | Items | 5,000 tickets, IDs 100001 to 105000, item IDs `HLT100001` to `HLT105000` |
 | Loader | `ingest-tickets.ps1` (Microsoft Graph PowerShell, app-only) |

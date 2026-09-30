@@ -135,6 +135,7 @@ Short URL bases:
 | GC-08 | Default 5 million items per connection, expandable to 50 million on request. | https://learn.microsoft.com/en-us/microsoftsearch/licensing | SNIP | 7 |
 | GC-09 | Number of connections per tenant. | Not found | UNVERIFIED | 7 |
 | GC-10 | Whether guests can see connector items with `everyone` ACL. | Not found | UNVERIFIED | 7 |
+| GC-11 | Schema creation can take 5 to 15 minutes; poll the operation URL in the Location header. | GRAPH api/externalconnectors-externalconnection-patch-schema | SRC | 7 |
 
 ## 7. Custom engine agents
 

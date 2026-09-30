@@ -7,7 +7,7 @@
 | Prerequisites | [Lab 2](../lab-02-agent-builder-deep-dive/README.md) (HLE Policy Helper), [Lab 3](../lab-03-studio-sharepoint-knowledge/README.md) (HLE HR Assistant), [Lab 6](../lab-06-declarative-agents-toolkit/README.md) (HLE Outage Desk project); setup scripts [00 to 03](../../setup/README.md) (personas, groups `<Prefix>-Ops-Ontario`, `<Prefix>-Ops-US`, `<Prefix>-HR`, `<Prefix>-Finance`, guest); rights to register an app and grant admin consent |
 | Personas used | Learner, Priya Nandakumar (hr), Marcus Delaney (tech), Sofia Brennan (fin), Tom Whitfield (nolic), guest contractor (guest) |
 | Status | GA. Contains UNVERIFIED limits: GC-09, GC-10. Uses SNIP rows: GC-08, ADM-09, CS-K04 |
-| Limits referenced | GC-01, GC-02, GC-03, GC-04, GC-05, GC-06, GC-07, GC-08, GC-09, GC-10, ADM-09, AB-05, AB-11, LIC-03, LIC-04, DA-01, DA-02, DA-03, CS-K04 ([limits.md](../../reference/limits.md)) |
+| Limits referenced | GC-01, GC-02, GC-03, GC-04, GC-05, GC-06, GC-07, GC-08, GC-09, GC-10, ADM-09, AB-02, AB-05, AB-11, LIC-03, LIC-04, DA-01, DA-02, DA-03, CS-K04 ([limits.md](../../reference/limits.md)) |
 
 > **Check before you run.** These rows are not fully verified. Confirm them on Microsoft Learn before the lab and note any change:
 > - GC-08 (5 million items per connection by default) is SNIP: https://learn.microsoft.com/en-us/microsoftsearch/licensing
@@ -89,7 +89,7 @@ If you are not a Global Administrator, see section 5 of `app-registration.md` fo
    ./ingest-tickets.ps1 -TenantId <tenant id> -ClientId <app id> -CertificateThumbprint <thumbprint> -Prefix HLE -MaxItems 50
    ```
 
-   The script creates connection `hleTickets` (display name "Harbourline Tickets (HLE)"), registers the 16-property schema and polls the schema operation every 30 seconds. The Graph reference for the schema PATCH says creation can take between 5 and 15 minutes (https://learn.microsoft.com/en-us/graph/api/externalconnectors-externalconnection-patch-schema; not a limits.md row, confirm on Learn).
+   The script creates connection `hleTickets` (display name "HLE Tickets"), registers the 16-property schema and polls the schema operation every 30 seconds. The Graph reference for the schema PATCH says creation can take between 5 and 15 minutes (https://learn.microsoft.com/en-us/graph/api/externalconnectors-externalconnection-patch-schema; not a limits.md row, confirm on Learn).
 9. Check the output line `Resolved ACL principals:`. Every token (`{{GROUP_OPS_ONTARIO}}`, `{{GROUP_OPS_US}}`, `{{GROUP_HR}}`, `{{GROUP_FINANCE}}`, `{{USER_FIN}}`, `{{TENANT_ID}}`) must map to an object ID. If a group is missing, run `setup/01-provision-users.ps1` or pass `-GroupMap` (see `app-registration.md` section 1).
 10. Ingest all 5,000 tickets. Items are sent with PUT, so re-running is safe.
 
@@ -101,7 +101,7 @@ If you are not a Global Administrator, see section 5 of `app-registration.md` fo
 
 ### Part E: Confirm the connection (20 minutes)
 
-11. Sign in to the Microsoft 365 admin center as a user with AI Administrator or Search Administrator (ADM-09). Go to **Copilot > Connectors** (the script's closing message) or **Search and intelligence > Data sources** in older tenants. UI labels may differ; check Learn. Find **Harbourline Tickets (HLE)** with connection ID `hleTickets` and confirm its state is ready and its item count is rising toward 5,000.
+11. Sign in to the Microsoft 365 admin center as a user with AI Administrator or Search Administrator (ADM-09). Go to **Copilot > Connectors** (the script's closing message) or **Search and intelligence > Data sources** in older tenants. UI labels may differ; check Learn. Find **HLE Tickets** with connection ID `hleTickets` and confirm its state is ready and its item count is rising toward 5,000.
 12. Sign in as the learner and as a persona that has no admin role (for example Marcus). Try to open the same admin page as Marcus. You should be blocked. That is break-it C-07-f.
 13. Run request 1 in `solutions/lab-07/search-api-checks.http` in Graph Explorer, signed in as the learner, then as Priya. The learner gets no result for `ticketId:104321`; Priya gets one. If both get nothing, indexing may not be finished: record the time and retry later (C-07-c).
 
@@ -123,11 +123,11 @@ If you are not a Global Administrator, see section 5 of `app-registration.md` fo
     - Append the text in `solutions/lab-07/outage-desk-instructions-addendum.txt` to the agent's instructions. Keep the total under 8,000 characters (DA-03).
     - In the Agents Toolkit **Lifecycle** pane, select **Provision**. Open HLE Outage Desk in Microsoft 365 Copilot Chat.
 15. **HLE Policy Helper (Lab 2, Agent Builder).** In Microsoft 365 Copilot Chat, open HLE Policy Helper > **Edit** > **Configure**.
-    - Under **Knowledge**, choose **Copilot connectors** (or "Choose other data sources", depending on the UI) and select **Harbourline Tickets (HLE)**. Agent Builder has no documented number limit for connectors (AB-05). If the connector is not listed, your admin has not enabled it for your organization (see break-it C-07-f).
+    - Under **Knowledge**, choose **Copilot connectors** (or "Choose other data sources", depending on the UI) and select **HLE Tickets**. Agent Builder has no documented number limit for connectors (AB-05). If the connector is not listed, your admin has not enabled it for your organization (see break-it C-07-f).
     - Append `solutions/lab-07/policy-helper-instructions-addendum.txt` to the instructions (limit 8,000 characters, AB-02).
     - Select **Update**.
 16. **HLE HR Assistant (Lab 3, Copilot Studio, environment HLE-Dev).** Open the agent in Copilot Studio.
-    - Go to **Knowledge > Add knowledge** and choose the Copilot connectors source, then select **Harbourline Tickets (HLE)**. UI labels may differ; check Learn.
+    - Go to **Knowledge > Add knowledge** and choose the Copilot connectors source, then select **HLE Tickets**. UI labels may differ; check Learn.
     - Keep **Settings > Security > Authentication** on "Authenticate with Microsoft" (CS-K04, SNIP). Connector results are trimmed per signed-in user, so the agent must know who the user is.
     - Append `solutions/lab-07/hr-assistant-instructions-addendum.txt` to the instructions. Save and **Publish**.
 

@@ -1,0 +1,14 @@
+# Replacement for the apiKey/register step in m365agents.yml when you switch to the Entra OAuth
+# variant (variants/README.md). `name` must match the securitySchemes key in openapi.oauth.yaml.
+# Syntax from the Learn page "Authentication support in TypeSpec for Microsoft 365 Copilot" (oauth/register example).
+# PKCE is on by default; add `isPKCEEnabled: false` only if your provider does not support PKCE.
+  - uses: oauth/register
+    with:
+      name: EntraOAuth
+      appId: ${{TEAMS_APP_ID}}
+      clientId: ${{AAD_APP_CLIENT_ID}}
+      clientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
+      apiSpecPath: ./appPackage/apiSpecificationFile/openapi.yaml
+      flow: authorizationCode
+    writeToEnvironmentFile:
+      configurationId: ENTRAOAUTH_CONFIGURATION_ID

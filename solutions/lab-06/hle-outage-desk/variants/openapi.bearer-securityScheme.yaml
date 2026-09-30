@@ -1,0 +1,10 @@
+# Replacement for the ApiKeyAuth block under components.securitySchemes in
+# appPackage/apiSpecificationFile/openapi.yaml (break-it C-06-f).
+# The mock API accepts the key as "Authorization: Bearer <key>" as well as "X-API-Key: <key>".
+# Keep the scheme name ApiKeyAuth so the apiKey/register step in m365agents.yml still matches it.
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: http
+      scheme: bearer
+      description: Harbourline course API key sent as a bearer token.

@@ -27,7 +27,7 @@ Run these in order.
 
 1. **Detach the connector from the agents** (skip any agent you already deleted):
    - HLE Outage Desk: remove the `GraphConnectors` object from `appPackage/declarativeAgent.json`, remove the ticket paragraph from the instructions, and Provision again.
-   - HLE Policy Helper: Edit > Configure > Knowledge, remove Harbourline Tickets (HLE), Update.
+   - HLE Policy Helper: Edit > Configure > Knowledge, remove HLE Tickets, Update.
    - HLE HR Assistant: Knowledge, remove the Copilot connector source, Publish.
 2. **Delete the connection.** This removes the schema and all items; deletion completes in the background.
 
@@ -36,7 +36,7 @@ Run these in order.
    ./ingest-tickets.ps1 -TenantId <tenant id> -ClientId <app id> -CertificateThumbprint <thumbprint> -Prefix HLE -Cleanup
    ```
 
-   Confirm in the admin center (Copilot > Connectors) that Harbourline Tickets (HLE) is gone.
+   Confirm in the admin center (Copilot > Connectors) that HLE Tickets is gone.
 3. **Delete the app registration.** Microsoft Entra admin center > App registrations > `HLE-Tickets-Connector` > Delete. Then check **Deleted applications** and delete permanently if your policy requires it.
 4. **Remove the certificate** from the machine that ran the script (`Cert:\CurrentUser\My`, subject `CN=HLE-Tickets-Connector`) and delete any `conn.key`, `conn.pfx` or `.cer` files you created.
 5. **Optional SQL database.** If you loaded `tickets-seed.sql` into SQL Server or Azure SQL, drop the database `HarbourlineTickets` (or delete the Azure SQL database and, if you created it for this lab only, its server and resource group).
