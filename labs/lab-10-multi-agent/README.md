@@ -7,7 +7,7 @@
 | Prerequisites | [Lab 3](../lab-03-studio-sharepoint-knowledge/README.md) (`HLE HR Assistant`, published, in `HLE-Dev`). [Lab 4](../lab-04-studio-dataverse-topics/README.md) and [Lab 5](../lab-05-studio-actions-flows/README.md) (`HLE Field Ops Assistant` with Dataverse knowledge and the `HLE Get Outage Status` flow, published, in `HLE-Dev`). Mock API running and reachable ([`data/api/run-local.md`](../../data/api/run-local.md)). Setup scripts [`02-provision-sites.ps1`](../../setup/02-provision-sites.ps1) and [`03-upload-content.ps1`](../../setup/03-upload-content.ps1) (Hub Finance library). |
 | Personas used | Learner (maker and tester). Other personas are not used: `HLE-Dev` is a developer environment and is owner-only (ENV-02). |
 | Status | Contains UNVERIFIED limits: CS-A13 (GA status of child agents and of Copilot Studio to Copilot Studio connected agents is not stated; **check GA/preview status on Learn**). GA per SNIP: connecting agents over A2A (CS-A11). PREVIEW, not built here: connecting Microsoft Foundry, Fabric and Agents SDK agents (CS-A11). |
-| Limits referenced | [CS-A11, CS-A12, CS-A13, CS-K04, CS-K06, CS-A01, ENV-02](../../reference/limits.md) |
+| Limits referenced | [CS-A11, CS-A12, CS-A13, CS-K04, CS-K06, CS-A01, ENV-02, AB-02, DA-03](../../reference/limits.md) |
 
 > **Check before you run.** All Copilot Studio rows used here are SNIP or UNVERIFIED. Confirm them on Learn before you start, and follow Learn if it differs.
 >
