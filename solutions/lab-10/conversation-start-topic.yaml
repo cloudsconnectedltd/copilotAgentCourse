@@ -1,0 +1,16 @@
+# HLE Front Door: Conversation Start topic (Copilot Studio code view)
+# Open the Conversation Start system topic, select "Open code editor", replace the content with this YAML, and save.
+# The editor may reformat the YAML or regenerate ids; that is expected. Check Learn if the schema has changed.
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnConversationStart
+  id: main
+  actions:
+    - kind: SendActivity
+      id: sendActivity_hleFrontDoorGreeting
+      activity: |-
+        Hello, this is HLE Front Door for Harbourline Energy Co. I can help with:
+        - HR policies: leave and carry-over, bereavement, parental leave, on-call and overtime, conduct
+        - Finance policies: expenses, per diems, hotel caps, mileage, approval limits
+        - Field operations: assets, work orders, crews and outage status (for example TX-ON-10423, WO-2026-01043, OUT-2026-0412)
+        What do you need?

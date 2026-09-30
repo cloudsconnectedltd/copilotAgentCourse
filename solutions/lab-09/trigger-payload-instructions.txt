@@ -1,0 +1,12 @@
+A file was created in the Procedures library of the Harbourline-Operations site.
+File name: <insert the trigger's file name property>
+Folder path: <insert the trigger's folder path property>
+File identifier: <insert the trigger's file identifier property>
+Created by: <insert the trigger's created by (display name or email) property>
+
+Triage this file by following your instructions from rule 0. Start by checking the file name and folder path. If they pass rule 0, call "HLE Read Field Report" with the file identifier above.
+
+---
+Notes for the maker (do not paste this part):
+- In the trigger's instructions or payload box, replace each <insert ...> with the matching dynamic value from the trigger outputs. The property names in the trigger outputs are not listed in any source this course could verify (UNVERIFIED); pick them from the dynamic content list and record which ones you used.
+- Keep the payload to identifiers. Do not try to pass file content here: the file-created trigger carries metadata, and a .docx is a binary package.

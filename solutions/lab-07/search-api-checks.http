@@ -1,0 +1,70 @@
+### Lab 7: Microsoft Search API checks for the hleTickets connection.
+### Run in Graph Explorer (https://developer.microsoft.com/graph/graph-explorer) signed in AS THE PERSONA you are testing.
+### Delegated permission: see the "Permissions" table of POST /search/query on Learn (ExternalItem.Read.All is expected; confirm).
+### Results are security trimmed by each item's ACL, so the same request returns different results per persona.
+
+### 1. Find ticket 104321 (deny beats grant): Marcus and the learner get no hit, Priya and Sofia get one.
+POST https://graph.microsoft.com/v1.0/search/query
+Content-Type: application/json
+
+{
+  "requests": [
+    {
+      "entityTypes": ["externalItem"],
+      "contentSources": ["/external/connections/hleTickets"],
+      "query": { "queryString": "ticketId:104321" },
+      "fields": ["ticketId", "title", "status", "url", "lastModified"],
+      "from": 0,
+      "size": 5
+    }
+  ]
+}
+
+### 2. Free text: HR case HR-2026-0381 (only HR group members get ticket 102050).
+POST https://graph.microsoft.com/v1.0/search/query
+Content-Type: application/json
+
+{
+  "requests": [
+    {
+      "entityTypes": ["externalItem"],
+      "contentSources": ["/external/connections/hleTickets"],
+      "query": { "queryString": "HR-2026-0381" },
+      "fields": ["ticketId", "title", "status", "url"],
+      "size": 5
+    }
+  ]
+}
+
+### 3. Refiner check: count of visible tickets by region (region is refinable, schema-design.md 2).
+### The Learn aggregation example uses the beta endpoint. If v1.0 rejects "aggregations", run this one on beta.
+POST https://graph.microsoft.com/v1.0/search/query
+Content-Type: application/json
+
+{
+  "requests": [
+    {
+      "entityTypes": ["externalItem"],
+      "contentSources": ["/external/connections/hleTickets"],
+      "query": { "queryString": "*" },
+      "aggregations": [ { "field": "region", "size": 5, "bucketDefinition": { "sortBy": "count", "isDescending": true, "minimumCount": 0 } } ],
+      "size": 1
+    }
+  ]
+}
+
+### 4. Indexing check (C-07-c): run right after ingestion and again later; record the time and totals.
+POST https://graph.microsoft.com/v1.0/search/query
+Content-Type: application/json
+
+{
+  "requests": [
+    {
+      "entityTypes": ["externalItem"],
+      "contentSources": ["/external/connections/hleTickets"],
+      "query": { "queryString": "Toronto Head Office parking P2" },
+      "fields": ["ticketId", "title", "url"],
+      "size": 5
+    }
+  ]
+}

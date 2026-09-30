@@ -1,0 +1,59 @@
+# Topic: Check Asset Status (HLE Field Ops Assistant, Lab 4)
+#
+# Copilot Studio topic code view YAML. NOT VALIDATED: the Copilot Studio documentation was not
+# available when this course was built, and this file was not pasted into a live tenant.
+# Build the topic once in the canvas, open "... > Open code editor", and compare the structure
+# (kinds, property names, variable prefixes) before pasting. Keep what your code view shows.
+#
+# Placeholders to replace:
+#   ENTITY_HLE_ASSET_ID  -> the name code view shows for your custom regex entity "HLE Asset ID"
+#
+# Concepts shown: trigger phrases, generative orchestration description, slot filling
+# (alwaysPrompt: false skips the question when the ID was in the user's message), topic
+# variable (Topic.AssetId), global variable (Global.LastAssetId), generative answers node
+# over the Dataverse knowledge source.
+kind: AdaptiveDialog
+modelDescription: Look up the current status, condition and open work orders of one specific asset when the user gives or asks about an asset ID such as TX-ON-10423.
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    displayName: Check Asset Status
+    triggerQueries:
+      - check asset status
+      - asset status
+      - look up an asset
+      - what is the condition of asset TX-ON-10423
+      - is POLE-NY-20017 in service
+
+  actions:
+    - kind: Question
+      id: askAssetId
+      alwaysPrompt: false
+      variable: init:Topic.AssetId
+      prompt: Which asset? Give the asset ID, for example TX-ON-10423.
+      entity: ENTITY_HLE_ASSET_ID
+
+    # Global scope: visible to every topic for the rest of the conversation.
+    # If your code view writes the first assignment as init:Global.LastAssetId, keep that form.
+    - kind: SetVariable
+      id: setLastAssetId
+      variable: Global.LastAssetId
+      value: =Topic.AssetId
+
+    # Generative answers node. In the canvas, open the node properties and limit
+    # Data sources to the "Harbourline field data" Dataverse knowledge source.
+    - kind: SearchAndSummarizeContent
+      id: assetAnswer
+      variable: Topic.AssetAnswer
+      userInput: ="Give the asset type, site, region, install year, condition score, operational status and last inspection date for asset " & Topic.AssetId & ", then list its open work orders."
+
+    - kind: ConditionGroup
+      id: checkFound
+      conditions:
+        - id: assetNotFound
+          condition: =IsBlank(Topic.AssetAnswer)
+          actions:
+            - kind: SendActivity
+              id: sayNotFound
+              activity: I could not find asset {Topic.AssetId} in the Harbourline field data. Check the ID and try again.
