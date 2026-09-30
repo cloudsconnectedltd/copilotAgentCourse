@@ -112,7 +112,7 @@ Several caveats in the brief behave differently from what the brief assumed. The
 | `HLE-Prod` | Production, managed environment | Lab 11 pipeline target and host |
 | Default | Default | Lab 11 environment routing discussion |
 
-Note: Developer environments cannot be assigned security groups and are owner-only (SRC).
+Note: Developer environments cannot be assigned security groups and are owner-only (SRC). Because of this, persona tests cannot run in `HLE-Dev`. Lab 3 creates a temporary sandbox, `HLE-Lab3-Sandbox`, for persona testing and deletes it in cleanup; Lab 11 publishes from `HLE-Prod` for persona access (caveats C-04-g and C-11-g).
 
 ### Admin roles
 
@@ -177,7 +177,7 @@ Mirrored locally as `data/sharepoint/<site>/<library>/`.
 
 | File | Rows | Notes |
 |---|---|---|
-| `schema.md` + `solution/` (unmanaged solution XML) | n/a | Tables `hle_Asset`, `hle_WorkOrder`, `hle_Crew`; WorkOrder N:1 Asset, WorkOrder N:1 Crew; choice column `hle_Priority` (Emergency, High, Routine, Deferred) |
+| `schema.md` (the import script creates unmanaged solution `HLEHarbourlineOps`) | n/a | Tables `hle_Asset`, `hle_WorkOrder`, `hle_Crew`; WorkOrder N:1 Asset, WorkOrder N:1 Crew; choice column `hle_Priority` (Emergency, High, Routine, Deferred) |
 | `Assets.csv` | 1,200 | Asset ID, type, region, site, install year, condition score |
 | `WorkOrders.csv` | 3,000 | Linked to assets and crews, status, priority, dates |
 | `Crews.csv` | 60 | Crew name, region, lead, certifications |
@@ -248,7 +248,7 @@ data/sharepoint/Harbourline-Hub/Finance/* (5)
 data/sharepoint/Harbourline-Hub/Vendors.csv
 data/sharepoint/Harbourline-Operations/Procedures/* (7)
 data/sharepoint/Harbourline-Operations/Archive-Bulk/  (generated at setup)
-data/dataverse/{schema.md,Assets.csv,WorkOrders.csv,Crews.csv,import-dataverse.ps1,solution/}
+data/dataverse/{schema.md,Assets.csv,WorkOrders.csv,Crews.csv,import-dataverse.ps1}   # import script creates solution HLEHarbourlineOps in the environment
 data/connector/{tickets-seed.sql,tickets.csv,schema-design.md,ingest-tickets.ps1}
 data/api/{src/,openapi.yaml,openapi-broken.yaml,run-local.md,deploy-azure.ps1}
 labs/lab-01-first-agent/{README.md,validate.md,cleanup.md,facilitator-notes.md,recap.md}
