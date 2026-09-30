@@ -1,0 +1,182 @@
+[
+  {
+    "crewId": "CREW-ON-01",
+    "region": "ON",
+    "regionName": "Ontario",
+    "crewLead": "Marcus Bellamy",
+    "crewSize": 5,
+    "baseDepot": "Kingston Service Centre",
+    "specialty": "Overhead lines",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-ON-02",
+    "region": "ON",
+    "regionName": "Ontario",
+    "crewLead": "Janelle Fortier",
+    "crewSize": 6,
+    "baseDepot": "Kingston Service Centre",
+    "specialty": "Underground cable",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-ON-03",
+    "region": "ON",
+    "regionName": "Ontario",
+    "crewLead": "Devon Achebe",
+    "crewSize": 5,
+    "baseDepot": "Kingston Service Centre",
+    "specialty": "Overhead lines",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-ON-04",
+    "region": "ON",
+    "regionName": "Ontario",
+    "crewLead": "Shauna Leclerc",
+    "crewSize": 6,
+    "baseDepot": "Belleville Depot",
+    "specialty": "Vegetation management",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-ON-05",
+    "region": "ON",
+    "regionName": "Ontario",
+    "crewLead": "Pieter Van Dyk",
+    "crewSize": 3,
+    "baseDepot": "Peterborough Depot",
+    "specialty": "Overhead lines",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-ON-06",
+    "region": "ON",
+    "regionName": "Ontario",
+    "crewLead": "Rena Kaplan",
+    "crewSize": 6,
+    "baseDepot": "Oshawa Service Centre",
+    "specialty": "Overhead lines",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-ON-07",
+    "region": "ON",
+    "regionName": "Ontario",
+    "crewLead": "Graham Oduya",
+    "crewSize": 6,
+    "baseDepot": "Barrie Depot",
+    "specialty": "Underground cable",
+    "status": "Off Shift"
+  },
+  {
+    "crewId": "CREW-ON-08",
+    "region": "ON",
+    "regionName": "Ontario",
+    "crewLead": "Colette Aubin",
+    "crewSize": 3,
+    "baseDepot": "Brockville Depot",
+    "specialty": "Substation",
+    "status": "Available"
+  },
+  {
+    "crewId": "CREW-NY-01",
+    "region": "NY",
+    "regionName": "New York",
+    "crewLead": "Tyrone Castellano",
+    "crewSize": 4,
+    "baseDepot": "Syracuse Operations Center",
+    "specialty": "Overhead lines",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-NY-02",
+    "region": "NY",
+    "regionName": "New York",
+    "crewLead": "Megan Iverson",
+    "crewSize": 6,
+    "baseDepot": "Syracuse Operations Center",
+    "specialty": "Underground cable",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-NY-03",
+    "region": "NY",
+    "regionName": "New York",
+    "crewLead": "Sal Okonkwo",
+    "crewSize": 5,
+    "baseDepot": "Rochester Depot",
+    "specialty": "Substation",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-NY-04",
+    "region": "NY",
+    "regionName": "New York",
+    "crewLead": "Brianna Holt",
+    "crewSize": 4,
+    "baseDepot": "Rochester Depot",
+    "specialty": "Underground cable",
+    "status": "Available"
+  },
+  {
+    "crewId": "CREW-NY-05",
+    "region": "NY",
+    "regionName": "New York",
+    "crewLead": "Wes Kaminski",
+    "crewSize": 6,
+    "baseDepot": "Utica Depot",
+    "specialty": "Overhead lines",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-OH-01",
+    "region": "OH",
+    "regionName": "Ohio",
+    "crewLead": "Dale Rutherford",
+    "crewSize": 6,
+    "baseDepot": "Toledo Operations Center",
+    "specialty": "Substation",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-OH-02",
+    "region": "OH",
+    "regionName": "Ohio",
+    "crewLead": "Keisha Monroe",
+    "crewSize": 3,
+    "baseDepot": "Toledo Operations Center",
+    "specialty": "Underground cable",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-OH-03",
+    "region": "OH",
+    "regionName": "Ohio",
+    "crewLead": "Evan Szabo",
+    "crewSize": 5,
+    "baseDepot": "Lima Depot",
+    "specialty": "Substation",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-OH-04",
+    "region": "OH",
+    "regionName": "Ohio",
+    "crewLead": "Lorena Pruitt",
+    "crewSize": 6,
+    "baseDepot": "Mansfield Depot",
+    "specialty": "Vegetation management",
+    "status": "Assigned"
+  },
+  {
+    "crewId": "CREW-OH-05",
+    "region": "OH",
+    "regionName": "Ohio",
+    "crewLead": "Garrett Ames",
+    "crewSize": 5,
+    "baseDepot": "Findlay Depot",
+    "specialty": "Overhead lines",
+    "status": "Assigned"
+  }
+]

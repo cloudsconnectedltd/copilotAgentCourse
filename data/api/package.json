@@ -1,0 +1,23 @@
+{
+  "name": "harbourline-mock-api",
+  "version": "1.0.0",
+  "description": "Mock outage, crew dispatch and customer lookup API for the Harbourline Energy Co. Microsoft 365 Copilot agent course (fictional data).",
+  "private": true,
+  "type": "module",
+  "main": "src/functions/*.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "func start",
+    "test": "node --test test/",
+    "seed": "node scripts/generate-seed.mjs"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.5.0",
+    "jose": "^6.0.0"
+  },
+  "devDependencies": {
+    "yaml": "^2.5.0"
+  }
+}

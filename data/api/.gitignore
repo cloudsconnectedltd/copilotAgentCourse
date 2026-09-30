@@ -1,0 +1,5 @@
+node_modules/
+local.settings.json
+.azurite/
+__azurite_*
+*.zip
