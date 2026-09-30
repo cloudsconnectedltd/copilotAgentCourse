@@ -32,7 +32,7 @@ If a publisher with customization prefix `hle` already exists in the environment
 | `hle_Crew` | `hle_crew` | read from metadata (normally `hle_crews`) | Crew | Crews | User or team | `hle_CrewCode` | 60 |
 | `hle_WorkOrder` | `hle_workorder` | read from metadata (normally `hle_workorders`) | Work Order | Work Orders | User or team | `hle_WorkOrderNumber` | 3,000 |
 
-The primary name column of each table holds the business key (for example `TX-ON-10423`, `CRW-OH-07`, `WO-2026-01127`). That is the value Copilot Studio shows in citations and the value users type, so it is deliberately the key rather than a free-text name.
+The primary name column of each table holds the business key (for example `TX-ON-10423`, `CREW-OH-07`, `WO-2026-01043`). That is the value Copilot Studio shows in citations and the value users type, so it is deliberately the key rather than a free-text name.
 
 ### 2.1 Row identity (how the import stays idempotent)
 
@@ -46,11 +46,11 @@ Types below are the Web API metadata types. "Choice" means a local choice column
 
 | Schema name | Display name | Type | Size or range | CSV column | Notes |
 |---|---|---|---|---|---|
-| `hle_AssetNumber` | Asset Number | Text (primary name) | 20 | AssetNumber | Pattern `<TYPE>-<REGION>-<5 digits>`, for example `TX-ON-10423`, `POLE-NY-20017`, `SW-OH-30110`. Ontario numbers are 10001 to 19999, New York 20001 to 29999, Ohio 30001 to 39999. |
+| `hle_AssetNumber` | Asset Number | Text (primary name) | 100 | AssetNumber | Pattern `<TYPE>-<REGION>-<5 digits>`, for example `TX-ON-10423`, `POLE-NY-20017`, `SW-OH-30110`. The 5-digit number is unique across all regions but is not tied to a region range (for example `TX-OH-20871` is in Ohio). Always read the region from the middle code. |
 | `hle_AssetType` | Asset Type | Choice | see 4.3 | AssetType | Pole, Transformer, Switch, Breaker, Recloser, Voltage Regulator |
 | `hle_Region` | Region | Choice | see 4.4 | Region | Ontario, New York, Ohio |
-| `hle_SiteCode` | Site Code | Text | 10 | SiteCode | For example `BAYTS` |
-| `hle_SiteName` | Site | Text | 100 | SiteName | For example Bayview Transformer Station |
+| `hle_SiteCode` | Site Code | Text | 10 | SiteCode | For example `KNGSC` |
+| `hle_SiteName` | Site | Text | 100 | SiteName | Depot or station responsible for the asset, for example Kingston Service Centre. See section 3.3. |
 | `hle_City` | City | Text | 60 | City | |
 | `hle_Manufacturer` | Manufacturer | Text | 100 | Manufacturer | Fictional manufacturers |
 | `hle_Rating` | Rating | Text | 60 | Rating | For example `10 MVA station`, `40 ft Class 3 wood` |
@@ -63,20 +63,45 @@ Types below are the Web API metadata types. "Choice" means a local choice column
 
 | Schema name | Display name | Type | Size or range | CSV column | Notes |
 |---|---|---|---|---|---|
-| `hle_CrewCode` | Crew Code | Text (primary name) | 20 | CrewCode | `CRW-<REGION>-<2 digits>`: 24 Ontario, 18 New York, 18 Ohio |
-| `hle_CrewName` | Crew Name | Text | 100 | CrewName | For example Bayview Substation Maintenance Crew A |
+| `hle_CrewCode` | Crew Code | Text (primary name) | 100 | CrewCode | `CREW-<REGION>-<2 digits>`: 24 Ontario, 18 New York, 18 Ohio. CREW-ON-01 to 08, CREW-NY-01 to 05 and CREW-OH-01 to 05 are the same crews (same lead, size, depot and specialty) as the mock API `GET /crews` data in `data/api/src/data/crews.json`. |
+| `hle_CrewName` | Crew Name | Text | 100 | CrewName | For example Kingston Overhead Lines Crew B |
 | `hle_Region` | Region | Choice | see 4.4 | Region | |
-| `hle_HomeBase` | Home Base | Text | 100 | HomeBase | Site name |
-| `hle_Specialty` | Specialty | Text | 60 | Specialty | Overhead Lines, Underground Cable, Substation Maintenance, Protection and Control, Vegetation Management, Storm Response |
+| `hle_BaseDepot` | Base Depot | Text | 100 | BaseDepot | Same values as `baseDepot` in the mock API |
+| `hle_Specialty` | Specialty | Text | 60 | Specialty | Overhead lines, Underground cable, Substation, Vegetation management, Protection and control, Storm response (first four match the mock API) |
 | `hle_CrewLead` | Crew Lead | Text | 100 | CrewLead | Fictional names |
 | `hle_CrewSize` | Crew Size | Whole number | 1 to 20 | CrewSize | |
 | `hle_Certifications` | Certifications | Multiple lines of text | 2,000 | Certifications | Semicolon separated list |
 
-### 3.3 hle_WorkOrder
+### 3.3 Sites (values of SiteCode and SiteName)
+
+| Region | Site code | Site | City | Kind |
+|---|---|---|---|---|
+| Ontario | KNGSC | Kingston Service Centre | Kingston | Depot |
+| Ontario | BELDP | Belleville Depot | Belleville | Depot |
+| Ontario | PTBDP | Peterborough Depot | Peterborough | Depot |
+| Ontario | OSHSC | Oshawa Service Centre | Oshawa | Depot |
+| Ontario | BARDP | Barrie Depot | Barrie | Depot |
+| Ontario | BRKDP | Brockville Depot | Brockville | Depot |
+| Ontario | CATTS | Cataraqui Transformer Station | Kingston | Station |
+| New York | SYROC | Syracuse Operations Center | Syracuse | Depot |
+| New York | ROCDP | Rochester Depot | Rochester | Depot |
+| New York | UTIDP | Utica Depot | Utica | Depot |
+| New York | WTNDP | Watertown Depot | Watertown | Depot |
+| New York | MOHSS | Mohawk Valley Substation | Utica | Station |
+| Ohio | TOLOC | Toledo Operations Center | Toledo | Depot |
+| Ohio | LIMDP | Lima Depot | Lima | Depot |
+| Ohio | MANDP | Mansfield Depot | Mansfield | Depot |
+| Ohio | FNDDP | Findlay Depot | Findlay | Depot |
+| Ohio | ASHDP | Ashtabula Depot | Ashtabula | Depot |
+| Ohio | MAUSS | Maumee Bay Substation | Toledo | Station |
+
+Depot names match the `baseDepot` values used by the mock API. The same site codes are used in the Lab 7 ticket database (`data/connector/tickets-seed.sql`), which adds three offices (Toronto Head Office, Albany Regional Office, Columbus Regional Office).
+
+### 3.4 hle_WorkOrder
 
 | Schema name | Display name | Type | Size or range | CSV column | Notes |
 |---|---|---|---|---|---|
-| `hle_WorkOrderNumber` | Work Order Number | Text (primary name) | 20 | WorkOrderNumber | `WO-<year opened>-<5 digit sequence>` |
+| `hle_WorkOrderNumber` | Work Order Number | Text (primary name) | 100 | WorkOrderNumber | `WO-<year opened>-<5 digit sequence>` |
 | `hle_Title` | Title | Text | 200 | Title | Uses field abbreviations (TX, SW, OH, ROW). See section 6. |
 | `hle_Description` | Description | Multiple lines of text | 4,000 | Description | |
 | `hle_WorkType` | Work Type | Choice | see 4.6 | WorkType | |
@@ -209,7 +234,7 @@ Note the collision: "ticket" is a synonym for a work order number here, but Lab 
 | Poor condition | An asset with Condition Score below 30. |
 | Mutual assistance | A crew from one region working on another region's assets, usually after a storm. |
 
-Planted row WO-2026-01106 ("RCL lockout on OH line: RCL-ON-13307") is an Ontario asset whose title says "OH line". Without the glossary entry for OH, an agent may describe it as an Ohio issue. See `data/answer-keys/dataverse-connector.md`.
+Planted row WO-2026-01076 ("RCL lockout on OH line: RCL-ON-13307") is an Ontario asset whose title says "OH line". Without the glossary entry for OH, an agent may describe it as an Ohio issue. See `data/answer-keys/dataverse-connector.md`.
 
 ## 7. Loading the data
 

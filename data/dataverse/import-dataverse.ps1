@@ -343,11 +343,11 @@ $Tables = [ordered]@{
     Crew      = @{
         Schema      = "${p}_Crew"; Display = 'Crew'; Plural = 'Crews'
         Description = 'Harbourline field crews with region, specialty, lead and certifications.'
-        Primary     = (New-StringAttr "${p}_CrewCode" 'Crew Code' 100 'Crew ID such as CRW-ON-03.' -Primary)
+        Primary     = (New-StringAttr "${p}_CrewCode" 'Crew Code' 100 'Crew ID such as CREW-ON-03.' -Primary)
         Columns     = @(
             (New-StringAttr "${p}_CrewName" 'Crew Name' 100 'Descriptive crew name.')
             (New-ChoiceAttr "${p}_Region" 'Region' $Choices.Region 'Home region of the crew.')
-            (New-StringAttr "${p}_HomeBase" 'Home Base' 100 'Site where the crew is based.')
+            (New-StringAttr "${p}_BaseDepot" 'Base Depot' 100 'Depot where the crew is based.')
             (New-StringAttr "${p}_Specialty" 'Specialty' 60 'Main type of work.')
             (New-StringAttr "${p}_CrewLead" 'Crew Lead' 100 'Crew lead (foreman).')
             (New-IntAttr "${p}_CrewSize" 'Crew Size' 1 20 'Number of workers in the crew.')
@@ -357,7 +357,7 @@ $Tables = [ordered]@{
     WorkOrder = @{
         Schema      = "${p}_WorkOrder"; Display = 'Work Order'; Plural = 'Work Orders'
         Description = 'Harbourline maintenance and restoration work orders (WO).'
-        Primary     = (New-StringAttr "${p}_WorkOrderNumber" 'Work Order Number' 100 'Work order ID such as WO-2026-01127.' -Primary)
+        Primary     = (New-StringAttr "${p}_WorkOrderNumber" 'Work Order Number' 100 'Work order ID such as WO-2026-01043.' -Primary)
         Columns     = @(
             (New-StringAttr "${p}_Title" 'Title' 200 'Short title of the work.')
             (New-MemoAttr "${p}_Description" 'Description' 4000 'Details of the work.')
@@ -544,8 +544,10 @@ function Import-SeedData {
     $asset = Get-TableMetadata "${p}_asset"
     $crew = Get-TableMetadata "${p}_crew"
     $wo = Get-TableMetadata "${p}_workorder"
-    $navAsset = (Invoke-Dv GET "RelationshipDefinitions(SchemaName='${p}_Asset_WorkOrder')/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?`$select=ReferencingEntityNavigationPropertyName").Json.ReferencingEntityNavigationPropertyName
-    $navCrew = (Invoke-Dv GET "RelationshipDefinitions(SchemaName='${p}_Crew_WorkOrder')/Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata?`$select=ReferencingEntityNavigationPropertyName").Json.ReferencingEntityNavigationPropertyName
+    # Single-valued navigation property names were set explicitly when the relationships were created
+    # (ReferencingEntityNavigationPropertyName = lookup schema name).
+    $navAsset = "${p}_Asset"
+    $navCrew = "${p}_Crew"
 
     $crewRows = Import-Csv -Path (Join-Path $DataPath 'Crews.csv')
     $assetRows = Import-Csv -Path (Join-Path $DataPath 'Assets.csv')
@@ -561,7 +563,7 @@ function Import-SeedData {
                     "${p}_crewcode"       = $c.CrewCode
                     "${p}_crewname"       = $c.CrewName
                     "${p}_region"         = $Choices.Region[$c.Region]
-                    "${p}_homebase"       = $c.HomeBase
+                    "${p}_basedepot"      = $c.BaseDepot
                     "${p}_specialty"      = $c.Specialty
                     "${p}_crewlead"       = $c.CrewLead
                     "${p}_crewsize"       = [int]$c.CrewSize

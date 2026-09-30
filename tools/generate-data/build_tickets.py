@@ -15,6 +15,7 @@ import csv
 import json
 import os
 import random
+import sys
 from collections import Counter
 from datetime import datetime, timedelta
 
@@ -38,26 +39,17 @@ REGIONS = [
 REGION_ID = {r[2]: r[0] for r in REGIONS}
 REGION_CODE = {r[2]: r[1] for r in REGIONS}
 
-# Operational sites match data/dataverse/Assets.csv SiteCode/SiteName. Offices added for corporate tickets.
-SITES = [
-    ("BAYTS", "Bayview Transformer Station", "Toronto", "Ontario", "Transformer station"),
-    ("KNGTS", "Kingsway Transformer Station", "Toronto", "Ontario", "Transformer station"),
-    ("LAKDS", "Lakeshore Distribution Station", "Mississauga", "Ontario", "Distribution station"),
-    ("OAKDS", "Oakridge Distribution Station", "Oakville", "Ontario", "Distribution station"),
-    ("NGTSC", "Northgate Service Centre", "Barrie", "Ontario", "Service centre"),
-    ("RIDDS", "Rideau Valley Distribution Station", "Ottawa", "Ontario", "Distribution station"),
+# Operational sites come from build_dataverse.py (same codes as Assets.csv). Offices added for corporate tickets.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from build_dataverse import SITES as DV_SITES  # noqa: E402
+
+SITES = []
+for _reg_code, _reg_name in (("ON", "Ontario"), ("NY", "New York"), ("OH", "Ohio")):
+    for _code, _name, _city, _kind in DV_SITES[_reg_code]:
+        SITES.append((_code, _name, _city, _reg_name, "Depot" if _kind == "depot" else "Station"))
+SITES += [
     ("TORHO", "Toronto Head Office", "Toronto", "Ontario", "Office"),
-    ("MOHSS", "Mohawk Valley Substation", "Utica", "New York", "Substation"),
-    ("GENDS", "Genesee Distribution Station", "Rochester", "New York", "Distribution station"),
-    ("SENDS", "Seneca Falls Distribution Station", "Seneca Falls", "New York", "Distribution station"),
-    ("TUGSS", "Tug Hill Substation", "Watertown", "New York", "Substation"),
-    ("ONOSC", "Onondaga Service Center", "Syracuse", "New York", "Service center"),
     ("ALBRO", "Albany Regional Office", "Albany", "New York", "Office"),
-    ("MAUSS", "Maumee River Substation", "Toledo", "Ohio", "Substation"),
-    ("CUYDS", "Cuyahoga Distribution Station", "Cleveland", "Ohio", "Distribution station"),
-    ("SANDS", "Sandusky Bay Distribution Station", "Sandusky", "Ohio", "Distribution station"),
-    ("SCISS", "Scioto Substation", "Columbus", "Ohio", "Substation"),
-    ("PORSC", "Portage Service Center", "Akron", "Ohio", "Service center"),
     ("COLRO", "Columbus Regional Office", "Columbus", "Ohio", "Office"),
 ]
 SITE_ID = {s[0]: i + 1 for i, s in enumerate(SITES)}
@@ -229,9 +221,12 @@ def status_for(created):
 
 def build():
     assets = load_assets()
+    # random tickets never use the planted Dataverse assets, so only the planted tickets mention them
+    from build_dataverse import PLANTED_ASSETS
     assets_by_region = {}
     for a in assets:
-        assets_by_region.setdefault(a["Region"], []).append(a)
+        if a["AssetNumber"] not in PLANTED_ASSETS:
+            assets_by_region.setdefault(a["Region"], []).append(a)
     asset_id = {a["AssetNumber"]: i + 1 for i, a in enumerate(assets)}
     asset_by_tag = {a["AssetNumber"]: a for a in assets}
 
@@ -316,14 +311,15 @@ def build():
 
     dt = datetime.fromisoformat
     plant(100420, "P-TK-01 Ontario-only",
-          Title="Dissolved gas alarm on TX-ON-10423, Bayview Transformer Station",
-          Description="Online DGA monitor on TX-ON-10423 (10 MVA station transformer) raised a high acetylene "
-                      "alarm at 19 ppm. Load transferred to T2. Ontario Field Dispatch assigned substation crew "
-                      "CRW-ON-03. Mobile transformer MTX-2 reserved. Linked work order WO-2026-01127.",
-          Status="In Progress", Priority="Critical", Category="Asset Maintenance", Region="Ontario",
-          SiteCode="BAYTS", AssetTag="TX-ON-10423", AssignedTo="Ontario Field Dispatch",
-          CreatedBy="alex.okafor@harbourline.example", Tags=["oil-sample", "planned-outage"],
-          CreatedDateTime=dt("2026-09-27T06:42:00"), LastModified=dt("2026-09-29T15:10:00"))
+          Title="Stain on pole P-30912 below transformer TX-ON-10423, Bath Road, Kingston",
+          Description="Customer on Bath Road near Collins Bay Road, Kingston, reported a dark stain on pole P-30912 "
+                      "below transformer TX-ON-10423 (25 kVA pole-mount). Infrared scan booked as work order "
+                      "WO-2026-00953 with crew CREW-ON-03. Scan on 2026-09-02 found normal connections and a light "
+                      "oil film at the tank lid gasket. Monitor at next patrol. Customer called back 2026-09-02.",
+          Status="Resolved", Priority="Medium", Category="Asset Maintenance", Region="Ontario",
+          SiteCode="KNGSC", AssetTag="TX-ON-10423", AssignedTo="Ontario Field Dispatch",
+          CreatedBy="alex.okafor@harbourline.example", Tags=["infrared", "oil-sample"],
+          CreatedDateTime=dt("2026-08-27T09:12:00"), LastModified=dt("2026-09-02T16:20:00"))
     plant(101776, "P-TK-02 US-only",
           Title="Trip counter above limit on BRK-NY-24480, Mohawk Valley Substation",
           Description="Operations counter on 69 kV breaker BRK-NY-24480 reached 2,140 operations, above the "
@@ -358,13 +354,13 @@ def build():
           AssetTag="", AssignedTo="IT Service Desk", CreatedBy="riley.hwang@harbourline.example",
           Tags=["m365", "vpn"], CreatedDateTime=dt("2026-09-23T09:30:00"), LastModified=dt("2026-09-29T10:00:00"))
     plant(104321, "P-TK-06 deny",
-          Title="Safety investigation SI-2026-014: contact with energized conductor, Lakeshore Distribution Station",
-          Description="Investigation into a contact event on 2026-09-08 at Lakeshore Distribution Station. "
+          Title="Safety investigation SI-2026-014: contact with energized conductor, Oshawa Service Centre",
+          Description="Investigation into a contact event on 2026-09-08 in the Oshawa Service Centre area. "
                       "Worker received a minor burn; hospital check completed, returned to work 2026-09-10. "
                       "Root cause review in progress; interim control: second-person verification of "
                       "test-before-touch. Visible to all staff except the Ontario operations group while "
                       "witness interviews are open.",
-          Status="In Progress", Priority="High", Category="Safety", Region="Ontario", SiteCode="LAKDS",
+          Status="In Progress", Priority="High", Category="Safety", Region="Ontario", SiteCode="OSHSC",
           AssetTag="", AssignedTo="Safety and Environment", CreatedBy="morgan.abernathy@harbourline.example",
           Tags=["near-miss"], CreatedDateTime=dt("2026-09-09T07:55:00"), LastModified=dt("2026-09-26T14:20:00"),
           Acl=[("everyoneExceptGuests", "{{TENANT_ID}}", "grant"), ("group", "{{GROUP_OPS_ONTARIO}}", "deny")])
@@ -379,7 +375,7 @@ def build():
           Acl=[("user", "{{USER_FIN}}", "grant")])
     plant(103900, "P-TK-08 Finance-only",
           Title="Finance request: Q3 capital accrual correction, project CP-2026-117",
-          Description="Q3 accrual for capital project CP-2026-117 (Scioto Substation transformer replacement, "
+          Description="Q3 accrual for capital project CP-2026-117 (Maumee Bay Substation transformer replacement, "
                       "TX-OH-31902) was booked at USD 185,000 instead of USD 1,850,000. Correcting journal "
                       "JE-2026-09-4471 to be posted before the 2026-10-07 close.",
           Status="In Progress", Priority="High", Category="Finance Request", Region="Ohio", SiteCode="COLRO",
@@ -388,8 +384,9 @@ def build():
     plant(101999, "P-TK-09 Ontario+US ops",
           Title="Cross-border mutual assistance roster, winter storm season 2026-2027",
           Description="Roster of crews available for cross-border mutual assistance between Ontario and the US "
-                      "operations from 2026-11-15 to 2027-03-31. Ontario storm crews CRW-ON-06, CRW-ON-11 and "
-                      "CRW-ON-12; US storm crews CRW-NY-06, CRW-NY-12, CRW-OH-07 and CRW-OH-12. Border crossing "
+                      "operations from 2026-11-15 to 2027-03-31. Ontario storm crews CREW-ON-11, CREW-ON-14 and "
+                      "CREW-ON-20; US storm crews CREW-NY-07, CREW-NY-13, CREW-OH-07, CREW-OH-12 and CREW-OH-18. "
+                      "Border crossing "
                       "paperwork owner: US Field Dispatch (New York).",
           Status="Assigned", Priority="Medium", Category="Field Operations", Region="New York", SiteCode="ALBRO",
           AssetTag="", AssignedTo="US Field Dispatch (New York)", CreatedBy="quinn.delgado@harbourline.example",
@@ -398,12 +395,22 @@ def build():
           Acl=[("group", "{{GROUP_OPS_ONTARIO}}", "grant"), ("group", "{{GROUP_OPS_US}}", "grant")])
     plant(104862, "P-TK-10 US-only",
           Title="Repeat failure: SW-OH-30110 stuck open during restoration",
-          Description="SW-OH-30110 at Cuyahoga Distribution Station stuck open during feeder restoration on "
-                      "2026-09-18. This is the ninth failure since November 2024. Engineering asks for a "
-                      "replacement business case. Linked work order WO-2026-01082.",
-          Status="New", Priority="Critical", Category="Outage", Region="Ohio", SiteCode="CUYDS",
+          Description="SW-OH-30110 at Lima Depot stuck open during feeder restoration on 2026-09-18. This is the "
+                      "ninth failure since November 2024. Engineering asks for a replacement business case. "
+                      "Linked work order WO-2026-01043, storm crew CREW-OH-07.",
+          Status="New", Priority="Critical", Category="Outage", Region="Ohio", SiteCode="LIMDP",
           AssetTag="SW-OH-30110", AssignedTo="US Field Dispatch (Ohio)", CreatedBy="avery.osei@harbourline.example",
           Tags=["restoration"], CreatedDateTime=dt("2026-09-18T21:35:00"), LastModified=dt("2026-09-30T08:05:00"))
+
+    plant(102777, "P-TK-11 US-only",
+          Title="Bushing tracking noted on TX-OH-20871, Lake Avenue, Ashtabula",
+          Description="Routine inspection of TX-OH-20871 (50 kVA pole-mount, pole P-51260, Lake Avenue at West 5th "
+                      "Street, Ashtabula) found minor surface tracking on the primary bushing. Wildlife guard "
+                      "present. Cleaning deferred to the next planned outage. Work order WO-2025-01181, crew "
+                      "CREW-OH-06.",
+          Status="Closed", Priority="Low", Category="Asset Maintenance", Region="Ohio", SiteCode="ASHDP",
+          AssetTag="TX-OH-20871", AssignedTo="US Field Dispatch (Ohio)", CreatedBy="drew.halvorsen@harbourline.example",
+          Tags=["inspection"], CreatedDateTime=dt("2025-10-09T08:30:00"), LastModified=dt("2025-10-14T15:45:00"))
 
     # enrich
     for t in tickets:
@@ -651,6 +658,9 @@ def main():
         "tickets_for_TX-ON-10423": [t["TicketId"] for t in tickets if t["AssetTag"] == "TX-ON-10423"],
         "tickets_for_SW-OH-30110": [t["TicketId"] for t in tickets if t["AssetTag"] == "SW-OH-30110"],
         "tickets_for_BRK-NY-24480": [t["TicketId"] for t in tickets if t["AssetTag"] == "BRK-NY-24480"],
+        "tickets_for_TX-OH-20871": [t["TicketId"] for t in tickets if t["AssetTag"] == "TX-OH-20871"],
+        "tickets_by_site": Counter(t["SiteName"] for t in tickets),
+        "open_by_region": Counter(t["Region"] for t in tickets if t["Status"] in ("New", "Assigned", "In Progress", "Pending")),
         "planted": [{"TicketId": t["TicketId"], "tag": t["_planted"], "Title": t["Title"], "Status": t["Status"],
                      "Priority": t["Priority"], "Category": t["Category"], "Region": t["Region"],
                      "Site": t["SiteName"], "LastModified": t["LastModified"].isoformat(),

@@ -1457,8 +1457,8 @@ FIELD_REPORTS = [
         "Report ID": "FR-EON-2026-1187",
         "Date": "2026-10-01",
         "Region": "Eastern Ontario",
-        "Crew ID": "EON-LC-14",
-        "Crew leader": "Marcus Delaney",
+        "Crew ID": "CREW-ON-03",
+        "Crew leader": "Devon Achebe",
         "Asset ID": "TX-ON-10423",
         "Asset description": "25 kVA pole-mount transformer, model NF-PM25-16B, pole P-30912, Bath Road near "
                              "Collins Bay Road, Kingston ON",
@@ -1475,8 +1475,8 @@ FIELD_REPORTS = [
         "Report ID": "FR-NYN-2026-0442",
         "Date": "2026-10-02",
         "Region": "New York North Country",
-        "Crew ID": "NYN-TC-03",
-        "Crew leader": "Jolene Parrish",
+        "Crew ID": "CREW-NY-13",
+        "Crew leader": "Colleen Brady",
         "Asset ID": "",
         "Asset description": "Pole-mount transformer on the east side of Arsenal Street near the Coffeen Street "
                              "intersection, Watertown NY. Asset tag missing from the tank.",
@@ -1493,8 +1493,8 @@ FIELD_REPORTS = [
         "Report ID": "FR-OHN-2026-0918",
         "Date": "2026-10-03",
         "Region": "Northeast Ohio",
-        "Crew ID": "OHN-LC-07",
-        "Crew leader": "Travis Kowalczyk",
+        "Crew ID": "CREW-OH-06",
+        "Crew leader": "Hannah Voss",
         "Asset ID": "TX-OH-20871",
         "Asset description": "50 kVA pole-mount transformer, pole P-51260, Lake Avenue at West 5th Street, "
                              "Ashtabula OH",

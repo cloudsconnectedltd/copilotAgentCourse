@@ -142,9 +142,9 @@ Each file is a Word doc with a Field/Value table (Report ID, Date, Region, Crew 
 
 | File | Report ID | Crew ID | Asset ID | Severity | Key content | Defect |
 |---|---|---|---|---|---|---|
-| Field-Report-2026-10-01-Kingston.docx | FR-EON-2026-1187 | EON-LC-14 (leader Marcus Delaney) | TX-ON-10423 | Moderate | Oil weeping from tank lid gasket on 25 kVA NF-PM25-16B, pole P-30912, Bath Road near Collins Bay Road; no outage; replace within 10 business days | None (clean baseline) |
-| Field-Report-2026-10-02-Watertown.docx | FR-NYN-2026-0442 | NYN-TC-03 (Jolene Parrish) | (blank) | Low | Missing squirrel guard, blown cutout fuse, 9 customers restored at 02:40; Arsenal Street near Coffeen Street | Asset ID field present but EMPTY; the asset tag was missing from the tank, and the notes say records must look it up in GIS. Use for trigger payload and validation design (required fields, fallback). |
-| Field-Report-2026-10-03-Ashtabula.docx | FR-OHN-2026-0918 | OHN-LC-07 (Travis Kowalczyk) | TX-OH-20871 | Critical | Primary bushing flashover, fire damage, cracked leaning pole P-51260, Lake Avenue at West 5th Street; 64 customers out; isolated under permit LOTO-OHN-2026-00388; about 40 L oil to soil; ETR 18:30 | Severity "Critical": should drive the escalation branch in the autonomous agent |
+| Field-Report-2026-10-01-Kingston.docx | FR-EON-2026-1187 | CREW-ON-03 (leader Devon Achebe) | TX-ON-10423 | Moderate | Oil weeping from tank lid gasket on 25 kVA NF-PM25-16B, pole P-30912, Bath Road near Collins Bay Road; no outage; replace within 10 business days | None (clean baseline) |
+| Field-Report-2026-10-02-Watertown.docx | FR-NYN-2026-0442 | CREW-NY-13 (Colleen Brady) | (blank) | Low | Missing squirrel guard, blown cutout fuse, 9 customers restored at 02:40; Arsenal Street near Coffeen Street | Asset ID field present but EMPTY; the asset tag was missing from the tank, and the notes say records must look it up in GIS. Use for trigger payload and validation design (required fields, fallback). |
+| Field-Report-2026-10-03-Ashtabula.docx | FR-OHN-2026-0918 | CREW-OH-06 (Hannah Voss) | TX-OH-20871 | Critical | Primary bushing flashover, fire damage, cracked leaning pole P-51260, Lake Avenue at West 5th Street; 64 customers out; isolated under permit LOTO-OHN-2026-00388; about 40 L oil to soil; ETR 18:30 | Severity "Critical": should drive the escalation branch in the autonomous agent |
 
 ## 9. Archive-Bulk (generated, gitignored)
 
