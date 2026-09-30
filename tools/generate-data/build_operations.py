@@ -1087,7 +1087,7 @@ def crew_deck(path):
     add_bullets(s, ["Season at a glance", "Where to report: this season's staging areas", "How call-outs work",
                     "The three critical safety numbers", "Work and rest rules", "Restoration priorities",
                     "Mutual assistance crews", "Questions"])
-    notes(s, "Keep this under 45 minutes. Leave time for questions at the end.")
+    notes(s, "Keep this under 40 minutes. Leave time for questions at the end.")
 
     # 3 Season at a glance
     s = prs.slides.add_slide(blank)
@@ -1166,6 +1166,15 @@ def crew_deck(path):
                     "Playbook and procedures are on the Harbourline-Operations site, Procedures library"])
     notes(s, "Close by reminding crews to check their call-out contact details in the storm dispatch system.")
 
+    # The default python-pptx master uses an en dash bullet glyph; replace it (no dashes rule).
+    for master in prs.slide_masters:
+        for el in master._element.iter():
+            if el.tag.endswith("}buChar") and el.get("char") in ("\u2013", "\u2014"):
+                el.set("char", "\u2022")
+        for layout in master.slide_layouts:
+            for el in layout._element.iter():
+                if el.tag.endswith("}buChar") and el.get("char") in ("\u2013", "\u2014"):
+                    el.set("char", "\u2022")
     prs.save(path)
 
 
@@ -1271,7 +1280,7 @@ def transformer_specs(path):
     classes = [
         ("Ontario 27.6 kV class", "27.6GrdY/16.0", "16", ["ON"], 125),
         ("Ontario 13.8 kV class", "13.8GrdY/8.0", "8", ["ON"], 95),
-        ("New York 13.2 kV class", "13.2GrdY/7.62", "7", ["NY"], 95),
+        ("New York 13.2 kV class", "13.2GrdY/7.62", "7N", ["NY"], 95),
         ("Ohio 12.47 kV class", "12.47GrdY/7.2", "7", ["OH"], 95),
     ]
     sizes = [10, 15, 25, 37.5, 50, 75, 100, 167]

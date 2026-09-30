@@ -291,6 +291,14 @@ def plant_assets(assets):
 
 
 # ---------------------------------------------------------------- crews
+def short_site(name):
+    for suffix in (" Transformer Station", " Distribution Station", " Substation", " Service Centre",
+                   " Service Center"):
+        if name.endswith(suffix):
+            return name[: -len(suffix)]
+    return name
+
+
 def build_crews():
     crews = []
     lead_iter = iter(LEAD_NAMES)
@@ -311,7 +319,7 @@ def build_crews():
                 certs[certs.index("Live-Line Glove 15 kV")] = "Live-Line Glove 27.6 kV"
             crews.append({
                 "CrewCode": code,
-                "CrewName": f"{site[1].split(' ')[0]} {spec} Crew {chr(64 + ((i - 1) // len(SITES[reg])) + 1)}",
+                "CrewName": f"{short_site(site[1])} {spec} Crew {chr(64 + ((i - 1) // len(SITES[reg])) + 1)}",
                 "Region": REGIONS[reg][0],
                 "HomeBase": site[1],
                 "Specialty": spec,
@@ -320,8 +328,8 @@ def build_crews():
                 "Certifications": "; ".join(dict.fromkeys(certs)),
             })
     by = {c["CrewCode"]: c for c in crews}
-    by["CRW-OH-07"].update(Specialty="Storm Response", HomeBase="Maumee River Substation",
-                           CrewName="Maumee Storm Response Crew B",
+    by["CRW-OH-07"].update(Specialty="Storm Response", HomeBase="Cuyahoga Distribution Station",
+                           CrewName="Cuyahoga Storm Response Crew B",
                            Certifications="Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; "
                                           "Live-Line Barehand 69 kV; Pole Top Rescue")
     by["CRW-ON-03"].update(Specialty="Substation Maintenance", HomeBase="Bayview Transformer Station",
@@ -404,6 +412,21 @@ def work_type_for(priority):
     return rng.choice(wt)
 
 
+def pick_crew(region_crews, t, wt):
+    if wt == "Vegetation Clearance":
+        wanted = {"Vegetation Management"}
+    elif wt == "Emergency Restoration":
+        wanted = {"Storm Response", "Overhead Lines"}
+    elif t in ("BRK", "REG") or (t == "TX" and rng.random() < 0.4):
+        wanted = {"Substation Maintenance", "Protection and Control"}
+    elif t == "TX":
+        wanted = {"Overhead Lines", "Underground Cable"}
+    else:
+        wanted = {"Overhead Lines", "Storm Response", "Protection and Control"}
+    pool = [c for c in region_crews if c["Specialty"] in wanted] or region_crews
+    return rng.choice(pool)
+
+
 def build_work_orders(assets, crews):
     crews_by_region = defaultdict(list)
     for c in crews:
@@ -425,9 +448,10 @@ def build_work_orders(assets, crews):
         opened = rand_date(EARLIEST, TODAY)
         if a["OperationalStatus"] == "Retired" and opened > date(2025, 3, 31):
             continue
-        crew = rng.choice(crews_by_region[a["Region"]])
         t = a["AssetNumber"].split("-")[0]
-        wo = make_wo(a, crew, opened, priority, work_type_for(priority), t)
+        wt = work_type_for(priority)
+        crew = pick_crew(crews_by_region[a["Region"]], t, wt)
+        wo = make_wo(a, crew, opened, priority, wt, t)
         if a["OperationalStatus"] == "Retired" and wo["Status"] not in ("Completed", "Cancelled"):
             wo["Status"] = "Cancelled"
         wos.append(wo)
@@ -475,8 +499,8 @@ def build_work_orders(assets, crews):
     # P-DV-04 SW-OH-30110 nine work orders, repeat failures
     sw_dates = [date(2024, 11, 14), date(2025, 1, 22), date(2025, 3, 9), date(2025, 5, 30), date(2025, 8, 12),
                 date(2025, 10, 27), date(2026, 1, 16), date(2026, 5, 4), date(2026, 9, 18)]
-    sw_crews = ["CRW-OH-02", "CRW-OH-02", "CRW-OH-08", "CRW-OH-02", "CRW-OH-14", "CRW-OH-02", "CRW-OH-08",
-                "CRW-OH-02", "CRW-OH-14"]
+    sw_crews = ["CRW-OH-04", "CRW-OH-04", "CRW-OH-10", "CRW-OH-04", "CRW-OH-03", "CRW-OH-04", "CRW-OH-10",
+                "CRW-OH-04", "CRW-OH-07"]
     for i, (d, cc) in enumerate(zip(sw_dates, sw_crews)):
         last = i == len(sw_dates) - 1
         add("SW-OH-30110", cc, d, "High" if not last else "Emergency",
@@ -499,13 +523,13 @@ def build_work_orders(assets, crews):
         "40 ft Class 3 pole.", completed=date(2025, 12, 12), est=12.0, actual=14.5, cost=6180.0, tag="P-DV-05")
 
     # P-DV-06 retired asset with active WO (data defect)
-    add("POLE-ON-11250", "CRW-ON-08", date(2026, 9, 21), "Routine", "Corrective Repair", "In Progress",
+    add("POLE-ON-11250", "CRW-ON-13", date(2026, 9, 21), "Routine", "Corrective Repair", "In Progress",
         "Replace cracked crossarm: POLE-ON-11250",
         "Crossarm on POLE-ON-11250 cracked at the through-bolt. Crew to confirm isolation and complete LOTO. "
         "Note: asset record shows status Retired.", est=6.0, cost=1110.0, tag="P-DV-06")
 
     # P-DV-07 deferred, on hold for outage window
-    add("BRK-NY-24480", "CRW-NY-05", date(2026, 6, 2), "Deferred", "Preventive Maintenance", "On Hold",
+    add("BRK-NY-24480", "CRW-NY-03", date(2026, 6, 2), "Deferred", "Preventive Maintenance", "On Hold",
         "BRK mechanism service: BRK-NY-24480",
         "Mechanism service on 69 kV breaker BRK-NY-24480 at Mohawk Valley Substation is on hold awaiting a "
         "planned outage window. System control has offered the window of 2027-01-12 to 2027-01-15.",
@@ -519,7 +543,7 @@ def build_work_orders(assets, crews):
         est=8.0, cost=1480.0, tag="P-DV-08")
 
     # P-DV-10 highest cost
-    add("TX-OH-31902", "CRW-OH-11", date(2026, 4, 7), "High", "Replacement", "Scheduled",
+    add("TX-OH-31902", "CRW-OH-09", date(2026, 4, 7), "High", "Replacement", "Scheduled",
         "Replace 20 MVA station TX: TX-OH-31902",
         "Station transformer TX-OH-31902 at Scioto Substation failed its insulation power factor test and was "
         "removed from service. Replace with new 20 MVA unit (long-lead item, delivery expected 2026-11). "
@@ -527,16 +551,16 @@ def build_work_orders(assets, crews):
         due=date(2026, 12, 15), est=320.0, cost=1850000.0, tag="P-DV-10")
 
     # fill remaining planted slots with realistic routine history on planted assets
-    add("POLE-ON-11250", "CRW-ON-08", date(2025, 2, 17), "Routine", "Inspection", "Completed",
+    add("POLE-ON-11250", "CRW-ON-13", date(2025, 2, 17), "Routine", "Inspection", "Completed",
         "Ten-year pole test and treat: POLE-ON-11250",
         "Ground-line decay found on POLE-ON-11250, remaining strength 58 percent. Recommend replacement.",
         completed=date(2025, 3, 4), est=2.0, actual=2.0, cost=370.0, tag="P-DV-06h")
-    add("BRK-NY-24480", "CRW-NY-05", date(2025, 7, 15), "Routine", "Inspection", "Completed",
+    add("BRK-NY-24480", "CRW-NY-03", date(2025, 7, 15), "Routine", "Inspection", "Completed",
         "BRK SF6 pressure check: BRK-NY-24480",
         "SF6 pressure on BRK-NY-24480 at 0.58 MPa, alarm at 0.55 MPa. Monitor monthly.",
         completed=date(2025, 7, 18), est=2.0, actual=2.0, cost=330.0, tag="P-DV-07h")
 
-    add("POLE-NY-20017", "CRW-NY-04", date(2026, 7, 8), "Routine", "Inspection", "Completed",
+    add("POLE-NY-20017", "CRW-NY-07", date(2026, 7, 8), "Routine", "Inspection", "Completed",
         "Ten-year pole test and treat: POLE-NY-20017",
         "POLE-NY-20017 (installed 1958, oldest pole in service) passed resistograph test with 71 percent "
         "remaining strength. Retreated at ground line. Next test due 2031.",

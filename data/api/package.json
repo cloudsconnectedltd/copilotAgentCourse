@@ -10,8 +10,9 @@
   },
   "scripts": {
     "start": "func start",
-    "test": "node --test test/",
-    "seed": "node scripts/generate-seed.mjs"
+    "test": "node --test test/api.test.js",
+    "seed": "node scripts/generate-seed.mjs",
+    "openapi": "node scripts/build-openapi-variants.mjs"
   },
   "dependencies": {
     "@azure/functions": "^4.5.0",

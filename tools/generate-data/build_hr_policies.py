@@ -34,7 +34,7 @@ COMPANY = "Harbourline Energy Co."
 FIXED_DT = datetime.datetime(2025, 6, 1, 9, 0, 0)
 ZIP_DT = (2025, 6, 1, 9, 0, 0)
 NAVY = RGBColor(0x1F, 0x3A, 0x5F)
-FORBIDDEN = ("—", "–")
+FORBIDDEN = (chr(0x2014), chr(0x2013))  # em dash, en dash
 
 
 def check_text(s):
@@ -1774,21 +1774,43 @@ def render_ack_image():
 
 
 def render_scan_pdf(path):
-    from reportlab.pdfgen import canvas
-    from reportlab.lib.utils import ImageReader
+    """Write a one-page PDF whose only content is a JPEG of the scanned form.
+
+    The PDF is assembled by hand (no reportlab canvas) so that it contains no
+    text operators and no font resources at all, like a scanner output.
+    """
     img = render_ack_image()
     buf = io.BytesIO()
     img.save(buf, format="JPEG", quality=70, optimize=False)
-    buf.seek(0)
+    jpg = buf.getvalue()
+    w, h = img.size
+    pw, ph = 612, 792  # US Letter in points
+    content = ("q %d 0 0 %d 0 0 cm /Im1 Do Q" % (pw, ph)).encode("ascii")
+    objs = [
+        b"<< /Type /Catalog /Pages 2 0 R >>",
+        b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
+        ("<< /Type /Page /Parent 2 0 R /MediaBox [0 0 %d %d] /Resources << /XObject << /Im1 4 0 R >> >> "
+         "/Contents 5 0 R >>" % (pw, ph)).encode("ascii"),
+        ("<< /Type /XObject /Subtype /Image /Width %d /Height %d /ColorSpace /DeviceGray /BitsPerComponent 8 "
+         "/Filter /DCTDecode /Length %d >>\nstream\n" % (w, h, len(jpg))).encode("ascii") + jpg + b"\nendstream",
+        ("<< /Length %d >>\nstream\n" % len(content)).encode("ascii") + content + b"\nendstream",
+        b"<< /Producer (Scan to SharePoint) /Creator (Office MFP Scanner) /Title (Scan 2025-03-14 SCN-0314-07) >>",
+    ]
+    out = io.BytesIO()
+    out.write(b"%PDF-1.4\n%\xe2\xe3\xcf\xd3\n")
+    offsets = []
+    for i, body in enumerate(objs, 1):
+        offsets.append(out.tell())
+        out.write(("%d 0 obj\n" % i).encode("ascii") + body + b"\nendobj\n")
+    xref = out.tell()
+    out.write(("xref\n0 %d\n0000000000 65535 f \n" % (len(objs) + 1)).encode("ascii"))
+    for off in offsets:
+        out.write(("%010d 00000 n \n" % off).encode("ascii"))
+    out.write(("trailer\n<< /Size %d /Root 1 0 R /Info 6 0 R >>\nstartxref\n%d\n%%%%EOF\n"
+               % (len(objs) + 1, xref)).encode("ascii"))
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    c = canvas.Canvas(path, pagesize=LETTER, invariant=1)
-    c.setTitle("Scan 2025-03-14 SCN-0314-07")
-    c.setAuthor("HP ScanJet Pro")
-    c.setCreator("Scan to SharePoint")
-    # Image only. No drawString calls anywhere: the PDF has no text layer.
-    c.drawImage(ImageReader(buf), 0, 0, width=LETTER[0], height=LETTER[1])
-    c.showPage()
-    c.save()
+    with open(path, "wb") as fh:
+        fh.write(out.getvalue())
 
 
 # ==========================================================================

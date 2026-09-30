@@ -1,0 +1,180 @@
+openapi: 3.0.3
+# INTENTIONALLY NON-COMPLIANT. Used in Lab 6 "break it" exercises only.
+# This file is valid OpenAPI 3.0.3 but breaks Microsoft 365 Copilot API plugin guidance.
+# Every defect is listed, with the expected symptom and the limits.md row, in
+# openapi-broken-NOTES.md. Search this file for "DEFECT" to find them.
+# Do not use this file as a starting point for a real plugin: use openapi.yaml.
+info:
+  title: Harbourline Outage Operations API (broken)
+  description: >-
+    Harbourline Energy Co. operations API for outages, crew dispatch and customer accounts.
+  version: 0.9.0-broken
+servers:
+  - url: https://REPLACE_WITH_API_HOST/api
+paths:
+  /outage-status:
+    get:
+      # DEFECT 1: no operationId on this operation (DA-13, DA-15).
+      summary: Get current power outages
+      description: Returns active outages. Filter by region or outage ID.
+      parameters:
+        - name: region
+          in: query
+          required: false
+          description: Region code (ON, NY, OH) or municipality name.
+          schema:
+            type: string
+        - name: outageId
+          in: query
+          required: false
+          description: Outage identifier, for example OUT-2026-0412.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Matching outages.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalMatches:
+                    type: integer
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Outage'
+  /crew-dispatch:
+    post:
+      operationId: dispatchCrew
+      summary: Dispatch a field crew to an outage
+      description: Sends a crew to an outage.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DispatchRequest'
+      responses:
+        '201':
+          description: Dispatch created.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  dispatchId:
+                    type: string
+                  message:
+                    type: string
+        '400':
+          description: Validation failed.
+  /customers:
+    get:
+      operationId: listAllCustomers
+      summary: List all customer accounts
+      description: Returns every Harbourline customer account in one response.
+      # DEFECT 4: unbounded array response. No pageSize or page parameter, no maxItems,
+      # and the route returns all matching accounts (300 with no filter) (DA-07, DA-16).
+      parameters:
+        - name: region
+          in: query
+          required: false
+          description: Optional region code (ON, NY, OH).
+          schema:
+            type: string
+      responses:
+        '200':
+          description: All customer accounts.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Customer'
+components:
+  schemas:
+    Outage:
+      type: object
+      properties:
+        outageId:
+          type: string
+        region:
+          type: string
+        municipality:
+          type: string
+        status:
+          type: string
+        customersAffected:
+          type: integer
+        estimatedRestorationTime:
+          type: string
+          nullable: true
+        assignedCrewId:
+          type: string
+          nullable: true
+    DispatchRequest:
+      type: object
+      required: [outageId, priority, assignment]
+      properties:
+        outageId:
+          type: string
+        priority:
+          type: string
+          enum: [Low, Normal, High, Emergency]
+        # DEFECT 2: polymorphic oneOf in the request body (DA-12).
+        assignment:
+          oneOf:
+            - $ref: '#/components/schemas/AssignByCrewId'
+            - $ref: '#/components/schemas/AssignBySpecialty'
+        # DEFECT 3: nested object in the request body (DA-12).
+        siteContact:
+          type: object
+          properties:
+            name:
+              type: string
+            phone:
+              type: string
+            location:
+              type: object
+              properties:
+                latitude:
+                  type: number
+                longitude:
+                  type: number
+    AssignByCrewId:
+      type: object
+      properties:
+        crewId:
+          type: string
+    AssignBySpecialty:
+      type: object
+      properties:
+        specialty:
+          type: string
+        depot:
+          type: string
+    Customer:
+      type: object
+      properties:
+        accountNumber:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        serviceAddress:
+          type: string
+        municipality:
+          type: string
+        postalCode:
+          type: string
+        accountStatus:
+          type: string
+        currentBalance:
+          type: number
+        medicalPriority:
+          type: boolean
+        currentOutageId:
+          type: string
+          nullable: true

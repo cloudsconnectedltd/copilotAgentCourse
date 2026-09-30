@@ -1,0 +1,223 @@
+{
+  "ticket_count": 5000,
+  "acl_entries": 5002,
+  "asset_rows": 1200,
+  "site_rows": 19,
+  "id_range": [
+    100001,
+    105000
+  ],
+  "by_category": {
+    "Asset Maintenance": 608,
+    "Field Operations": 1681,
+    "Customer Complaint": 205,
+    "HR Case": 306,
+    "Outage": 723,
+    "Facilities": 405,
+    "Safety": 226,
+    "IT Service Desk": 562,
+    "Finance Request": 284
+  },
+  "by_region": {
+    "Ontario": 2697,
+    "New York": 1285,
+    "Ohio": 1018
+  },
+  "by_status": {
+    "Closed": 3747,
+    "Resolved": 786,
+    "Pending": 186,
+    "In Progress": 148,
+    "Assigned": 77,
+    "New": 56
+  },
+  "by_priority": {
+    "High": 1129,
+    "Medium": 2345,
+    "Low": 1155,
+    "Critical": 371
+  },
+  "by_acl_pattern": {
+    "grant:group:{{GROUP_OPS_ONTARIO}}": 1594,
+    "grant:group:{{GROUP_OPS_US}}": 1622,
+    "grant:group:{{GROUP_HR}}": 306,
+    "grant:everyone:{{TENANT_ID}}": 405,
+    "grant:everyoneExceptGuests:{{TENANT_ID}}": 787,
+    "grant:group:{{GROUP_FINANCE}}": 283,
+    "grant:group:{{GROUP_OPS_ONTARIO}} + grant:group:{{GROUP_OPS_US}}": 1,
+    "grant:everyoneExceptGuests:{{TENANT_ID}} + deny:group:{{GROUP_OPS_ONTARIO}}": 1,
+    "grant:user:{{USER_FIN}}": 1
+  },
+  "open_critical": [
+    100420,
+    101319,
+    101450,
+    101585,
+    101725,
+    103054,
+    103090,
+    103437,
+    103719,
+    104011,
+    104088,
+    104179,
+    104286,
+    104637,
+    104651,
+    104652,
+    104655,
+    104693,
+    104745,
+    104807,
+    104827,
+    104855,
+    104860,
+    104862,
+    104891,
+    104892,
+    104911,
+    104951,
+    104955,
+    104961,
+    104972
+  ],
+  "tickets_for_TX-ON-10423": [
+    100420,
+    102077
+  ],
+  "tickets_for_SW-OH-30110": [
+    100843,
+    102933,
+    103204,
+    104862
+  ],
+  "tickets_for_BRK-NY-24480": [
+    101204,
+    101776,
+    103271,
+    104618
+  ],
+  "planted": [
+    {
+      "TicketId": 100420,
+      "tag": "P-TK-01 Ontario-only",
+      "Title": "Dissolved gas alarm on TX-ON-10423, Bayview Transformer Station",
+      "Status": "In Progress",
+      "Priority": "Critical",
+      "Category": "Asset Maintenance",
+      "Region": "Ontario",
+      "Site": "Bayview Transformer Station",
+      "LastModified": "2026-09-29T15:10:00",
+      "Acl": "[{\"type\":\"group\",\"value\":\"{{GROUP_OPS_ONTARIO}}\",\"accessType\":\"grant\"}]"
+    },
+    {
+      "TicketId": 101776,
+      "tag": "P-TK-02 US-only",
+      "Title": "Trip counter above limit on BRK-NY-24480, Mohawk Valley Substation",
+      "Status": "Pending",
+      "Priority": "High",
+      "Category": "Asset Maintenance",
+      "Region": "New York",
+      "Site": "Mohawk Valley Substation",
+      "LastModified": "2026-09-12T09:30:00",
+      "Acl": "[{\"type\":\"group\",\"value\":\"{{GROUP_OPS_US}}\",\"accessType\":\"grant\"}]"
+    },
+    {
+      "TicketId": 101999,
+      "tag": "P-TK-09 Ontario+US ops",
+      "Title": "Cross-border mutual assistance roster, winter storm season 2026-2027",
+      "Status": "Assigned",
+      "Priority": "Medium",
+      "Category": "Field Operations",
+      "Region": "New York",
+      "Site": "Albany Regional Office",
+      "LastModified": "2026-09-27T12:00:00",
+      "Acl": "[{\"type\":\"group\",\"value\":\"{{GROUP_OPS_ONTARIO}}\",\"accessType\":\"grant\"},{\"type\":\"group\",\"value\":\"{{GROUP_OPS_US}}\",\"accessType\":\"grant\"}]"
+    },
+    {
+      "TicketId": 102050,
+      "tag": "P-TK-03 HR-only",
+      "Title": "HR case: Return-to-work plan and accommodation (case HR-2026-0381)",
+      "Status": "In Progress",
+      "Priority": "High",
+      "Category": "HR Case",
+      "Region": "Ontario",
+      "Site": "Toronto Head Office",
+      "LastModified": "2026-09-28T11:05:00",
+      "Acl": "[{\"type\":\"group\",\"value\":\"{{GROUP_HR}}\",\"accessType\":\"grant\"}]"
+    },
+    {
+      "TicketId": 102600,
+      "tag": "P-TK-04 everyone",
+      "Title": "Parking garage level P2 closed for resurfacing, Toronto Head Office",
+      "Status": "Assigned",
+      "Priority": "Low",
+      "Category": "Facilities",
+      "Region": "Ontario",
+      "Site": "Toronto Head Office",
+      "LastModified": "2026-09-25T16:45:00",
+      "Acl": "[{\"type\":\"everyone\",\"value\":\"{{TENANT_ID}}\",\"accessType\":\"grant\"}]"
+    },
+    {
+      "TicketId": 103115,
+      "tag": "P-TK-05 everyoneExceptGuests",
+      "Title": "Company-wide VPN client upgrade to version 6.2 on 2026-10-06",
+      "Status": "Assigned",
+      "Priority": "Medium",
+      "Category": "IT Service Desk",
+      "Region": "Ontario",
+      "Site": "Toronto Head Office",
+      "LastModified": "2026-09-29T10:00:00",
+      "Acl": "[{\"type\":\"everyoneExceptGuests\",\"value\":\"{{TENANT_ID}}\",\"accessType\":\"grant\"}]"
+    },
+    {
+      "TicketId": 103900,
+      "tag": "P-TK-08 Finance-only",
+      "Title": "Finance request: Q3 capital accrual correction, project CP-2026-117",
+      "Status": "In Progress",
+      "Priority": "High",
+      "Category": "Finance Request",
+      "Region": "Ohio",
+      "Site": "Columbus Regional Office",
+      "LastModified": "2026-09-30T09:15:00",
+      "Acl": "[{\"type\":\"group\",\"value\":\"{{GROUP_FINANCE}}\",\"accessType\":\"grant\"}]"
+    },
+    {
+      "TicketId": 104321,
+      "tag": "P-TK-06 deny",
+      "Title": "Safety investigation SI-2026-014: contact with energized conductor, Lakeshore Distribution Station",
+      "Status": "In Progress",
+      "Priority": "High",
+      "Category": "Safety",
+      "Region": "Ontario",
+      "Site": "Lakeshore Distribution Station",
+      "LastModified": "2026-09-26T14:20:00",
+      "Acl": "[{\"type\":\"everyoneExceptGuests\",\"value\":\"{{TENANT_ID}}\",\"accessType\":\"grant\"},{\"type\":\"group\",\"value\":\"{{GROUP_OPS_ONTARIO}}\",\"accessType\":\"deny\"}]"
+    },
+    {
+      "TicketId": 104700,
+      "tag": "P-TK-07 user-only",
+      "Title": "Corporate card dispute: duplicate hotel charge, Sofia Brennan",
+      "Status": "Pending",
+      "Priority": "Low",
+      "Category": "Finance Request",
+      "Region": "Ontario",
+      "Site": "Toronto Head Office",
+      "LastModified": "2026-09-24T09:40:00",
+      "Acl": "[{\"type\":\"user\",\"value\":\"{{USER_FIN}}\",\"accessType\":\"grant\"}]"
+    },
+    {
+      "TicketId": 104862,
+      "tag": "P-TK-10 US-only",
+      "Title": "Repeat failure: SW-OH-30110 stuck open during restoration",
+      "Status": "New",
+      "Priority": "Critical",
+      "Category": "Outage",
+      "Region": "Ohio",
+      "Site": "Cuyahoga Distribution Station",
+      "LastModified": "2026-09-30T08:05:00",
+      "Acl": "[{\"type\":\"group\",\"value\":\"{{GROUP_OPS_US}}\",\"accessType\":\"grant\"}]"
+    }
+  ],
+  "max_title_len": 99
+}
