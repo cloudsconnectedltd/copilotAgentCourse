@@ -17,8 +17,7 @@ info:
     crew to an outage, and to look up a customer account by account number, last name or postal code.
   version: 1.0.0
 servers:
-  # Replace with your Function App or dev tunnel URL, keeping the /api suffix.
-  # Local: http://localhost:7071/api   Azure: https://<prefix>-func.azurewebsites.net/api
+  # OPENAPI_SERVER_URL is set in env/.env.dev: your dev tunnel URL or Function App URL, without /api.
   - url: ${{OPENAPI_SERVER_URL}}/api
 paths:
   /outage-status:
