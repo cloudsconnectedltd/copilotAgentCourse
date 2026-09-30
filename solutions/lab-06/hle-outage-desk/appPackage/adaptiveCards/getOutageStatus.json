@@ -1,0 +1,62 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "${outageId}: ${municipality}, ${regionName}",
+      "weight": "Bolder",
+      "size": "Medium",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "${status}",
+      "color": "${if(status == 'Restored', 'Good', 'Attention')}",
+      "weight": "Bolder",
+      "spacing": "None",
+      "wrap": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Customers affected",
+          "value": "${formatNumber(customersAffected, 0)}"
+        },
+        {
+          "title": "Cause",
+          "value": "${if(cause, cause, 'Under investigation')}"
+        },
+        {
+          "title": "Started",
+          "value": "${startTime}"
+        },
+        {
+          "title": "Estimated restoration",
+          "value": "${if(estimatedRestorationTime, estimatedRestorationTime, 'Not yet estimated')}"
+        },
+        {
+          "title": "Restored",
+          "value": "${if(restoredTime, restoredTime, 'Not restored')}"
+        },
+        {
+          "title": "Assigned crew",
+          "value": "${if(assignedCrewId, assignedCrewId, 'None assigned')}"
+        },
+        {
+          "title": "Feeder",
+          "value": "${feederId}"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Last updated ${lastUpdated}. Times are Eastern time. Course data, fictional.",
+      "isSubtle": true,
+      "size": "Small",
+      "wrap": true
+    }
+  ]
+}

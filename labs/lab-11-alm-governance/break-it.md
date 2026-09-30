@@ -136,7 +136,7 @@ https://learn.microsoft.com/en-us/power-platform/alm/pipelines (see also https:/
 
 ### Symptom you will see
 
-- The agent was created in the tenant's default environment (named after your organization), not in a governed environment. Every licensed user in the tenant is a maker in the default environment, so this agent now sits next to everyone else's experiments.
+- The agent was created in the tenant's default environment (named "{Microsoft Entra tenant name} (default)" unless an admin renamed it; its **Type** is Default), not in a governed environment. All licensed users have the Environment Maker role in the default environment (ENV-01 source page), so this agent now sits next to everyone else's experiments.
 - Environment routing is **Off** (the docs say it is off by default).
 
 ### Root cause
