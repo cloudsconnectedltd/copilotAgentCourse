@@ -4,7 +4,7 @@ Eval file: [`evals/lab-10-questions.csv`](../../evals/lab-10-questions.csv) (15 
 
 ## Who and where
 
-- **Persona:** the learner (maker) for every row. `HLE-Dev` is a developer environment, which is owner-only (ENV-02), so other personas cannot be given access to these agents here. Persona-specific permission tests for multi-agent setups belong in a sandbox or production environment (Lab 11).
+- **Persona:** the learner (maker) for every row. `HLE-Dev` is a developer environment, which is owner-only and cannot be shared with security groups (ENV-02), so this lab tests as the learner only. Persona-specific permission tests for multi-agent setups belong in a sandbox or production environment.
 - **Where to type:** the `HLE Front Door` test pane in Copilot Studio, with the activity map turned on (or "Show activity"; UI labels may differ). Reset the conversation before each row unless the row has two turns. You may also run the answer rows in the published channel you configured, but the activity map is only in the test pane.
 - **Before you start:** the three specialists and `HLE Front Door` are published with the precise descriptions from `solutions/lab-10/agent-descriptions.md` section 1; the mock API and dev tunnel are running (row L10-Q06, L10-Q14). If you have not yet cleaned up Lab 9, an extra Emergency work order `WO-FR-OHN-2026-0918` appears in L10-Q05; that is expected.
 - **Pace:** leave a few seconds between prompts. Developer environments allow 10 generative AI requests per minute and 200 per hour (CS-A01, SNIP), and each routed turn uses several.

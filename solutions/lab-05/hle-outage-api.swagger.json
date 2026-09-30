@@ -1,0 +1,233 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "HLE Outage API",
+    "description": "Harbourline Energy Co. outage operations API (course mock). OpenAPI 2.0 conversion of data/api/openapi-apikey.yaml for the Power Platform custom connector in Lab 5. Operations: getOutageStatus and dispatchCrew. Replace the host with your dev tunnel host or Function App host.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Harbourline course team",
+      "email": "course@harbourline.example"
+    }
+  },
+  "host": "REPLACE_WITH_API_HOST",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/outage-status": {
+      "get": {
+        "operationId": "getOutageStatus",
+        "summary": "Get current power outages and estimated restoration times",
+        "description": "Returns active electricity outages, largest first, with the number of customers affected, cause, status, assigned crew and estimated restoration time (ETR). Filter by region (ON, NY, OH, or a town such as Kingston) or ask for one outage by its ID (for example OUT-2026-0412). Restored outages are excluded unless includeRestored is true.",
+        "parameters": [
+          {
+            "name": "region",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-summary": "Region or town",
+            "description": "Region code (ON, NY, OH), region name (Ontario, New York, Ohio) or municipality name (for example Kingston). Omit to search all regions."
+          },
+          {
+            "name": "outageId",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-summary": "Outage ID",
+            "description": "Outage identifier in the form OUT-2026-0412. When provided, other filters are ignored."
+          },
+          {
+            "name": "includeRestored",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "default": false,
+            "x-ms-summary": "Include restored",
+            "description": "Set to true to include outages that are already restored."
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50,
+            "default": 10,
+            "x-ms-summary": "Page size",
+            "description": "Maximum number of outages to return, 1 to 50. Defaults to 10."
+          },
+          {
+            "name": "delayMs",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 180000,
+            "default": 0,
+            "x-ms-summary": "Delay (ms, training only)",
+            "x-ms-visibility": "advanced",
+            "description": "Training only. Delays the response by this many milliseconds (capped at 180000) to demonstrate timeouts."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matching outages, largest first.",
+            "schema": {
+              "$ref": "#/definitions/OutageList"
+            }
+          },
+          "400": {
+            "description": "A parameter is invalid.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "401": {
+            "description": "Missing or wrong API key.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "404": {
+            "description": "No outage exists with the given outageId.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    },
+    "/crew-dispatch": {
+      "post": {
+        "operationId": "dispatchCrew",
+        "summary": "Dispatch a field crew to an outage",
+        "description": "Creates a crew dispatch that sends a Harbourline field crew to an active outage and returns a dispatch ID and estimated arrival time. The crew must work in the same region as the outage and must not be off shift. Restored outages cannot receive a dispatch.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DispatchRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Dispatch created.",
+            "schema": {
+              "$ref": "#/definitions/DispatchResult"
+            }
+          },
+          "400": {
+            "description": "Validation failed. errorCode is one of MISSING_FIELD, INVALID_FIELD, INVALID_JSON, NESTED_VALUE_NOT_SUPPORTED, UNKNOWN_OUTAGE, UNKNOWN_CREW, CREW_REGION_MISMATCH, CREW_OFF_SHIFT.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "401": {
+            "description": "Missing or wrong API key.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          },
+          "409": {
+            "description": "The outage is already restored, so no dispatch was created.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Outage": {
+      "type": "object",
+      "properties": {
+        "outageId": { "type": "string", "x-ms-summary": "Outage ID" },
+        "region": { "type": "string", "x-ms-summary": "Region code" },
+        "regionName": { "type": "string", "x-ms-summary": "Region name" },
+        "municipality": { "type": "string", "x-ms-summary": "Municipality" },
+        "status": { "type": "string", "x-ms-summary": "Status" },
+        "cause": { "type": "string", "x-ms-summary": "Cause" },
+        "customersAffected": { "type": "integer", "x-ms-summary": "Customers affected" },
+        "startTime": { "type": "string", "format": "date-time", "x-ms-summary": "Start time" },
+        "estimatedRestorationTime": { "type": "string", "format": "date-time", "x-nullable": true, "x-ms-summary": "Estimated restoration time" },
+        "restoredTime": { "type": "string", "format": "date-time", "x-nullable": true, "x-ms-summary": "Restored time" },
+        "assignedCrewId": { "type": "string", "x-nullable": true, "x-ms-summary": "Assigned crew ID" },
+        "feederId": { "type": "string", "x-ms-summary": "Feeder ID" },
+        "lastUpdated": { "type": "string", "format": "date-time", "x-ms-summary": "Last updated" }
+      }
+    },
+    "OutageList": {
+      "type": "object",
+      "properties": {
+        "totalMatches": { "type": "integer", "x-ms-summary": "Total matches" },
+        "returnedCount": { "type": "integer", "x-ms-summary": "Returned count" },
+        "pageSize": { "type": "integer", "x-ms-summary": "Page size" },
+        "customersAffectedTotal": { "type": "integer", "x-ms-summary": "Customers affected (returned outages)" },
+        "message": { "type": "string", "x-ms-summary": "Message" },
+        "results": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Outage" }
+        }
+      }
+    },
+    "DispatchRequest": {
+      "type": "object",
+      "required": [ "outageId", "crewId", "priority" ],
+      "properties": {
+        "outageId": { "type": "string", "x-ms-summary": "Outage ID", "description": "ID of the active outage, for example OUT-2026-0433." },
+        "crewId": { "type": "string", "x-ms-summary": "Crew ID", "description": "ID of the crew to dispatch, for example CREW-NY-04." },
+        "priority": { "type": "string", "enum": [ "Low", "Normal", "High", "Emergency" ], "x-ms-summary": "Priority" },
+        "notes": { "type": "string", "maxLength": 500, "x-ms-summary": "Notes", "description": "Optional instructions for the crew, up to 500 characters." }
+      }
+    },
+    "DispatchResult": {
+      "type": "object",
+      "properties": {
+        "dispatchId": { "type": "string", "x-ms-summary": "Dispatch ID" },
+        "status": { "type": "string", "x-ms-summary": "Status" },
+        "outageId": { "type": "string", "x-ms-summary": "Outage ID" },
+        "crewId": { "type": "string", "x-ms-summary": "Crew ID" },
+        "crewLead": { "type": "string", "x-ms-summary": "Crew lead" },
+        "priority": { "type": "string", "x-ms-summary": "Priority" },
+        "notes": { "type": "string", "x-ms-summary": "Notes" },
+        "municipality": { "type": "string", "x-ms-summary": "Municipality" },
+        "region": { "type": "string", "x-ms-summary": "Region" },
+        "estimatedArrivalMinutes": { "type": "integer", "x-ms-summary": "Estimated arrival (minutes)" },
+        "createdAt": { "type": "string", "format": "date-time", "x-ms-summary": "Created at" },
+        "createdBy": { "type": "string", "x-ms-summary": "Created by" },
+        "message": { "type": "string", "x-ms-summary": "Message" }
+      }
+    },
+    "Error": {
+      "type": "object",
+      "properties": {
+        "errorCode": { "type": "string", "x-ms-summary": "Error code" },
+        "message": { "type": "string", "x-ms-summary": "Error message" },
+        "field": { "type": "string", "x-nullable": true, "x-ms-summary": "Field" }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key"
+    }
+  },
+  "security": [
+    {
+      "api_key": []
+    }
+  ]
+}

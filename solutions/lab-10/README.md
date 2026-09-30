@@ -1,6 +1,6 @@
 # Lab 10 solution: HLE Front Door
 
-Finished source artifacts for [Lab 10](../../labs/lab-10-multi-agent/README.md). There is no exported solution zip in this folder. Build from these files; Lab 11 then adds the agents to the `HLEHarbourlineOps` solution and exports it.
+Finished source artifacts for [Lab 10](../../labs/lab-10-multi-agent/README.md). There is no exported solution zip in this folder. Build from these files. Lab 11 leaves these agents in `HLE-Dev` (moving a multi-agent set across environments is out of scope there); the export notes below are for when you do move it.
 
 | File | What it is | How to use it |
 |---|---|---|
@@ -18,7 +18,7 @@ HLE Front Door (parent, HLE-Dev, generative orchestration, Authenticate with Mic
   +-- HLE Field Ops Assistant connected agent (Labs 4, 5) knowledge: Dataverse hle_Asset, hle_WorkOrder, hle_Crew; tools: HLE Get Outage Status, HLE Dispatch Crew
 ```
 
-## Export notes for Lab 11
+## Export notes (beyond this course)
 
 - The child agent is part of `HLE Front Door` and moves with it.
 - Connected agents are separate components. Add `HLE HR Assistant` and `HLE Field Ops Assistant` (and Lab 5's flows and the `HLE Outage API` custom connector) to the same solution, or the parent will reference agents that do not exist in the target environment.

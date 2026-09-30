@@ -127,5 +127,5 @@ All four are also in [`caveats.csv`](caveats.csv).
 |---|---|
 | [`break-it.md`](break-it.md) | Reproduce and fix each caveat |
 | [`validate.md`](validate.md) | Run [`evals/lab-10-questions.csv`](../../evals/lab-10-questions.csv) |
-| [`cleanup.md`](cleanup.md) | Remove what this lab created, and what to keep for Lab 11 |
+| [`cleanup.md`](cleanup.md) | Remove what this lab created, and what to keep for Labs 11 and 12 |
 | [`../../solutions/lab-10/`](../../solutions/lab-10/README.md) | Instructions, descriptions, topic YAML |

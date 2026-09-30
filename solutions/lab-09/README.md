@@ -19,7 +19,7 @@ Finished source artifacts for [Lab 9](../../labs/lab-09-autonomous-triggers/READ
 3. Add the trigger (`trigger-design.md` section 1 and 2, payload from `trigger-payload-instructions.txt`).
 4. Publish, then drop files as in the lab README.
 
-## Export (optional, feeds Lab 11)
+## Export (optional)
 
 In Copilot Studio, agents and agent flows created in `HLE-Dev` can be added to a solution. Open https://make.powerapps.com > `HLE-Dev` > Solutions > `HLEHarbourlineOps` > Add existing > Agent (and the flow). Connection references are created for the Dataverse, Teams, Outlook and SharePoint connections. Export as unmanaged for source control or managed for `HLE-Test`. Lab 11 covers pipelines; this lab does not require an export. The trigger condition from `trigger-design.md` section 2 should travel with the flow; check it after import.
 

@@ -1,6 +1,6 @@
 # Lab 10: Clean up
 
-Lab 11 uses `HLE Front Door` (with its child and connected agents) as the solution it moves from `HLE-Dev` to `HLE-Test` and `HLE-Prod`. **If you are continuing to Lab 11, skip the "Remove" section** and only do "Restore".
+Lab 11 lists this lab as completed but does not move `HLE Front Door`; the multi-agent set stays in `HLE-Dev`. Lab 12 re-runs `evals/lab-10-questions.csv` against it. **If you are continuing to Lab 11 or Lab 12, skip the "Remove" section** and only do "Restore".
 
 ## Restore (always)
 
@@ -20,7 +20,7 @@ Lab 11 uses `HLE Front Door` (with its child and connected agents) as the soluti
 
 | Item | Why |
 |---|---|
-| `HLE HR Assistant` | Built in Lab 3; used by Lab 7 (connector attached), Lab 11 and Lab 12 |
+| `HLE HR Assistant` | Built in Lab 3; used by Lab 7 (connector attached) and Lab 12 |
 | `HLE Field Ops Assistant`, its `HLE Get Outage Status` and `HLE Dispatch Crew` flows, and the `HLE Outage API` custom connector | Built in Labs 4 and 5; used by Labs 11 and 12 |
 | Environment `HLE-Dev`, the Dataverse tables and the `HLEHarbourlineOps` solution | Used by Labs 11 and 12 |
 | Hub Finance library and HR-Policies files | Created by setup; used by Labs 2, 3, 12 |
@@ -28,4 +28,4 @@ Lab 11 uses `HLE Front Door` (with its child and connected agents) as the soluti
 ## Check
 
 - If you removed everything: Copilot Studio in `HLE-Dev` shows no `HLE Front Door`; `HLE HR Assistant` and `HLE Field Ops Assistant` still answer in their own test panes.
-- If you kept everything for Lab 11: `evals/lab-10-questions.csv` rows L10-Q01 to L10-Q10 pass again.
+- If you kept everything for Labs 11 and 12: `evals/lab-10-questions.csv` rows L10-Q01 to L10-Q10 pass again.
