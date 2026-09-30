@@ -1,0 +1,14 @@
+{
+  "_comment": "Column mapping for ConvertTo-CopilotStudioTestSet.ps1. The target column names below are an ASSUMPTION: the exact CSV columns that Copilot Studio agent evaluation accepts for test set import (CS-A14) could not be read from source for this course. Download the template from the evaluation page or check https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-intro and edit 'target' values to match exactly. 'source' names a column of the course eval CSV; 'value' sets a constant instead.",
+  "columns": [
+    { "target": "Question", "source": "prompt" },
+    { "target": "Expected response", "source": "expected_answer", "stopAt": [ "Diagnosis:", "Decision tree:", "If a Copilot Studio agent", "If this row", "If Marcus", "If the flow" ] }
+  ],
+  "optionalColumnsExamples": [
+    { "target": "Testing method", "value": "<a method name from the Learn page, for example a meaning or similarity comparison>" },
+    { "target": "Source", "source": "expected_source" }
+  ],
+  "includeBehaviors": [ "answer", "conflict_flagged", "no_answer", "refuse", "answer_without_citation" ],
+  "stripAgentPrefix": true,
+  "encoding": "utf8BOM"
+}

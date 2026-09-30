@@ -242,13 +242,13 @@ if ($Mode -eq 'Validate') {
             }
             else { Write-Warning "$($r.id): expected_source '$src' does not exist in the repo"; $problems++ }
         }
-        elseif ($src -notlike 'data/*' -and $src -notmatch '^(api:|dataverse:|connector:|admin:|none$)') {
+        elseif ($src -notlike 'data/*' -and $src -notmatch '^(api:|dataverse:|connector:|admin:|agent:|none$)') {
             Write-Warning "$($r.id): expected_source '$src' has an unknown form"; $problems++
         }
     }
     $evals | Group-Object lab | Sort-Object { [int]$_.Name } | ForEach-Object {
         [pscustomobject]@{ lab = $_.Name; rows = $_.Count; file = @($_.Group.file)[0] }
-    } | Format-Table -AutoSize
+    } | Format-Table -AutoSize | Out-String -Width 220 | Write-Host
     Write-Host "Eval rows: $($evals.Count). Problems: $problems"
     return
 }
@@ -337,7 +337,8 @@ if ($Mode -eq 'Record') {
 
 # ------------------------------------------------------------------ Report
 if (-not (Test-Path $ResultsCsv)) { throw "No results file at $ResultsCsv. Run -Mode Init, then -Mode Record." }
-$results = @(Import-Results | Where-Object { Test-Filter $_ })
+$allResults = Import-Results
+$results = @($allResults | Where-Object { Test-Filter $_ })
 $bad = @($results | Where-Object { $_.result -and $_.result -notin $ValidResults })
 if ($bad.Count) { Write-Warning "Unknown result values (treated as not run): $(($bad | ForEach-Object { "$($_.id)=$($_.result)" }) -join ', ')"; foreach ($b in $bad) { $b.result = '' } }
 
@@ -351,11 +352,11 @@ $byPersona = @(Get-Summary $results { $_.persona } 'persona')
 $byCaveat = @(Get-Summary $results { if ([string]::IsNullOrWhiteSpace($_.caveat_id)) { '(none)' } else { $_.caveat_id } } 'caveat_id')
 $failures = @($results | Where-Object result -eq 'fail' | Select-Object id, lab, persona, caveat_id, notes)
 
-Write-Host "`nOverall"; $overall | Format-Table -AutoSize | Out-Host
-Write-Host 'By lab'; $byLab | Format-Table -AutoSize | Out-Host
-Write-Host 'By persona'; $byPersona | Format-Table -AutoSize | Out-Host
-Write-Host 'By caveat_id'; $byCaveat | Format-Table -AutoSize | Out-Host
-if ($failures.Count) { Write-Host 'Failures (use labs/lab-12-eval-troubleshooting/troubleshooting-decision-tree.md)'; $failures | Format-Table -AutoSize | Out-Host }
+Write-Host "`nOverall"; $overall | Format-Table -AutoSize | Out-String -Width 220 | Write-Host
+Write-Host 'By lab'; $byLab | Format-Table -AutoSize | Out-String -Width 220 | Write-Host
+Write-Host 'By persona'; $byPersona | Format-Table -AutoSize | Out-String -Width 220 | Write-Host
+Write-Host 'By caveat_id'; $byCaveat | Format-Table -AutoSize | Out-String -Width 220 | Write-Host
+if ($failures.Count) { Write-Host 'Failures (use labs/lab-12-eval-troubleshooting/troubleshooting-decision-tree.md)'; $failures | Format-Table -AutoSize | Out-String -Width 220 | Write-Host }
 
 if ($ReportFolder) {
     New-Item -ItemType Directory -Path $ReportFolder -Force | Out-Null

@@ -7,7 +7,7 @@
 | Prerequisites | Setup scripts 00 to 03 ([`setup/README.md`](../../setup/README.md)); mock API running with `AUTH_MODE=apikey` behind a persistent dev tunnel ([`data/api/run-local.md`](../../data/api/run-local.md)); "Upload custom apps" enabled for your account (DA-17); a Microsoft 365 Copilot license for the learner (LIC-15). [Lab 5](../lab-05-studio-actions-flows/README.md) is recommended (same API and tunnel) but not required. |
 | Personas used | Learner (developer and tester). Sideloaded agents are available only to the account that provisioned them, so no other persona is used. |
 | Status | GA. Contains UNVERIFIED limits: DA-16 (response size in KB or MB). Contains CONFLICT: DA-10 vs DA-11 (API key in custom header). `worker_agents` (DA-06) is PREVIEW and not used. |
-| Limits referenced | [DA-01, DA-02, DA-03, DA-04, DA-05, DA-07, DA-08, DA-09, DA-10, DA-11, DA-12, DA-13, DA-14, DA-15, DA-16, DA-17, AB-09, LIC-15](../../reference/limits.md) |
+| Limits referenced | [DA-01, DA-02, DA-03, DA-04, DA-05, DA-06, DA-07, DA-08, DA-09, DA-10, DA-11, DA-12, DA-13, DA-14, DA-15, DA-16, DA-17, AB-09, LIC-15](../../reference/limits.md) |
 
 > **Check before you run.** Most rows used here are SRC (read from the Learn source repository on 2026-09-30). Re-check these on Microsoft Learn before class:
 > - **DA-16** (UNVERIFIED): no response size limit in KB or MB is documented. Observe and record; do not state a number.
@@ -94,7 +94,7 @@ Target file: [`appPackage/declarativeAgent.json`](../../solutions/lab-06/hle-out
 Target files: [`appPackage/ai-plugin.json`](../../solutions/lab-06/hle-outage-desk/appPackage/ai-plugin.json) and [`appPackage/adaptiveCards/getOutageStatus.json`](../../solutions/lab-06/hle-outage-desk/appPackage/adaptiveCards/getOutageStatus.json).
 
 1. `"schema_version": "v2.4"`, `"$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json"`, `name_for_human` `HLE Outage API` (characters beyond 20 may be ignored), `namespace` `hleoutage`.
-2. `functions`: one per operationId. For each, keep `description`, `states.reasoning.instructions` and `states.responding.instructions` from the solution file.
+2. `functions`: one per operationId (three functions; there is no hard limit, but quality may drop above 10 functions per plugin, DA-14). For each, keep `description`, `states.reasoning.instructions` and `states.responding.instructions` from the solution file.
 3. `getOutageStatus.capabilities.response_semantics`:
 
    ```json
