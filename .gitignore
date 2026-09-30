@@ -1,0 +1,8 @@
+# Generated at setup time
+data/sharepoint/Harbourline-Operations/Archive-Bulk/
+data/sharepoint/Harbourline-Hub/HR-Policies/Employee-Handbook-Full.docx
+node_modules/
+local.settings.json
+__pycache__/
+*.pyc
+.venv/
