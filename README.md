@@ -68,6 +68,24 @@ evals/       test prompts with expected answers and sources, one CSV per lab
 solutions/   finished artifacts per lab
 ```
 
+## Reference
+
+| Document | Use it for |
+|---|---|
+| [limits.md](reference/limits.md) | Every limit with source, date checked and verification tag |
+| [agent-types-matrix.md](reference/agent-types-matrix.md) | Choosing a build path |
+| [caveats-index.md](reference/caveats-index.md) | Every caveat, linked to the lab that triggers it |
+| [site-map.md](reference/site-map.md) | Sites, libraries, permissions and personas |
+| [glossary.md](reference/glossary.md) | Terms used in the course |
+| [final-assessment.md](reference/final-assessment.md) | 25 scenarios: pick the build path, predict the caveat |
+
+## Maintaining the course
+
+```bash
+python3 tools/build_caveats_index.py   # regenerate the caveats index from labs/*/caveats.csv
+python3 tools/self-check.py            # inventory, caveat links, eval sources, Markdown links, no-dash rule
+```
+
 ## Teardown
 
 ```powershell
