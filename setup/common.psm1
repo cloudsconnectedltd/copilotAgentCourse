@@ -261,6 +261,10 @@ function Connect-CoursePnP {
         [Parameter(Mandatory)][string]$ClientId,
         [string]$Tenant
     )
+    $guid = [guid]::Empty
+    if (-not [guid]::TryParse($ClientId, [ref]$guid)) {
+        throw "ClientId '$ClientId' is not a GUID. Use the Application (client) ID of your app registration (Entra admin center > App registrations > your app > Overview)."
+    }
     $key = $Url.TrimEnd('/').ToLowerInvariant()
     if ($script:PnPConnections.ContainsKey($key)) { return $script:PnPConnections[$key] }
     $mode = if (Test-CourseDeviceCode) { 'device code' } else { 'interactive browser' }
@@ -310,9 +314,10 @@ function Connect-CourseGraph {
     if (Test-CourseDeviceCode) { $params['UseDeviceCode'] = $true }
     $mode = if (Test-CourseDeviceCode) { 'device code' } else { 'interactive browser' }
     Write-Step "Connecting Microsoft Graph ($mode; scopes: $($Scopes -join ', '))" -Level Action
-    Connect-MgGraph @params | Out-Null
-    Set-CourseGraphTransport -Mg
+    Connect-MgGraph @params -ErrorAction Stop | Out-Null
     $ctx = Get-MgContext
+    if (-not $ctx) { throw 'Connect-MgGraph returned without a signed-in context.' }
+    Set-CourseGraphTransport -Mg
     Write-Step "Graph connected as $($ctx.Account)" -Level Ok
     return $ctx
 }

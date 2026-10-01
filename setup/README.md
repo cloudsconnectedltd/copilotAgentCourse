@@ -123,6 +123,8 @@ Connect-MgGraph -Scopes 'Organization.Read.All' -TenantId <tenant>.onmicrosoft.c
 Connect-PnPOnline -Url https://<tenant>-admin.sharepoint.com -ClientId <app id> -Tenant <tenant>.onmicrosoft.com -DeviceLogin
 ```
 
+If `Connect-MgGraph` fails with `Could not load file or assembly 'System.Text.Json, Version=10.0.0.0'`, your PowerShell is older than the Microsoft.Graph module expects. Upgrade PowerShell (macOS: `brew upgrade --cask powershell`; Windows: `winget upgrade Microsoft.PowerShell`), open a new `pwsh` window and check `$PSVersionTable.PSVersion`.
+
 ## What -Cleanup removes, and how it avoids other objects
 
 | Script | Removes | Safety check |
