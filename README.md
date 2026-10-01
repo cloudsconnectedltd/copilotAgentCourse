@@ -12,7 +12,7 @@ Microsoft 365 and SharePoint architects who already know SharePoint permissions,
 
 1. Read `PLAN.md` section 3 for licenses, environments, roles and tenant settings.
 2. Read `reference/limits.md`. Limits change often. Re-check any row tagged SNIP or UNVERIFIED on Microsoft Learn before the lab that uses it.
-3. Install PowerShell 7, PnP.PowerShell, Microsoft.Graph, ExchangeOnlineManagement, the Power Platform CLI (`pac`), Python 3.10+ (data generation only), Node.js 20+ and Azure Functions Core Tools v4, and VS Code with the Microsoft 365 Agents Toolkit extension.
+3. Install the tools for the setup scripts (see [Tools to install](#tools-to-install)). Install the rest before the lab that needs them.
 4. Run the setup scripts in order. Every script takes `-TenantUrl` and `-Prefix`, is safe to re-run, and supports `-Cleanup`.
 
 ```powershell
@@ -24,6 +24,60 @@ Microsoft 365 and SharePoint architects who already know SharePoint permissions,
 ```
 
 Lab 1 needs none of this. It runs with only a Microsoft 365 Copilot license and the files in `data/sharepoint/getting-started.zip`.
+
+## Tools to install
+
+Lab 1 needs only a browser and a Microsoft 365 Copilot license. Install the rest when you reach the step that needs it. `setup/00-prereqs-check.ps1` reports missing PowerShell modules.
+
+### Windows
+
+| Tool | Needed for | When | Install |
+|---|---|---|---|
+| PowerShell 7 | All setup scripts | Before setup | `winget install Microsoft.PowerShell` |
+| PnP.PowerShell | Scripts 00, 02, 03, 04 (SharePoint). Needs your own Entra app registration (see [setup/README.md](setup/README.md)) | Before setup | `Install-Module PnP.PowerShell -Scope CurrentUser` |
+| Microsoft.Graph | Scripts 00, 01; Lab 7 connector ingestion | Before setup | `Install-Module Microsoft.Graph -Scope CurrentUser` |
+| ExchangeOnlineManagement | Script 04 (sensitivity labels); Lab 11 audit search | Before script 04 | `Install-Module ExchangeOnlineManagement -Scope CurrentUser` |
+| Python 3.10+ and the libraries in [requirements.txt](requirements.txt) | Script 03 only: generates the 9 MB handbook and the 1,200 archive files | Before script 03 | `winget install Python.Python.3.12`, then `pip install -r requirements.txt` |
+| Azure CLI | Lab 4 Dataverse import (`az login`); optional Azure deploy of the mock API | Before Lab 4 | `winget install Microsoft.AzureCLI` |
+| Node.js 22 | Mock API (Labs 5, 6, 8, 10); Lab 8 agent code | Before Lab 5 | `winget install OpenJS.NodeJS.LTS` |
+| Azure Functions Core Tools v4 | Runs the mock API locally (`func start`) | Before Lab 5 | `npm install -g azure-functions-core-tools@4` |
+| Dev tunnels CLI | Lets Copilot and Copilot Studio reach your local API | Before Lab 5 | `winget install Microsoft.devtunnel` |
+| VS Code and Microsoft 365 Agents Toolkit | Labs 6 and 8 | Before Lab 6 | `winget install Microsoft.VisualStudioCode`, then install "Microsoft 365 Agents Toolkit" from the Extensions view |
+| Power Platform CLI (`pac`) | Lab 11 solution export and import | Before Lab 11 | "Power Platform Tools" VS Code extension, or see [Power Platform CLI](https://learn.microsoft.com/power-platform/developer/cli/introduction) |
+| SQL Server (Developer or Express) | Lab 7 SQL source | Optional: `ingest-tickets.ps1` can read `tickets.csv` | Skip unless you want the SQL path |
+| MicrosoftTeams module | Script 00 automatic check of the custom app upload policy | Optional: otherwise a manual check is printed | `Install-Module MicrosoftTeams -Scope CurrentUser` |
+
+### macOS
+
+Install [Homebrew](https://brew.sh) first. Run `Install-Module` commands inside `pwsh`.
+
+| Tool | Needed for | When | Install |
+|---|---|---|---|
+| PowerShell 7 | All setup scripts | Before setup | `brew install --cask powershell`, then start it with `pwsh` |
+| PnP.PowerShell | Scripts 00, 02, 03, 04 (SharePoint). Needs your own Entra app registration (see [setup/README.md](setup/README.md)) | Before setup | `Install-Module PnP.PowerShell -Scope CurrentUser` |
+| Microsoft.Graph | Scripts 00, 01; Lab 7 connector ingestion | Before setup | `Install-Module Microsoft.Graph -Scope CurrentUser` |
+| ExchangeOnlineManagement | Script 04 (sensitivity labels); Lab 11 audit search | Before script 04 | `Install-Module ExchangeOnlineManagement -Scope CurrentUser` |
+| Python 3.10+ and the libraries in [requirements.txt](requirements.txt) | Script 03 only: generates the 9 MB handbook and the 1,200 archive files | Before script 03 | `brew install python`, then use a virtual environment (below) |
+| Azure CLI | Lab 4 Dataverse import (`az login`); optional Azure deploy of the mock API | Before Lab 4 | `brew install azure-cli` |
+| Node.js 22 | Mock API (Labs 5, 6, 8, 10); Lab 8 agent code | Before Lab 5 | `brew install node@22`, then add it to your PATH as the brew output describes |
+| Azure Functions Core Tools v4 | Runs the mock API locally (`func start`) | Before Lab 5 | `brew tap azure/functions`, then `brew install azure-functions-core-tools@4` |
+| Dev tunnels CLI | Lets Copilot and Copilot Studio reach your local API | Before Lab 5 | `brew install --cask devtunnel` |
+| VS Code and Microsoft 365 Agents Toolkit | Labs 6 and 8 | Before Lab 6 | `brew install --cask visual-studio-code`, then install "Microsoft 365 Agents Toolkit" from the Extensions view |
+| Power Platform CLI (`pac`) | Lab 11 solution export and import | Before Lab 11 | "Power Platform Tools" VS Code extension, or see [Power Platform CLI](https://learn.microsoft.com/power-platform/developer/cli/introduction) |
+| SQL Server | Lab 7 SQL source | Optional: `ingest-tickets.ps1` can read `tickets.csv` | No native macOS version; use the CSV path |
+| MicrosoftTeams module | Script 00 automatic check of the custom app upload policy | Optional: otherwise a manual check is printed | `Install-Module MicrosoftTeams -Scope CurrentUser` |
+
+Homebrew's Python blocks system-wide `pip install`. From the repository root:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run `setup/03-upload-content.ps1` from a terminal where `.venv` is active, or pass `-PythonPath ./.venv/bin/python3`.
+
+The setup scripts are written for PowerShell 7 on any platform but have not yet been run against a live tenant on either operating system. Report errors from the first run so they can be fixed.
 
 ## Lab order
 
