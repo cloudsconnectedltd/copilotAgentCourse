@@ -232,6 +232,16 @@ function Get-CourseProp {
 # ---------------------------------------------------------------------------------------------
 # Connections
 # ---------------------------------------------------------------------------------------------
+function Test-CourseDeviceCode {
+    <#
+    .SYNOPSIS
+        True when $env:HLE_DEVICE_CODE is 1, which switches Graph and PnP sign-in to the device code flow.
+    .EXAMPLE
+        $env:HLE_DEVICE_CODE = '1'   # then run any setup script
+    #>
+    return ($env:HLE_DEVICE_CODE -eq '1')
+}
+
 function Connect-CoursePnP {
     <#
     .SYNOPSIS
@@ -254,8 +264,15 @@ function Connect-CoursePnP {
     $key = $Url.TrimEnd('/').ToLowerInvariant()
     if ($script:PnPConnections.ContainsKey($key)) { return $script:PnPConnections[$key] }
     Write-Step "Connecting PnP to $Url (interactive, client ID $ClientId)" -Level Action
-    $params = @{ Url = $Url; Interactive = $true; ClientId = $ClientId; ReturnConnection = $true }
+    $params = @{ Url = $Url; ClientId = $ClientId; ReturnConnection = $true }
     if ($Tenant) { $params['Tenant'] = $Tenant }
+    if (Test-CourseDeviceCode) {
+        # Device code sign-in: avoids the local browser redirect, which fails on some machines.
+        $params['DeviceLogin'] = $true
+    }
+    else {
+        $params['Interactive'] = $true
+    }
     $conn = Connect-PnPOnline @params
     $script:PnPConnections[$key] = $conn
     return $conn
@@ -289,6 +306,7 @@ function Connect-CourseGraph {
     $params = @{ Scopes = $Scopes; NoWelcome = $true }
     if ($TenantId) { $params['TenantId'] = $TenantId }
     if ($ClientId) { $params['ClientId'] = $ClientId }
+    if (Test-CourseDeviceCode) { $params['UseDeviceCode'] = $true }
     Write-Step "Connecting Microsoft Graph (scopes: $($Scopes -join ', '))" -Level Action
     Connect-MgGraph @params | Out-Null
     Set-CourseGraphTransport -Mg
@@ -643,7 +661,7 @@ function Write-CourseSummary {
     Write-Host ("Totals: " + ($counts -join ', '))
 }
 
-Export-ModuleMember -Function Write-Step, Assert-Module, Test-CourseModule, Get-CourseNames, Get-CourseRepoRoot, `
+Export-ModuleMember -Function Write-Step, Test-CourseDeviceCode, Assert-Module, Test-CourseModule, Get-CourseNames, Get-CourseRepoRoot, `
     Get-CourseProp, Connect-CoursePnP, Connect-CourseGraph, Set-CourseGraphTransport, Invoke-CourseGraph, `
     ConvertTo-CourseFilter, Resolve-CourseDomain, Get-CourseEntraGroup, Get-CourseEntraUser, Invoke-CourseAction, `
     Test-CourseTagged, Wait-CourseCondition, Get-CourseTenantSite, Confirm-CourseFolder, Get-CourseGroupClaim, `

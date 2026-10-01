@@ -105,6 +105,24 @@ The permissions are delegated, so the signed-in admin's roles still apply. You a
 
 `assignSensitivityLabel` is a metered (protected) Microsoft Graph API. To call it from your PnP app, the app must be set up for metered API billing against an Azure subscription (see "Metered APIs and services in Microsoft Graph" on Microsoft Learn). Without that, 04 prints manual steps to apply the label in the SharePoint UI, which works just as well for the lab.
 
+## Sign-in problems
+
+If the browser sign-in fails (for example `AADSTS90013: Invalid input received from the user`), switch Microsoft Graph and PnP to the device code flow and run the script again:
+
+```powershell
+$env:HLE_DEVICE_CODE = '1'
+./setup/00-prereqs-check.ps1 -TenantUrl https://<tenant>.sharepoint.com -Prefix HLE
+```
+
+The script prints a code and the URL https://microsoft.com/devicelogin. Open the URL in any browser, enter the code, and sign in with the admin account. Remove the variable with `Remove-Item Env:HLE_DEVICE_CODE` to return to browser sign-in. Device code sign-in can be blocked by a Conditional Access policy; if so, the sign-in page says so.
+
+To find which sign-in fails, test each one alone in a new `pwsh` window:
+
+```powershell
+Connect-MgGraph -Scopes 'Organization.Read.All' -TenantId <tenant>.onmicrosoft.com -UseDeviceCode
+Connect-PnPOnline -Url https://<tenant>-admin.sharepoint.com -ClientId <app id> -Tenant <tenant>.onmicrosoft.com -DeviceLogin
+```
+
 ## What -Cleanup removes, and how it avoids other objects
 
 | Script | Removes | Safety check |
