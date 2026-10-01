@@ -263,7 +263,8 @@ function Connect-CoursePnP {
     )
     $key = $Url.TrimEnd('/').ToLowerInvariant()
     if ($script:PnPConnections.ContainsKey($key)) { return $script:PnPConnections[$key] }
-    Write-Step "Connecting PnP to $Url (interactive, client ID $ClientId)" -Level Action
+    $mode = if (Test-CourseDeviceCode) { 'device code' } else { 'interactive browser' }
+    Write-Step "Connecting PnP to $Url ($mode, client ID $ClientId)" -Level Action
     $params = @{ Url = $Url; ClientId = $ClientId; ReturnConnection = $true }
     if ($Tenant) { $params['Tenant'] = $Tenant }
     if (Test-CourseDeviceCode) {
@@ -307,7 +308,8 @@ function Connect-CourseGraph {
     if ($TenantId) { $params['TenantId'] = $TenantId }
     if ($ClientId) { $params['ClientId'] = $ClientId }
     if (Test-CourseDeviceCode) { $params['UseDeviceCode'] = $true }
-    Write-Step "Connecting Microsoft Graph (scopes: $($Scopes -join ', '))" -Level Action
+    $mode = if (Test-CourseDeviceCode) { 'device code' } else { 'interactive browser' }
+    Write-Step "Connecting Microsoft Graph ($mode; scopes: $($Scopes -join ', '))" -Level Action
     Connect-MgGraph @params | Out-Null
     Set-CourseGraphTransport -Mg
     $ctx = Get-MgContext

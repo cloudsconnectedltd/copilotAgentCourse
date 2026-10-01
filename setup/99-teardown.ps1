@@ -68,7 +68,7 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
-Import-Module (Join-Path $PSScriptRoot 'common.psm1') -Verbose:$false
+Import-Module (Join-Path $PSScriptRoot 'common.psm1') -Force -Verbose:$false
 
 $names = Get-CourseNames -TenantUrl $TenantUrl -Prefix $Prefix
 Write-Step "99 Teardown for prefix $Prefix on $($names.RootUrl)" -Level Header

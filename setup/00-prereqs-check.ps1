@@ -65,7 +65,7 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
-Import-Module (Join-Path $PSScriptRoot 'common.psm1') -Verbose:$false
+Import-Module (Join-Path $PSScriptRoot 'common.psm1') -Force -Verbose:$false
 
 Write-Step '00 Prerequisites check (read-only)' -Level Header
 if ($Cleanup) {

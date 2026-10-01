@@ -66,7 +66,7 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
-Import-Module (Join-Path $PSScriptRoot 'common.psm1') -Verbose:$false
+Import-Module (Join-Path $PSScriptRoot 'common.psm1') -Force -Verbose:$false
 
 Write-Step "02 Provision SharePoint sites$(if ($Cleanup) { ' (CLEANUP)' })" -Level Header
 if (-not $ClientId) { throw 'Pass -ClientId (your Entra app for PnP.PowerShell) or set $env:ENTRAID_APP_ID. See setup/README.md.' }

@@ -89,7 +89,7 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
-Import-Module (Join-Path $PSScriptRoot 'common.psm1') -Verbose:$false
+Import-Module (Join-Path $PSScriptRoot 'common.psm1') -Force -Verbose:$false
 
 Write-Step "01 Provision users and groups$(if ($Cleanup) { ' (CLEANUP)' })" -Level Header
 Assert-Module -Name 'Microsoft.Graph.Authentication', 'Microsoft.Graph.Users', 'Microsoft.Graph.Users.Actions',
