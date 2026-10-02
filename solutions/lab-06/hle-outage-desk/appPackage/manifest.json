@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.24/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.24",
+  "version": "1.0.0",
+  "id": "${{TEAMS_APP_ID}}",
+  "developer": {
+    "name": "Harbourline Energy Co. (course)",
+    "websiteUrl": "https://www.harbourline.example",
+    "privacyUrl": "https://www.harbourline.example/privacy",
+    "termsOfUseUrl": "https://www.harbourline.example/terms"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "HLE Outage Desk${{APP_NAME_SUFFIX}}",
+    "full": "HLE Outage Desk for Harbourline Energy Co."
+  },
+  "description": {
+    "short": "Outage status, crew dispatch and outage procedures for Harbourline staff.",
+    "full": "HLE Outage Desk answers questions about current Harbourline Energy Co. power outages, estimated restoration times and customer accounts from the outage operations API, dispatches field crews after confirmation, and answers questions from the HR-Policies and Procedures libraries. All data in this course is fictional."
+  },
+  "accentColor": "#0B5CAD",
+  "validDomains": [],
+  "copilotAgents": {
+    "declarativeAgents": [
+      {
+        "id": "declarativeAgent",
+        "file": "declarativeAgent.json"
+      }
+    ]
+  }
+}

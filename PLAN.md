@@ -112,7 +112,7 @@ Several caveats in the brief behave differently from what the brief assumed. The
 | `HLE-Prod` | Production, managed environment | Lab 11 pipeline target and host |
 | Default | Default | Lab 11 environment routing discussion |
 
-Note: Developer environments cannot be assigned security groups and are owner-only (SRC).
+Note: Developer environments cannot be assigned security groups and are owner-only (SRC). Because of this, persona tests cannot run in `HLE-Dev`. Lab 3 creates a temporary sandbox, `HLE-Lab3-Sandbox`, for persona testing and deletes it in cleanup; Lab 11 publishes from `HLE-Prod` for persona access (caveats C-04-g and C-11-g).
 
 ### Admin roles
 
@@ -177,7 +177,7 @@ Mirrored locally as `data/sharepoint/<site>/<library>/`.
 
 | File | Rows | Notes |
 |---|---|---|
-| `schema.md` + `solution/` (unmanaged solution XML) | n/a | Tables `hle_Asset`, `hle_WorkOrder`, `hle_Crew`; WorkOrder N:1 Asset, WorkOrder N:1 Crew; choice column `hle_Priority` (Emergency, High, Routine, Deferred) |
+| `schema.md` (the import script creates unmanaged solution `HLEHarbourlineOps`) | n/a | Tables `hle_Asset`, `hle_WorkOrder`, `hle_Crew`; WorkOrder N:1 Asset, WorkOrder N:1 Crew; choice column `hle_Priority` (Emergency, High, Routine, Deferred) |
 | `Assets.csv` | 1,200 | Asset ID, type, region, site, install year, condition score |
 | `WorkOrders.csv` | 3,000 | Linked to assets and crews, status, priority, dates |
 | `Crews.csv` | 60 | Crew name, region, lead, certifications |
@@ -239,6 +239,7 @@ setup/01-provision-users.ps1
 setup/02-provision-sites.ps1
 setup/03-upload-content.ps1
 setup/04-apply-labels.ps1
+setup/05-add-learner.ps1     # optional: access for additional learners
 setup/99-teardown.ps1
 setup/common.psm1                     # shared params, logging, idempotency helpers
 tools/generate-data/                  # generators for bulk and large files (see Q7)
@@ -248,7 +249,7 @@ data/sharepoint/Harbourline-Hub/Finance/* (5)
 data/sharepoint/Harbourline-Hub/Vendors.csv
 data/sharepoint/Harbourline-Operations/Procedures/* (7)
 data/sharepoint/Harbourline-Operations/Archive-Bulk/  (generated at setup)
-data/dataverse/{schema.md,Assets.csv,WorkOrders.csv,Crews.csv,import-dataverse.ps1,solution/}
+data/dataverse/{schema.md,Assets.csv,WorkOrders.csv,Crews.csv,import-dataverse.ps1}   # import script creates solution HLEHarbourlineOps in the environment
 data/connector/{tickets-seed.sql,tickets.csv,schema-design.md,ingest-tickets.ps1}
 data/api/{src/,openapi.yaml,openapi-broken.yaml,run-local.md,deploy-azure.ps1}
 labs/lab-01-first-agent/{README.md,validate.md,cleanup.md,facilitator-notes.md,recap.md}
@@ -271,7 +272,25 @@ Lab 1 has no `break-it.md`, per the brief.
 
 ---
 
-## 5. Open questions
+## 5. Open questions and decisions
+
+Decisions recorded 2026-09-30 (plan approved):
+
+| Q | Decision |
+|---|---|
+| Q1 | learn.microsoft.com enabled by the user, but still blocked from the build container. Facts remain tagged in `reference/limits.md`; re-check SNIP and UNVERIFIED rows. |
+| Q2 | Guest address is a script parameter (`-GuestEmail`). |
+| Q3 | 9 MB DOCX generated at setup; lab toggles tenant graph grounding off to show the 7 MB exclusion. |
+| Q4 | Node.js (Azure Functions v4). |
+| Q5 | `pac` CLI, Dataverse Web API and ExchangeOnlineManagement are allowed in addition to PnP.PowerShell and Microsoft.Graph. |
+| Q6 | Hands-on pipelines where managed environments exist; the lab includes a documented fallback path. |
+| Q7 | Curated documents committed; bulk and oversized files generated at setup with Python. |
+| Q8 | Repository root is the course root. |
+| Q9 | Classic Copilot Studio experience, with notes where the new experience differs. |
+| Q10 | Every persona that needs a Copilot license has one. Copilot Studio billing via capacity pack or pay-as-you-go; labs work with either. |
+| Q11 | Microsoft 365 Agents SDK as the main path; Copilot Studio with a Foundry model as an optional extension. |
+
+Original questions:
 
 **Q1. Verification gap.** learn.microsoft.com is blocked from this environment. Options: (a) accept SRC-tagged facts and flag SNIP/UNVERIFIED items in `limits.md` for you to confirm; (b) you allow learn.microsoft.com in the environment's network policy so I can re-verify in Phase 2. I recommend (b), with (a) as fallback.
 

@@ -1,0 +1,8 @@
+{
+  "name": "GraphConnectors",
+  "connections": [
+    {
+      "connection_id": "hleTickets"
+    }
+  ]
+}

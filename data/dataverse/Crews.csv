@@ -1,0 +1,61 @@
+CrewCode,CrewName,Region,BaseDepot,Specialty,CrewLead,CrewSize,Certifications
+CREW-NY-01,Syracuse Overhead Lines Crew A,New York,Syracuse Operations Center,Overhead lines,Tyrone Castellano,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 15 kV; Live-Line Glove 27.6 kV; Pole Top Rescue
+CREW-NY-02,Syracuse Underground Cable Crew A,New York,Syracuse Operations Center,Underground cable,Megan Iverson,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Vault Entry; Confined Space Entry; Underground Cable Splicing
+CREW-NY-03,Rochester Substation Crew A,New York,Rochester Depot,Substation,Sal Okonkwo,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Substation Entry
+CREW-NY-04,Rochester Underground Cable Crew A,New York,Rochester Depot,Underground cable,Brianna Holt,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Vault Entry; Underground Cable Splicing
+CREW-NY-05,Utica Overhead Lines Crew A,New York,Utica Depot,Overhead lines,Wes Kaminski,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 15 kV
+CREW-NY-06,Syracuse Protection and Control Crew A,New York,Syracuse Operations Center,Protection and control,Yuki Tanaka,7,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Substation Entry
+CREW-NY-07,Rochester Storm Response Crew A,New York,Rochester Depot,Storm response,Grace Mbeki,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue
+CREW-NY-08,Utica Overhead Lines Crew B,New York,Utica Depot,Overhead lines,Declan Walsh,3,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 15 kV
+CREW-NY-09,Watertown Underground Cable Crew A,New York,Watertown Depot,Underground cable,Fatima Haddad,8,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Underground Cable Splicing
+CREW-NY-10,Syracuse Substation Crew A,New York,Syracuse Operations Center,Substation,Ivan Kovac,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Transformer Oil Sampling
+CREW-NY-11,Rochester Vegetation Management Crew A,New York,Rochester Depot,Vegetation management,Leah Goldstein,3,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Chainsaw Safety; Aerial Lift Operation
+CREW-NY-12,Utica Protection and Control Crew A,New York,Utica Depot,Protection and control,Samir Farouk,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Relay Testing
+CREW-NY-13,Watertown Storm Response Crew A,New York,Watertown Depot,Storm response,Colleen Brady,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue
+CREW-NY-14,Syracuse Overhead Lines Crew B,New York,Syracuse Operations Center,Overhead lines,Derek Nakamura,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue; Live-Line Glove 15 kV
+CREW-NY-15,Rochester Underground Cable Crew B,New York,Rochester Depot,Underground cable,Ines Carvalho,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Confined Space Entry
+CREW-NY-16,Utica Substation Crew A,New York,Utica Depot,Substation,Travis Holloway,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Transformer Oil Sampling; Substation Entry; SF6 Gas Handling
+CREW-NY-17,Watertown Vegetation Management Crew A,New York,Watertown Depot,Vegetation management,Anika Sorensen,3,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Aerial Lift Operation; Vegetation Line Clearance
+CREW-NY-18,Syracuse Protection and Control Crew B,New York,Syracuse Operations Center,Protection and control,Gabriel Dufresne,8,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Substation Entry; Relay Testing
+CREW-OH-01,Toledo Substation Crew A,Ohio,Toledo Operations Center,Substation,Dale Rutherford,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; SF6 Gas Handling
+CREW-OH-02,Toledo Underground Cable Crew A,Ohio,Toledo Operations Center,Underground cable,Keisha Monroe,3,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Confined Space Entry; Vault Entry; Underground Cable Splicing
+CREW-OH-03,Lima Substation Crew A,Ohio,Lima Depot,Substation,Evan Szabo,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Transformer Oil Sampling; Substation Entry
+CREW-OH-04,Mansfield Vegetation Management Crew A,Ohio,Mansfield Depot,Vegetation management,Lorena Pruitt,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Aerial Lift Operation; Chainsaw Safety; Vegetation Line Clearance
+CREW-OH-05,Findlay Overhead Lines Crew A,Ohio,Findlay Depot,Overhead lines,Garrett Ames,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 27.6 kV
+CREW-OH-06,Ashtabula Overhead Lines Crew A,Ohio,Ashtabula Depot,Overhead lines,Hannah Voss,7,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 15 kV; Pole Top Rescue
+CREW-OH-07,Toledo Storm Response Crew A,Ohio,Toledo Operations Center,Storm response,Tessa Whitaker,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Barehand 69 kV; Pole Top Rescue
+CREW-OH-08,Lima Underground Cable Crew A,Ohio,Lima Depot,Underground cable,Victor Almeida,3,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Vault Entry; Confined Space Entry
+CREW-OH-09,Mansfield Substation Crew A,Ohio,Mansfield Depot,Substation,Rhiannon Price,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Transformer Oil Sampling
+CREW-OH-10,Findlay Vegetation Management Crew A,Ohio,Findlay Depot,Vegetation management,Jonah Feldman,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Vegetation Line Clearance
+CREW-OH-11,Ashtabula Protection and Control Crew A,Ohio,Ashtabula Depot,Protection and control,Priscilla Ng,7,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Substation Entry; Arc Flash Level 4
+CREW-OH-12,Toledo Storm Response Crew B,Ohio,Toledo Operations Center,Storm response,Kieran Doyle,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue; Live-Line Glove 15 kV; Traffic Control
+CREW-OH-13,Lima Overhead Lines Crew A,Ohio,Lima Depot,Overhead lines,Selena Ortiz,7,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue; Live-Line Glove 15 kV
+CREW-OH-14,Mansfield Underground Cable Crew A,Ohio,Mansfield Depot,Underground cable,Wes Hartley,7,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Underground Cable Splicing; Confined Space Entry; Vault Entry
+CREW-OH-15,Findlay Substation Crew A,Ohio,Findlay Depot,Substation,Lina Novak,8,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Substation Entry
+CREW-OH-16,Ashtabula Vegetation Management Crew A,Ohio,Ashtabula Depot,Vegetation management,Andre Baptiste,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Aerial Lift Operation; Vegetation Line Clearance
+CREW-OH-17,Toledo Protection and Control Crew A,Ohio,Toledo Operations Center,Protection and control,Maeve Gallagher,7,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Substation Entry
+CREW-OH-18,Lima Storm Response Crew A,Ohio,Lima Depot,Storm response,Rohan Iyer,3,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue
+CREW-ON-01,Kingston Overhead Lines Crew A,Ontario,Kingston Service Centre,Overhead lines,Marcus Bellamy,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 27.6 kV
+CREW-ON-02,Kingston Underground Cable Crew A,Ontario,Kingston Service Centre,Underground cable,Janelle Fortier,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Vault Entry; Underground Cable Splicing
+CREW-ON-03,Kingston Overhead Lines Crew B,Ontario,Kingston Service Centre,Overhead lines,Devon Achebe,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue
+CREW-ON-04,Belleville Vegetation Management Crew A,Ontario,Belleville Depot,Vegetation management,Shauna Leclerc,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Vegetation Line Clearance; Aerial Lift Operation
+CREW-ON-05,Peterborough Overhead Lines Crew A,Ontario,Peterborough Depot,Overhead lines,Pieter Van Dyk,3,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 27.6 kV
+CREW-ON-06,Oshawa Overhead Lines Crew A,Ontario,Oshawa Service Centre,Overhead lines,Rena Kaplan,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue
+CREW-ON-07,Barrie Underground Cable Crew A,Ontario,Barrie Depot,Underground cable,Graham Oduya,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Vault Entry
+CREW-ON-08,Brockville Substation Crew A,Ontario,Brockville Depot,Substation,Colette Aubin,3,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Transformer Oil Sampling; SF6 Gas Handling; Substation Entry
+CREW-ON-09,Kingston Overhead Lines Crew C,Ontario,Kingston Service Centre,Overhead lines,Dana Kowalski,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 27.6 kV
+CREW-ON-10,Belleville Underground Cable Crew A,Ontario,Belleville Depot,Underground cable,Raj Mehta,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Confined Space Entry
+CREW-ON-11,Kingston Storm Response Crew A,Ontario,Kingston Service Centre,Storm response,Luc Tremblay,7,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 27.6 kV; Pole Top Rescue; Traffic Control
+CREW-ON-12,Oshawa Vegetation Management Crew A,Ontario,Oshawa Service Centre,Vegetation management,Sarah O'Donnell,8,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Aerial Lift Operation; Vegetation Line Clearance
+CREW-ON-13,Barrie Protection and Control Crew A,Ontario,Barrie Depot,Protection and control,Kwame Asante,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Substation Entry
+CREW-ON-14,Brockville Storm Response Crew A,Ontario,Brockville Depot,Storm response,Mei Lin Zhou,3,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 27.6 kV
+CREW-ON-15,Kingston Overhead Lines Crew D,Ontario,Kingston Service Centre,Overhead lines,Tyler Brandt,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue
+CREW-ON-16,Belleville Underground Cable Crew B,Ontario,Belleville Depot,Underground cable,Aisha Rahman,8,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Underground Cable Splicing
+CREW-ON-17,Peterborough Substation Crew A,Ontario,Peterborough Depot,Substation,Dana Kowalski,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; SF6 Gas Handling
+CREW-ON-18,Oshawa Vegetation Management Crew B,Ontario,Oshawa Service Centre,Vegetation management,Jenna McAllister,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Chainsaw Safety
+CREW-ON-19,Barrie Overhead Lines Crew A,Ontario,Barrie Depot,Overhead lines,Owen Fraser,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 27.6 kV; Pole Top Rescue
+CREW-ON-20,Brockville Storm Response Crew B,Ontario,Brockville Depot,Storm response,Harpreet Gill,7,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Live-Line Glove 27.6 kV
+CREW-ON-21,Kingston Overhead Lines Crew E,Ontario,Kingston Service Centre,Overhead lines,Marisol Vega,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Pole Top Rescue; Live-Line Glove 27.6 kV
+CREW-ON-22,Belleville Underground Cable Crew C,Ontario,Belleville Depot,Underground cable,Ben Achterberg,5,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Vault Entry; Underground Cable Splicing
+CREW-ON-23,Peterborough Substation Crew B,Ontario,Peterborough Depot,Substation,Nadia Petrova,4,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; SF6 Gas Handling; Transformer Oil Sampling
+CREW-ON-24,Oshawa Vegetation Management Crew C,Ontario,Oshawa Service Centre,Vegetation management,Curtis Blackwood,6,Lockout/Tagout (LOTO); First Aid and CPR; Bucket Truck Rescue; Vegetation Line Clearance

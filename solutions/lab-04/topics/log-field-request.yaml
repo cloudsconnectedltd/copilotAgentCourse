@@ -1,0 +1,129 @@
+# Topic: Log Field Request (HLE Field Ops Assistant, Lab 4)
+#
+# Copilot Studio topic code view YAML. NOT VALIDATED: the Copilot Studio documentation was not
+# available when this course was built, and this file was not pasted into a live tenant.
+# Build the topic once in the canvas, open "... > Open code editor", and compare the structure
+# before pasting. Keep what your code view shows.
+#
+# Placeholders to replace:
+#   ENTITY_HLE_ASSET_ID  -> name code view shows for the custom regex entity "HLE Asset ID"
+#   ENTITY_HLE_PRIORITY  -> name code view shows for the custom closed list entity "HLE Priority"
+#
+# The priority checks below use Text(Topic.Priority) = "Emergency". Copilot Studio may
+# generate a different expression for closed list values when you build the condition in the
+# canvas; if so, use the generated expression.
+#
+# Lab 5 adds a call to the "HLE Dispatch Crew" agent flow before the final message.
+kind: AdaptiveDialog
+modelDescription: Log a new field request for one specific asset, with a priority and a description of the problem. Use only when the user wants to raise or report new work, not for questions about existing work orders.
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    displayName: Log Field Request
+    triggerQueries:
+      - log a field request
+      - raise a field request
+      - report a problem with an asset
+      - request crew work on an asset
+      - new field request
+
+  actions:
+    # Slot filling: skipped if the asset ID was already in the user's message.
+    - kind: Question
+      id: askAssetId
+      alwaysPrompt: false
+      variable: init:Topic.AssetId
+      prompt: Which asset? Give the asset ID, for example TX-ON-10423.
+      entity: ENTITY_HLE_ASSET_ID
+
+    # Slot filling: "urgent" in the first message fills Emergency through the entity synonyms.
+    - kind: Question
+      id: askPriority
+      alwaysPrompt: false
+      variable: init:Topic.Priority
+      prompt: What priority is this? Emergency, High, Routine or Deferred.
+      entity: ENTITY_HLE_PRIORITY
+
+    - kind: Question
+      id: askDescription
+      alwaysPrompt: true
+      variable: init:Topic.Description
+      prompt: Describe the problem in one or two sentences.
+      entity: StringPrebuiltEntity
+
+    - kind: SetVariable
+      id: setLastAssetId
+      variable: Global.LastAssetId
+      value: =Topic.AssetId
+
+    - kind: ConditionGroup
+      id: emergencyCheck
+      conditions:
+        - id: isEmergency
+          condition: =Text(Topic.Priority) = "Emergency"
+          actions:
+            - kind: SendActivity
+              id: safetyMessage
+              activity: If anyone is in danger or wires are down, call the Distribution System Operator now. Do not wait for this request.
+
+    # Adaptive card in formula (Power Fx) form so it can show variables.
+    # The static design is in ../cards/field-request-summary.json.
+    # Adaptive Card version 1.5 is assumed; check Learn for the version Copilot Studio renders.
+    - kind: SendActivity
+      id: sendSummaryCard
+      activity:
+        attachments:
+          - kind: AdaptiveCardTemplate
+            cardContent: |-
+              ={
+                type: "AdaptiveCard",
+                '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+                version: "1.5",
+                body: [
+                  {
+                    type: "TextBlock",
+                    text: "Harbourline field request",
+                    weight: "Bolder",
+                    size: "Medium",
+                    wrap: true
+                  },
+                  {
+                    type: "TextBlock",
+                    text: "Draft only. Not yet sent to dispatch.",
+                    isSubtle: true,
+                    spacing: "None",
+                    wrap: true
+                  },
+                  {
+                    type: "FactSet",
+                    facts: [
+                      { title: "Asset", value: Topic.AssetId },
+                      { title: "Priority", value: Text(Topic.Priority) },
+                      {
+                        title: "Target",
+                        value: Switch(
+                          Text(Topic.Priority),
+                          "Emergency", "Due next day",
+                          "High", "Due within 7 days",
+                          "Routine", "Due within 30 days",
+                          "Deferred", "Due within 120 days",
+                          ""
+                        )
+                      },
+                      { title: "Problem", value: Topic.Description }
+                    ]
+                  },
+                  {
+                    type: "TextBlock",
+                    text: "Priority targets: Emergency next day, High 7 days, Routine 30 days, Deferred 120 days.",
+                    size: "Small",
+                    isSubtle: true,
+                    wrap: true
+                  }
+                ]
+              }
+
+    - kind: SendActivity
+      id: notSavedYet
+      activity: "Your request is summarised above. It is not saved yet: in Lab 5 this topic calls the HLE Dispatch Crew flow."

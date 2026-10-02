@@ -1,0 +1,50 @@
+TEMPLATE A: Critical escalation
+Subject: CRITICAL field report <ReportId>: <AssetId>
+Importance: High
+
+A Critical field report was received and an Emergency work order was created.
+
+Report ID: <ReportId>
+Report date: <ReportDate>
+Region: <Region>
+Asset: <AssetId>, <asset site from Dataverse>, condition score <score>, installed <install year>
+Crew: <CrewId>, <CrewLeader>
+Work order: <WorkOrderNumber>, Emergency, Emergency Restoration, due <DueDate>
+
+Issue:
+<Issue>
+
+Recommended action:
+<RecommendedAction>
+
+Crew notes:
+<CrewNotes>
+
+Source file: <file name>, submitted by <created by>
+This message was sent by HLE Field Report Triage, an autonomous agent that runs with its maker's credentials.
+
+
+TEMPLATE B: Asset ID needed
+Subject: Asset ID needed: <ReportId>
+Importance: Normal
+
+A field report arrived without a usable asset ID, so no work order was created.
+Please confirm the asset ID from GIS and create the work order by hand, or reply with the asset ID.
+
+Report ID: <ReportId>
+Report date: <ReportDate>
+Region: <Region>
+Crew: <CrewId>, <CrewLeader>
+Asset description: <AssetDescription>
+Issue: <Issue>
+Severity: <Severity>
+Recommended action: <RecommendedAction>
+
+Source file: <file name>, submitted by <created by>
+
+
+EXPECTED FILLED VALUES (for checking, from data/answer-keys/operations.md section 8 and data/answer-keys/dataverse-connector.md P-DV-03)
+
+Ashtabula (Template A): FR-OHN-2026-0918, 2026-10-03, Northeast Ohio, TX-OH-20871 at Ashtabula Depot, condition score 44, installed 1992, CREW-OH-06 Hannah Voss, WO-FR-OHN-2026-0918 due 2026-10-04. Issue mentions primary bushing flashover, fire damage, pole cracked and leaning, 64 customers out. Recommended action mentions immediate replacement of pole and transformer, permit LOTO-OHN-2026-00388, about 40 L oil to soil. Crew notes mention ETR 18:30.
+
+Watertown (Template B): FR-NYN-2026-0442, 2026-10-02, New York North Country, CREW-NY-13 Colleen Brady, pole-mount transformer on the east side of Arsenal Street near the Coffeen Street intersection, Watertown NY, asset tag missing, Severity Low.

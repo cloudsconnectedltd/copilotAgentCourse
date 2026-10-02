@@ -1,0 +1,1201 @@
+AssetNumber,AssetType,Region,SiteCode,SiteName,City,Manufacturer,Rating,InstallYear,ConditionScore,OperationalStatus,LastInspectionDate
+BRK-NY-20167,Breaker,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Switchgear,"15 kV 1,200 A vacuum",2013,81,In Service,2023-06-05
+BRK-NY-20279,Breaker,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Switchgear,"69 kV 2,000 A SF6",1993,73,In Service,2026-09-01
+BRK-NY-20978,Breaker,New York,WTNDP,Watertown Depot,Watertown,Ridgeline Power Systems,"69 kV 2,000 A SF6",1967,40,In Service,2025-01-24
+BRK-NY-21021,Breaker,New York,WTNDP,Watertown Depot,Watertown,Ridgeline Power Systems,"15 kV 1,200 A vacuum",2006,75,In Service,2024-08-16
+BRK-NY-21527,Breaker,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,"15 kV 1,200 A vacuum",2006,81,In Service,2023-12-31
+BRK-NY-23587,Breaker,New York,WTNDP,Watertown Depot,Watertown,Lakeport Switchgear,"27.6 kV 2,000 A vacuum",2013,91,In Service,2025-08-09
+BRK-NY-23874,Breaker,New York,UTIDP,Utica Depot,Utica,Lakeport Switchgear,"69 kV 2,000 A SF6",2024,100,In Service,2025-08-09
+BRK-NY-23956,Breaker,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Switchgear,"69 kV 2,000 A SF6",1979,41,In Service,2026-04-28
+BRK-NY-24470,Breaker,New York,ROCDP,Rochester Depot,Rochester,Ridgeline Power Systems,"15 kV 1,200 A vacuum",2023,91,In Service,2025-07-26
+BRK-NY-24480,Breaker,New York,MOHSS,Mohawk Valley Substation,Utica,Ridgeline Power Systems,"69 kV 2,000 A SF6",2003,63,In Service,2025-07-18
+BRK-NY-24739,Breaker,New York,MOHSS,Mohawk Valley Substation,Utica,Ashby and Moore Electric,"44 kV 1,200 A SF6",2001,80,In Service,2026-03-23
+BRK-NY-24793,Breaker,New York,MOHSS,Mohawk Valley Substation,Utica,Ashby and Moore Electric,"27.6 kV 2,000 A vacuum",1979,33,In Service,2026-04-18
+BRK-NY-24834,Breaker,New York,MOHSS,Mohawk Valley Substation,Utica,Ridgeline Power Systems,"27.6 kV 2,000 A vacuum",2022,99,In Service,2026-04-21
+BRK-NY-25418,Breaker,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,"44 kV 1,200 A SF6",1971,52,In Service,2024-07-07
+BRK-NY-25975,Breaker,New York,WTNDP,Watertown Depot,Watertown,Lakeport Switchgear,"44 kV 1,200 A SF6",1966,26,In Service,2025-07-14
+BRK-NY-27193,Breaker,New York,UTIDP,Utica Depot,Utica,Lakeport Switchgear,"44 kV 1,200 A SF6",1985,52,In Service,2023-08-16
+BRK-NY-27672,Breaker,New York,WTNDP,Watertown Depot,Watertown,Ridgeline Power Systems,"69 kV 2,000 A SF6",1964,25,In Service,2023-10-25
+BRK-NY-28046,Breaker,New York,WTNDP,Watertown Depot,Watertown,Lakeport Switchgear,"69 kV 2,000 A SF6",1984,62,In Service,2025-11-16
+BRK-NY-28356,Breaker,New York,MOHSS,Mohawk Valley Substation,Utica,Ridgeline Power Systems,"44 kV 1,200 A SF6",2007,67,Out of Service,2025-02-05
+BRK-NY-28730,Breaker,New York,ROCDP,Rochester Depot,Rochester,Lakeport Switchgear,"69 kV 2,000 A SF6",2003,71,In Service,2024-03-04
+BRK-NY-28775,Breaker,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,"27.6 kV 2,000 A vacuum",1972,43,In Service,2023-12-25
+BRK-NY-28837,Breaker,New York,UTIDP,Utica Depot,Utica,Ridgeline Power Systems,"69 kV 2,000 A SF6",2002,61,In Service,2023-09-27
+BRK-NY-29201,Breaker,New York,UTIDP,Utica Depot,Utica,Ashby and Moore Electric,"44 kV 1,200 A SF6",1993,52,In Service,2025-12-07
+BRK-NY-29231,Breaker,New York,ROCDP,Rochester Depot,Rochester,Lakeport Switchgear,"27.6 kV 2,000 A vacuum",2008,68,In Service,2026-08-15
+BRK-NY-29723,Breaker,New York,ROCDP,Rochester Depot,Rochester,Ashby and Moore Electric,"44 kV 1,200 A SF6",1999,74,In Service,2023-06-24
+BRK-OH-30071,Breaker,Ohio,MAUSS,Maumee Bay Substation,Toledo,Lakeport Switchgear,"69 kV 2,000 A SF6",1965,17,In Service,2023-02-06
+BRK-OH-30598,Breaker,Ohio,LIMDP,Lima Depot,Lima,Ashby and Moore Electric,"44 kV 1,200 A SF6",1991,77,In Service,2025-08-05
+BRK-OH-31021,Breaker,Ohio,MAUSS,Maumee Bay Substation,Toledo,Lakeport Switchgear,"15 kV 1,200 A vacuum",2023,100,In Service,2024-08-08
+BRK-OH-32112,Breaker,Ohio,LIMDP,Lima Depot,Lima,Lakeport Switchgear,"69 kV 2,000 A SF6",2021,76,In Service,2024-12-05
+BRK-OH-32266,Breaker,Ohio,MAUSS,Maumee Bay Substation,Toledo,Ashby and Moore Electric,"27.6 kV 2,000 A vacuum",2010,69,In Service,2025-05-09
+BRK-OH-32341,Breaker,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ashby and Moore Electric,"44 kV 1,200 A SF6",2002,63,In Service,2023-04-09
+BRK-OH-34104,Breaker,Ohio,LIMDP,Lima Depot,Lima,Ridgeline Power Systems,"44 kV 1,200 A SF6",2017,90,In Service,2026-09-12
+BRK-OH-34511,Breaker,Ohio,LIMDP,Lima Depot,Lima,Lakeport Switchgear,"15 kV 1,200 A vacuum",1978,60,In Service,2025-02-01
+BRK-OH-34577,Breaker,Ohio,MAUSS,Maumee Bay Substation,Toledo,Ashby and Moore Electric,"15 kV 1,200 A vacuum",1983,49,In Service,2023-01-11
+BRK-OH-35437,Breaker,Ohio,TOLOC,Toledo Operations Center,Toledo,Ridgeline Power Systems,"44 kV 1,200 A SF6",1978,38,In Service,2023-04-01
+BRK-OH-35444,Breaker,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ridgeline Power Systems,"44 kV 1,200 A SF6",1986,49,In Service,2026-07-10
+BRK-OH-35622,Breaker,Ohio,MAUSS,Maumee Bay Substation,Toledo,Lakeport Switchgear,"69 kV 2,000 A SF6",1964,47,In Service,2025-07-20
+BRK-OH-36008,Breaker,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ridgeline Power Systems,"15 kV 1,200 A vacuum",1992,63,In Service,2023-11-26
+BRK-OH-36164,Breaker,Ohio,LIMDP,Lima Depot,Lima,Lakeport Switchgear,"27.6 kV 2,000 A vacuum",1982,40,In Service,2023-09-25
+BRK-OH-36563,Breaker,Ohio,FNDDP,Findlay Depot,Findlay,Ridgeline Power Systems,"15 kV 1,200 A vacuum",1983,48,In Service,2025-12-14
+BRK-OH-36705,Breaker,Ohio,FNDDP,Findlay Depot,Findlay,Ridgeline Power Systems,"69 kV 2,000 A SF6",1984,51,In Service,2025-11-20
+BRK-OH-36856,Breaker,Ohio,FNDDP,Findlay Depot,Findlay,Ashby and Moore Electric,"69 kV 2,000 A SF6",2019,96,In Service,2025-08-07
+BRK-OH-37273,Breaker,Ohio,MANDP,Mansfield Depot,Mansfield,Ashby and Moore Electric,"69 kV 2,000 A SF6",2020,85,In Service,2023-06-01
+BRK-OH-38681,Breaker,Ohio,LIMDP,Lima Depot,Lima,Lakeport Switchgear,"69 kV 2,000 A SF6",1962,34,In Service,2026-06-02
+BRK-OH-39126,Breaker,Ohio,LIMDP,Lima Depot,Lima,Lakeport Switchgear,"15 kV 1,200 A vacuum",1963,51,In Service,2026-03-11
+BRK-ON-10283,Breaker,Ontario,BELDP,Belleville Depot,Belleville,Ridgeline Power Systems,"69 kV 2,000 A SF6",1980,40,In Service,2024-04-23
+BRK-ON-10472,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,"69 kV 2,000 A SF6",1983,45,In Service,2025-11-12
+BRK-ON-10611,Breaker,Ontario,BELDP,Belleville Depot,Belleville,Ashby and Moore Electric,"27.6 kV 2,000 A vacuum",1996,68,In Service,2026-05-17
+BRK-ON-10710,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Ridgeline Power Systems,"27.6 kV 2,000 A vacuum",2010,78,In Service,2025-05-26
+BRK-ON-10797,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,"69 kV 2,000 A SF6",1974,47,In Service,2023-04-04
+BRK-ON-11028,Breaker,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Switchgear,"15 kV 1,200 A vacuum",1963,9,In Service,2026-05-03
+BRK-ON-11167,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Switchgear,"69 kV 2,000 A SF6",1993,64,In Service,2026-04-27
+BRK-ON-11239,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,"27.6 kV 2,000 A vacuum",2007,77,In Service,2024-01-08
+BRK-ON-11418,Breaker,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,"69 kV 2,000 A SF6",2004,74,In Service,2024-11-10
+BRK-ON-11477,Breaker,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ridgeline Power Systems,"27.6 kV 2,000 A vacuum",2009,85,In Service,2024-09-16
+BRK-ON-11711,Breaker,Ontario,BELDP,Belleville Depot,Belleville,Ashby and Moore Electric,"15 kV 1,200 A vacuum",1983,43,Retired,2026-08-23
+BRK-ON-11921,Breaker,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Switchgear,"27.6 kV 2,000 A vacuum",1971,28,In Service,2026-09-14
+BRK-ON-12210,Breaker,Ontario,BARDP,Barrie Depot,Barrie,Ridgeline Power Systems,"69 kV 2,000 A SF6",2021,83,In Service,2026-02-10
+BRK-ON-12514,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,"69 kV 2,000 A SF6",2005,84,In Service,2023-02-26
+BRK-ON-12540,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,"69 kV 2,000 A SF6",2020,90,In Service,2025-11-10
+BRK-ON-13265,Breaker,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Switchgear,"15 kV 1,200 A vacuum",2025,82,In Service,2025-06-25
+BRK-ON-13497,Breaker,Ontario,BARDP,Barrie Depot,Barrie,Ridgeline Power Systems,"27.6 kV 2,000 A vacuum",1983,48,In Service,2024-04-20
+BRK-ON-13554,Breaker,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,"15 kV 1,200 A vacuum",1970,42,In Service,2023-05-12
+BRK-ON-14365,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,"15 kV 1,200 A vacuum",1976,34,Retired,2025-06-13
+BRK-ON-14543,Breaker,Ontario,BELDP,Belleville Depot,Belleville,Ashby and Moore Electric,"44 kV 1,200 A SF6",2016,81,Out of Service,2025-03-15
+BRK-ON-14803,Breaker,Ontario,BELDP,Belleville Depot,Belleville,Ridgeline Power Systems,"44 kV 1,200 A SF6",1986,58,In Service,2023-05-03
+BRK-ON-15118,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Switchgear,"69 kV 2,000 A SF6",2011,77,In Service,2025-01-27
+BRK-ON-15241,Breaker,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ridgeline Power Systems,"44 kV 1,200 A SF6",1967,46,In Service,2023-07-05
+BRK-ON-15260,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,"69 kV 2,000 A SF6",1963,43,In Service,2025-02-01
+BRK-ON-15263,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,"44 kV 1,200 A SF6",2001,68,In Service,2023-08-08
+BRK-ON-15325,Breaker,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,"15 kV 1,200 A vacuum",1998,57,In Service,2024-05-05
+BRK-ON-15383,Breaker,Ontario,BARDP,Barrie Depot,Barrie,Ridgeline Power Systems,"27.6 kV 2,000 A vacuum",1974,57,In Service,2024-10-30
+BRK-ON-15421,Breaker,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,"15 kV 1,200 A vacuum",2013,81,In Service,2023-01-27
+BRK-ON-15870,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,"15 kV 1,200 A vacuum",2011,90,In Service,2023-05-05
+BRK-ON-16273,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,"44 kV 1,200 A SF6",1983,64,In Service,2025-05-19
+BRK-ON-16402,Breaker,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Switchgear,"69 kV 2,000 A SF6",1985,50,In Service,2024-03-16
+BRK-ON-16424,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Ridgeline Power Systems,"44 kV 1,200 A SF6",2014,85,In Service,2024-06-15
+BRK-ON-16847,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,"69 kV 2,000 A SF6",1994,65,In Service,2023-03-29
+BRK-ON-16973,Breaker,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Switchgear,"27.6 kV 2,000 A vacuum",1965,30,In Service,2024-10-12
+BRK-ON-17280,Breaker,Ontario,BARDP,Barrie Depot,Barrie,Ridgeline Power Systems,"27.6 kV 2,000 A vacuum",2010,83,In Service,2024-12-16
+BRK-ON-17392,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Ridgeline Power Systems,"69 kV 2,000 A SF6",2019,95,In Service,2024-04-10
+BRK-ON-17539,Breaker,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ridgeline Power Systems,"44 kV 1,200 A SF6",2003,89,In Service,2024-06-13
+BRK-ON-17751,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,"15 kV 1,200 A vacuum",1989,80,In Service,2023-07-14
+BRK-ON-18012,Breaker,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,"15 kV 1,200 A vacuum",2018,85,In Service,2024-10-09
+BRK-ON-18017,Breaker,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ridgeline Power Systems,"44 kV 1,200 A SF6",2012,91,In Service,2024-09-18
+BRK-ON-18060,Breaker,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ridgeline Power Systems,"27.6 kV 2,000 A vacuum",2021,84,Retired,2023-10-06
+BRK-ON-18311,Breaker,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Switchgear,"69 kV 2,000 A SF6",2018,79,In Service,2026-01-15
+BRK-ON-18508,Breaker,Ontario,BELDP,Belleville Depot,Belleville,Ridgeline Power Systems,"27.6 kV 2,000 A vacuum",2023,99,In Service,2026-07-14
+BRK-ON-18527,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,"44 kV 1,200 A SF6",1987,33,In Service,2026-05-16
+BRK-ON-18673,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Switchgear,"27.6 kV 2,000 A vacuum",1978,45,In Service,2023-01-15
+BRK-ON-18700,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,"69 kV 2,000 A SF6",2017,100,In Service,2025-04-29
+BRK-ON-19103,Breaker,Ontario,BRKDP,Brockville Depot,Brockville,Ridgeline Power Systems,"44 kV 1,200 A SF6",2020,94,In Service,2026-02-11
+BRK-ON-19161,Breaker,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Switchgear,"44 kV 1,200 A SF6",2004,78,In Service,2025-05-05
+BRK-ON-19537,Breaker,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,"15 kV 1,200 A vacuum",1976,48,In Service,2026-06-07
+BRK-ON-19805,Breaker,Ontario,BARDP,Barrie Depot,Barrie,Ridgeline Power Systems,"44 kV 1,200 A SF6",1962,28,In Service,2024-07-12
+POLE-NY-20017,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,40 ft Class 3 wood,1958,41,In Service,2026-07-10
+POLE-NY-20036,Pole,New York,UTIDP,Utica Depot,Utica,Corvane Composite Structures,40 ft Class 3 wood,1997,73,In Service,2023-10-21
+POLE-NY-20083,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,50 ft Class 1 wood,1962,38,In Service,2024-07-27
+POLE-NY-20101,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,35 ft Class 4 wood,1975,37,In Service,2024-06-11
+POLE-NY-20162,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Timberline Utility Poles,40 ft Class 3 wood,1988,70,In Service,2026-07-12
+POLE-NY-20229,Pole,New York,UTIDP,Utica Depot,Utica,Corvane Composite Structures,35 ft Class 4 wood,1997,56,In Service,2026-03-18
+POLE-NY-20232,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,40 ft Class 3 wood,1994,59,In Service,2024-01-07
+POLE-NY-20379,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,45 ft Class 2 wood,1985,53,In Service,2024-12-06
+POLE-NY-20402,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,50 ft Class 1 wood,1969,37,Out of Service,2025-10-05
+POLE-NY-20469,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,45 ft Class 2 wood,1969,49,In Service,2023-09-28
+POLE-NY-20472,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,35 ft Class 4 wood,1996,74,In Service,2025-03-08
+POLE-NY-20596,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,35 ft Class 4 wood,2023,89,In Service,2023-12-28
+POLE-NY-20632,Pole,New York,ROCDP,Rochester Depot,Rochester,Timberline Utility Poles,45 ft composite,1970,19,In Service,2024-10-22
+POLE-NY-20700,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Timberline Utility Poles,45 ft composite,1991,52,In Service,2024-03-16
+POLE-NY-20769,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,50 ft Class 1 wood,1986,59,In Service,2026-03-21
+POLE-NY-20846,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,35 ft Class 4 wood,1978,45,In Service,2026-06-20
+POLE-NY-21029,Pole,New York,UTIDP,Utica Depot,Utica,Great Lakes Pole Co.,50 ft Class 1 wood,1986,43,In Service,2024-12-16
+POLE-NY-21057,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,45 ft Class 2 wood,2014,100,In Service,2023-01-20
+POLE-NY-21143,Pole,New York,ROCDP,Rochester Depot,Rochester,Corvane Composite Structures,40 ft Class 3 wood,2005,71,In Service,2025-10-14
+POLE-NY-21156,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Great Lakes Pole Co.,45 ft Class 2 wood,1975,32,In Service,2023-10-22
+POLE-NY-21426,Pole,New York,WTNDP,Watertown Depot,Watertown,Timberline Utility Poles,40 ft Class 3 wood,2010,77,In Service,2026-07-07
+POLE-NY-21524,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Timberline Utility Poles,35 ft Class 4 wood,1997,76,In Service,2026-07-03
+POLE-NY-21557,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,40 ft Class 3 wood,2018,89,In Service,2024-09-30
+POLE-NY-21606,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,35 ft Class 4 wood,2023,92,In Service,2024-02-25
+POLE-NY-21721,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,35 ft Class 4 wood,1972,41,In Service,2024-02-09
+POLE-NY-21781,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,50 ft Class 1 wood,1975,40,In Service,2026-05-20
+POLE-NY-21811,Pole,New York,UTIDP,Utica Depot,Utica,Corvane Composite Structures,50 ft Class 1 wood,2016,96,In Service,2023-11-25
+POLE-NY-21860,Pole,New York,ROCDP,Rochester Depot,Rochester,Timberline Utility Poles,35 ft Class 4 wood,1980,53,In Service,2026-08-06
+POLE-NY-21960,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,45 ft Class 2 wood,1974,39,In Service,2026-01-27
+POLE-NY-22017,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Great Lakes Pole Co.,45 ft composite,2011,79,In Service,2025-10-07
+POLE-NY-22052,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Great Lakes Pole Co.,40 ft Class 3 wood,1977,21,In Service,2023-03-06
+POLE-NY-22067,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,45 ft Class 2 wood,1988,71,In Service,2025-07-08
+POLE-NY-22194,Pole,New York,ROCDP,Rochester Depot,Rochester,Timberline Utility Poles,45 ft composite,1970,38,In Service,2025-12-27
+POLE-NY-22196,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,40 ft Class 3 wood,1978,43,In Service,2023-08-15
+POLE-NY-22257,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,35 ft Class 4 wood,1995,53,In Service,2023-02-25
+POLE-NY-22447,Pole,New York,UTIDP,Utica Depot,Utica,Corvane Composite Structures,45 ft Class 2 wood,2009,88,In Service,2026-07-20
+POLE-NY-22470,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Timberline Utility Poles,50 ft Class 1 wood,1983,70,In Service,2023-12-23
+POLE-NY-22504,Pole,New York,ROCDP,Rochester Depot,Rochester,Corvane Composite Structures,35 ft Class 4 wood,2001,81,Retired,2023-01-16
+POLE-NY-22574,Pole,New York,ROCDP,Rochester Depot,Rochester,Corvane Composite Structures,45 ft composite,1969,51,In Service,2025-01-18
+POLE-NY-22599,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Timberline Utility Poles,50 ft Class 1 wood,1968,51,In Service,2023-08-04
+POLE-NY-22777,Pole,New York,WTNDP,Watertown Depot,Watertown,Timberline Utility Poles,40 ft Class 3 wood,2022,94,In Service,2024-02-28
+POLE-NY-22821,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Great Lakes Pole Co.,35 ft Class 4 wood,1970,31,Out of Service,2024-08-28
+POLE-NY-22826,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,45 ft Class 2 wood,1995,30,In Service,2023-06-01
+POLE-NY-22831,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,45 ft Class 2 wood,1962,24,In Service,2025-03-25
+POLE-NY-22930,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,45 ft Class 2 wood,1966,28,In Service,2026-09-08
+POLE-NY-22969,Pole,New York,ROCDP,Rochester Depot,Rochester,Timberline Utility Poles,35 ft Class 4 wood,2023,94,In Service,2026-07-21
+POLE-NY-23085,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,45 ft Class 2 wood,2010,88,In Service,2023-06-07
+POLE-NY-23147,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,45 ft Class 2 wood,2022,93,In Service,2023-11-22
+POLE-NY-23451,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,50 ft Class 1 wood,1994,55,In Service,2024-03-15
+POLE-NY-23484,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,45 ft composite,2016,86,In Service,2024-03-13
+POLE-NY-23686,Pole,New York,UTIDP,Utica Depot,Utica,Great Lakes Pole Co.,40 ft Class 3 wood,2025,100,Retired,2024-03-12
+POLE-NY-23742,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,45 ft Class 2 wood,1980,40,In Service,2024-06-04
+POLE-NY-23746,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,50 ft Class 1 wood,2018,83,In Service,2025-12-14
+POLE-NY-23754,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,35 ft Class 4 wood,2014,100,In Service,2024-12-05
+POLE-NY-23772,Pole,New York,WTNDP,Watertown Depot,Watertown,Timberline Utility Poles,50 ft Class 1 wood,2009,78,Out of Service,2023-08-18
+POLE-NY-23873,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Great Lakes Pole Co.,45 ft composite,2007,54,In Service,2023-08-31
+POLE-NY-23947,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,35 ft Class 4 wood,1980,49,In Service,2023-12-29
+POLE-NY-24152,Pole,New York,ROCDP,Rochester Depot,Rochester,Corvane Composite Structures,40 ft Class 3 wood,2004,76,In Service,2026-06-18
+POLE-NY-24175,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Timberline Utility Poles,50 ft Class 1 wood,2005,76,In Service,2025-08-18
+POLE-NY-24253,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,35 ft Class 4 wood,1991,68,In Service,2026-08-06
+POLE-NY-24306,Pole,New York,ROCDP,Rochester Depot,Rochester,Timberline Utility Poles,45 ft Class 2 wood,2011,70,In Service,2024-05-02
+POLE-NY-24380,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,40 ft Class 3 wood,1991,50,In Service,2023-06-07
+POLE-NY-24472,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Great Lakes Pole Co.,35 ft Class 4 wood,1963,31,In Service,2025-07-07
+POLE-NY-24520,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,40 ft Class 3 wood,2010,87,In Service,2026-04-29
+POLE-NY-24554,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Great Lakes Pole Co.,40 ft Class 3 wood,1962,5,In Service,2025-07-13
+POLE-NY-24569,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,50 ft Class 1 wood,2009,82,In Service,2026-05-15
+POLE-NY-24630,Pole,New York,ROCDP,Rochester Depot,Rochester,Corvane Composite Structures,45 ft composite,2000,65,In Service,2026-06-16
+POLE-NY-24751,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,40 ft Class 3 wood,1962,51,In Service,2025-08-19
+POLE-NY-24791,Pole,New York,ROCDP,Rochester Depot,Rochester,Corvane Composite Structures,50 ft Class 1 wood,1989,51,In Service,2025-11-10
+POLE-NY-24930,Pole,New York,UTIDP,Utica Depot,Utica,Corvane Composite Structures,45 ft Class 2 wood,1987,60,In Service,2024-02-06
+POLE-NY-24971,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,40 ft Class 3 wood,1974,37,In Service,2025-09-14
+POLE-NY-25121,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,45 ft composite,1991,66,In Service,2025-10-24
+POLE-NY-25183,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Great Lakes Pole Co.,40 ft Class 3 wood,2005,70,In Service,2025-10-10
+POLE-NY-25347,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,45 ft composite,1998,63,In Service,2026-07-11
+POLE-NY-25412,Pole,New York,ROCDP,Rochester Depot,Rochester,Corvane Composite Structures,45 ft Class 2 wood,1973,41,In Service,2025-01-24
+POLE-NY-25708,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,35 ft Class 4 wood,2002,76,In Service,2023-07-07
+POLE-NY-25740,Pole,New York,UTIDP,Utica Depot,Utica,Great Lakes Pole Co.,35 ft Class 4 wood,2000,60,In Service,2023-03-21
+POLE-NY-25821,Pole,New York,UTIDP,Utica Depot,Utica,Great Lakes Pole Co.,45 ft composite,1970,40,In Service,2023-05-11
+POLE-NY-25865,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,50 ft Class 1 wood,1974,31,In Service,2023-04-25
+POLE-NY-25901,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,35 ft Class 4 wood,2000,72,Out of Service,2026-07-21
+POLE-NY-25908,Pole,New York,WTNDP,Watertown Depot,Watertown,Timberline Utility Poles,50 ft Class 1 wood,1977,54,In Service,2023-05-21
+POLE-NY-25959,Pole,New York,ROCDP,Rochester Depot,Rochester,Corvane Composite Structures,40 ft Class 3 wood,1993,53,Retired,2025-01-22
+POLE-NY-26017,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,50 ft Class 1 wood,1978,53,In Service,2025-10-23
+POLE-NY-26103,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Great Lakes Pole Co.,50 ft Class 1 wood,2004,70,In Service,2023-07-30
+POLE-NY-26246,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,40 ft Class 3 wood,1988,73,In Service,2025-04-10
+POLE-NY-26254,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,40 ft Class 3 wood,2019,83,In Service,2024-10-03
+POLE-NY-26365,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,50 ft Class 1 wood,1989,47,In Service,2024-04-24
+POLE-NY-26395,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,45 ft composite,1964,35,In Service,2023-09-18
+POLE-NY-26481,Pole,New York,ROCDP,Rochester Depot,Rochester,Timberline Utility Poles,40 ft Class 3 wood,1990,37,In Service,2026-06-15
+POLE-NY-26615,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,40 ft Class 3 wood,1989,52,In Service,2025-12-12
+POLE-NY-26672,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Timberline Utility Poles,35 ft Class 4 wood,2009,73,In Service,2024-03-17
+POLE-NY-26677,Pole,New York,UTIDP,Utica Depot,Utica,Great Lakes Pole Co.,45 ft composite,1993,55,In Service,2025-04-08
+POLE-NY-26687,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Great Lakes Pole Co.,35 ft Class 4 wood,2017,98,In Service,2026-04-02
+POLE-NY-26710,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,45 ft Class 2 wood,2025,83,In Service,2023-10-18
+POLE-NY-26830,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,45 ft Class 2 wood,2005,88,Retired,2026-09-08
+POLE-NY-26881,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,45 ft composite,2017,82,In Service,2024-10-26
+POLE-NY-26995,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Great Lakes Pole Co.,45 ft composite,1980,57,In Service,2025-07-17
+POLE-NY-27003,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,45 ft Class 2 wood,2020,100,In Service,2025-08-19
+POLE-NY-27045,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Great Lakes Pole Co.,35 ft Class 4 wood,1980,56,In Service,2025-07-23
+POLE-NY-27073,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Great Lakes Pole Co.,35 ft Class 4 wood,1997,68,In Service,2024-01-12
+POLE-NY-27166,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Timberline Utility Poles,50 ft Class 1 wood,1980,60,In Service,2023-09-16
+POLE-NY-27266,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,45 ft composite,2021,84,In Service,2026-05-08
+POLE-NY-27375,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Great Lakes Pole Co.,35 ft Class 4 wood,1969,38,In Service,2026-07-01
+POLE-NY-27405,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Timberline Utility Poles,35 ft Class 4 wood,2007,81,In Service,2025-10-21
+POLE-NY-27420,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Great Lakes Pole Co.,45 ft Class 2 wood,2024,100,Retired,2023-05-07
+POLE-NY-27435,Pole,New York,WTNDP,Watertown Depot,Watertown,Timberline Utility Poles,35 ft Class 4 wood,1979,72,In Service,2024-12-08
+POLE-NY-27489,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,45 ft composite,1997,61,In Service,2024-05-02
+POLE-NY-27566,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,45 ft Class 2 wood,2018,100,In Service,2025-05-10
+POLE-NY-27587,Pole,New York,UTIDP,Utica Depot,Utica,Great Lakes Pole Co.,45 ft Class 2 wood,2019,73,In Service,2024-07-30
+POLE-NY-27618,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,50 ft Class 1 wood,2015,94,Out of Service,2025-08-12
+POLE-NY-27633,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,50 ft Class 1 wood,2016,83,In Service,2025-12-26
+POLE-NY-27668,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Timberline Utility Poles,40 ft Class 3 wood,2018,94,In Service,2026-02-17
+POLE-NY-27787,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,50 ft Class 1 wood,2024,100,In Service,2023-07-14
+POLE-NY-27887,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,45 ft Class 2 wood,1995,64,In Service,2023-04-09
+POLE-NY-27891,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,35 ft Class 4 wood,2007,63,In Service,2024-01-23
+POLE-NY-27930,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,45 ft Class 2 wood,1975,38,In Service,2024-10-20
+POLE-NY-27951,Pole,New York,WTNDP,Watertown Depot,Watertown,Great Lakes Pole Co.,45 ft Class 2 wood,1969,24,In Service,2025-06-17
+POLE-NY-28007,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,40 ft Class 3 wood,2005,76,In Service,2023-10-28
+POLE-NY-28105,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,45 ft Class 2 wood,1966,38,In Service,2025-10-19
+POLE-NY-28160,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Great Lakes Pole Co.,45 ft Class 2 wood,1981,35,In Service,2023-08-03
+POLE-NY-28161,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,50 ft Class 1 wood,2000,71,In Service,2023-03-03
+POLE-NY-28597,Pole,New York,UTIDP,Utica Depot,Utica,Corvane Composite Structures,50 ft Class 1 wood,2022,96,In Service,2024-03-05
+POLE-NY-28616,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,35 ft Class 4 wood,1984,47,In Service,2024-12-20
+POLE-NY-28740,Pole,New York,UTIDP,Utica Depot,Utica,Great Lakes Pole Co.,45 ft Class 2 wood,2014,85,In Service,2023-03-16
+POLE-NY-29063,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,50 ft Class 1 wood,1962,26,In Service,2026-03-18
+POLE-NY-29147,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Timberline Utility Poles,50 ft Class 1 wood,1998,68,Out of Service,2026-03-19
+POLE-NY-29190,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Great Lakes Pole Co.,45 ft Class 2 wood,1971,34,In Service,2026-02-09
+POLE-NY-29202,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,35 ft Class 4 wood,2025,100,In Service,2025-11-07
+POLE-NY-29332,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,50 ft Class 1 wood,1998,76,In Service,2024-04-01
+POLE-NY-29334,Pole,New York,ROCDP,Rochester Depot,Rochester,Corvane Composite Structures,45 ft composite,1968,23,In Service,2024-01-25
+POLE-NY-29351,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Great Lakes Pole Co.,40 ft Class 3 wood,2011,76,In Service,2026-06-26
+POLE-NY-29430,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Timberline Utility Poles,45 ft Class 2 wood,1978,35,In Service,2024-05-24
+POLE-NY-29460,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,50 ft Class 1 wood,2024,83,In Service,2026-03-25
+POLE-NY-29634,Pole,New York,ROCDP,Rochester Depot,Rochester,Timberline Utility Poles,35 ft Class 4 wood,2011,99,In Service,2023-09-29
+POLE-NY-29663,Pole,New York,WTNDP,Watertown Depot,Watertown,Corvane Composite Structures,35 ft Class 4 wood,1999,78,In Service,2025-07-05
+POLE-NY-29798,Pole,New York,ROCDP,Rochester Depot,Rochester,Great Lakes Pole Co.,40 ft Class 3 wood,2022,95,In Service,2024-06-14
+POLE-NY-29801,Pole,New York,UTIDP,Utica Depot,Utica,Great Lakes Pole Co.,40 ft Class 3 wood,2022,100,In Service,2025-06-12
+POLE-NY-29855,Pole,New York,UTIDP,Utica Depot,Utica,Timberline Utility Poles,50 ft Class 1 wood,1988,49,In Service,2024-09-15
+POLE-NY-29944,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Timberline Utility Poles,50 ft Class 1 wood,2025,91,In Service,2023-11-01
+POLE-NY-29959,Pole,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Composite Structures,35 ft Class 4 wood,1981,55,In Service,2026-08-14
+POLE-NY-29969,Pole,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Composite Structures,40 ft Class 3 wood,1963,22,In Service,2025-08-29
+POLE-OH-30210,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Timberline Utility Poles,35 ft Class 4 wood,2019,100,In Service,2025-02-20
+POLE-OH-30314,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Great Lakes Pole Co.,50 ft Class 1 wood,2022,100,In Service,2025-09-23
+POLE-OH-30496,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Timberline Utility Poles,45 ft Class 2 wood,1992,78,In Service,2024-06-09
+POLE-OH-30662,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,50 ft Class 1 wood,1997,86,In Service,2024-10-23
+POLE-OH-30663,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Timberline Utility Poles,50 ft Class 1 wood,2006,79,In Service,2024-06-10
+POLE-OH-30905,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Timberline Utility Poles,40 ft Class 3 wood,1964,24,In Service,2025-02-05
+POLE-OH-30914,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Timberline Utility Poles,45 ft composite,2018,83,In Service,2024-12-14
+POLE-OH-31220,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Corvane Composite Structures,45 ft composite,2010,72,Retired,2025-09-06
+POLE-OH-31260,Pole,Ohio,LIMDP,Lima Depot,Lima,Timberline Utility Poles,45 ft Class 2 wood,2024,100,In Service,2026-01-22
+POLE-OH-31371,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Corvane Composite Structures,45 ft Class 2 wood,2023,100,Out of Service,2023-03-23
+POLE-OH-31517,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Timberline Utility Poles,45 ft composite,1983,40,In Service,2024-11-04
+POLE-OH-31520,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Timberline Utility Poles,35 ft Class 4 wood,1987,66,In Service,2025-04-30
+POLE-OH-31645,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,45 ft composite,1984,40,In Service,2026-08-25
+POLE-OH-31670,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,45 ft composite,1994,68,In Service,2023-01-08
+POLE-OH-31690,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,45 ft composite,1998,78,In Service,2023-07-20
+POLE-OH-31738,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,45 ft Class 2 wood,1987,47,Retired,2023-09-11
+POLE-OH-31750,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Composite Structures,35 ft Class 4 wood,1969,27,In Service,2024-09-22
+POLE-OH-31764,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Great Lakes Pole Co.,35 ft Class 4 wood,1979,52,In Service,2025-04-08
+POLE-OH-31874,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Composite Structures,35 ft Class 4 wood,1971,33,In Service,2023-09-08
+POLE-OH-32005,Pole,Ohio,LIMDP,Lima Depot,Lima,Great Lakes Pole Co.,45 ft composite,2018,93,In Service,2024-02-06
+POLE-OH-32144,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Composite Structures,35 ft Class 4 wood,1977,50,In Service,2023-06-30
+POLE-OH-32155,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,35 ft Class 4 wood,1976,41,In Service,2023-03-26
+POLE-OH-32267,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Great Lakes Pole Co.,50 ft Class 1 wood,2012,80,In Service,2023-02-07
+POLE-OH-32477,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Composite Structures,45 ft composite,1975,26,In Service,2026-01-16
+POLE-OH-32596,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Timberline Utility Poles,45 ft composite,2005,74,In Service,2025-10-22
+POLE-OH-32606,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Composite Structures,45 ft Class 2 wood,2021,84,In Service,2025-06-01
+POLE-OH-32701,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Composite Structures,40 ft Class 3 wood,2008,79,In Service,2024-10-06
+POLE-OH-32829,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Timberline Utility Poles,50 ft Class 1 wood,1967,13,In Service,2024-06-11
+POLE-OH-32930,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Timberline Utility Poles,45 ft composite,1982,58,In Service,2023-12-18
+POLE-OH-32942,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,35 ft Class 4 wood,1988,62,In Service,2023-07-30
+POLE-OH-32943,Pole,Ohio,LIMDP,Lima Depot,Lima,Corvane Composite Structures,50 ft Class 1 wood,1991,55,In Service,2023-11-29
+POLE-OH-33117,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Composite Structures,50 ft Class 1 wood,1991,69,In Service,2025-02-18
+POLE-OH-33154,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Composite Structures,50 ft Class 1 wood,1995,58,In Service,2026-02-16
+POLE-OH-33215,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Composite Structures,35 ft Class 4 wood,1989,59,In Service,2025-06-15
+POLE-OH-33276,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Corvane Composite Structures,45 ft composite,1966,15,In Service,2025-05-18
+POLE-OH-33597,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Composite Structures,50 ft Class 1 wood,2013,89,In Service,2024-02-27
+POLE-OH-33777,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,40 ft Class 3 wood,1993,61,In Service,2024-12-17
+POLE-OH-34052,Pole,Ohio,LIMDP,Lima Depot,Lima,Corvane Composite Structures,40 ft Class 3 wood,1987,54,In Service,2025-11-08
+POLE-OH-34087,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Timberline Utility Poles,35 ft Class 4 wood,2001,64,In Service,2023-06-15
+POLE-OH-34809,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,35 ft Class 4 wood,1992,46,In Service,2026-03-25
+POLE-OH-34945,Pole,Ohio,LIMDP,Lima Depot,Lima,Corvane Composite Structures,45 ft Class 2 wood,2023,88,In Service,2025-11-13
+POLE-OH-34985,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Timberline Utility Poles,45 ft composite,2007,73,In Service,2024-05-28
+POLE-OH-35050,Pole,Ohio,LIMDP,Lima Depot,Lima,Timberline Utility Poles,45 ft Class 2 wood,2023,97,In Service,2025-04-05
+POLE-OH-35053,Pole,Ohio,LIMDP,Lima Depot,Lima,Great Lakes Pole Co.,45 ft composite,2001,73,In Service,2025-03-19
+POLE-OH-35070,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,45 ft composite,1979,47,In Service,2026-01-24
+POLE-OH-35221,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Composite Structures,40 ft Class 3 wood,2020,90,Out of Service,2024-07-12
+POLE-OH-35235,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Timberline Utility Poles,40 ft Class 3 wood,1990,57,In Service,2025-09-28
+POLE-OH-35240,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Corvane Composite Structures,45 ft Class 2 wood,2001,61,In Service,2026-07-28
+POLE-OH-35290,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Timberline Utility Poles,50 ft Class 1 wood,1988,64,In Service,2023-04-26
+POLE-OH-35294,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Timberline Utility Poles,50 ft Class 1 wood,2006,68,In Service,2024-06-06
+POLE-OH-35330,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,50 ft Class 1 wood,2003,68,In Service,2025-03-09
+POLE-OH-35354,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,40 ft Class 3 wood,2011,89,In Service,2023-12-13
+POLE-OH-35422,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Composite Structures,45 ft Class 2 wood,2020,88,In Service,2024-05-19
+POLE-OH-35447,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Timberline Utility Poles,45 ft Class 2 wood,2017,84,In Service,2025-06-24
+POLE-OH-35524,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Timberline Utility Poles,40 ft Class 3 wood,2017,79,In Service,2026-07-01
+POLE-OH-35527,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,45 ft composite,2012,96,In Service,2023-07-09
+POLE-OH-35857,Pole,Ohio,LIMDP,Lima Depot,Lima,Corvane Composite Structures,45 ft composite,1965,34,In Service,2026-05-21
+POLE-OH-35945,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Timberline Utility Poles,35 ft Class 4 wood,1999,73,In Service,2024-06-17
+POLE-OH-36030,Pole,Ohio,LIMDP,Lima Depot,Lima,Great Lakes Pole Co.,40 ft Class 3 wood,1984,48,In Service,2026-06-13
+POLE-OH-36040,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Timberline Utility Poles,45 ft Class 2 wood,1966,47,In Service,2025-09-03
+POLE-OH-36165,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,45 ft Class 2 wood,2020,98,In Service,2024-06-01
+POLE-OH-36372,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,45 ft composite,1999,89,In Service,2025-02-27
+POLE-OH-36493,Pole,Ohio,LIMDP,Lima Depot,Lima,Timberline Utility Poles,45 ft composite,1976,52,In Service,2023-03-30
+POLE-OH-36502,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,45 ft Class 2 wood,1990,62,In Service,2026-07-23
+POLE-OH-36620,Pole,Ohio,LIMDP,Lima Depot,Lima,Corvane Composite Structures,45 ft Class 2 wood,1999,63,In Service,2024-03-24
+POLE-OH-36680,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Great Lakes Pole Co.,45 ft Class 2 wood,1967,54,In Service,2024-09-18
+POLE-OH-36743,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Great Lakes Pole Co.,50 ft Class 1 wood,2018,100,In Service,2025-01-05
+POLE-OH-36820,Pole,Ohio,LIMDP,Lima Depot,Lima,Corvane Composite Structures,45 ft Class 2 wood,1988,41,In Service,2025-08-02
+POLE-OH-37029,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,50 ft Class 1 wood,2020,79,In Service,2025-05-24
+POLE-OH-37210,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Timberline Utility Poles,50 ft Class 1 wood,1996,50,In Service,2023-10-30
+POLE-OH-37217,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,35 ft Class 4 wood,2003,61,In Service,2023-11-04
+POLE-OH-37229,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Composite Structures,45 ft composite,1971,33,Retired,2025-07-18
+POLE-OH-37238,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Timberline Utility Poles,35 ft Class 4 wood,2015,80,In Service,2025-01-12
+POLE-OH-37248,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Timberline Utility Poles,45 ft Class 2 wood,2021,91,In Service,2024-12-20
+POLE-OH-37254,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Great Lakes Pole Co.,45 ft Class 2 wood,1984,68,In Service,2025-02-12
+POLE-OH-37374,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Timberline Utility Poles,50 ft Class 1 wood,1971,28,In Service,2024-08-16
+POLE-OH-37393,Pole,Ohio,LIMDP,Lima Depot,Lima,Great Lakes Pole Co.,50 ft Class 1 wood,1979,39,In Service,2024-10-13
+POLE-OH-37466,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Great Lakes Pole Co.,40 ft Class 3 wood,1985,47,In Service,2023-11-04
+POLE-OH-37480,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Great Lakes Pole Co.,45 ft Class 2 wood,1987,47,In Service,2023-04-14
+POLE-OH-37498,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Composite Structures,40 ft Class 3 wood,1978,32,In Service,2024-12-30
+POLE-OH-37560,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,50 ft Class 1 wood,1981,69,In Service,2023-04-04
+POLE-OH-37676,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Composite Structures,45 ft composite,1967,37,In Service,2025-03-30
+POLE-OH-37715,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,35 ft Class 4 wood,1983,40,In Service,2024-07-05
+POLE-OH-37740,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Timberline Utility Poles,45 ft composite,1969,41,In Service,2024-07-14
+POLE-OH-38058,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Great Lakes Pole Co.,50 ft Class 1 wood,1984,65,In Service,2025-06-15
+POLE-OH-38063,Pole,Ohio,LIMDP,Lima Depot,Lima,Corvane Composite Structures,40 ft Class 3 wood,1993,71,In Service,2025-08-18
+POLE-OH-38123,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Composite Structures,50 ft Class 1 wood,1986,70,In Service,2023-08-23
+POLE-OH-38166,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Timberline Utility Poles,35 ft Class 4 wood,1996,70,In Service,2024-11-06
+POLE-OH-38326,Pole,Ohio,LIMDP,Lima Depot,Lima,Timberline Utility Poles,50 ft Class 1 wood,1992,56,In Service,2026-08-20
+POLE-OH-38391,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Great Lakes Pole Co.,45 ft composite,2010,90,In Service,2025-06-15
+POLE-OH-38440,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Composite Structures,45 ft composite,2017,90,In Service,2026-01-11
+POLE-OH-38447,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Timberline Utility Poles,35 ft Class 4 wood,1973,39,In Service,2023-10-04
+POLE-OH-38496,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Great Lakes Pole Co.,45 ft Class 2 wood,1989,63,In Service,2023-04-20
+POLE-OH-38506,Pole,Ohio,LIMDP,Lima Depot,Lima,Corvane Composite Structures,35 ft Class 4 wood,2001,80,In Service,2023-08-22
+POLE-OH-38567,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Great Lakes Pole Co.,35 ft Class 4 wood,1969,39,In Service,2023-01-16
+POLE-OH-38630,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Corvane Composite Structures,40 ft Class 3 wood,1969,38,In Service,2024-11-27
+POLE-OH-38647,Pole,Ohio,LIMDP,Lima Depot,Lima,Great Lakes Pole Co.,35 ft Class 4 wood,2001,59,In Service,2025-02-10
+POLE-OH-38690,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Timberline Utility Poles,35 ft Class 4 wood,1970,47,In Service,2024-05-04
+POLE-OH-38740,Pole,Ohio,MANDP,Mansfield Depot,Mansfield,Timberline Utility Poles,45 ft composite,1968,31,In Service,2025-09-01
+POLE-OH-38746,Pole,Ohio,LIMDP,Lima Depot,Lima,Corvane Composite Structures,40 ft Class 3 wood,1984,55,In Service,2026-08-28
+POLE-OH-38904,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Composite Structures,45 ft composite,2007,73,In Service,2026-01-10
+POLE-OH-38992,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Timberline Utility Poles,45 ft Class 2 wood,1965,48,In Service,2023-10-06
+POLE-OH-39148,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Composite Structures,35 ft Class 4 wood,2021,88,In Service,2025-06-29
+POLE-OH-39180,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Timberline Utility Poles,35 ft Class 4 wood,2021,100,In Service,2023-04-26
+POLE-OH-39245,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Timberline Utility Poles,50 ft Class 1 wood,1987,72,In Service,2025-04-29
+POLE-OH-39260,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Timberline Utility Poles,50 ft Class 1 wood,2007,58,In Service,2024-06-08
+POLE-OH-39277,Pole,Ohio,LIMDP,Lima Depot,Lima,Great Lakes Pole Co.,50 ft Class 1 wood,2010,68,In Service,2025-10-11
+POLE-OH-39501,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Composite Structures,35 ft Class 4 wood,2006,81,In Service,2025-03-04
+POLE-OH-39612,Pole,Ohio,MAUSS,Maumee Bay Substation,Toledo,Timberline Utility Poles,35 ft Class 4 wood,2013,85,In Service,2026-03-18
+POLE-OH-39770,Pole,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Great Lakes Pole Co.,45 ft Class 2 wood,2012,84,In Service,2026-07-06
+POLE-OH-39935,Pole,Ohio,FNDDP,Findlay Depot,Findlay,Great Lakes Pole Co.,35 ft Class 4 wood,2008,76,In Service,2026-08-26
+POLE-OH-39953,Pole,Ohio,TOLOC,Toledo Operations Center,Toledo,Great Lakes Pole Co.,45 ft composite,2005,66,In Service,2024-01-29
+POLE-ON-10017,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,45 ft Class 2 wood,2016,86,In Service,2026-03-28
+POLE-ON-10055,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,45 ft composite,1968,46,In Service,2025-06-02
+POLE-ON-10076,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,40 ft Class 3 wood,2017,100,In Service,2025-07-18
+POLE-ON-10113,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,35 ft Class 4 wood,1997,61,In Service,2025-11-14
+POLE-ON-10198,Pole,Ontario,BELDP,Belleville Depot,Belleville,Timberline Utility Poles,45 ft composite,2010,89,In Service,2024-10-22
+POLE-ON-10263,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,35 ft Class 4 wood,1981,66,In Service,2025-05-07
+POLE-ON-10296,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,50 ft Class 1 wood,2021,96,In Service,2024-08-20
+POLE-ON-10318,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,50 ft Class 1 wood,2020,91,In Service,2026-06-22
+POLE-ON-10415,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,45 ft composite,1970,45,In Service,2025-05-11
+POLE-ON-10425,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,45 ft Class 2 wood,2021,87,In Service,2026-05-19
+POLE-ON-10483,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,45 ft Class 2 wood,2019,91,In Service,2023-04-17
+POLE-ON-10513,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Timberline Utility Poles,45 ft composite,2013,83,In Service,2026-05-18
+POLE-ON-10535,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,45 ft Class 2 wood,2021,88,Out of Service,2024-03-03
+POLE-ON-10567,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,45 ft Class 2 wood,1986,61,In Service,2023-07-03
+POLE-ON-10571,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,50 ft Class 1 wood,1965,30,In Service,2026-03-24
+POLE-ON-10584,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft Class 2 wood,1975,36,In Service,2023-03-21
+POLE-ON-10597,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,45 ft composite,1998,57,Retired,2025-08-20
+POLE-ON-10602,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Timberline Utility Poles,35 ft Class 4 wood,1996,58,In Service,2023-04-09
+POLE-ON-10608,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,35 ft Class 4 wood,1981,61,In Service,2023-08-23
+POLE-ON-10647,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,45 ft composite,2017,89,In Service,2025-10-10
+POLE-ON-10659,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,40 ft Class 3 wood,2022,94,In Service,2023-11-15
+POLE-ON-10700,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,35 ft Class 4 wood,1965,38,In Service,2026-03-04
+POLE-ON-10748,Pole,Ontario,BELDP,Belleville Depot,Belleville,Corvane Composite Structures,40 ft Class 3 wood,1966,50,In Service,2024-12-30
+POLE-ON-10764,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,35 ft Class 4 wood,1976,35,In Service,2026-07-18
+POLE-ON-10785,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,45 ft Class 2 wood,2018,100,Out of Service,2023-06-17
+POLE-ON-10821,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,45 ft composite,1993,71,In Service,2024-11-06
+POLE-ON-10849,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,45 ft composite,1998,62,In Service,2023-07-17
+POLE-ON-10876,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,40 ft Class 3 wood,1981,20,In Service,2024-09-12
+POLE-ON-10886,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft composite,1990,63,In Service,2025-09-29
+POLE-ON-11001,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,35 ft Class 4 wood,1999,74,In Service,2024-12-08
+POLE-ON-11044,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,45 ft composite,1990,60,In Service,2024-05-01
+POLE-ON-11112,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,45 ft Class 2 wood,1965,33,In Service,2026-07-27
+POLE-ON-11132,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,45 ft Class 2 wood,2024,99,In Service,2026-06-16
+POLE-ON-11158,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft composite,2015,88,In Service,2025-10-01
+POLE-ON-11250,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Timberline Utility Poles,45 ft Class 2 wood,1971,12,Retired,2025-03-04
+POLE-ON-11267,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,35 ft Class 4 wood,1973,42,In Service,2024-05-05
+POLE-ON-11287,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,40 ft Class 3 wood,2024,81,In Service,2024-10-20
+POLE-ON-11320,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Great Lakes Pole Co.,35 ft Class 4 wood,2021,82,In Service,2024-07-25
+POLE-ON-11351,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Timberline Utility Poles,45 ft Class 2 wood,1979,57,In Service,2026-08-23
+POLE-ON-11366,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Timberline Utility Poles,50 ft Class 1 wood,1989,71,In Service,2025-12-15
+POLE-ON-11423,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Timberline Utility Poles,45 ft composite,1997,72,In Service,2026-08-22
+POLE-ON-11538,Pole,Ontario,BELDP,Belleville Depot,Belleville,Timberline Utility Poles,40 ft Class 3 wood,1985,49,In Service,2024-12-23
+POLE-ON-11548,Pole,Ontario,BELDP,Belleville Depot,Belleville,Timberline Utility Poles,45 ft composite,2012,55,In Service,2025-06-22
+POLE-ON-11614,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,35 ft Class 4 wood,1978,37,In Service,2024-09-15
+POLE-ON-11617,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,50 ft Class 1 wood,1962,19,In Service,2025-01-15
+POLE-ON-11638,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Timberline Utility Poles,45 ft composite,1972,38,In Service,2024-05-02
+POLE-ON-11641,Pole,Ontario,BARDP,Barrie Depot,Barrie,Great Lakes Pole Co.,35 ft Class 4 wood,1978,39,In Service,2024-05-17
+POLE-ON-11704,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,40 ft Class 3 wood,1993,65,In Service,2026-03-13
+POLE-ON-11726,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,50 ft Class 1 wood,1996,82,In Service,2024-12-09
+POLE-ON-11753,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,35 ft Class 4 wood,1984,47,In Service,2024-09-02
+POLE-ON-11759,Pole,Ontario,BARDP,Barrie Depot,Barrie,Great Lakes Pole Co.,50 ft Class 1 wood,1983,72,In Service,2024-03-03
+POLE-ON-11803,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Great Lakes Pole Co.,50 ft Class 1 wood,1977,56,In Service,2023-07-13
+POLE-ON-11815,Pole,Ontario,BELDP,Belleville Depot,Belleville,Timberline Utility Poles,45 ft composite,1966,26,In Service,2024-12-07
+POLE-ON-11828,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,35 ft Class 4 wood,1970,33,In Service,2024-06-06
+POLE-ON-11912,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,45 ft Class 2 wood,2022,100,In Service,2026-04-20
+POLE-ON-12040,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Timberline Utility Poles,35 ft Class 4 wood,1969,48,In Service,2025-07-06
+POLE-ON-12084,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Great Lakes Pole Co.,50 ft Class 1 wood,1986,56,Retired,2026-04-06
+POLE-ON-12122,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Timberline Utility Poles,40 ft Class 3 wood,2009,80,In Service,2023-07-05
+POLE-ON-12129,Pole,Ontario,BELDP,Belleville Depot,Belleville,Corvane Composite Structures,45 ft Class 2 wood,1996,64,In Service,2026-05-26
+POLE-ON-12193,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,50 ft Class 1 wood,1970,40,In Service,2023-12-15
+POLE-ON-12217,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Timberline Utility Poles,35 ft Class 4 wood,1983,59,In Service,2023-07-08
+POLE-ON-12263,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,35 ft Class 4 wood,1968,18,In Service,2023-04-26
+POLE-ON-12302,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Timberline Utility Poles,45 ft Class 2 wood,1962,5,In Service,2025-08-22
+POLE-ON-12347,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,45 ft Class 2 wood,2003,82,In Service,2026-03-18
+POLE-ON-12379,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,40 ft Class 3 wood,1964,30,In Service,2024-06-10
+POLE-ON-12453,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Composite Structures,50 ft Class 1 wood,1980,64,In Service,2024-06-14
+POLE-ON-12596,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,50 ft Class 1 wood,2021,87,In Service,2023-10-15
+POLE-ON-12623,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,35 ft Class 4 wood,1971,55,In Service,2024-07-20
+POLE-ON-12721,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,50 ft Class 1 wood,2010,77,In Service,2025-03-24
+POLE-ON-12737,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,45 ft composite,1994,55,In Service,2026-01-29
+POLE-ON-12767,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,40 ft Class 3 wood,2000,76,In Service,2025-03-04
+POLE-ON-12775,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Great Lakes Pole Co.,40 ft Class 3 wood,1986,42,In Service,2025-06-14
+POLE-ON-12868,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft composite,1990,61,In Service,2025-07-20
+POLE-ON-12903,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Timberline Utility Poles,45 ft Class 2 wood,2014,79,In Service,2025-12-17
+POLE-ON-12919,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,40 ft Class 3 wood,2008,80,Out of Service,2023-08-07
+POLE-ON-12953,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,45 ft composite,2012,74,In Service,2026-09-10
+POLE-ON-12983,Pole,Ontario,BELDP,Belleville Depot,Belleville,Timberline Utility Poles,40 ft Class 3 wood,1968,26,In Service,2023-08-25
+POLE-ON-12998,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,45 ft Class 2 wood,1975,41,In Service,2025-05-22
+POLE-ON-13009,Pole,Ontario,BARDP,Barrie Depot,Barrie,Great Lakes Pole Co.,50 ft Class 1 wood,1998,70,In Service,2026-03-21
+POLE-ON-13011,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,40 ft Class 3 wood,2014,72,In Service,2026-08-14
+POLE-ON-13019,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft composite,1964,25,In Service,2026-02-27
+POLE-ON-13031,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,45 ft Class 2 wood,1991,70,In Service,2023-01-29
+POLE-ON-13038,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,45 ft Class 2 wood,2023,87,In Service,2024-11-23
+POLE-ON-13083,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,40 ft Class 3 wood,2012,71,In Service,2023-09-14
+POLE-ON-13179,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,35 ft Class 4 wood,1987,65,In Service,2026-09-03
+POLE-ON-13218,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,50 ft Class 1 wood,1981,57,In Service,2025-02-19
+POLE-ON-13322,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft Class 2 wood,2024,100,In Service,2024-12-09
+POLE-ON-13393,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,40 ft Class 3 wood,1968,48,In Service,2025-11-18
+POLE-ON-13404,Pole,Ontario,BELDP,Belleville Depot,Belleville,Timberline Utility Poles,45 ft composite,1977,42,In Service,2025-06-06
+POLE-ON-13605,Pole,Ontario,BARDP,Barrie Depot,Barrie,Great Lakes Pole Co.,45 ft composite,1967,42,In Service,2025-09-13
+POLE-ON-13623,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,50 ft Class 1 wood,2023,100,In Service,2024-03-10
+POLE-ON-13704,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft composite,2008,100,Out of Service,2023-11-30
+POLE-ON-13751,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,40 ft Class 3 wood,2006,69,In Service,2023-06-03
+POLE-ON-13760,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,45 ft Class 2 wood,1998,71,In Service,2023-04-06
+POLE-ON-13798,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,40 ft Class 3 wood,1982,58,Out of Service,2025-01-31
+POLE-ON-13920,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,35 ft Class 4 wood,1977,37,In Service,2025-03-01
+POLE-ON-13935,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Timberline Utility Poles,35 ft Class 4 wood,1977,54,Out of Service,2023-06-24
+POLE-ON-13957,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft composite,1964,18,In Service,2025-06-26
+POLE-ON-13966,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Great Lakes Pole Co.,50 ft Class 1 wood,1974,42,Retired,2025-03-14
+POLE-ON-13978,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,35 ft Class 4 wood,2007,81,In Service,2025-01-17
+POLE-ON-14020,Pole,Ontario,BELDP,Belleville Depot,Belleville,Corvane Composite Structures,45 ft composite,2007,73,In Service,2023-12-12
+POLE-ON-14021,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Timberline Utility Poles,45 ft Class 2 wood,1967,28,In Service,2025-08-14
+POLE-ON-14037,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Composite Structures,45 ft composite,2017,99,Out of Service,2026-06-02
+POLE-ON-14206,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,45 ft composite,1989,65,In Service,2023-11-09
+POLE-ON-14237,Pole,Ontario,BELDP,Belleville Depot,Belleville,Corvane Composite Structures,45 ft composite,1982,35,In Service,2026-01-18
+POLE-ON-14249,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,45 ft Class 2 wood,1964,47,Retired,2025-01-16
+POLE-ON-14315,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,50 ft Class 1 wood,1962,46,In Service,2025-07-06
+POLE-ON-14378,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Composite Structures,35 ft Class 4 wood,1978,55,In Service,2024-12-29
+POLE-ON-14452,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Great Lakes Pole Co.,40 ft Class 3 wood,1995,52,In Service,2023-01-21
+POLE-ON-14463,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,50 ft Class 1 wood,2007,87,In Service,2024-04-18
+POLE-ON-14472,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,45 ft Class 2 wood,2012,80,In Service,2023-03-13
+POLE-ON-14587,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Timberline Utility Poles,35 ft Class 4 wood,2009,97,In Service,2023-06-27
+POLE-ON-14596,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,35 ft Class 4 wood,1997,69,In Service,2023-04-26
+POLE-ON-14640,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,45 ft Class 2 wood,1975,51,In Service,2024-07-03
+POLE-ON-14691,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,45 ft composite,1965,30,In Service,2025-10-23
+POLE-ON-14759,Pole,Ontario,BARDP,Barrie Depot,Barrie,Great Lakes Pole Co.,50 ft Class 1 wood,2019,83,In Service,2023-04-14
+POLE-ON-14798,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,45 ft Class 2 wood,1974,49,In Service,2025-05-21
+POLE-ON-14835,Pole,Ontario,BELDP,Belleville Depot,Belleville,Timberline Utility Poles,45 ft composite,2009,81,In Service,2023-09-24
+POLE-ON-15016,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,50 ft Class 1 wood,2022,74,Retired,2023-11-01
+POLE-ON-15030,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,40 ft Class 3 wood,1991,51,In Service,2025-03-20
+POLE-ON-15095,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,50 ft Class 1 wood,1984,36,In Service,2025-09-15
+POLE-ON-15200,Pole,Ontario,BELDP,Belleville Depot,Belleville,Timberline Utility Poles,45 ft composite,2015,87,In Service,2025-06-20
+POLE-ON-15236,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,50 ft Class 1 wood,2012,93,In Service,2025-05-04
+POLE-ON-15283,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,45 ft composite,2024,83,In Service,2026-02-10
+POLE-ON-15358,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,50 ft Class 1 wood,2021,89,Out of Service,2026-07-23
+POLE-ON-15388,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,35 ft Class 4 wood,1994,67,In Service,2024-07-30
+POLE-ON-15399,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,35 ft Class 4 wood,1963,46,In Service,2023-03-25
+POLE-ON-15482,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Timberline Utility Poles,35 ft Class 4 wood,1998,46,In Service,2024-01-29
+POLE-ON-15523,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Timberline Utility Poles,45 ft composite,1967,29,In Service,2026-08-17
+POLE-ON-15608,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,35 ft Class 4 wood,1967,28,In Service,2023-11-26
+POLE-ON-15610,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,35 ft Class 4 wood,2010,68,In Service,2026-08-10
+POLE-ON-15665,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,50 ft Class 1 wood,1984,58,Retired,2023-05-14
+POLE-ON-15696,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,40 ft Class 3 wood,2002,68,In Service,2025-09-08
+POLE-ON-15710,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Composite Structures,45 ft Class 2 wood,2007,66,In Service,2025-03-03
+POLE-ON-15760,Pole,Ontario,BELDP,Belleville Depot,Belleville,Corvane Composite Structures,40 ft Class 3 wood,2001,68,In Service,2023-10-17
+POLE-ON-15776,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,35 ft Class 4 wood,1989,66,In Service,2024-06-27
+POLE-ON-15867,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,40 ft Class 3 wood,2009,84,In Service,2023-10-17
+POLE-ON-15903,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,35 ft Class 4 wood,2016,85,In Service,2023-05-15
+POLE-ON-16013,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Timberline Utility Poles,45 ft composite,1984,45,In Service,2026-02-01
+POLE-ON-16164,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Timberline Utility Poles,45 ft composite,1970,22,Retired,2026-04-10
+POLE-ON-16180,Pole,Ontario,BARDP,Barrie Depot,Barrie,Great Lakes Pole Co.,45 ft composite,2014,80,In Service,2024-08-30
+POLE-ON-16267,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Great Lakes Pole Co.,35 ft Class 4 wood,1977,50,In Service,2026-05-30
+POLE-ON-16276,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,35 ft Class 4 wood,1975,42,In Service,2026-09-11
+POLE-ON-16318,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,35 ft Class 4 wood,1966,48,In Service,2023-04-01
+POLE-ON-16354,Pole,Ontario,BARDP,Barrie Depot,Barrie,Great Lakes Pole Co.,40 ft Class 3 wood,2008,78,In Service,2025-02-02
+POLE-ON-16376,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Great Lakes Pole Co.,40 ft Class 3 wood,1998,72,In Service,2023-07-27
+POLE-ON-16435,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Great Lakes Pole Co.,35 ft Class 4 wood,2022,78,In Service,2024-03-04
+POLE-ON-16467,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,45 ft composite,2017,99,In Service,2026-05-31
+POLE-ON-16477,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,35 ft Class 4 wood,2017,67,In Service,2025-10-31
+POLE-ON-16525,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Timberline Utility Poles,45 ft Class 2 wood,1996,45,In Service,2026-06-25
+POLE-ON-16543,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,40 ft Class 3 wood,2017,70,In Service,2023-02-18
+POLE-ON-16676,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft composite,1969,34,In Service,2024-09-25
+POLE-ON-16719,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,50 ft Class 1 wood,2016,98,In Service,2025-11-25
+POLE-ON-16728,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,45 ft Class 2 wood,2013,73,In Service,2025-07-04
+POLE-ON-16792,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,45 ft composite,2001,75,In Service,2024-11-24
+POLE-ON-16813,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,40 ft Class 3 wood,1982,45,In Service,2025-06-21
+POLE-ON-16858,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Timberline Utility Poles,35 ft Class 4 wood,2006,71,In Service,2024-03-19
+POLE-ON-16882,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft composite,1971,44,In Service,2023-04-04
+POLE-ON-16929,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Timberline Utility Poles,50 ft Class 1 wood,2001,82,In Service,2024-06-06
+POLE-ON-16949,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,35 ft Class 4 wood,1984,63,In Service,2023-10-27
+POLE-ON-16960,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,35 ft Class 4 wood,2023,95,In Service,2025-12-19
+POLE-ON-16970,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,40 ft Class 3 wood,1982,37,In Service,2023-07-18
+POLE-ON-16993,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,35 ft Class 4 wood,1998,73,In Service,2023-09-25
+POLE-ON-16998,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,35 ft Class 4 wood,1990,57,Retired,2024-04-25
+POLE-ON-17018,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Timberline Utility Poles,45 ft Class 2 wood,2012,84,In Service,2025-04-07
+POLE-ON-17027,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Timberline Utility Poles,45 ft Class 2 wood,2000,93,In Service,2024-04-07
+POLE-ON-17051,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,45 ft composite,1992,67,In Service,2026-06-12
+POLE-ON-17066,Pole,Ontario,BELDP,Belleville Depot,Belleville,Corvane Composite Structures,40 ft Class 3 wood,1995,67,In Service,2025-01-03
+POLE-ON-17075,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,50 ft Class 1 wood,1986,55,In Service,2023-12-04
+POLE-ON-17208,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Composite Structures,40 ft Class 3 wood,1999,68,In Service,2026-07-07
+POLE-ON-17233,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,35 ft Class 4 wood,2013,88,In Service,2024-01-30
+POLE-ON-17237,Pole,Ontario,BELDP,Belleville Depot,Belleville,Timberline Utility Poles,45 ft Class 2 wood,1963,18,Out of Service,2024-03-01
+POLE-ON-17298,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Timberline Utility Poles,35 ft Class 4 wood,1997,73,In Service,2025-12-11
+POLE-ON-17429,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,40 ft Class 3 wood,2010,76,In Service,2023-07-25
+POLE-ON-17575,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,45 ft composite,1988,47,In Service,2025-04-08
+POLE-ON-17585,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,50 ft Class 1 wood,1982,37,In Service,2023-02-18
+POLE-ON-17588,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,45 ft composite,2017,98,Out of Service,2025-06-29
+POLE-ON-17592,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Composite Structures,45 ft Class 2 wood,2015,88,In Service,2026-06-20
+POLE-ON-17598,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Composite Structures,40 ft Class 3 wood,2001,63,In Service,2024-03-16
+POLE-ON-17704,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,50 ft Class 1 wood,1993,67,In Service,2024-10-15
+POLE-ON-17709,Pole,Ontario,BARDP,Barrie Depot,Barrie,Corvane Composite Structures,40 ft Class 3 wood,1983,43,In Service,2026-06-22
+POLE-ON-17714,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Composite Structures,45 ft Class 2 wood,1982,49,In Service,2025-04-05
+POLE-ON-17808,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,45 ft Class 2 wood,1994,54,In Service,2023-03-14
+POLE-ON-17840,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,50 ft Class 1 wood,1982,49,In Service,2024-06-28
+POLE-ON-17921,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,50 ft Class 1 wood,2003,90,In Service,2025-03-13
+POLE-ON-17937,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,40 ft Class 3 wood,1973,38,In Service,2023-01-19
+POLE-ON-17974,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,40 ft Class 3 wood,1993,61,In Service,2025-12-08
+POLE-ON-17993,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Timberline Utility Poles,40 ft Class 3 wood,2005,79,In Service,2025-05-09
+POLE-ON-17994,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Composite Structures,50 ft Class 1 wood,1978,48,In Service,2023-02-05
+POLE-ON-18037,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Timberline Utility Poles,45 ft Class 2 wood,1998,75,In Service,2024-11-20
+POLE-ON-18098,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft composite,1968,45,In Service,2025-07-31
+POLE-ON-18100,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,45 ft composite,1981,56,In Service,2023-06-08
+POLE-ON-18130,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,35 ft Class 4 wood,1964,25,In Service,2025-03-19
+POLE-ON-18197,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,50 ft Class 1 wood,1978,41,In Service,2025-07-07
+POLE-ON-18252,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,35 ft Class 4 wood,2004,56,In Service,2024-05-11
+POLE-ON-18342,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,45 ft composite,1986,55,In Service,2026-02-16
+POLE-ON-18377,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Composite Structures,45 ft Class 2 wood,1962,29,In Service,2024-04-13
+POLE-ON-18397,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Timberline Utility Poles,45 ft composite,1990,65,In Service,2023-11-27
+POLE-ON-18412,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,50 ft Class 1 wood,2021,96,In Service,2024-12-08
+POLE-ON-18493,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,45 ft Class 2 wood,1970,49,In Service,2023-07-17
+POLE-ON-18516,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,50 ft Class 1 wood,2005,83,In Service,2025-05-29
+POLE-ON-18524,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,35 ft Class 4 wood,1969,41,In Service,2024-07-17
+POLE-ON-18615,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,35 ft Class 4 wood,2010,71,In Service,2024-01-04
+POLE-ON-18663,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Great Lakes Pole Co.,45 ft composite,1985,54,In Service,2024-04-01
+POLE-ON-18719,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Composite Structures,45 ft Class 2 wood,1983,65,In Service,2025-05-02
+POLE-ON-18732,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,35 ft Class 4 wood,1971,52,In Service,2023-05-13
+POLE-ON-18823,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,45 ft composite,1987,68,In Service,2024-03-23
+POLE-ON-18839,Pole,Ontario,BELDP,Belleville Depot,Belleville,Corvane Composite Structures,35 ft Class 4 wood,1973,35,In Service,2026-07-28
+POLE-ON-18859,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Timberline Utility Poles,45 ft Class 2 wood,1994,83,In Service,2026-05-29
+POLE-ON-18887,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Great Lakes Pole Co.,35 ft Class 4 wood,1985,58,Out of Service,2025-06-07
+POLE-ON-18910,Pole,Ontario,BELDP,Belleville Depot,Belleville,Corvane Composite Structures,45 ft composite,1996,62,In Service,2025-07-10
+POLE-ON-18977,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,45 ft composite,1994,66,In Service,2024-08-14
+POLE-ON-19017,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Great Lakes Pole Co.,50 ft Class 1 wood,2010,80,In Service,2023-04-05
+POLE-ON-19256,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,45 ft Class 2 wood,1966,25,In Service,2025-10-05
+POLE-ON-19282,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Timberline Utility Poles,35 ft Class 4 wood,1984,59,In Service,2026-04-07
+POLE-ON-19293,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,40 ft Class 3 wood,1987,61,In Service,2023-08-19
+POLE-ON-19296,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,35 ft Class 4 wood,1998,56,In Service,2023-10-05
+POLE-ON-19311,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,45 ft Class 2 wood,1973,44,In Service,2025-06-26
+POLE-ON-19314,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Great Lakes Pole Co.,45 ft composite,2019,86,In Service,2024-01-17
+POLE-ON-19391,Pole,Ontario,BARDP,Barrie Depot,Barrie,Timberline Utility Poles,50 ft Class 1 wood,1981,57,In Service,2026-08-16
+POLE-ON-19401,Pole,Ontario,BELDP,Belleville Depot,Belleville,Corvane Composite Structures,45 ft Class 2 wood,1986,63,In Service,2024-09-11
+POLE-ON-19413,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,45 ft Class 2 wood,1982,59,In Service,2023-01-07
+POLE-ON-19426,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Composite Structures,45 ft Class 2 wood,1978,47,In Service,2023-02-15
+POLE-ON-19449,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Great Lakes Pole Co.,40 ft Class 3 wood,2012,79,In Service,2024-07-31
+POLE-ON-19473,Pole,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Timberline Utility Poles,35 ft Class 4 wood,2020,76,Retired,2026-08-24
+POLE-ON-19705,Pole,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Composite Structures,45 ft composite,1990,66,In Service,2024-02-24
+POLE-ON-19790,Pole,Ontario,KNGSC,Kingston Service Centre,Kingston,Great Lakes Pole Co.,45 ft composite,2015,89,In Service,2024-06-27
+POLE-ON-19842,Pole,Ontario,BELDP,Belleville Depot,Belleville,Great Lakes Pole Co.,40 ft Class 3 wood,2023,93,In Service,2025-03-02
+POLE-ON-19866,Pole,Ontario,BRKDP,Brockville Depot,Brockville,Great Lakes Pole Co.,35 ft Class 4 wood,1995,66,In Service,2025-10-23
+POLE-ON-19898,Pole,Ontario,PTBDP,Peterborough Depot,Peterborough,Great Lakes Pole Co.,40 ft Class 3 wood,1964,27,In Service,2026-08-09
+POLE-ON-19921,Pole,Ontario,BARDP,Barrie Depot,Barrie,Great Lakes Pole Co.,35 ft Class 4 wood,2011,89,In Service,2025-04-28
+RCL-NY-20023,Recloser,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Industries,27.6 kV 800 A three-phase,1964,22,In Service,2025-04-11
+RCL-NY-20087,Recloser,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,15 kV 100 A single-phase,2002,67,In Service,2023-12-23
+RCL-NY-21338,Recloser,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,15 kV 100 A single-phase,2003,66,In Service,2023-02-06
+RCL-NY-21983,Recloser,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,15 kV 100 A single-phase,1979,46,In Service,2023-07-02
+RCL-NY-22436,Recloser,New York,WTNDP,Watertown Depot,Watertown,Corvane Industries,15 kV 100 A single-phase,2009,75,In Service,2026-03-25
+RCL-NY-22654,Recloser,New York,ROCDP,Rochester Depot,Rochester,Corvane Industries,15 kV 100 A single-phase,1970,29,In Service,2026-09-06
+RCL-NY-23075,Recloser,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,27.6 kV 800 A three-phase,2016,79,Out of Service,2023-03-10
+RCL-NY-23272,Recloser,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,15 kV 560 A three-phase,2011,90,In Service,2024-02-07
+RCL-NY-24205,Recloser,New York,SYROC,Syracuse Operations Center,Syracuse,Northfield Transformer Co.,15 kV 560 A three-phase,2024,100,In Service,2024-11-20
+RCL-NY-24522,Recloser,New York,ROCDP,Rochester Depot,Rochester,Northfield Transformer Co.,15 kV 100 A single-phase,1972,25,In Service,2023-11-10
+RCL-NY-25288,Recloser,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,15 kV 560 A three-phase,1993,74,In Service,2024-01-17
+RCL-NY-25817,Recloser,New York,WTNDP,Watertown Depot,Watertown,Corvane Industries,15 kV 100 A single-phase,2008,60,In Service,2025-05-24
+RCL-NY-26220,Recloser,New York,ROCDP,Rochester Depot,Rochester,Corvane Industries,15 kV 100 A single-phase,2024,80,In Service,2026-03-26
+RCL-NY-26346,Recloser,New York,SYROC,Syracuse Operations Center,Syracuse,Northfield Transformer Co.,15 kV 100 A single-phase,1987,80,In Service,2024-11-08
+RCL-NY-26587,Recloser,New York,MOHSS,Mohawk Valley Substation,Utica,Northfield Transformer Co.,27.6 kV 800 A three-phase,1968,34,In Service,2026-07-08
+RCL-NY-26717,Recloser,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,15 kV 560 A three-phase,1997,74,In Service,2024-07-28
+RCL-NY-26796,Recloser,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,15 kV 100 A single-phase,1995,71,In Service,2023-10-17
+RCL-NY-27932,Recloser,New York,UTIDP,Utica Depot,Utica,Corvane Industries,27.6 kV 800 A three-phase,2010,87,In Service,2023-02-01
+RCL-NY-28173,Recloser,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,15 kV 100 A single-phase,1996,79,In Service,2023-05-15
+RCL-NY-28227,Recloser,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,15 kV 100 A single-phase,1964,41,In Service,2026-03-28
+RCL-NY-28276,Recloser,New York,SYROC,Syracuse Operations Center,Syracuse,Northfield Transformer Co.,15 kV 560 A three-phase,1997,97,Retired,2024-06-17
+RCL-NY-28973,Recloser,New York,MOHSS,Mohawk Valley Substation,Utica,Northfield Transformer Co.,15 kV 100 A single-phase,1990,70,In Service,2025-06-10
+RCL-NY-29521,Recloser,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Industries,15 kV 560 A three-phase,1967,40,In Service,2025-01-23
+RCL-OH-30493,Recloser,Ohio,FNDDP,Findlay Depot,Findlay,Northfield Transformer Co.,15 kV 560 A three-phase,1969,21,In Service,2026-07-27
+RCL-OH-30591,Recloser,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Industries,27.6 kV 800 A three-phase,2020,99,In Service,2024-02-14
+RCL-OH-30752,Recloser,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Industries,27.6 kV 800 A three-phase,2025,96,In Service,2023-10-22
+RCL-OH-32745,Recloser,Ohio,MAUSS,Maumee Bay Substation,Toledo,Northfield Transformer Co.,15 kV 560 A three-phase,2010,82,In Service,2026-05-30
+RCL-OH-33555,Recloser,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Industries,27.6 kV 800 A three-phase,2022,100,In Service,2023-01-11
+RCL-OH-33888,Recloser,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Northfield Transformer Co.,15 kV 560 A three-phase,1962,29,In Service,2025-08-09
+RCL-OH-33891,Recloser,Ohio,LIMDP,Lima Depot,Lima,Northfield Transformer Co.,27.6 kV 800 A three-phase,2019,89,In Service,2025-12-15
+RCL-OH-34746,Recloser,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Industries,15 kV 560 A three-phase,1995,66,In Service,2026-09-01
+RCL-OH-34989,Recloser,Ohio,TOLOC,Toledo Operations Center,Toledo,Northfield Transformer Co.,15 kV 100 A single-phase,2015,93,In Service,2023-07-20
+RCL-OH-35504,Recloser,Ohio,FNDDP,Findlay Depot,Findlay,Northfield Transformer Co.,15 kV 100 A single-phase,1995,59,In Service,2025-09-08
+RCL-OH-35938,Recloser,Ohio,TOLOC,Toledo Operations Center,Toledo,Northfield Transformer Co.,15 kV 100 A single-phase,1995,76,In Service,2025-03-02
+RCL-OH-36317,Recloser,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Industries,15 kV 560 A three-phase,2014,70,In Service,2026-01-07
+RCL-OH-36410,Recloser,Ohio,LIMDP,Lima Depot,Lima,Northfield Transformer Co.,27.6 kV 800 A three-phase,1975,32,In Service,2025-06-01
+RCL-OH-37185,Recloser,Ohio,LIMDP,Lima Depot,Lima,Northfield Transformer Co.,15 kV 560 A three-phase,1963,44,In Service,2024-05-21
+RCL-OH-37551,Recloser,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Industries,15 kV 100 A single-phase,1965,13,In Service,2023-05-03
+RCL-OH-37972,Recloser,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Industries,15 kV 560 A three-phase,2012,62,In Service,2024-06-23
+RCL-OH-38785,Recloser,Ohio,TOLOC,Toledo Operations Center,Toledo,Northfield Transformer Co.,15 kV 100 A single-phase,2002,70,In Service,2024-03-20
+RCL-OH-38997,Recloser,Ohio,MAUSS,Maumee Bay Substation,Toledo,Northfield Transformer Co.,15 kV 100 A single-phase,2023,87,Out of Service,2023-05-20
+RCL-OH-39098,Recloser,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Industries,15 kV 100 A single-phase,1980,52,In Service,2023-03-21
+RCL-OH-39990,Recloser,Ohio,FNDDP,Findlay Depot,Findlay,Northfield Transformer Co.,27.6 kV 800 A three-phase,2024,100,In Service,2026-01-31
+RCL-ON-10127,Recloser,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,15 kV 100 A single-phase,1985,68,In Service,2023-02-02
+RCL-ON-10183,Recloser,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Industries,27.6 kV 800 A three-phase,2005,60,Retired,2025-11-21
+RCL-ON-10349,Recloser,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,15 kV 100 A single-phase,1980,62,In Service,2026-02-27
+RCL-ON-10388,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,15 kV 560 A three-phase,1970,47,In Service,2025-12-31
+RCL-ON-10622,Recloser,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,27.6 kV 800 A three-phase,2009,74,In Service,2024-11-02
+RCL-ON-10666,Recloser,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,15 kV 560 A three-phase,2022,88,In Service,2023-12-22
+RCL-ON-10756,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Corvane Industries,15 kV 100 A single-phase,1968,34,In Service,2024-11-16
+RCL-ON-10857,Recloser,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,27.6 kV 800 A three-phase,2009,78,In Service,2026-09-05
+RCL-ON-11315,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,15 kV 100 A single-phase,1979,48,In Service,2026-02-16
+RCL-ON-11361,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Northfield Transformer Co.,15 kV 100 A single-phase,2025,93,In Service,2025-09-17
+RCL-ON-11908,Recloser,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Industries,27.6 kV 800 A three-phase,2025,83,In Service,2025-01-08
+RCL-ON-11994,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,15 kV 560 A three-phase,1971,33,In Service,2024-10-22
+RCL-ON-12157,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,15 kV 100 A single-phase,2013,98,In Service,2025-01-17
+RCL-ON-12358,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Corvane Industries,15 kV 560 A three-phase,1979,44,In Service,2025-10-29
+RCL-ON-12363,Recloser,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Industries,15 kV 100 A single-phase,1976,47,In Service,2025-06-23
+RCL-ON-12468,Recloser,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Industries,27.6 kV 800 A three-phase,1964,28,In Service,2024-05-20
+RCL-ON-12806,Recloser,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,27.6 kV 800 A three-phase,2007,75,In Service,2023-12-28
+RCL-ON-12850,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,15 kV 100 A single-phase,2006,73,In Service,2026-08-29
+RCL-ON-12979,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,15 kV 560 A three-phase,1967,37,In Service,2024-06-03
+RCL-ON-13307,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Corvane Industries,27.6 kV 800 A three-phase,2011,71,In Service,2026-05-30
+RCL-ON-13517,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Corvane Industries,15 kV 560 A three-phase,2001,87,In Service,2023-07-15
+RCL-ON-13750,Recloser,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,15 kV 100 A single-phase,2007,78,Out of Service,2025-07-14
+RCL-ON-13897,Recloser,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,27.6 kV 800 A three-phase,2018,92,In Service,2023-03-14
+RCL-ON-14751,Recloser,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Industries,27.6 kV 800 A three-phase,2008,84,Out of Service,2023-08-20
+RCL-ON-15174,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,27.6 kV 800 A three-phase,1966,18,In Service,2024-07-06
+RCL-ON-15306,Recloser,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,27.6 kV 800 A three-phase,2014,73,In Service,2024-05-04
+RCL-ON-15309,Recloser,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,15 kV 100 A single-phase,1971,43,Out of Service,2025-01-07
+RCL-ON-15321,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,15 kV 100 A single-phase,2015,77,In Service,2025-06-30
+RCL-ON-15537,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Northfield Transformer Co.,15 kV 100 A single-phase,1984,49,Out of Service,2023-12-02
+RCL-ON-15581,Recloser,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,27.6 kV 800 A three-phase,1965,28,In Service,2026-05-02
+RCL-ON-15691,Recloser,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,15 kV 100 A single-phase,2003,79,In Service,2026-07-12
+RCL-ON-15864,Recloser,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,27.6 kV 800 A three-phase,2011,81,In Service,2024-03-01
+RCL-ON-16121,Recloser,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,15 kV 100 A single-phase,2014,96,In Service,2024-11-10
+RCL-ON-16471,Recloser,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,15 kV 100 A single-phase,2001,59,In Service,2026-04-06
+RCL-ON-17055,Recloser,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Industries,15 kV 100 A single-phase,1980,59,In Service,2023-11-26
+RCL-ON-17070,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,27.6 kV 800 A three-phase,1970,40,In Service,2025-05-04
+RCL-ON-17367,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,15 kV 560 A three-phase,1967,36,In Service,2025-11-10
+RCL-ON-17467,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Corvane Industries,15 kV 560 A three-phase,1998,41,In Service,2023-11-04
+RCL-ON-17590,Recloser,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Industries,15 kV 100 A single-phase,2023,98,In Service,2024-12-24
+RCL-ON-18384,Recloser,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Industries,15 kV 100 A single-phase,1983,68,In Service,2025-06-16
+RCL-ON-18423,Recloser,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Northfield Transformer Co.,27.6 kV 800 A three-phase,2017,93,In Service,2026-04-24
+RCL-ON-18439,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,15 kV 100 A single-phase,2000,78,In Service,2026-07-25
+RCL-ON-18594,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Northfield Transformer Co.,15 kV 100 A single-phase,1985,57,In Service,2023-04-15
+RCL-ON-18684,Recloser,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,15 kV 560 A three-phase,2001,78,In Service,2023-09-09
+RCL-ON-18740,Recloser,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,15 kV 100 A single-phase,1975,42,In Service,2023-01-22
+RCL-ON-19488,Recloser,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,15 kV 100 A single-phase,1985,58,In Service,2023-06-30
+RCL-ON-19508,Recloser,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Industries,15 kV 560 A three-phase,1974,33,In Service,2025-11-16
+RCL-ON-19527,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,15 kV 100 A single-phase,2002,81,In Service,2025-02-20
+RCL-ON-19606,Recloser,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,27.6 kV 800 A three-phase,2023,92,In Service,2026-06-19
+RCL-ON-19629,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Corvane Industries,15 kV 100 A single-phase,2005,60,In Service,2024-06-20
+RCL-ON-19689,Recloser,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,15 kV 100 A single-phase,1996,73,In Service,2025-02-10
+RCL-ON-19707,Recloser,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Industries,15 kV 560 A three-phase,1999,67,In Service,2023-06-02
+RCL-ON-19788,Recloser,Ontario,BARDP,Barrie Depot,Barrie,Northfield Transformer Co.,27.6 kV 800 A three-phase,1983,61,In Service,2023-03-15
+RCL-ON-19841,Recloser,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,27.6 kV 800 A three-phase,1993,63,In Service,2023-07-30
+RCL-ON-19986,Recloser,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,27.6 kV 800 A three-phase,1983,41,In Service,2025-03-31
+REG-NY-20439,Voltage Regulator,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,7.2 kV 438 A step,2007,61,In Service,2023-09-09
+REG-NY-21202,Voltage Regulator,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,13.8 kV 328 A single-phase,1976,42,In Service,2023-07-18
+REG-NY-22100,Voltage Regulator,New York,MOHSS,Mohawk Valley Substation,Utica,Ashby and Moore Electric,7.2 kV 438 A step,1988,55,In Service,2026-02-21
+REG-NY-22441,Voltage Regulator,New York,UTIDP,Utica Depot,Utica,Ashby and Moore Electric,27.6 kV 219 A single-phase,1999,66,In Service,2023-04-03
+REG-NY-22642,Voltage Regulator,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,7.2 kV 438 A step,1980,66,In Service,2025-03-13
+REG-NY-23161,Voltage Regulator,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,27.6 kV 219 A single-phase,1979,41,In Service,2024-01-03
+REG-NY-24555,Voltage Regulator,New York,SYROC,Syracuse Operations Center,Syracuse,Ashby and Moore Electric,13.8 kV 328 A single-phase,1963,29,In Service,2025-12-10
+REG-NY-24633,Voltage Regulator,New York,SYROC,Syracuse Operations Center,Syracuse,Ashby and Moore Electric,13.8 kV 328 A single-phase,2001,86,In Service,2024-07-13
+REG-NY-26404,Voltage Regulator,New York,UTIDP,Utica Depot,Utica,Ashby and Moore Electric,7.2 kV 438 A step,1997,64,In Service,2024-03-16
+REG-NY-26486,Voltage Regulator,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,13.8 kV 328 A single-phase,1994,57,In Service,2026-04-04
+REG-NY-27095,Voltage Regulator,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,7.2 kV 438 A step,1993,69,In Service,2024-03-26
+REG-NY-27205,Voltage Regulator,New York,ROCDP,Rochester Depot,Rochester,Ashby and Moore Electric,13.8 kV 328 A single-phase,2008,61,In Service,2024-11-26
+REG-NY-27558,Voltage Regulator,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,7.2 kV 438 A step,1998,68,In Service,2026-07-14
+REG-NY-27574,Voltage Regulator,New York,ROCDP,Rochester Depot,Rochester,Ashby and Moore Electric,27.6 kV 219 A single-phase,1989,73,In Service,2025-07-20
+REG-NY-29060,Voltage Regulator,New York,ROCDP,Rochester Depot,Rochester,Lakeport Transformer Works,13.8 kV 328 A single-phase,2020,100,In Service,2026-04-06
+REG-NY-29136,Voltage Regulator,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,27.6 kV 219 A single-phase,2015,90,In Service,2023-10-22
+REG-NY-29355,Voltage Regulator,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,13.8 kV 328 A single-phase,1986,40,In Service,2023-09-03
+REG-OH-30066,Voltage Regulator,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ashby and Moore Electric,7.2 kV 438 A step,1991,68,In Service,2024-12-23
+REG-OH-30121,Voltage Regulator,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Transformer Works,27.6 kV 219 A single-phase,2012,83,In Service,2024-02-29
+REG-OH-31676,Voltage Regulator,Ohio,LIMDP,Lima Depot,Lima,Lakeport Transformer Works,13.8 kV 328 A single-phase,1980,56,In Service,2023-03-21
+REG-OH-32940,Voltage Regulator,Ohio,TOLOC,Toledo Operations Center,Toledo,Lakeport Transformer Works,7.2 kV 438 A step,2007,96,In Service,2024-07-13
+REG-OH-33068,Voltage Regulator,Ohio,TOLOC,Toledo Operations Center,Toledo,Lakeport Transformer Works,13.8 kV 328 A single-phase,1988,64,In Service,2025-04-10
+REG-OH-34826,Voltage Regulator,Ohio,TOLOC,Toledo Operations Center,Toledo,Lakeport Transformer Works,7.2 kV 438 A step,1971,20,In Service,2025-11-20
+REG-OH-35525,Voltage Regulator,Ohio,TOLOC,Toledo Operations Center,Toledo,Ashby and Moore Electric,13.8 kV 328 A single-phase,2006,76,In Service,2026-06-10
+REG-OH-35779,Voltage Regulator,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Lakeport Transformer Works,13.8 kV 328 A single-phase,2006,69,In Service,2026-05-03
+REG-OH-36703,Voltage Regulator,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ashby and Moore Electric,27.6 kV 219 A single-phase,1991,54,In Service,2025-04-10
+REG-OH-36804,Voltage Regulator,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Transformer Works,27.6 kV 219 A single-phase,2003,76,In Service,2023-06-08
+REG-OH-38717,Voltage Regulator,Ohio,LIMDP,Lima Depot,Lima,Ashby and Moore Electric,7.2 kV 438 A step,2007,88,Out of Service,2023-11-27
+REG-OH-38952,Voltage Regulator,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Lakeport Transformer Works,13.8 kV 328 A single-phase,2009,88,In Service,2023-08-27
+REG-OH-39128,Voltage Regulator,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Transformer Works,7.2 kV 438 A step,1968,28,In Service,2025-03-12
+REG-ON-10367,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,7.2 kV 438 A step,2007,75,In Service,2025-01-20
+REG-ON-10747,Voltage Regulator,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,7.2 kV 438 A step,1976,51,In Service,2023-07-01
+REG-ON-11094,Voltage Regulator,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Transformer Works,27.6 kV 219 A single-phase,2008,76,In Service,2024-05-31
+REG-ON-11125,Voltage Regulator,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,13.8 kV 328 A single-phase,1990,59,In Service,2023-04-24
+REG-ON-11151,Voltage Regulator,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,13.8 kV 328 A single-phase,2020,89,In Service,2026-01-24
+REG-ON-11545,Voltage Regulator,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,13.8 kV 328 A single-phase,1984,57,In Service,2025-05-14
+REG-ON-11869,Voltage Regulator,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Transformer Works,27.6 kV 219 A single-phase,1995,79,In Service,2024-11-23
+REG-ON-11923,Voltage Regulator,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,27.6 kV 219 A single-phase,1965,30,In Service,2025-05-22
+REG-ON-12001,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,13.8 kV 328 A single-phase,1990,50,In Service,2025-06-02
+REG-ON-12281,Voltage Regulator,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,7.2 kV 438 A step,1991,66,In Service,2024-01-09
+REG-ON-12284,Voltage Regulator,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,27.6 kV 219 A single-phase,1996,69,In Service,2025-02-18
+REG-ON-12336,Voltage Regulator,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,7.2 kV 438 A step,1995,65,In Service,2023-03-20
+REG-ON-12459,Voltage Regulator,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,13.8 kV 328 A single-phase,1994,78,In Service,2023-03-10
+REG-ON-12717,Voltage Regulator,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,27.6 kV 219 A single-phase,1990,83,In Service,2024-01-03
+REG-ON-13082,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,13.8 kV 328 A single-phase,1979,52,In Service,2026-07-15
+REG-ON-13154,Voltage Regulator,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,27.6 kV 219 A single-phase,1998,66,In Service,2025-02-06
+REG-ON-13321,Voltage Regulator,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,13.8 kV 328 A single-phase,2001,89,In Service,2026-05-27
+REG-ON-13329,Voltage Regulator,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Transformer Works,13.8 kV 328 A single-phase,1971,57,In Service,2025-04-02
+REG-ON-13571,Voltage Regulator,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,13.8 kV 328 A single-phase,1994,64,In Service,2025-01-15
+REG-ON-14095,Voltage Regulator,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Transformer Works,7.2 kV 438 A step,1967,39,In Service,2025-11-16
+REG-ON-14284,Voltage Regulator,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,13.8 kV 328 A single-phase,2023,98,In Service,2024-05-04
+REG-ON-14409,Voltage Regulator,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,13.8 kV 328 A single-phase,2021,94,In Service,2025-11-15
+REG-ON-14478,Voltage Regulator,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,7.2 kV 438 A step,2024,100,In Service,2024-08-25
+REG-ON-15018,Voltage Regulator,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,27.6 kV 219 A single-phase,2003,64,In Service,2025-12-29
+REG-ON-15116,Voltage Regulator,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,13.8 kV 328 A single-phase,2014,95,In Service,2025-05-24
+REG-ON-15176,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,7.2 kV 438 A step,2015,91,In Service,2025-09-30
+REG-ON-15565,Voltage Regulator,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,7.2 kV 438 A step,1975,57,In Service,2024-09-30
+REG-ON-15718,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,13.8 kV 328 A single-phase,1996,53,In Service,2024-11-02
+REG-ON-15749,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,13.8 kV 328 A single-phase,1968,41,In Service,2024-03-19
+REG-ON-15898,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,7.2 kV 438 A step,1988,72,In Service,2023-10-16
+REG-ON-15912,Voltage Regulator,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,27.6 kV 219 A single-phase,2024,96,In Service,2023-09-19
+REG-ON-16048,Voltage Regulator,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,27.6 kV 219 A single-phase,1969,47,In Service,2025-07-11
+REG-ON-16330,Voltage Regulator,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,27.6 kV 219 A single-phase,2007,78,In Service,2025-01-04
+REG-ON-16515,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,7.2 kV 438 A step,1973,45,In Service,2025-05-05
+REG-ON-17365,Voltage Regulator,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,27.6 kV 219 A single-phase,1998,72,In Service,2025-05-08
+REG-ON-17862,Voltage Regulator,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,7.2 kV 438 A step,1972,31,In Service,2024-06-20
+REG-ON-17929,Voltage Regulator,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,13.8 kV 328 A single-phase,1988,51,In Service,2024-08-23
+REG-ON-18153,Voltage Regulator,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,7.2 kV 438 A step,1977,38,In Service,2025-08-03
+REG-ON-18540,Voltage Regulator,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,27.6 kV 219 A single-phase,1991,65,In Service,2025-03-04
+REG-ON-18693,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,7.2 kV 438 A step,1969,54,In Service,2024-08-17
+REG-ON-19380,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,13.8 kV 328 A single-phase,1990,40,In Service,2025-04-25
+REG-ON-19652,Voltage Regulator,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,7.2 kV 438 A step,1982,49,In Service,2023-04-26
+SW-NY-20133,Switch,New York,ROCDP,Rochester Depot,Rochester,Lakeport Switchgear,15 kV 200 A inline,2019,83,In Service,2024-08-25
+SW-NY-20192,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Switchgear,27.6 kV 900 A load-break,2013,88,In Service,2023-01-09
+SW-NY-20314,Switch,New York,ROCDP,Rochester Depot,Rochester,Ridgeline Power Systems,15 kV 600 A gang-operated,1973,47,In Service,2024-05-19
+SW-NY-21017,Switch,New York,UTIDP,Utica Depot,Utica,Lakeport Switchgear,27.6 kV 900 A load-break,1967,38,In Service,2025-09-19
+SW-NY-21197,Switch,New York,ROCDP,Rochester Depot,Rochester,Corvane Industries,27.6 kV 900 A load-break,2010,93,In Service,2023-01-07
+SW-NY-21231,Switch,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Industries,15 kV 600 A gang-operated,1992,52,In Service,2026-09-09
+SW-NY-21771,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Ridgeline Power Systems,27.6 kV 600 A motorized,1988,61,In Service,2025-01-31
+SW-NY-22151,Switch,New York,ROCDP,Rochester Depot,Rochester,Lakeport Switchgear,15 kV 600 A gang-operated,1978,35,In Service,2023-09-24
+SW-NY-23142,Switch,New York,ROCDP,Rochester Depot,Rochester,Ridgeline Power Systems,15 kV 600 A gang-operated,2004,66,In Service,2026-09-09
+SW-NY-23327,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Switchgear,15 kV 200 A inline,1997,68,In Service,2024-04-04
+SW-NY-23377,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Ridgeline Power Systems,15 kV 200 A inline,2013,93,Out of Service,2023-06-04
+SW-NY-23796,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Ridgeline Power Systems,15 kV 600 A gang-operated,2000,66,In Service,2026-02-24
+SW-NY-23930,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Switchgear,27.6 kV 600 A motorized,1978,33,In Service,2023-05-22
+SW-NY-24169,Switch,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Industries,15 kV 600 A gang-operated,2021,99,In Service,2024-08-20
+SW-NY-24215,Switch,New York,MOHSS,Mohawk Valley Substation,Utica,Ridgeline Power Systems,27.6 kV 900 A load-break,2009,75,In Service,2025-07-06
+SW-NY-24774,Switch,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Switchgear,15 kV 600 A gang-operated,1994,60,In Service,2025-03-31
+SW-NY-24853,Switch,New York,UTIDP,Utica Depot,Utica,Corvane Industries,15 kV 200 A inline,2018,87,In Service,2025-03-15
+SW-NY-25053,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Ridgeline Power Systems,15 kV 600 A gang-operated,1993,66,In Service,2024-01-10
+SW-NY-25202,Switch,New York,UTIDP,Utica Depot,Utica,Ridgeline Power Systems,15 kV 600 A gang-operated,1984,50,In Service,2024-01-04
+SW-NY-25247,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Switchgear,15 kV 200 A inline,2015,97,In Service,2024-03-04
+SW-NY-25590,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Switchgear,15 kV 600 A gang-operated,1971,43,In Service,2026-08-03
+SW-NY-25669,Switch,New York,WTNDP,Watertown Depot,Watertown,Lakeport Switchgear,27.6 kV 900 A load-break,2004,75,In Service,2026-01-27
+SW-NY-26343,Switch,New York,MOHSS,Mohawk Valley Substation,Utica,Ridgeline Power Systems,27.6 kV 900 A load-break,1978,47,In Service,2025-12-04
+SW-NY-26362,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Switchgear,15 kV 200 A inline,1981,48,In Service,2023-11-13
+SW-NY-26416,Switch,New York,ROCDP,Rochester Depot,Rochester,Corvane Industries,27.6 kV 900 A load-break,1973,48,In Service,2026-04-17
+SW-NY-26545,Switch,New York,UTIDP,Utica Depot,Utica,Ridgeline Power Systems,27.6 kV 900 A load-break,1996,70,In Service,2026-04-07
+SW-NY-26639,Switch,New York,UTIDP,Utica Depot,Utica,Corvane Industries,27.6 kV 600 A motorized,1980,54,In Service,2024-08-10
+SW-NY-26860,Switch,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Switchgear,15 kV 200 A inline,2016,100,In Service,2023-06-04
+SW-NY-27322,Switch,New York,ROCDP,Rochester Depot,Rochester,Corvane Industries,27.6 kV 900 A load-break,1987,52,In Service,2024-01-07
+SW-NY-28183,Switch,New York,SYROC,Syracuse Operations Center,Syracuse,Corvane Industries,27.6 kV 600 A motorized,1983,45,In Service,2025-09-27
+SW-NY-28284,Switch,New York,UTIDP,Utica Depot,Utica,Lakeport Switchgear,15 kV 200 A inline,2005,84,In Service,2026-08-21
+SW-NY-28388,Switch,New York,UTIDP,Utica Depot,Utica,Corvane Industries,15 kV 200 A inline,1999,74,In Service,2026-09-09
+SW-NY-28682,Switch,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Switchgear,15 kV 600 A gang-operated,1989,56,In Service,2025-01-20
+SW-NY-28685,Switch,New York,MOHSS,Mohawk Valley Substation,Utica,Corvane Industries,15 kV 600 A gang-operated,2012,100,In Service,2024-05-24
+SW-NY-29080,Switch,New York,MOHSS,Mohawk Valley Substation,Utica,Ridgeline Power Systems,27.6 kV 900 A load-break,2020,82,In Service,2025-05-25
+SW-NY-29402,Switch,New York,ROCDP,Rochester Depot,Rochester,Lakeport Switchgear,27.6 kV 600 A motorized,2012,87,In Service,2026-07-28
+SW-NY-29594,Switch,New York,ROCDP,Rochester Depot,Rochester,Lakeport Switchgear,15 kV 600 A gang-operated,1976,43,In Service,2026-08-04
+SW-NY-29837,Switch,New York,UTIDP,Utica Depot,Utica,Corvane Industries,27.6 kV 600 A motorized,1975,45,In Service,2025-04-26
+SW-NY-29887,Switch,New York,ROCDP,Rochester Depot,Rochester,Lakeport Switchgear,27.6 kV 600 A motorized,1983,38,In Service,2025-02-05
+SW-OH-30110,Switch,Ohio,LIMDP,Lima Depot,Lima,Lakeport Switchgear,27.6 kV 600 A motorized,1994,34,In Service,2026-08-21
+SW-OH-30618,Switch,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Switchgear,27.6 kV 600 A motorized,2025,99,In Service,2025-12-11
+SW-OH-30708,Switch,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Switchgear,15 kV 200 A inline,2011,91,In Service,2024-05-21
+SW-OH-30833,Switch,Ohio,LIMDP,Lima Depot,Lima,Lakeport Switchgear,15 kV 600 A gang-operated,2000,68,In Service,2024-06-12
+SW-OH-31204,Switch,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Switchgear,27.6 kV 900 A load-break,1992,71,Retired,2026-05-13
+SW-OH-31799,Switch,Ohio,LIMDP,Lima Depot,Lima,Corvane Industries,27.6 kV 600 A motorized,1990,62,In Service,2024-10-22
+SW-OH-32204,Switch,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Industries,15 kV 200 A inline,1995,76,In Service,2026-09-04
+SW-OH-32300,Switch,Ohio,MANDP,Mansfield Depot,Mansfield,Ridgeline Power Systems,27.6 kV 900 A load-break,1992,73,In Service,2025-01-24
+SW-OH-32323,Switch,Ohio,LIMDP,Lima Depot,Lima,Corvane Industries,15 kV 200 A inline,2022,100,In Service,2026-05-11
+SW-OH-32622,Switch,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Lakeport Switchgear,27.6 kV 600 A motorized,2014,88,In Service,2023-10-14
+SW-OH-32862,Switch,Ohio,LIMDP,Lima Depot,Lima,Ridgeline Power Systems,15 kV 200 A inline,2022,98,In Service,2023-05-14
+SW-OH-32956,Switch,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Industries,15 kV 200 A inline,1994,63,In Service,2024-07-26
+SW-OH-33061,Switch,Ohio,LIMDP,Lima Depot,Lima,Ridgeline Power Systems,15 kV 200 A inline,2002,82,In Service,2024-04-01
+SW-OH-33708,Switch,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Switchgear,15 kV 600 A gang-operated,1973,28,In Service,2025-08-02
+SW-OH-34500,Switch,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Switchgear,15 kV 200 A inline,2003,79,In Service,2025-10-11
+SW-OH-34905,Switch,Ohio,MAUSS,Maumee Bay Substation,Toledo,Corvane Industries,27.6 kV 600 A motorized,1983,71,In Service,2025-12-26
+SW-OH-34913,Switch,Ohio,MAUSS,Maumee Bay Substation,Toledo,Ridgeline Power Systems,15 kV 600 A gang-operated,2005,78,In Service,2025-10-31
+SW-OH-35172,Switch,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ridgeline Power Systems,15 kV 200 A inline,2013,83,In Service,2025-07-04
+SW-OH-35254,Switch,Ohio,LIMDP,Lima Depot,Lima,Ridgeline Power Systems,27.6 kV 600 A motorized,1987,47,In Service,2025-04-29
+SW-OH-35378,Switch,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Industries,15 kV 200 A inline,1989,54,In Service,2024-08-30
+SW-OH-35383,Switch,Ohio,MAUSS,Maumee Bay Substation,Toledo,Ridgeline Power Systems,15 kV 600 A gang-operated,1995,60,In Service,2024-07-31
+SW-OH-35873,Switch,Ohio,MANDP,Mansfield Depot,Mansfield,Corvane Industries,15 kV 600 A gang-operated,1991,72,In Service,2025-10-07
+SW-OH-35966,Switch,Ohio,FNDDP,Findlay Depot,Findlay,Ridgeline Power Systems,27.6 kV 600 A motorized,1972,33,In Service,2023-11-11
+SW-OH-36548,Switch,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Industries,27.6 kV 900 A load-break,1963,50,In Service,2024-03-08
+SW-OH-36569,Switch,Ohio,TOLOC,Toledo Operations Center,Toledo,Corvane Industries,15 kV 600 A gang-operated,1993,66,In Service,2023-03-19
+SW-OH-36767,Switch,Ohio,MAUSS,Maumee Bay Substation,Toledo,Lakeport Switchgear,27.6 kV 900 A load-break,2003,72,In Service,2023-12-05
+SW-OH-36927,Switch,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Industries,15 kV 600 A gang-operated,1965,24,In Service,2025-11-22
+SW-OH-37843,Switch,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Lakeport Switchgear,15 kV 200 A inline,1971,30,In Service,2024-04-01
+SW-OH-38355,Switch,Ohio,FNDDP,Findlay Depot,Findlay,Corvane Industries,15 kV 200 A inline,2012,77,In Service,2024-08-24
+SW-OH-38439,Switch,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Lakeport Switchgear,27.6 kV 600 A motorized,1973,48,In Service,2023-06-23
+SW-OH-39131,Switch,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Corvane Industries,15 kV 200 A inline,1987,43,In Service,2026-02-04
+SW-OH-39599,Switch,Ohio,MAUSS,Maumee Bay Substation,Toledo,Ridgeline Power Systems,15 kV 600 A gang-operated,2005,65,In Service,2025-04-07
+SW-OH-39835,Switch,Ohio,TOLOC,Toledo Operations Center,Toledo,Lakeport Switchgear,27.6 kV 900 A load-break,1998,70,In Service,2025-06-20
+SW-ON-10150,Switch,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Industries,15 kV 200 A inline,2019,89,In Service,2025-06-26
+SW-ON-10410,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ridgeline Power Systems,15 kV 200 A inline,1964,32,In Service,2026-07-05
+SW-ON-10427,Switch,Ontario,BARDP,Barrie Depot,Barrie,Ridgeline Power Systems,15 kV 200 A inline,1973,49,In Service,2025-02-24
+SW-ON-10445,Switch,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,27.6 kV 600 A motorized,1984,35,In Service,2023-02-12
+SW-ON-10614,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Ridgeline Power Systems,27.6 kV 600 A motorized,2012,93,In Service,2023-07-05
+SW-ON-11038,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,27.6 kV 600 A motorized,1977,56,In Service,2024-08-18
+SW-ON-11090,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Industries,27.6 kV 900 A load-break,1962,11,In Service,2025-12-19
+SW-ON-11441,Switch,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,15 kV 600 A gang-operated,2025,100,In Service,2026-05-08
+SW-ON-11766,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Switchgear,27.6 kV 600 A motorized,1980,35,In Service,2026-04-03
+SW-ON-11790,Switch,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Switchgear,27.6 kV 600 A motorized,2023,88,In Service,2024-08-13
+SW-ON-11894,Switch,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,27.6 kV 600 A motorized,1999,53,In Service,2025-09-17
+SW-ON-11936,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Switchgear,15 kV 600 A gang-operated,2007,65,In Service,2023-12-04
+SW-ON-12007,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Switchgear,27.6 kV 900 A load-break,1998,77,In Service,2025-09-27
+SW-ON-12133,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Switchgear,15 kV 200 A inline,1992,46,In Service,2023-04-07
+SW-ON-12215,Switch,Ontario,BARDP,Barrie Depot,Barrie,Corvane Industries,15 kV 600 A gang-operated,1992,57,In Service,2025-05-22
+SW-ON-12264,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,27.6 kV 900 A load-break,1991,70,In Service,2026-04-09
+SW-ON-12600,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ridgeline Power Systems,27.6 kV 900 A load-break,2020,95,In Service,2025-07-25
+SW-ON-12835,Switch,Ontario,PTBDP,Peterborough Depot,Peterborough,Ridgeline Power Systems,15 kV 600 A gang-operated,1969,31,In Service,2025-03-15
+SW-ON-13032,Switch,Ontario,PTBDP,Peterborough Depot,Peterborough,Ridgeline Power Systems,27.6 kV 600 A motorized,2013,67,In Service,2023-05-26
+SW-ON-13530,Switch,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,15 kV 200 A inline,1984,49,In Service,2025-10-22
+SW-ON-13603,Switch,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Switchgear,27.6 kV 600 A motorized,1964,26,In Service,2023-11-27
+SW-ON-13807,Switch,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Switchgear,15 kV 200 A inline,1965,54,In Service,2024-06-30
+SW-ON-13931,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,27.6 kV 600 A motorized,2023,100,In Service,2025-08-05
+SW-ON-14319,Switch,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,27.6 kV 600 A motorized,1992,62,In Service,2026-04-02
+SW-ON-14448,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,15 kV 200 A inline,2024,83,In Service,2024-08-23
+SW-ON-14475,Switch,Ontario,BELDP,Belleville Depot,Belleville,Corvane Industries,27.6 kV 600 A motorized,2015,86,In Service,2024-08-31
+SW-ON-15009,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Switchgear,27.6 kV 600 A motorized,2025,92,In Service,2025-12-24
+SW-ON-15134,Switch,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,27.6 kV 600 A motorized,1963,47,In Service,2026-06-02
+SW-ON-15449,Switch,Ontario,PTBDP,Peterborough Depot,Peterborough,Ridgeline Power Systems,15 kV 600 A gang-operated,1982,49,In Service,2024-11-30
+SW-ON-15624,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Switchgear,15 kV 600 A gang-operated,2005,62,In Service,2023-12-24
+SW-ON-15672,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Switchgear,27.6 kV 600 A motorized,2006,83,In Service,2023-03-07
+SW-ON-15773,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Ridgeline Power Systems,15 kV 600 A gang-operated,1982,58,In Service,2023-08-17
+SW-ON-15793,Switch,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Switchgear,27.6 kV 900 A load-break,1976,46,In Service,2026-03-03
+SW-ON-16030,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Corvane Industries,15 kV 600 A gang-operated,1986,51,In Service,2026-02-14
+SW-ON-16096,Switch,Ontario,BELDP,Belleville Depot,Belleville,Ridgeline Power Systems,27.6 kV 900 A load-break,2019,100,Out of Service,2026-06-04
+SW-ON-16325,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Switchgear,27.6 kV 900 A load-break,1973,41,In Service,2023-11-29
+SW-ON-16367,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Switchgear,15 kV 200 A inline,2018,83,In Service,2023-01-27
+SW-ON-16390,Switch,Ontario,PTBDP,Peterborough Depot,Peterborough,Corvane Industries,27.6 kV 900 A load-break,1983,44,In Service,2024-12-01
+SW-ON-16526,Switch,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,15 kV 600 A gang-operated,2021,92,In Service,2023-01-18
+SW-ON-16529,Switch,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,27.6 kV 900 A load-break,1997,50,In Service,2023-03-21
+SW-ON-16808,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Switchgear,27.6 kV 600 A motorized,2000,59,In Service,2023-08-06
+SW-ON-16909,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Switchgear,15 kV 600 A gang-operated,1974,44,Out of Service,2024-06-26
+SW-ON-16952,Switch,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Switchgear,27.6 kV 900 A load-break,1967,38,In Service,2024-02-06
+SW-ON-17164,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,27.6 kV 900 A load-break,1966,29,In Service,2024-08-09
+SW-ON-17350,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ridgeline Power Systems,15 kV 200 A inline,1992,71,In Service,2025-02-19
+SW-ON-17430,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Corvane Industries,27.6 kV 900 A load-break,2010,81,In Service,2024-08-25
+SW-ON-17702,Switch,Ontario,BARDP,Barrie Depot,Barrie,Corvane Industries,15 kV 200 A inline,2004,85,In Service,2026-07-24
+SW-ON-17705,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Switchgear,15 kV 200 A inline,2025,86,Out of Service,2023-07-14
+SW-ON-18067,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Ridgeline Power Systems,27.6 kV 600 A motorized,1989,83,In Service,2023-07-20
+SW-ON-18152,Switch,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Switchgear,15 kV 200 A inline,1963,27,In Service,2025-11-26
+SW-ON-18260,Switch,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ridgeline Power Systems,15 kV 600 A gang-operated,2001,76,In Service,2025-12-21
+SW-ON-18302,Switch,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,27.6 kV 900 A load-break,1964,28,In Service,2023-02-28
+SW-ON-18338,Switch,Ontario,BRKDP,Brockville Depot,Brockville,Corvane Industries,15 kV 200 A inline,1973,43,In Service,2024-04-29
+SW-ON-18772,Switch,Ontario,PTBDP,Peterborough Depot,Peterborough,Ridgeline Power Systems,15 kV 200 A inline,2005,66,In Service,2025-11-03
+SW-ON-18814,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Ridgeline Power Systems,15 kV 200 A inline,1984,45,In Service,2024-03-03
+SW-ON-19042,Switch,Ontario,KNGSC,Kingston Service Centre,Kingston,Ridgeline Power Systems,27.6 kV 600 A motorized,1988,57,In Service,2025-09-30
+SW-ON-19462,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ridgeline Power Systems,15 kV 600 A gang-operated,2009,95,In Service,2023-02-10
+SW-ON-19536,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,27.6 kV 600 A motorized,2001,73,In Service,2024-03-26
+SW-ON-19694,Switch,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Corvane Industries,15 kV 600 A gang-operated,1972,42,In Service,2024-10-22
+SW-ON-19873,Switch,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Switchgear,15 kV 200 A inline,2020,100,In Service,2026-06-16
+SW-ON-19883,Switch,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Switchgear,15 kV 200 A inline,1999,68,In Service,2025-01-05
+SW-ON-19903,Switch,Ontario,BARDP,Barrie Depot,Barrie,Ridgeline Power Systems,15 kV 600 A gang-operated,1965,12,In Service,2026-01-17
+TX-NY-20130,Transformer,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,10 MVA station,2003,62,In Service,2024-04-11
+TX-NY-20370,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,167 kVA pole-mount,2004,82,In Service,2024-11-05
+TX-NY-20383,Transformer,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,25 kVA pole-mount,1980,36,In Service,2024-11-25
+TX-NY-20527,Transformer,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,300 kVA pad-mount,1969,40,In Service,2025-03-04
+TX-NY-20558,Transformer,New York,UTIDP,Utica Depot,Utica,Ashby and Moore Electric,25 kVA pole-mount,2019,91,In Service,2025-02-02
+TX-NY-20960,Transformer,New York,UTIDP,Utica Depot,Utica,Ashby and Moore Electric,25 kVA pole-mount,2021,84,In Service,2023-08-26
+TX-NY-21099,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Transformer Works,167 kVA pole-mount,1970,28,In Service,2023-10-14
+TX-NY-21416,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Ashby and Moore Electric,50 kVA pole-mount,1990,57,In Service,2025-04-18
+TX-NY-21529,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Northfield Transformer Co.,167 kVA pole-mount,2001,67,In Service,2024-05-02
+TX-NY-21530,Transformer,New York,UTIDP,Utica Depot,Utica,Ashby and Moore Electric,25 kVA pole-mount,1991,57,In Service,2024-03-17
+TX-NY-21764,Transformer,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,10 MVA station,1975,37,In Service,2026-08-17
+TX-NY-21794,Transformer,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,500 kVA pad-mount,2003,78,In Service,2023-07-25
+TX-NY-21798,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Northfield Transformer Co.,500 kVA pad-mount,2010,98,In Service,2023-05-03
+TX-NY-21903,Transformer,New York,ROCDP,Rochester Depot,Rochester,Ashby and Moore Electric,75 kVA pole-mount,1964,20,In Service,2026-04-01
+TX-NY-21917,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,20 MVA station,1975,40,In Service,2026-06-24
+TX-NY-21958,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Transformer Works,50 kVA pole-mount,2009,75,In Service,2026-07-18
+TX-NY-22145,Transformer,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,300 kVA pad-mount,1969,29,In Service,2024-01-19
+TX-NY-22353,Transformer,New York,ROCDP,Rochester Depot,Rochester,Lakeport Transformer Works,"1,000 kVA pad-mount",1986,49,In Service,2024-08-29
+TX-NY-22355,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Ashby and Moore Electric,500 kVA pad-mount,2002,62,In Service,2025-07-07
+TX-NY-22440,Transformer,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,75 kVA pole-mount,1990,52,Out of Service,2023-08-17
+TX-NY-22896,Transformer,New York,UTIDP,Utica Depot,Utica,Ashby and Moore Electric,75 kVA pole-mount,1963,8,In Service,2024-05-04
+TX-NY-23125,Transformer,New York,ROCDP,Rochester Depot,Rochester,Lakeport Transformer Works,75 kVA pole-mount,1966,45,In Service,2025-07-11
+TX-NY-23187,Transformer,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,20 MVA station,2025,100,In Service,2025-06-28
+TX-NY-23214,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Ashby and Moore Electric,167 kVA pole-mount,1967,36,In Service,2026-02-04
+TX-NY-23309,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Transformer Works,25 kVA pole-mount,1998,67,In Service,2024-06-24
+TX-NY-23317,Transformer,New York,ROCDP,Rochester Depot,Rochester,Ashby and Moore Electric,"1,000 kVA pad-mount",2015,91,In Service,2026-04-14
+TX-NY-23412,Transformer,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,500 kVA pad-mount,1980,45,In Service,2026-05-20
+TX-NY-23485,Transformer,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,500 kVA pad-mount,1992,64,In Service,2024-12-22
+TX-NY-23768,Transformer,New York,ROCDP,Rochester Depot,Rochester,Northfield Transformer Co.,50 kVA pole-mount,1991,68,In Service,2026-04-29
+TX-NY-23929,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Northfield Transformer Co.,10 MVA station,1997,80,In Service,2024-07-23
+TX-NY-23965,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Ashby and Moore Electric,50 kVA pole-mount,1966,33,In Service,2026-04-29
+TX-NY-24184,Transformer,New York,ROCDP,Rochester Depot,Rochester,Lakeport Transformer Works,75 kVA pole-mount,1973,39,In Service,2025-06-02
+TX-NY-24311,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Transformer Works,75 kVA pole-mount,2016,88,In Service,2023-11-30
+TX-NY-24353,Transformer,New York,ROCDP,Rochester Depot,Rochester,Lakeport Transformer Works,500 kVA pad-mount,1963,39,In Service,2026-07-17
+TX-NY-24375,Transformer,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,25 kVA pole-mount,2025,100,In Service,2023-12-30
+TX-NY-24412,Transformer,New York,UTIDP,Utica Depot,Utica,Lakeport Transformer Works,20 MVA station,1968,37,In Service,2024-01-25
+TX-NY-24458,Transformer,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,500 kVA pad-mount,1964,28,Out of Service,2025-03-04
+TX-NY-24486,Transformer,New York,UTIDP,Utica Depot,Utica,Lakeport Transformer Works,"1,000 kVA pad-mount",2019,100,In Service,2025-04-16
+TX-NY-24673,Transformer,New York,UTIDP,Utica Depot,Utica,Lakeport Transformer Works,25 kVA pole-mount,1988,48,In Service,2023-07-14
+TX-NY-24760,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Ashby and Moore Electric,25 kVA pole-mount,1993,57,In Service,2026-05-01
+TX-NY-24762,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Northfield Transformer Co.,500 kVA pad-mount,1998,37,In Service,2025-10-22
+TX-NY-24794,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,500 kVA pad-mount,1995,73,In Service,2025-08-23
+TX-NY-24815,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,"1,000 kVA pad-mount",1986,66,In Service,2026-02-06
+TX-NY-24819,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Northfield Transformer Co.,167 kVA pole-mount,2004,81,In Service,2025-07-24
+TX-NY-24923,Transformer,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,50 kVA pole-mount,2002,65,In Service,2025-11-22
+TX-NY-25138,Transformer,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,75 kVA pole-mount,1964,18,In Service,2026-03-17
+TX-NY-25166,Transformer,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,500 kVA pad-mount,1974,33,In Service,2024-02-01
+TX-NY-25344,Transformer,New York,ROCDP,Rochester Depot,Rochester,Northfield Transformer Co.,167 kVA pole-mount,2023,100,In Service,2026-01-13
+TX-NY-25430,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Ashby and Moore Electric,50 kVA pole-mount,2005,77,In Service,2023-06-16
+TX-NY-25479,Transformer,New York,ROCDP,Rochester Depot,Rochester,Ashby and Moore Electric,500 kVA pad-mount,1966,27,In Service,2024-04-21
+TX-NY-25649,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Transformer Works,75 kVA pole-mount,1974,50,In Service,2024-08-02
+TX-NY-25760,Transformer,New York,ROCDP,Rochester Depot,Rochester,Lakeport Transformer Works,500 kVA pad-mount,2013,77,In Service,2023-03-11
+TX-NY-25779,Transformer,New York,UTIDP,Utica Depot,Utica,Lakeport Transformer Works,10 MVA station,1984,54,In Service,2026-01-25
+TX-NY-25819,Transformer,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,300 kVA pad-mount,2004,82,In Service,2026-02-20
+TX-NY-26085,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Ashby and Moore Electric,300 kVA pad-mount,2016,90,In Service,2025-01-20
+TX-NY-26264,Transformer,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,50 kVA pole-mount,2006,73,In Service,2025-05-09
+TX-NY-26650,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,300 kVA pad-mount,2022,96,In Service,2025-03-15
+TX-NY-26678,Transformer,New York,ROCDP,Rochester Depot,Rochester,Ashby and Moore Electric,167 kVA pole-mount,1971,19,In Service,2025-05-23
+TX-NY-26702,Transformer,New York,ROCDP,Rochester Depot,Rochester,Ashby and Moore Electric,500 kVA pad-mount,1997,63,In Service,2026-05-25
+TX-NY-26781,Transformer,New York,ROCDP,Rochester Depot,Rochester,Northfield Transformer Co.,25 kVA pole-mount,1980,46,In Service,2026-04-13
+TX-NY-26800,Transformer,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,500 kVA pad-mount,1994,63,In Service,2024-03-20
+TX-NY-26804,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Northfield Transformer Co.,25 kVA pole-mount,2009,72,In Service,2025-01-24
+TX-NY-26880,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,500 kVA pad-mount,1985,57,In Service,2025-11-15
+TX-NY-26960,Transformer,New York,ROCDP,Rochester Depot,Rochester,Lakeport Transformer Works,167 kVA pole-mount,2009,81,In Service,2025-07-18
+TX-NY-27060,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Northfield Transformer Co.,75 kVA pole-mount,2015,76,In Service,2025-01-16
+TX-NY-27260,Transformer,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,25 kVA pole-mount,1963,34,In Service,2026-09-01
+TX-NY-27480,Transformer,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,500 kVA pad-mount,1987,83,In Service,2025-05-09
+TX-NY-27484,Transformer,New York,UTIDP,Utica Depot,Utica,Ashby and Moore Electric,167 kVA pole-mount,2001,62,In Service,2025-09-01
+TX-NY-27605,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Northfield Transformer Co.,25 kVA pole-mount,1978,66,In Service,2025-11-08
+TX-NY-27678,Transformer,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,"1,000 kVA pad-mount",2001,78,In Service,2024-07-20
+TX-NY-27823,Transformer,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,"1,000 kVA pad-mount",2022,100,In Service,2024-11-12
+TX-NY-27824,Transformer,New York,ROCDP,Rochester Depot,Rochester,Northfield Transformer Co.,25 kVA pole-mount,1995,67,In Service,2024-04-13
+TX-NY-27996,Transformer,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,"1,000 kVA pad-mount",2023,92,In Service,2026-05-11
+TX-NY-28109,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Ashby and Moore Electric,20 MVA station,1986,68,In Service,2025-02-27
+TX-NY-28203,Transformer,New York,ROCDP,Rochester Depot,Rochester,Northfield Transformer Co.,50 kVA pole-mount,1973,18,In Service,2025-01-26
+TX-NY-28500,Transformer,New York,SYROC,Syracuse Operations Center,Syracuse,Lakeport Transformer Works,500 kVA pad-mount,1966,34,In Service,2025-11-04
+TX-NY-29108,Transformer,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,300 kVA pad-mount,1970,33,Retired,2025-05-17
+TX-NY-29272,Transformer,New York,WTNDP,Watertown Depot,Watertown,Northfield Transformer Co.,"1,000 kVA pad-mount",1977,39,In Service,2024-05-10
+TX-NY-29341,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Ashby and Moore Electric,10 MVA station,1983,41,In Service,2026-01-17
+TX-NY-29361,Transformer,New York,WTNDP,Watertown Depot,Watertown,Ashby and Moore Electric,"1,000 kVA pad-mount",1995,79,In Service,2023-06-10
+TX-NY-29381,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Ashby and Moore Electric,300 kVA pad-mount,1965,46,In Service,2024-09-24
+TX-NY-29401,Transformer,New York,UTIDP,Utica Depot,Utica,Northfield Transformer Co.,500 kVA pad-mount,2013,73,In Service,2024-06-09
+TX-NY-29558,Transformer,New York,WTNDP,Watertown Depot,Watertown,Lakeport Transformer Works,50 kVA pole-mount,2006,82,In Service,2023-01-21
+TX-NY-29726,Transformer,New York,MOHSS,Mohawk Valley Substation,Utica,Lakeport Transformer Works,300 kVA pad-mount,1996,52,In Service,2023-11-30
+TX-NY-29991,Transformer,New York,ROCDP,Rochester Depot,Rochester,Northfield Transformer Co.,75 kVA pole-mount,1967,31,In Service,2026-07-24
+TX-OH-20871,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Lakeport Transformer Works,50 kVA pole-mount,1992,44,In Service,2025-10-14
+TX-OH-30027,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Ashby and Moore Electric,50 kVA pole-mount,2023,97,Retired,2026-05-09
+TX-OH-30036,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Transformer Works,500 kVA pad-mount,1991,83,In Service,2025-12-29
+TX-OH-30098,Transformer,Ohio,LIMDP,Lima Depot,Lima,Lakeport Transformer Works,75 kVA pole-mount,2004,83,In Service,2023-09-09
+TX-OH-30174,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Lakeport Transformer Works,167 kVA pole-mount,1998,58,In Service,2026-06-02
+TX-OH-30199,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Ashby and Moore Electric,75 kVA pole-mount,2006,66,In Service,2023-02-15
+TX-OH-30260,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Northfield Transformer Co.,167 kVA pole-mount,1998,70,In Service,2023-03-17
+TX-OH-30317,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Northfield Transformer Co.,500 kVA pad-mount,1965,31,In Service,2024-12-20
+TX-OH-30792,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ashby and Moore Electric,167 kVA pole-mount,1989,60,In Service,2023-12-25
+TX-OH-30904,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Northfield Transformer Co.,"1,000 kVA pad-mount",2012,91,In Service,2025-05-27
+TX-OH-30919,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Northfield Transformer Co.,500 kVA pad-mount,1998,66,In Service,2024-07-20
+TX-OH-30999,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Northfield Transformer Co.,25 kVA pole-mount,1972,54,In Service,2025-09-20
+TX-OH-31195,Transformer,Ohio,LIMDP,Lima Depot,Lima,Ashby and Moore Electric,10 MVA station,2003,66,In Service,2024-04-17
+TX-OH-31384,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Northfield Transformer Co.,10 MVA station,1972,40,In Service,2024-12-27
+TX-OH-31496,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Transformer Works,50 kVA pole-mount,2012,100,In Service,2023-12-02
+TX-OH-31671,Transformer,Ohio,LIMDP,Lima Depot,Lima,Northfield Transformer Co.,"1,000 kVA pad-mount",1970,46,In Service,2023-07-19
+TX-OH-31729,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Transformer Works,500 kVA pad-mount,1974,44,In Service,2026-08-08
+TX-OH-31892,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ashby and Moore Electric,20 MVA station,1995,57,Out of Service,2023-06-29
+TX-OH-31902,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Lakeport Transformer Works,20 MVA station,1976,24,Out of Service,2026-03-12
+TX-OH-32018,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Transformer Works,167 kVA pole-mount,1975,55,In Service,2026-03-10
+TX-OH-32029,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Ashby and Moore Electric,25 kVA pole-mount,1986,55,In Service,2024-01-28
+TX-OH-32125,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Northfield Transformer Co.,20 MVA station,2016,88,In Service,2026-08-22
+TX-OH-32482,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Transformer Works,500 kVA pad-mount,1963,47,In Service,2025-03-21
+TX-OH-32626,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Lakeport Transformer Works,500 kVA pad-mount,1979,35,In Service,2025-01-25
+TX-OH-32631,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Northfield Transformer Co.,300 kVA pad-mount,2021,95,In Service,2025-12-05
+TX-OH-32658,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Northfield Transformer Co.,20 MVA station,2022,86,In Service,2025-04-09
+TX-OH-33009,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Lakeport Transformer Works,"1,000 kVA pad-mount",1992,71,In Service,2024-04-29
+TX-OH-33111,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Lakeport Transformer Works,75 kVA pole-mount,1990,68,In Service,2023-06-23
+TX-OH-33234,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ashby and Moore Electric,167 kVA pole-mount,1969,35,In Service,2023-02-19
+TX-OH-33335,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ashby and Moore Electric,500 kVA pad-mount,2021,100,In Service,2024-01-18
+TX-OH-33429,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Transformer Works,75 kVA pole-mount,2017,85,In Service,2024-11-08
+TX-OH-33439,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Transformer Works,20 MVA station,2014,95,In Service,2025-08-04
+TX-OH-33538,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Northfield Transformer Co.,10 MVA station,1972,48,In Service,2025-10-31
+TX-OH-33745,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Transformer Works,50 kVA pole-mount,1962,25,In Service,2025-12-18
+TX-OH-33896,Transformer,Ohio,LIMDP,Lima Depot,Lima,Ashby and Moore Electric,"1,000 kVA pad-mount",1993,64,In Service,2023-04-08
+TX-OH-34068,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Ashby and Moore Electric,25 kVA pole-mount,1962,28,In Service,2026-07-09
+TX-OH-34122,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Lakeport Transformer Works,500 kVA pad-mount,2025,89,In Service,2024-04-01
+TX-OH-34339,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Northfield Transformer Co.,"1,000 kVA pad-mount",1996,64,In Service,2026-03-21
+TX-OH-34345,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Northfield Transformer Co.,500 kVA pad-mount,2008,65,In Service,2026-07-29
+TX-OH-34386,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Northfield Transformer Co.,500 kVA pad-mount,2005,72,In Service,2026-09-09
+TX-OH-34468,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Transformer Works,10 MVA station,1980,58,In Service,2024-08-01
+TX-OH-34622,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Lakeport Transformer Works,500 kVA pad-mount,1965,35,In Service,2025-12-15
+TX-OH-34823,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Northfield Transformer Co.,500 kVA pad-mount,1965,56,Retired,2023-10-03
+TX-OH-34888,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Ashby and Moore Electric,167 kVA pole-mount,2023,90,In Service,2026-07-02
+TX-OH-34902,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Lakeport Transformer Works,20 MVA station,2019,86,In Service,2023-08-04
+TX-OH-34978,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Lakeport Transformer Works,"1,000 kVA pad-mount",2021,83,In Service,2024-12-22
+TX-OH-35205,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Transformer Works,10 MVA station,1985,55,In Service,2023-01-21
+TX-OH-35276,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Lakeport Transformer Works,20 MVA station,1993,59,In Service,2025-07-18
+TX-OH-35455,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Transformer Works,167 kVA pole-mount,1989,52,In Service,2024-10-30
+TX-OH-35740,Transformer,Ohio,LIMDP,Lima Depot,Lima,Ashby and Moore Electric,75 kVA pole-mount,2006,80,In Service,2024-07-16
+TX-OH-36269,Transformer,Ohio,LIMDP,Lima Depot,Lima,Lakeport Transformer Works,50 kVA pole-mount,2022,100,In Service,2024-10-06
+TX-OH-36290,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Ashby and Moore Electric,75 kVA pole-mount,1994,62,In Service,2025-03-08
+TX-OH-36523,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Ashby and Moore Electric,75 kVA pole-mount,2011,100,In Service,2023-12-03
+TX-OH-36545,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Ashby and Moore Electric,300 kVA pad-mount,2017,77,In Service,2024-04-13
+TX-OH-36574,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Northfield Transformer Co.,500 kVA pad-mount,1977,48,Retired,2024-07-23
+TX-OH-36784,Transformer,Ohio,LIMDP,Lima Depot,Lima,Ashby and Moore Electric,75 kVA pole-mount,1983,46,In Service,2024-07-01
+TX-OH-36891,Transformer,Ohio,LIMDP,Lima Depot,Lima,Lakeport Transformer Works,300 kVA pad-mount,1979,44,In Service,2026-08-24
+TX-OH-37043,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ashby and Moore Electric,25 kVA pole-mount,1979,60,In Service,2026-01-29
+TX-OH-37077,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Lakeport Transformer Works,300 kVA pad-mount,1974,43,In Service,2023-09-08
+TX-OH-37563,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Northfield Transformer Co.,75 kVA pole-mount,1965,16,Retired,2025-06-03
+TX-OH-37614,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Northfield Transformer Co.,167 kVA pole-mount,1964,17,In Service,2023-01-25
+TX-OH-37766,Transformer,Ohio,LIMDP,Lima Depot,Lima,Ashby and Moore Electric,25 kVA pole-mount,1989,80,In Service,2023-09-17
+TX-OH-38243,Transformer,Ohio,LIMDP,Lima Depot,Lima,Ashby and Moore Electric,10 MVA station,1989,66,In Service,2025-01-20
+TX-OH-38419,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Northfield Transformer Co.,75 kVA pole-mount,1997,72,In Service,2023-01-24
+TX-OH-38743,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Ashby and Moore Electric,10 MVA station,2014,99,In Service,2024-05-26
+TX-OH-38874,Transformer,Ohio,FNDDP,Findlay Depot,Findlay,Ashby and Moore Electric,50 kVA pole-mount,2022,100,In Service,2023-07-17
+TX-OH-39100,Transformer,Ohio,MAUSS,Maumee Bay Substation,Toledo,Northfield Transformer Co.,500 kVA pad-mount,1977,49,In Service,2023-02-25
+TX-OH-39183,Transformer,Ohio,ASHDP,Ashtabula Depot,Ashtabula,Northfield Transformer Co.,25 kVA pole-mount,2020,74,In Service,2025-05-02
+TX-OH-39286,Transformer,Ohio,MANDP,Mansfield Depot,Mansfield,Northfield Transformer Co.,25 kVA pole-mount,2012,80,In Service,2025-09-16
+TX-OH-39569,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Ashby and Moore Electric,300 kVA pad-mount,2025,97,In Service,2025-12-14
+TX-OH-39664,Transformer,Ohio,TOLOC,Toledo Operations Center,Toledo,Northfield Transformer Co.,10 MVA station,2011,77,In Service,2023-01-29
+TX-OH-39788,Transformer,Ohio,LIMDP,Lima Depot,Lima,Lakeport Transformer Works,"1,000 kVA pad-mount",2015,89,In Service,2023-01-13
+TX-ON-10018,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Northfield Transformer Co.,10 MVA station,1966,32,In Service,2023-04-27
+TX-ON-10092,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,167 kVA pole-mount,2013,97,In Service,2026-08-28
+TX-ON-10096,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,"1,000 kVA pad-mount",1968,15,In Service,2025-10-06
+TX-ON-10116,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,20 MVA station,1998,53,In Service,2025-05-01
+TX-ON-10134,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,50 kVA pole-mount,2015,88,In Service,2023-10-10
+TX-ON-10151,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,500 kVA pad-mount,1969,37,In Service,2025-10-20
+TX-ON-10284,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,167 kVA pole-mount,1968,30,In Service,2025-05-17
+TX-ON-10398,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,50 kVA pole-mount,1984,38,In Service,2023-11-03
+TX-ON-10423,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,25 kVA pole-mount,1987,38,In Service,2026-08-28
+TX-ON-10486,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,50 kVA pole-mount,1972,47,In Service,2024-09-23
+TX-ON-10525,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,10 MVA station,1991,60,In Service,2024-04-07
+TX-ON-10545,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Ashby and Moore Electric,25 kVA pole-mount,2004,84,In Service,2025-11-10
+TX-ON-10615,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Transformer Works,"1,000 kVA pad-mount",1977,57,In Service,2025-12-27
+TX-ON-10637,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,10 MVA station,1983,64,In Service,2025-11-30
+TX-ON-10705,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,50 kVA pole-mount,2013,90,Out of Service,2025-05-02
+TX-ON-10812,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,"1,000 kVA pad-mount",2012,56,In Service,2026-06-27
+TX-ON-10842,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Transformer Works,25 kVA pole-mount,1997,56,Out of Service,2024-12-28
+TX-ON-10875,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,10 MVA station,1970,44,In Service,2026-08-21
+TX-ON-10923,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,"1,000 kVA pad-mount",1977,61,In Service,2026-09-13
+TX-ON-10998,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,50 kVA pole-mount,2016,71,In Service,2024-02-18
+TX-ON-11162,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,300 kVA pad-mount,1965,33,Retired,2023-06-01
+TX-ON-11254,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Northfield Transformer Co.,10 MVA station,1966,9,In Service,2025-12-17
+TX-ON-11501,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,25 kVA pole-mount,1996,56,In Service,2024-06-04
+TX-ON-11528,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Northfield Transformer Co.,"1,000 kVA pad-mount",2006,86,In Service,2024-12-23
+TX-ON-11535,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,167 kVA pole-mount,2018,90,In Service,2025-05-22
+TX-ON-11571,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,300 kVA pad-mount,1977,46,In Service,2026-05-23
+TX-ON-11669,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,50 kVA pole-mount,1977,42,In Service,2025-07-07
+TX-ON-11799,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,50 kVA pole-mount,2004,75,In Service,2023-12-09
+TX-ON-11829,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,75 kVA pole-mount,2007,76,In Service,2025-02-01
+TX-ON-11866,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Transformer Works,50 kVA pole-mount,1989,64,In Service,2026-03-19
+TX-ON-11880,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,50 kVA pole-mount,2001,59,In Service,2024-04-26
+TX-ON-11890,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,10 MVA station,1999,70,In Service,2025-12-18
+TX-ON-12050,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,50 kVA pole-mount,2014,81,In Service,2023-08-31
+TX-ON-12086,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,300 kVA pad-mount,2009,87,In Service,2023-09-01
+TX-ON-12089,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Transformer Works,"1,000 kVA pad-mount",1975,43,In Service,2025-10-12
+TX-ON-12141,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,500 kVA pad-mount,1973,55,In Service,2024-04-13
+TX-ON-12142,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,25 kVA pole-mount,2010,94,In Service,2025-04-13
+TX-ON-12209,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Transformer Works,500 kVA pad-mount,2023,96,In Service,2024-12-11
+TX-ON-12295,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Transformer Works,75 kVA pole-mount,2024,96,In Service,2023-11-22
+TX-ON-12310,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Ashby and Moore Electric,167 kVA pole-mount,2011,71,In Service,2025-03-01
+TX-ON-12362,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,500 kVA pad-mount,2001,74,In Service,2025-02-27
+TX-ON-12364,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,25 kVA pole-mount,1964,22,In Service,2025-04-26
+TX-ON-12376,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,"1,000 kVA pad-mount",1967,44,In Service,2024-01-06
+TX-ON-12393,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,300 kVA pad-mount,2001,82,In Service,2024-02-11
+TX-ON-12395,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,25 kVA pole-mount,1966,23,In Service,2026-01-20
+TX-ON-12424,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,500 kVA pad-mount,1990,67,In Service,2025-02-18
+TX-ON-12548,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Transformer Works,10 MVA station,1964,7,In Service,2023-10-23
+TX-ON-12610,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,10 MVA station,1975,51,In Service,2024-10-15
+TX-ON-12638,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,500 kVA pad-mount,2009,86,In Service,2025-10-29
+TX-ON-12656,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Northfield Transformer Co.,"1,000 kVA pad-mount",1973,24,In Service,2025-12-08
+TX-ON-12769,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,25 kVA pole-mount,2001,66,In Service,2024-12-30
+TX-ON-12872,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Ashby and Moore Electric,50 kVA pole-mount,1974,41,In Service,2026-05-18
+TX-ON-12937,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,75 kVA pole-mount,1988,60,Out of Service,2024-10-12
+TX-ON-13076,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,75 kVA pole-mount,1971,58,In Service,2025-02-08
+TX-ON-13101,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Transformer Works,500 kVA pad-mount,1975,49,In Service,2026-02-14
+TX-ON-13305,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,167 kVA pole-mount,2012,87,In Service,2023-05-14
+TX-ON-13401,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Ashby and Moore Electric,50 kVA pole-mount,2025,100,In Service,2025-03-07
+TX-ON-13473,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Northfield Transformer Co.,167 kVA pole-mount,1977,37,In Service,2026-08-22
+TX-ON-13521,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Northfield Transformer Co.,50 kVA pole-mount,2021,97,In Service,2025-04-02
+TX-ON-13576,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,"1,000 kVA pad-mount",1964,23,In Service,2023-05-25
+TX-ON-13643,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,25 kVA pole-mount,2001,62,In Service,2025-05-07
+TX-ON-13720,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,20 MVA station,2000,74,In Service,2025-03-24
+TX-ON-13861,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Northfield Transformer Co.,25 kVA pole-mount,1967,49,Out of Service,2023-10-19
+TX-ON-13910,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Northfield Transformer Co.,25 kVA pole-mount,1984,60,In Service,2025-09-28
+TX-ON-14044,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,20 MVA station,1996,80,In Service,2026-06-13
+TX-ON-14052,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,300 kVA pad-mount,2024,100,In Service,2023-08-04
+TX-ON-14255,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,75 kVA pole-mount,1974,49,In Service,2026-05-11
+TX-ON-14295,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,167 kVA pole-mount,2004,87,In Service,2023-12-26
+TX-ON-14312,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,500 kVA pad-mount,1983,68,In Service,2024-03-17
+TX-ON-14352,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,500 kVA pad-mount,1963,10,In Service,2026-08-27
+TX-ON-14422,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,10 MVA station,2024,100,In Service,2025-11-29
+TX-ON-14536,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,50 kVA pole-mount,2017,77,In Service,2023-03-23
+TX-ON-14583,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,50 kVA pole-mount,1996,68,In Service,2024-07-17
+TX-ON-14590,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,"1,000 kVA pad-mount",2002,64,In Service,2026-06-05
+TX-ON-14782,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,300 kVA pad-mount,2018,100,In Service,2024-12-21
+TX-ON-14804,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Transformer Works,25 kVA pole-mount,1990,34,In Service,2026-06-05
+TX-ON-14852,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,300 kVA pad-mount,2000,71,In Service,2024-05-15
+TX-ON-14863,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,75 kVA pole-mount,1981,66,In Service,2024-12-25
+TX-ON-14871,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Transformer Works,25 kVA pole-mount,1973,32,In Service,2023-06-22
+TX-ON-14889,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,10 MVA station,1971,26,In Service,2024-08-13
+TX-ON-14967,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,500 kVA pad-mount,1971,34,In Service,2024-02-10
+TX-ON-14971,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Transformer Works,50 kVA pole-mount,1978,61,Out of Service,2024-10-19
+TX-ON-15034,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,10 MVA station,2011,84,In Service,2024-07-21
+TX-ON-15072,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,500 kVA pad-mount,2020,83,In Service,2023-07-16
+TX-ON-15103,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,25 kVA pole-mount,1964,31,In Service,2025-10-31
+TX-ON-15172,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,167 kVA pole-mount,2011,89,In Service,2024-08-08
+TX-ON-15271,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,50 kVA pole-mount,1975,42,In Service,2023-04-27
+TX-ON-15272,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,300 kVA pad-mount,1974,29,In Service,2025-08-29
+TX-ON-15313,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,25 kVA pole-mount,1970,35,In Service,2026-04-07
+TX-ON-15359,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,50 kVA pole-mount,2024,100,In Service,2025-07-15
+TX-ON-15368,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,75 kVA pole-mount,2019,83,In Service,2026-08-01
+TX-ON-15468,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,"1,000 kVA pad-mount",1988,73,In Service,2025-09-07
+TX-ON-15742,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,75 kVA pole-mount,1979,46,Out of Service,2024-10-28
+TX-ON-15752,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,25 kVA pole-mount,1993,54,In Service,2023-11-27
+TX-ON-15935,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,167 kVA pole-mount,2000,87,In Service,2025-03-02
+TX-ON-15974,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,167 kVA pole-mount,1975,29,In Service,2024-01-12
+TX-ON-16015,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,167 kVA pole-mount,2012,72,In Service,2024-07-10
+TX-ON-16243,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,167 kVA pole-mount,1977,47,In Service,2023-07-11
+TX-ON-16294,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,10 MVA station,2012,82,In Service,2023-05-03
+TX-ON-16322,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,500 kVA pad-mount,1975,40,Out of Service,2026-07-13
+TX-ON-16362,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,167 kVA pole-mount,2018,87,In Service,2025-11-09
+TX-ON-16400,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,"1,000 kVA pad-mount",1982,45,Out of Service,2023-02-03
+TX-ON-16541,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,500 kVA pad-mount,2012,74,In Service,2024-09-27
+TX-ON-16603,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,75 kVA pole-mount,1971,42,In Service,2024-05-08
+TX-ON-16760,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Transformer Works,"1,000 kVA pad-mount",2023,100,In Service,2025-10-09
+TX-ON-16764,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,25 kVA pole-mount,1968,36,In Service,2026-03-09
+TX-ON-16928,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,50 kVA pole-mount,2001,90,Out of Service,2026-04-07
+TX-ON-17002,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,50 kVA pole-mount,2002,70,In Service,2024-12-29
+TX-ON-17012,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,300 kVA pad-mount,2002,67,In Service,2023-10-26
+TX-ON-17059,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,20 MVA station,2024,96,In Service,2024-02-14
+TX-ON-17088,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,300 kVA pad-mount,1991,73,In Service,2024-10-12
+TX-ON-17117,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,50 kVA pole-mount,2000,63,In Service,2026-04-08
+TX-ON-17138,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,75 kVA pole-mount,1978,42,In Service,2026-02-26
+TX-ON-17170,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,167 kVA pole-mount,2020,69,In Service,2026-07-23
+TX-ON-17189,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,10 MVA station,1994,53,In Service,2026-08-26
+TX-ON-17198,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,300 kVA pad-mount,2025,100,In Service,2023-06-26
+TX-ON-17204,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Northfield Transformer Co.,500 kVA pad-mount,1987,67,In Service,2024-08-10
+TX-ON-17239,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,25 kVA pole-mount,2013,93,In Service,2024-05-22
+TX-ON-17248,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,20 MVA station,1981,40,In Service,2024-08-12
+TX-ON-17267,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Lakeport Transformer Works,10 MVA station,1997,91,In Service,2025-11-19
+TX-ON-17299,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,"1,000 kVA pad-mount",1994,62,Retired,2023-12-27
+TX-ON-17333,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,75 kVA pole-mount,2019,94,In Service,2026-03-17
+TX-ON-17334,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,75 kVA pole-mount,2014,77,In Service,2023-06-15
+TX-ON-17426,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,10 MVA station,1979,51,In Service,2026-04-13
+TX-ON-17441,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Lakeport Transformer Works,10 MVA station,1993,52,In Service,2025-03-14
+TX-ON-17471,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,167 kVA pole-mount,1963,33,In Service,2024-12-13
+TX-ON-17646,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,75 kVA pole-mount,1982,62,In Service,2023-08-24
+TX-ON-17757,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,50 kVA pole-mount,1970,50,In Service,2023-01-08
+TX-ON-17770,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Ashby and Moore Electric,25 kVA pole-mount,1975,54,In Service,2025-06-28
+TX-ON-17773,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,25 kVA pole-mount,1994,70,In Service,2025-01-08
+TX-ON-17776,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,50 kVA pole-mount,1964,28,In Service,2026-04-06
+TX-ON-17826,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,10 MVA station,1994,67,In Service,2024-06-01
+TX-ON-17829,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,20 MVA station,2001,58,In Service,2023-01-25
+TX-ON-17847,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,25 kVA pole-mount,2021,94,Retired,2024-02-07
+TX-ON-17859,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,300 kVA pad-mount,1963,20,In Service,2024-09-14
+TX-ON-17924,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,10 MVA station,1986,52,In Service,2026-01-26
+TX-ON-18001,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Northfield Transformer Co.,300 kVA pad-mount,1975,40,In Service,2023-06-25
+TX-ON-18169,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,300 kVA pad-mount,1971,53,In Service,2025-07-15
+TX-ON-18204,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Ashby and Moore Electric,"1,000 kVA pad-mount",1967,42,In Service,2025-07-31
+TX-ON-18390,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,500 kVA pad-mount,1995,69,In Service,2024-11-27
+TX-ON-18430,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Ashby and Moore Electric,10 MVA station,1980,41,Out of Service,2023-08-06
+TX-ON-18705,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,50 kVA pole-mount,1989,65,In Service,2024-08-09
+TX-ON-18731,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Lakeport Transformer Works,75 kVA pole-mount,1970,42,In Service,2026-02-12
+TX-ON-18759,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Northfield Transformer Co.,50 kVA pole-mount,1997,75,In Service,2025-06-29
+TX-ON-18788,Transformer,Ontario,BELDP,Belleville Depot,Belleville,Northfield Transformer Co.,75 kVA pole-mount,1963,36,In Service,2023-03-04
+TX-ON-18904,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Ashby and Moore Electric,10 MVA station,1965,35,In Service,2023-05-10
+TX-ON-18979,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,20 MVA station,1992,73,In Service,2026-04-11
+TX-ON-19005,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,20 MVA station,1986,61,In Service,2024-12-25
+TX-ON-19152,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Lakeport Transformer Works,75 kVA pole-mount,1986,59,In Service,2023-10-19
+TX-ON-19156,Transformer,Ontario,BARDP,Barrie Depot,Barrie,Ashby and Moore Electric,500 kVA pad-mount,1981,53,In Service,2024-09-30
+TX-ON-19215,Transformer,Ontario,PTBDP,Peterborough Depot,Peterborough,Northfield Transformer Co.,25 kVA pole-mount,1990,71,In Service,2023-03-14
+TX-ON-19324,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,500 kVA pad-mount,1983,46,In Service,2024-12-31
+TX-ON-19445,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Lakeport Transformer Works,20 MVA station,1995,67,In Service,2024-11-22
+TX-ON-19484,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Lakeport Transformer Works,500 kVA pad-mount,2012,94,In Service,2024-08-07
+TX-ON-19563,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,20 MVA station,2015,89,In Service,2025-05-31
+TX-ON-19571,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Ashby and Moore Electric,75 kVA pole-mount,2021,100,In Service,2025-09-13
+TX-ON-19667,Transformer,Ontario,OSHSC,Oshawa Service Centre,Oshawa,Northfield Transformer Co.,300 kVA pad-mount,2011,100,In Service,2024-04-28
+TX-ON-19789,Transformer,Ontario,BRKDP,Brockville Depot,Brockville,Northfield Transformer Co.,25 kVA pole-mount,2001,76,Out of Service,2024-03-03
+TX-ON-19851,Transformer,Ontario,KNGSC,Kingston Service Centre,Kingston,Lakeport Transformer Works,75 kVA pole-mount,1978,37,In Service,2024-06-23
+TX-ON-19995,Transformer,Ontario,CATTS,Cataraqui Transformer Station,Kingston,Northfield Transformer Co.,75 kVA pole-mount,2023,100,In Service,2025-06-28
