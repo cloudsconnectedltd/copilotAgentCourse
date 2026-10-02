@@ -173,7 +173,7 @@ if ($Cleanup) {
                 for ($i = 0; $i -lt $targets.Count; $i += $BatchSize) {
                     $batch = New-PnPBatch -Connection $conns['Hub']
                     foreach ($it in $targets[$i..([Math]::Min($i + $BatchSize, $targets.Count) - 1)]) {
-                        Remove-PnPListItem -List $names.VendorsList -Identity $it.Id -Batch $batch -Force
+                        Remove-PnPListItem -List $names.VendorsList -Identity $it.Id -Batch $batch -Force -Connection $conns['Hub']
                     }
                     Invoke-PnPBatch -Batch $batch -Connection $conns['Hub']
                     Write-Progress -Activity 'Deleting Vendors items' -PercentComplete ([int](100 * [Math]::Min($i + $BatchSize, $targets.Count) / $targets.Count))
@@ -276,7 +276,7 @@ else {
                         elseif ($dateCols -contains $p.Name) { $values[$internal] = [datetime]::Parse($val, $inv) }
                         else { $values[$internal] = $val }
                     }
-                    Add-PnPListItem -List $names.VendorsList -Values $values -Batch $batch | Out-Null
+                    Add-PnPListItem -List $names.VendorsList -Values $values -Batch $batch -Connection $hubConn | Out-Null
                 }
                 Invoke-PnPBatch -Batch $batch -Connection $hubConn
                 Write-Progress -Activity 'Importing Vendors' -PercentComplete ([int](100 * [Math]::Min($i + $BatchSize, $new.Count) / $new.Count))
