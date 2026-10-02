@@ -132,7 +132,7 @@ for r in rows:
         fail("caveats", f"{cid} anchor {m.group(2)} not in {target}")
 
 # 3. Eval sources exist
-for f in sorted(glob.glob("evals/lab-*-questions.csv")):
+for f in sorted(glob.glob("evals/*-questions.csv")):
     for row in csv.DictReader(open(f, newline="", encoding="utf-8")):
         src = (row.get("expected_source") or "").strip()
         for part in [s.strip() for s in src.split(";") if s.strip()]:

@@ -95,7 +95,10 @@ The setup scripts are written for PowerShell 7 on any platform but have not yet 
 | 10 | [Multi-agent orchestration](labs/lab-10-multi-agent/README.md) | Copilot Studio | 2.5 h |
 | 11 | [ALM and governance](labs/lab-11-alm-governance/README.md) | Power Platform, admin centers, Purview | 3.5 h |
 | 12 | [Evaluation and troubleshooting capstone](labs/lab-12-eval-troubleshooting/README.md) | Copilot Studio | 3 h |
+| C1 | [Challenge 01: Procurement Desk](labs/challenge-01-procurement-desk/README.md) (objectives only, no steps) | Your choice | 6 h |
 | A | [Final assessment](reference/final-assessment.md) | None | 1 h |
+
+The challenge gives you a business request and objectives only, like a real engagement. Attempt it after Lab 5; its acceptance tests and marking guide are in `evals/` and `solutions/challenge-01/`, to open only after you submit.
 
 Lab 7 attaches a connector to the agents from Labs 2, 3 and 6, so run it after them. Lab 9 can run any time after Lab 3.
 
