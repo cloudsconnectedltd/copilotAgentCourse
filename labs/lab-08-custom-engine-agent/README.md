@@ -17,6 +17,8 @@
 > - Azure OpenAI `api-version` values and request fields change. Look up a current version for your deployment on Learn.
 > - The custom engine agent overview on Learn states that custom engine agents need app manifest version 1.21 or later (not yet a limits.md row; confirm).
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Build **HLE Grid Advisor**, a custom engine agent that answers Harbourline outage questions by calling the mock outage API and grounding on the Outage Response Procedure (OPS-PRO-001 Rev 7). You own every layer Copilot would otherwise provide: orchestration, model, retrieval, citations and responsible AI controls (CE-01). Run it locally, deploy it to Azure with Azure Bot Service, add SSO through Agents Toolkit (CE-02), and surface it in Teams and Microsoft 365 Copilot.

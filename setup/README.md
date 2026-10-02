@@ -20,11 +20,29 @@ Shared code lives in `common.psm1` (logging, module checks, sign-in helpers, nam
 | 2 | `02-provision-sites.ps1` | Hub communication site, Operations team site with Microsoft 365 group, libraries, Vendors list, folders, permissions, guest sharing, Operations group members. | PnP | 10 to 25 min (site provisioning) |
 | 3 | `03-upload-content.ps1` | Runs the Python generators if needed, uploads all library content, imports 2,600 Vendors rows. | PnP | 20 to 60 min (about 1,200 Archive-Bulk files) |
 | 4 | `04-apply-labels.ps1` | Encrypting sensitivity label, label policy, label applied to `Compensation-Bands-2025.docx`. | PnP, Security and Compliance PowerShell | 5 min, plus label propagation time |
+| 5 | `05-add-learner.ps1` (optional) | Only when more than one person takes the course. The setup owner runs it once per additional learner: adds them to every course group, the Hub Owners group and the Operations group. | PnP | 1 to 2 min per learner |
 | 99 | `99-teardown.ps1` | Runs 04, 03, 02, 01 with `-Cleanup` after one confirmation. Lists lab `cleanup.md` files. | all of the above | 10 to 30 min |
 
 Runtimes are estimates for planning, not measured values. They depend on tenant load and network speed.
 
 Lab 1 needs none of this. Labs 2 onward need steps 0 to 3; Lab 3 also needs step 4.
+
+## Two or more learners
+
+One person, the **setup owner**, runs steps 0 to 4 once. Every other learner runs no setup scripts. The setup owner gives each additional learner access with step 5:
+
+```powershell
+./setup/05-add-learner.ps1 -TenantUrl $t -ClientId $app -LearnerUpn second.learner@contoso.com
+```
+
+| Who | Does |
+|---|---|
+| Setup owner | Steps 0 to 4, then step 5 for each additional learner. Shares the persona passwords file (`~/.harbourline-course/<Prefix>-initial-passwords.csv`) through a secure channel. |
+| Additional learner | Nothing in `setup/`. Needs their own Microsoft 365 Copilot license, then starts the labs. |
+
+Run step 5 before step 4 (or re-run step 4 afterwards): the sensitivity label grants rights to the members of `<Prefix>-HR` at the time step 4 runs. Group membership can take a few minutes to apply. Both learners share the same sites, data and personas, so give your agents distinct names (for example add your initials) to avoid confusion when sharing them.
+
+Some later labs include steps each learner does in their own workspace, such as creating a personal developer environment or running the mock API locally. Those are lab steps, not setup.
 
 ```powershell
 $t   = 'https://contoso.sharepoint.com'
@@ -35,6 +53,7 @@ $app = '11111111-2222-3333-4444-555555555555'   # your PnP app registration (see
 ./setup/02-provision-sites.ps1 -TenantUrl $t -ClientId $app -GuestEmail someone@outlook.com
 ./setup/03-upload-content.ps1  -TenantUrl $t -ClientId $app
 ./setup/04-apply-labels.ps1    -TenantUrl $t -ClientId $app
+./setup/05-add-learner.ps1     -TenantUrl $t -ClientId $app -LearnerUpn second.learner@contoso.com   # optional
 
 # Preview, then remove everything
 ./setup/99-teardown.ps1 -TenantUrl $t -ClientId $app -GuestEmail someone@outlook.com -WhatIf

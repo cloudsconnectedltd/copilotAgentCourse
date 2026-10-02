@@ -21,6 +21,8 @@
 >
 > Copilot Studio docs could not be read from source while this course was built. UI labels may differ; look for the concept.
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Build **HLE Front Door**, one agent that Harbourline staff talk to, which hands each question to the right specialist:

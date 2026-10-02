@@ -17,6 +17,8 @@
 > - CS-K04 (Copilot Studio "Authenticate with Microsoft") is SNIP: https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio
 > - Indexing time after ingestion is not documented in any row of limits.md. Measure it (break-it C-07-c); do not quote a number.
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Build a synced Copilot connector for Harbourline's service tickets with the Microsoft Graph connectors API, ingest 5,000 tickets with per-item access control lists (ACLs), and attach the connection `hleTickets` to three agents built on three different paths:

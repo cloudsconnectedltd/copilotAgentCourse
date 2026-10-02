@@ -30,6 +30,8 @@
 >
 > Copilot Studio menu labels in this lab follow the documented concepts. **UI labels may differ in your tenant; check Learn** when a menu name does not match.
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Build **HLE HR Assistant**, a Copilot Studio agent that answers Harbourline HR policy questions from the `HR-Policies` SharePoint library, and learn exactly where SharePoint and file knowledge stops working: file size, scanned PDFs, conflicting versions, permissions, encryption, authentication, content moderation, list size, image-only content, merged cells and scoping. A second scratch agent, **HLE Knowledge Bench**, is used for the list, Operations and scoping experiments so that HLE HR Assistant stays clean for Labs 7 and 10.

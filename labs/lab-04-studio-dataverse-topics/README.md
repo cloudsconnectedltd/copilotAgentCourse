@@ -20,6 +20,8 @@
 >
 > The Copilot Studio documentation could not be read when this course was built. Menu names follow documented concepts; **UI labels may differ, check Learn**. The topic YAML in [solutions/lab-04](../../solutions/lab-04/README.md) was written from the documented code-view format but not validated against a live tenant: open the code view of a topic you built in the UI and compare before pasting.
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Build **HLE Field Ops Assistant**, a Copilot Studio agent that answers questions about Harbourline assets, work orders and crews from Dataverse, reads approval limits and vendor data from SharePoint, and runs three topics that use variables, slot filling, a regex entity, a closed-list entity and an adaptive card. Then break it: a topic that hijacks knowledge questions, a variable that is out of scope, a glossary that has not applied yet, and tabular data that disagrees with itself.

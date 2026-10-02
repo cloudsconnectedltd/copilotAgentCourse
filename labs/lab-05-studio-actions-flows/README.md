@@ -17,6 +17,8 @@
 >
 > UI labels in Copilot Studio and Power Automate change often. Where this lab names a button or setting that could not be checked against a public source, it says "(label may differ; check Learn)".
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Give **HLE Field Ops Assistant** two real actions against the Harbourline mock API:

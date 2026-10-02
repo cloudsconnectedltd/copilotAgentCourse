@@ -4,7 +4,7 @@
 |---|---|
 | Build path | Agent Builder in Microsoft 365 Copilot Chat |
 | Estimated time | 2.5 hours |
-| Prerequisites | [Lab 1](../lab-01-first-agent/README.md); setup scripts [00 to 03](../../setup/README.md) (`00-prereqs-check.ps1`, `01-provision-users.ps1`, `02-provision-sites.ps1`, `03-upload-content.ps1`, which also generates Archive-Bulk); sign-in details for the hr, fin and nolic personas (the password file written by `01-provision-users.ps1`); a second browser profile or InPrivate window for persona sign-ins |
+| Prerequisites | [Lab 1](../lab-01-first-agent/README.md); setup scripts [00 to 03](../../setup/README.md) run once by the setup owner (`00-prereqs-check.ps1`, `01-provision-users.ps1`, `02-provision-sites.ps1`, `03-upload-content.ps1`, which also generates Archive-Bulk). **Additional learners run no setup scripts (optional for them)**: the setup owner runs `05-add-learner.ps1` for them (see [Two or more learners](../../setup/README.md#two-or-more-learners)); sign-in details for the hr, fin and nolic personas (the password file written by `01-provision-users.ps1`, shared by the setup owner); a second browser profile or InPrivate window for persona sign-ins |
 | Personas used | learner (builder), hr (Priya Nandakumar), fin (Sofia Brennan), nolic (Tom Whitfield) |
 | Status | GA. Agent Builder skills are PREVIEW (Frontier Program only, AB-13): mentioned, not built. |
 | Limits referenced | [LIC-02, LIC-03, LIC-04, LIC-05, AB-02, AB-03, AB-04, AB-05, AB-06, AB-07, AB-08, AB-09, AB-10, AB-11, AB-12, AB-13, ADM-01, ADM-03](../../reference/limits.md) |

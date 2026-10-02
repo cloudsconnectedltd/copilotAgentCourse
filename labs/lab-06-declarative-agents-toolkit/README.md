@@ -15,6 +15,8 @@
 > - **DA-15**: OpenAPI 3.1 support for Copilot plugins is UNVERIFIED. This lab uses OpenAPI 3.0.3.
 > - The Microsoft 365 app manifest version (this lab uses v1.24, as in the Learn declarative agent environment article) and the `m365agents.yml` `version` line change with toolkit releases. Use what your installed toolkit generates.
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Build **HLE Outage Desk**, a declarative agent for Microsoft 365 Copilot that:

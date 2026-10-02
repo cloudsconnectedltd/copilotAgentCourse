@@ -23,6 +23,8 @@
 >
 > Copilot Studio documentation could not be read from source for this course. Where a step says "UI labels may differ", look for the concept, not the exact words.
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Move **HLE Field Ops Assistant** and everything it depends on from your developer environment to test and production the way a regulated utility would: as a managed solution, through a pipeline, with environment-specific settings, an approval gate before users see it, and an audit trail of who used it.

@@ -20,6 +20,8 @@
 >
 > Copilot Studio documentation could not be read from source while this course was built, so UI labels in the steps may differ from what you see. Where a step says "UI labels may differ", look for the concept, not the exact words.
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Build **HLE Field Report Triage**, an autonomous agent that wakes up when a crew's field report lands in the `Procedures/Incoming` folder of the Harbourline-Operations site, reads the report, looks up the asset in Dataverse, and then:

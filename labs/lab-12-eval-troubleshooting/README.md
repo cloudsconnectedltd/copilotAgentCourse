@@ -20,6 +20,8 @@
 >
 > Copilot Studio documentation could not be read from source for this course. Where a step says "UI labels may differ", look for the concept, not the exact words.
 
+> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+
 ## Objective
 
 Run every eval in the course against the agents you built, record the results in one place, explain every failure with a named caveat, and use Copilot Studio's own tools (test pane, activity map, analytics, agent evaluation) to prove the fix. You finish with:

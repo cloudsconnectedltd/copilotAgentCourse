@@ -239,6 +239,7 @@ setup/01-provision-users.ps1
 setup/02-provision-sites.ps1
 setup/03-upload-content.ps1
 setup/04-apply-labels.ps1
+setup/05-add-learner.ps1     # optional: access for additional learners
 setup/99-teardown.ps1
 setup/common.psm1                     # shared params, logging, idempotency helpers
 tools/generate-data/                  # generators for bulk and large files (see Q7)

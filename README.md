@@ -23,6 +23,8 @@ Microsoft 365 and SharePoint architects who already know SharePoint permissions,
 ./setup/04-apply-labels.ps1    -TenantUrl https://contoso.sharepoint.com -Prefix HLE
 ```
 
+**More than one learner?** Only one person (the setup owner) runs these scripts. Every other learner skips them: the setup owner runs `./setup/05-add-learner.ps1 -TenantUrl <url> -LearnerUpn <their UPN>` to give them access. See [Two or more learners](setup/README.md#two-or-more-learners).
+
 Lab 1 needs none of this. It runs with only a Microsoft 365 Copilot license and the files in `data/sharepoint/getting-started.zip`.
 
 ## Tools to install
