@@ -36,7 +36,10 @@ Do not open `solutions/challenge-01/` or `evals/challenge-01-questions.csv` unti
 5. Staff can submit a purchase request through the agent. The request is complete (the agent collects whatever Procurement needs to act on it), the requester is told who must approve it, and Procurement receives it without anyone re-typing it.
 6. Staff without a Microsoft 365 Copilot license can use the agent.
 7. The agent stays within its remit. It does not answer HR or compensation questions, and it never reveals content the person asking could not open themselves.
-8. Procurement can maintain the agent without you: they can see who uses it, and changes to Finance documents flow through without a rebuild.
+
+### Stretch goal (not scored)
+
+Procurement can maintain the agent without you: they can see who uses it, and changes to Finance documents flow through without a rebuild.
 
 ## What you have
 
@@ -55,7 +58,7 @@ Put these in a folder of your own (for example `my-work/challenge-01/`, which yo
    - the build path you chose and why, including what you ruled out
    - each knowledge source and tool, and why you trust it
    - authentication, and what each persona can and cannot see
-   - licensing and cost for unlicensed users
+   - how staff without a Copilot license get access, and how their usage is billed
    - known limitations, in plain language Ingrid would understand
 3. **Your own test plan and results**: the questions you asked, as which persona, the expected answer and source, and pass or fail.
 
@@ -65,7 +68,6 @@ After you submit, run the acceptance tests in `evals/challenge-01-questions.csv`
 
 | Area | Weight |
 |---|---|
-| Acceptance tests passed | 40% |
+| Acceptance tests passed | 50% |
 | Design note: correct reasoning about build path, limits, licensing and security | 30% |
 | Your own test plan: did you find the problems before the acceptance tests did? | 20% |
-| Honesty about limitations | 10% |
