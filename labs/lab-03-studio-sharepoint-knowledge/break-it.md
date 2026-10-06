@@ -157,19 +157,25 @@ A maker who tests only in the test pane believes everyone gets the restricted an
 **Caveat ID:** C-03-g
 
 **Steps to reproduce**
-1. At the default moderation setting, ask:
+1. Note the current position of **Settings > Generative AI > Moderation > Content moderation level** (README step 14). At that setting, ask:
    ```text
    If a harassment complaint is about a Director, who investigates it?
    ```
    Expected: an external investigator (`Harassment-Prevention-Ontario.docx`, 5.2).
-2. In **Settings > Generative AI**, set content moderation to its strictest level. **Check Learn** for the current level names; they are not recorded in limits.md.
+2. Drag **Content moderation level** to the right-hand end (highest moderation) and select **Save**.
 3. Reset the test chat and ask again. Also try `How often is a workplace violence risk assessment done at each location?` (expected: every 3 years, `Harassment-Prevention-Ontario.docx`, 5.4).
 
-**Symptom you will see.** Observe and record. A plausible result at the strictest level is that the agent declines or gives a generic "I can't help with that" response to legitimate HR questions about harassment and violence, because the words look sensitive. A looser level can let through lower-quality or less-grounded answers.
+**Symptom you will see.** Observe and record. A plausible result at the highest level is that the agent returns the flagged-response message instead of an answer. Unless you changed it, that is the default text `I can't help with that. Is there something else I can help with?`, which gives the user no clue that a filter, not missing content, stopped the answer. At **Low** (the left end), more gets through, including responses you might not want.
 
-**Root cause.** Content moderation filters generated responses by a sensitivity threshold. HR and safety policy text legitimately discusses harassment, violence and injury. No limits row covers the setting: its names, levels and defaults must be checked on Learn.
+**Root cause.** Content moderation filters generated responses by a sensitivity threshold. HR and safety policy text legitimately discusses harassment, violence and injury, so a high threshold can block real policy answers. No limits row covers the setting; the level names (other than **Low**) and the default must be checked on Learn.
 
-**Fix.** Return moderation to the default (or the level your organization approves) and re-test. Validate the chosen level with the Lab 3 evals, which include harassment and safety questions.
+**Fix.**
+1. Move the slider back to the level your organization approves (the reset arrow restores the default) and select **Save**.
+2. Replace the flagged-response message with one that tells users where to go, for example:
+   ```text
+   I can't answer that here. For harassment, workplace violence or other sensitive HR matters, contact your HR business partner or People and Culture.
+   ```
+3. Re-test with the Lab 3 evals, which include harassment and safety questions (L03-Q16).
 
 **Doc link.** https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio (general knowledge settings; the content moderation setting is not in limits.md, check Learn for its own page).
 

@@ -136,7 +136,11 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
 
 ### Part C: Content moderation (10 minutes)
 
-14. Go to **Settings > Generative AI** and find the content moderation setting for generative answers. It controls how strictly the agent filters generated responses. The names of the levels are not recorded in [reference/limits.md](../../reference/limits.md): **check Learn** for the current setting names and defaults. Note the current value. Break-it C-03-g raises it to the strictest level and tests a legitimate harassment-policy question.
+14. Go to **Settings > Generative AI** and scroll to the **Moderation** section (observed in the classic experience on 2026-10-06; UI labels may change). It has two settings:
+    - **Content moderation level**: a slider. The left end is **Low**, which lets more through; moving right raises moderation. The panel text says: "Lower moderation increases the risk of harmful content in your agent's responses. Higher moderation lowers that risk, but may reduce the number of responses." The arrow icon next to the slider resets it to the default.
+    - **When potential responses get flagged by content moderation, send:** the message users see when a response is blocked. If you leave it empty, the grey placeholder text is shown: `I can't help with that. Is there something else I can help with?`
+
+    Note the current slider position. Only the **Low** label was observed; check Learn for the names of the other levels and for which level is the default. Break-it C-03-g moves the slider to the right-hand end and tests a legitimate harassment-policy question.
 
 ### Part D: Publish, share and test as personas (60 minutes)
 
