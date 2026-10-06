@@ -4,72 +4,104 @@
 |---|---|
 | Build path | Copilot Studio (classic experience), environment `HLE-Dev` |
 | Estimated time | 4 hours |
-| Prerequisites | [Lab 2](../lab-02-agent-builder-deep-dive/README.md). Setup scripts [`00`](../../setup/00-prereqs-check.ps1), [`01`](../../setup/01-provision-users.ps1), [`02`](../../setup/02-provision-sites.ps1), [`03`](../../setup/03-upload-content.ps1) and [`04-apply-labels.ps1`](../../setup/04-apply-labels.ps1) completed (see [setup/README.md](../../setup/README.md)). Power Apps Developer Plan for the learner (ENV-03). Copilot Studio capacity pack or pay-as-you-go (LIC-06, LIC-07). Generative AI enabled in Power Platform and the Copilot Studio app deployed in the Microsoft 365 admin center (ADM-07). |
+| Prerequisites | [Lab 2](../lab-02-agent-builder-deep-dive/README.md); setup scripts 00 to 04 run by the setup owner (details below) |
 | Personas used | Learner (maker), Priya Nandakumar (`hr`), Marcus Delaney (`tech`), Sofia Brennan (`fin`), Tom Whitfield (`nolic`), guest contractor (`guest`) |
-| Status | PREVIEW: SharePoint lists as knowledge (status to confirm; documented only in the new-experience docs, CS-K10). Contains UNVERIFIED limits: CS-K13, CS-K14, CS-A05 |
-| Limits referenced | [CS-K01, CS-K02, CS-K03, CS-K04, CS-K05, CS-K06, CS-K07, CS-K08, CS-K09, CS-K10, CS-K12, CS-K13, CS-K14, CS-A05, LIC-10, ADM-07, ENV-02, ENV-03](../../reference/limits.md) |
+| Status | PREVIEW: SharePoint lists as knowledge (CS-K10). Contains UNVERIFIED limits: CS-K13, CS-K14, CS-A05 |
 
-> **Check before you run.** Every Copilot Studio limit in this lab is tagged SNIP or UNVERIFIED in [reference/limits.md](../../reference/limits.md), because the Copilot Studio documentation source was not readable when the course was built. Before you start, open these pages on Microsoft Learn and confirm the values:
->
-> | Row | Value used here | Tag | Page |
-> |---|---|---|---|
-> | CS-K01 | 7 MB file limit without a Microsoft 365 Copilot license in the tenant | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-quotas |
-> | CS-K02 | Up to 200 MB with tenant graph grounding | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio |
-> | CS-K03 | 512 MB for PDF, PPTX and DOCX | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio |
-> | CS-K04 | Tenant graph grounding needs "Authenticate with Microsoft" | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-user-authentication |
-> | CS-K05 | Manual auth needs Sites.Read.All and Files.Read.All | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive |
-> | CS-K06 | SharePoint URL: site path, no query parameters | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-sharepoint |
-> | CS-K07 | Folder source: 1,000 files, 50 folders, 10 levels | SNIP, scope unclear | https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-quotas |
-> | CS-K08 | Encryption only via sensitivity labels, SharePoint only, VIEW and EXTRACT needed | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-faq |
-> | CS-K09 | Uploaded files: encrypted files not supported | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-file-upload |
-> | CS-K10 | SharePoint lists: queries use the first 2,048 rows | SNIP, new-experience docs | https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-sharepoint-lists |
-> | CS-K12 | Public websites: 25 (generative) or 4 (classic) | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-quotas |
-> | CS-K13 | Scanned PDFs not OCR'd | UNVERIFIED | No Learn source. The lab observes, it does not assert. |
-> | CS-K14 | Total SharePoint URLs per agent | UNVERIFIED | Not found. Check current limit on Microsoft Learn. |
-> | CS-A05 | Instructions limit 8,000 characters | UNVERIFIED | Community answer only. The instructions in this lab are far below it. |
->
-> Copilot Studio menu labels in this lab follow the documented concepts. **UI labels may differ in your tenant; check Learn** when a menu name does not match.
+## What you'll be able to do
 
-> **Additional learners:** the setup scripts listed in Prerequisites are run once by the setup owner. If you are not the setup owner, skip them; the setup owner gives you access with `05-add-learner.ps1` (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+By the end of this lab you can:
 
-## Objective
+1. **Build a Copilot Studio agent grounded on SharePoint** and write instructions that control behaviour (sources, citations, conflicts, tone) without copying policy content into them.
+2. **Explain the two orchestration modes** and predict when a topic, rather than your knowledge, will answer a question.
+3. **Prove that an agent respects permissions**: each person sees only what they can open in SharePoint, including encrypted files, and know why the maker's test pane proves nothing about this.
+4. **Diagnose the common reasons an agent "can't find" content that is clearly there**: file size, scanned PDFs, facts in images, merged cells, list row limits and over-wide scope.
+5. **Choose between SharePoint knowledge and uploaded files** for a given requirement, and between authentication options.
+6. **Tune content moderation** so legitimate sensitive policy questions still get answered.
 
-Build **HLE HR Assistant**, a Copilot Studio agent that answers Harbourline HR policy questions from the `HR-Policies` SharePoint library, and learn exactly where SharePoint and file knowledge stops working: file size, scanned PDFs, conflicting versions, permissions, encryption, authentication, content moderation, list size, image-only content, merged cells and scoping. A second scratch agent, **HLE Knowledge Bench**, is used for the list, Operations and scoping experiments so that HLE HR Assistant stays clean for Labs 7 and 10.
+<details>
+<summary><strong>Before you start: prerequisites, limits to check, additional learners</strong></summary>
+
+**Prerequisites**
+- Setup scripts [`00`](../../setup/00-prereqs-check.ps1) to [`04-apply-labels.ps1`](../../setup/04-apply-labels.ps1) completed by the setup owner (see [setup/README.md](../../setup/README.md)). Additional learners skip them; the setup owner runs `05-add-learner.ps1` for you (see [Two or more learners](../../setup/README.md#two-or-more-learners)).
+- Power Apps Developer Plan for the learner (ENV-03).
+- Copilot Studio capacity pack or pay-as-you-go (LIC-06, LIC-07).
+- Generative AI enabled in Power Platform, and the Copilot Studio app deployed in the Microsoft 365 admin center (ADM-07).
+
+**Limits used in this lab.** Every Copilot Studio limit here is tagged SNIP or UNVERIFIED in [reference/limits.md](../../reference/limits.md), because the Copilot Studio documentation source was not readable when the course was built. Confirm these on Microsoft Learn:
+
+| Row | Value used here | Tag | Page |
+|---|---|---|---|
+| CS-K01 | 7 MB file limit without a Microsoft 365 Copilot license in the tenant | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-quotas |
+| CS-K02 | Up to 200 MB with tenant graph grounding | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio |
+| CS-K03 | 512 MB for PDF, PPTX and DOCX | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio |
+| CS-K04 | Tenant graph grounding needs "Authenticate with Microsoft" | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-end-user-authentication |
+| CS-K05 | Manual auth needs Sites.Read.All and Files.Read.All | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive |
+| CS-K06 | SharePoint URL: site path, no query parameters | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-sharepoint |
+| CS-K07 | Folder source: 1,000 files, 50 folders, 10 levels | SNIP, scope unclear | https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-quotas |
+| CS-K08 | Encryption only via sensitivity labels, SharePoint only, VIEW and EXTRACT needed | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-faq |
+| CS-K09 | Uploaded files: encrypted files not supported | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-file-upload |
+| CS-K10 | SharePoint lists: queries use the first 2,048 rows | SNIP, new-experience docs | https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-sharepoint-lists |
+| CS-K12 | Public websites: 25 (generative) or 4 (classic) | SNIP | https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-quotas |
+| CS-K13 | Scanned PDFs not OCR'd | UNVERIFIED | No Learn source. The lab observes, it does not assert. |
+| CS-K14 | Total SharePoint URLs per agent | UNVERIFIED | Not found. Check current limit on Microsoft Learn. |
+| CS-A05 | Instructions limit 8,000 characters | UNVERIFIED | Community answer only. The instructions in this lab are far below it. |
+
+Also referenced: LIC-10, ADM-07, ENV-02, ENV-03. Copilot Studio menu labels follow the documented concepts and were partly confirmed in a live tenant on 2026-10-06. **UI labels may differ in your tenant; check Learn** when a menu name does not match.
+
+</details>
+
+## Scenario
+
+Harbourline's People and Culture team wants **HLE HR Assistant**, an agent in Teams and Microsoft 365 Copilot that answers policy questions from the `HR-Policies` library. HR insists on three things: answers must cite the policy, nobody may see the confidential `Restricted` folder or compensation bands unless they are in HR, and the agent must cope with the messy real library (old versions, scans, a huge handbook).
+
+You build it, then deliberately find every point where SharePoint knowledge stops working. A second scratch agent, **HLE Knowledge Bench**, carries the experiments that don't belong in an HR agent, so HLE HR Assistant stays clean for Labs 7 and 10.
 
 ## Concepts
 
-- **Classic vs new experience.** This course uses the classic Copilot Studio experience (PLAN.md decision Q9). Where [reference/limits.md](../../reference/limits.md) says a fact comes from the new-experience docs (CS-K10), this lab says so.
-- **Generative orchestration vs classic orchestration.** With generative orchestration the model reads the descriptions of topics, knowledge and tools and decides what to use for each turn. With classic orchestration, trigger phrases route the user to a topic, and knowledge is used only as a fallback when no topic matches (the Conversational boosting system topic). Some limits differ by mode: an agent can have 25 public websites with generative orchestration but only 4 with classic orchestration or a topic-level generative answers node (CS-K12). Event triggers in Lab 9 need generative orchestration (CS-A07).
-- **SharePoint knowledge is security trimmed.** The agent searches SharePoint as the signed-in user, which is why the agent must use "Authenticate with Microsoft" (CS-K04). The Copilot Studio test pane runs as you, the maker, and the learner is in every course group, so the test pane is never a permission test.
-- **Tenant graph grounding** uses Microsoft 365 semantic search over SharePoint. It raises the usable file size from 7 MB (no Microsoft 365 Copilot license in the tenant, CS-K01) to 200 MB (CS-K02). SharePoint and connector sources support PDF, PPTX and DOCX up to 512 MB (CS-K03).
-- **SharePoint knowledge vs uploaded files.** A SharePoint source stays in SharePoint and keeps its permissions and labels. An uploaded file is copied into the agent (up to 500 files, 512 MB each), is visible to every user of the agent, and cannot be encrypted (CS-K09).
-- **Licensing for the people who chat.** Copilot-licensed users are zero-rated for classic answers, generative answers and tenant graph grounding in Copilot Chat, Teams and SharePoint (LIC-10). Tom Whitfield (`nolic`) has no Copilot license, so his usage consumes Copilot Credits.
+| Concept | What to understand |
+|---|---|
+| Generative vs classic orchestration | **Generative:** the model reads the descriptions of your topics, knowledge and tools and decides what to use on each turn. **Classic:** trigger phrases route to a topic; knowledge is only a fallback when no topic matches (the Conversational boosting system topic). Some limits differ by mode (25 vs 4 public websites, CS-K12), and autonomous triggers need generative (CS-A07). |
+| Security trimming | SharePoint knowledge is searched as the signed-in user, so the agent must use "Authenticate with Microsoft" (CS-K04). The test pane runs as you, the maker, and you are in every course group, so **the test pane never proves permissions**. Only signing in as another person does. |
+| Tenant graph grounding | Microsoft 365 semantic search over SharePoint. It raises the usable file size from 7 MB (CS-K01) to 200 MB (CS-K02); PDF, PPTX and DOCX up to 512 MB (CS-K03). |
+| SharePoint knowledge vs uploaded files | SharePoint knowledge stays in SharePoint and keeps its permissions and labels. An uploaded file is copied into the agent, is visible to every user of the agent, and cannot be encrypted (CS-K09). |
+| Who pays | Copilot-licensed users are zero-rated in Copilot Chat, Teams and SharePoint (LIC-10). Tom (`nolic`) has no Copilot license, so his usage consumes Copilot Credits. |
 
 ## Steps
 
 Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course prefix (default `HLE`).
 
-### Part A: Environment and agent (45 minutes)
+### Part A: Build the agent (45 minutes)
 
-1. **Confirm setup.** Open `https://<tenant>.sharepoint.com/sites/<Prefix>-Harbourline-Hub/HR-Policies` and check that:
-   - `Employee-Handbook-Full.docx` is present and about 9.1 MB (generated by `tools/generate-data/generate_oversized_handbook.py` during `03-upload-content.ps1`). If it is missing, run `python3 tools/generate-data/generate_oversized_handbook.py` and re-run `03-upload-content.ps1`.
-   - `Compensation-Bands-2025.docx` shows the sensitivity label **`<Prefix> HR Confidential`**. If not, re-run `04-apply-labels.ps1` or apply it manually (the script prints the steps).
-   - The `Restricted` folder shows "Has unique permissions" and only the site owners and `<Prefix>-HR` have access.
+<details>
+<summary>1. Confirm the setup content (5 minutes, admin check)</summary>
 
-2. **Create environment `HLE-Dev`** (skip if it already exists). Go to https://admin.powerplatform.microsoft.com, open **Manage > Environments > New**, and set:
-   - Name: `HLE-Dev`
-   - Type: **Developer**
-   - Region: your tenant's default
-   - Dataverse: included (Developer environments include Dataverse, ENV-03)
+Open `https://<tenant>.sharepoint.com/sites/<Prefix>-Harbourline-Hub/HR-Policies` and check that:
+- `Employee-Handbook-Full.docx` is present and about 9.1 MB. If it is missing, run `python3 tools/generate-data/generate_oversized_handbook.py` and re-run `03-upload-content.ps1`.
+- `Compensation-Bands-2025.docx` shows the sensitivity label **`<Prefix> HR Confidential`**. If not, re-run `04-apply-labels.ps1` or apply it manually (the script prints the steps).
+- The `Restricted` folder shows "Has unique permissions" and only the site owners and `<Prefix>-HR` have access.
 
-   Labs 4, 5, 9, 10 and 11 all use `HLE-Dev`. Do not delete it in cleanup. Note that a Developer environment is owner-only and cannot be assigned security groups (ENV-02). Step 15 explains what this means for persona testing.
+</details>
 
-3. Go to https://copilotstudio.microsoft.com and select **HLE-Dev** in the environment picker (top right).
+<details>
+<summary>2. Create environment <code>HLE-Dev</code> (5 minutes, admin task; skip if it exists)</summary>
 
-4. Select **Create > New agent**, then choose to skip the conversational setup and configure the agent directly. Set:
+Go to https://admin.powerplatform.microsoft.com, open **Manage > Environments > New**, and set:
+- Name: `HLE-Dev`
+- Type: **Developer**
+- Region: your tenant's default
+- Dataverse: included (ENV-03)
+
+Labs 4, 5, 9, 10 and 11 use `HLE-Dev`; don't delete it. **Know this now:** a Developer environment is owner-only (ENV-02), so other people can't use agents built in it. Part D handles this for the persona tests.
+
+</details>
+
+3. Go to https://copilotstudio.microsoft.com and select **HLE-Dev** in the environment picker (top right). If you are offered a choice of harness, use **Standard**, not GitHub Copilot (see [agent-types-matrix.md](../../reference/agent-types-matrix.md)).
+
+4. Select **Create > New agent**, skip the conversational setup, and configure it directly:
    - Name: `HLE HR Assistant`
    - Description: `Answers Harbourline Energy Co. HR policy questions for employees in Ontario, New York and Ohio, using the HR-Policies library.`
-   - Instructions: paste the text below (also in [solutions/lab-03/hle-hr-assistant-instructions.txt](../../solutions/lab-03/hle-hr-assistant-instructions.txt)). It is about 1,000 characters, far below the unverified 8,000-character figure (CS-A05).
+   - Instructions: paste the text below (also in [solutions/lab-03/hle-hr-assistant-instructions.txt](../../solutions/lab-03/hle-hr-assistant-instructions.txt)).
 
    ```text
    You are HLE HR Assistant for Harbourline Energy Co. employees in Ontario, New York and Ohio.
@@ -87,14 +119,15 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
    Keep answers under 150 words unless the user asks for more detail.
    ```
 
-5. Select **Create**. When the agent opens, go to **Settings > Generative AI** and set:
-   - Orchestration: **Generative** (use generative AI orchestration).
-   - Use general knowledge (the model's own knowledge): **Off**.
-   - Leave content moderation at its default for now (Part C).
+   > **Why this matters:** every line is a *behaviour* rule: which source, how to cite, what to do with conflicting versions, when to refer to a person. There are no policy values in it. Values belong in SharePoint, where they stay current and permission-trimmed (Lab 2, C-02-b).
 
-   Save. UI labels may differ; check Learn.
+5. Select **Create**. Go to **Settings > Generative AI** and set orchestration to **Generative** and general knowledge to **Off**. Leave moderation alone for now (Part C). Save.
 
-6. Go to **Settings > Security > Authentication** and confirm **Authenticate with Microsoft** is selected. New agents default to it, and tenant graph grounding requires it (CS-K04).
+   > **Why this matters:** with general knowledge on, the agent can answer from the model's training data when your documents don't cover a question. That produces plausible answers with no Harbourline source, the exact thing HR asked you to prevent.
+
+6. Go to **Settings > Security > Authentication** and confirm **Authenticate with Microsoft** is selected.
+
+   > **Why this matters:** this is what makes the agent search SharePoint *as the person asking*. Without it there is no security trimming and no tenant graph grounding (CS-K04). Break-it C-03-f shows what happens when you turn it off.
 
 7. Go to **Knowledge > Add knowledge > SharePoint** and enter:
 
@@ -102,54 +135,77 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
    https://<tenant>.sharepoint.com/sites/<Prefix>-Harbourline-Hub/HR-Policies
    ```
 
-   The URL must include the site path and no query parameters (CS-K06). Do not paste a view URL such as `.../HR-Policies/Forms/AllItems.aspx?...`. Name the source `HR Policies library` and give it this description (the orchestrator reads it):
+   Name it `HR Policies library` and give it this description:
 
    ```text
    Harbourline HR policies: leave, parental and bereavement leave, remote work, overtime and on-call, travel, code of conduct, harassment prevention, FMLA, performance reviews, grievances, accommodation, safety incident reporting, compensation bands and the full employee handbook.
    ```
 
-8. Confirm tenant graph grounding is on. In the classic experience it is a toggle for tenant graph grounding with semantic search in the Generative AI or Knowledge settings area. UI labels may differ; check Learn. With a Microsoft 365 Copilot license in the tenant and this toggle on, files up to 200 MB are used (CS-K02).
+   > **Why this matters:** the URL points at one library, not the whole site, so finance and operations content can't leak into HR answers (C-03-k). It must be the library path with no query string (CS-K06); a copied view URL like `.../Forms/AllItems.aspx?...` fails. The description is what the generative orchestrator reads to decide when to use this source, so write it like a table of contents.
 
-9. Wait for the knowledge source to show as ready, then open the **Test** pane and type:
+8. Confirm tenant graph grounding is on (a toggle in the Generative AI or Knowledge settings; UI labels may differ).
 
-   ```text
-   How many days can I carry over?
-   ```
+9. When the knowledge source shows as ready, test in the **Test** pane:
 
-   You should get 5 days, to be used by March 31, citing `Leave-Policy-v4-2025.pdf`, ideally with a note that version 3.0 said 10 days. Then type:
-
-   ```text
-   What do employees receive for 25 years of service?
-   ```
-
-   Expected: 3 extra days of paid leave (one time) and a crystal award, presented at the Service Recognition Dinner in October, citing `Employee-Handbook-Full.docx` (chapter 14.2). This proves the 9 MB file is in use under CS-K02. Break-it C-03-a turns the toggle off.
+   | Prompt | Expected | What it proves |
+   |---|---|---|
+   | `How many days can I carry over?` | 5 days, used by March 31, citing `Leave-Policy-v4-2025.pdf`, ideally noting version 3.0 said 10 | Your version-conflict instruction works (C-03-c) |
+   | `What do employees receive for 25 years of service?` | 3 extra paid leave days (one time) and a crystal award, citing `Employee-Handbook-Full.docx`, 14.2 | The 9 MB handbook is indexed under tenant graph grounding (CS-K02). Break-it C-03-a turns the toggle off. |
 
 ### Part B: Orchestration modes (20 minutes)
 
-10. Still in the test pane, type `What is the on-call stipend in Ontario?`. Expected: CAD 300 per full week (`Overtime-and-On-Call.docx`, 4.2). Open the activity map or conversation trace in the test pane and note that the orchestrator chose the `HR Policies library` knowledge source directly.
+The point of this part is to see *how* the agent decides what to use, because in classic mode a topic can hijack a question your knowledge would have answered correctly.
 
-11. Go to **Settings > Generative AI** and switch orchestration to **Classic**. Save, reset the test chat, and ask the same question. The answer now arrives through the **Conversational boosting** system topic (the classic fallback that runs generative answers when no topic trigger phrase matches). Open **Topics > System > Conversational boosting** to see the generative answers node.
+10. Ask `What is the on-call stipend in Ontario?` (expected: CAD 300 per full week, `Overtime-and-On-Call.docx`, 4.2). Open the activity map or conversation trace in the test pane: the orchestrator went straight to `HR Policies library`, with no topic involved.
 
-12. In classic mode, type `Hello`. The **Greeting** topic fires from its trigger phrases, not from knowledge. This is how topics take precedence in classic mode, which Lab 4 exploits in break-it C-04-a.
+11. Go to **Settings > Generative AI**, switch orchestration to **Classic**, save, and **start a new test conversation** (the test pane keeps the old setting until you do). Ask the same question.
 
-13. Switch orchestration back to **Generative** and save. Keep it on generative for the rest of the course (Labs 9 and 10 need it, CS-A07).
+    **The answer will probably look the same.** In classic mode, a question that matches no topic falls back to the **Conversational boosting** system topic, which searches the same knowledge. The difference is in the trace: it now shows **Conversational boosting** firing (turn on **Track between topics** if your test pane offers it). Open **Topics > System > Conversational boosting** to see its generative answers node.
+
+12. **Make the difference visible.** Still in classic mode:
+    1. Create a topic named `On-call test` with the trigger phrase `on-call stipend` and a single message node: `Please contact Payroll.` Save.
+    2. Start a new test conversation and ask `What is the on-call stipend in Ontario?` You get **"Please contact Payroll."**: the trigger phrase matched, so the topic won and your knowledge was never searched.
+    3. Switch to **Generative**, save, start a new conversation and ask again. Observe and record: the orchestrator now chooses by description and may answer from the policy instead.
+    4. Delete the `On-call test` topic.
+
+    > **Why this matters:** topics take priority over knowledge in classic mode. A carelessly broad trigger phrase silently replaces correct, cited answers. Lab 4 (C-04-a) builds on this.
+
+13. Make sure orchestration is back on **Generative** and saved. Keep it there for the rest of the course (Labs 9 and 10 need it, CS-A07).
 
 ### Part C: Content moderation (10 minutes)
 
-14. Go to **Settings > Generative AI** and scroll to the **Moderation** section (observed in the classic experience on 2026-10-06; UI labels may change). It has two settings:
-    - **Content moderation level**: a slider. The left end is **Low**, which lets more through; moving right raises moderation. The panel text says: "Lower moderation increases the risk of harmful content in your agent's responses. Higher moderation lowers that risk, but may reduce the number of responses." The arrow icon next to the slider resets it to the default.
-    - **When potential responses get flagged by content moderation, send:** the message users see when a response is blocked. If you leave it empty, the grey placeholder text is shown: `I can't help with that. Is there something else I can help with?`
+14. Go to **Settings > Generative AI** and scroll to **Moderation** (observed in the classic experience on 2026-10-06; UI labels may change):
+    - **Content moderation level**: a slider. The left end is **Low**, which lets more through; moving right raises moderation. The arrow icon resets it to the default.
+    - **When potential responses get flagged by content moderation, send:** the message shown when a response is blocked. If empty, users see `I can't help with that. Is there something else I can help with?`
 
-    Note the current slider position. Only the **Low** label was observed; check Learn for the names of the other levels and for which level is the default. Break-it C-03-g moves the slider to the right-hand end and tests a legitimate harassment-policy question.
+    Note the current slider position. Only the **Low** label was observed; check Learn for the other level names and the default.
 
-### Part D: Publish, share and test as personas (60 minutes)
+    > **Why this matters:** HR and safety policies legitimately discuss harassment, violence and injury. Set moderation too high and those answers get blocked with a generic message that hides why. Break-it C-03-g tests this and has you write a better flagged-response message.
+
+### Part D: Prove the permissions as real users (60 minutes)
 
 15. **Publish and share.**
     1. Select **Publish**, then **Channels > Teams and Microsoft 365 Copilot**, and add the channel. Select **Make available in Microsoft 365 Copilot** if offered.
-    2. Select **Share** and add the persona users individually: `<prefix>-hr@<domain>`, `<prefix>-tech@<domain>`, `<prefix>-fin@<domain>`, `<prefix>-nolic@<domain>`, and the guest contractor's account. Do not add groups: Developer environments cannot be assigned security groups (ENV-02).
-    3. **If sharing fails or a persona gets an access error** because `HLE-Dev` is a Developer environment (ENV-02): create a Sandbox environment named `HLE-Lab3-Sandbox`, rebuild HLE HR Assistant there with steps 3 to 9 and 13, and run steps 16 to 18 against that copy. Record which path you used. Cleanup removes `HLE-Lab3-Sandbox`.
+    2. Select **Share** and add each persona individually (not groups): `<prefix>-hr@<domain>`, `<prefix>-tech@<domain>`, `<prefix>-fin@<domain>`, `<prefix>-nolic@<domain>`, and the guest.
+    3. In the Teams channel settings, copy the agent's link (under **Availability options**; UI labels may differ). You'll open it as each persona; it's more reliable than hoping the agent shows up in their app list.
 
-16. **Security trimming test.** Open an InPrivate or guest browser window for each persona, sign in, go to Teams (https://teams.microsoft.com) or Microsoft 365 Copilot Chat (https://microsoft365.com/chat), open **HLE HR Assistant**, and type:
+    <details>
+    <summary>If a persona can't see or open the agent</summary>
+
+    Check in this order:
+
+    | Check | What to do |
+    |---|---|
+    | Environment type | `HLE-Dev` is a Developer environment and owner-only (ENV-02), so personas can't use agents in it. Create a **Sandbox** environment `HLE-Lab3-Sandbox`, rebuild HLE HR Assistant there with steps 3 to 9 and 13, publish and share it, and run steps 16 to 18 against that copy. Cleanup removes it. |
+    | Published | Select **Publish** again after any change; personas only see the published version. |
+    | Channel | **Channels > Teams and Microsoft 365 Copilot** shows the channel as added. |
+    | Shared individually | Each persona added by name, not through a group. |
+    | Time | Wait a few minutes after publishing, then sign the persona out and back in. |
+    | Copilot Studio app | Microsoft 365 admin center > **Integrated apps**: the Copilot Studio app is deployed to users (ADM-07). |
+
+    </details>
+
+16. **Security trimming test.** In an InPrivate window per persona, sign in, open the agent link (Teams or https://microsoft365.com/chat) and ask:
 
     ```text
     How long is a final written warning active?
@@ -160,43 +216,54 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
     | Priya (`hr`) | 24 months, citing `Restricted/Disciplinary-Case-Handling.docx` |
     | Sofia (`fin`) | Not found. No restricted fact appears. |
     | Marcus (`tech`) | Not found. |
-    | Guest | Not found, or the guest cannot open the agent at all. Either result is a pass: guests have no Hub access. |
+    | Guest | Not found, or can't open the agent. Both pass. |
 
-    Then, as Priya and as Sofia, type `What is the CAD midpoint for grade G7?`. Priya gets 105,000 (encrypted file, HR has VIEW and EXTRACT, CS-K08). Sofia gets no answer. Details are in break-it C-03-d and C-03-e.
+    Then, as Priya and as Sofia, ask `What is the CAD midpoint for grade G7?`. Priya gets 105,000 from the encrypted file (HR has VIEW and EXTRACT rights, CS-K08); Sofia gets nothing.
 
-17. As Tom (`nolic`), type `How many days can I carry over?` and **observe and record** what happens. Tom has no Copilot license, so any usage consumes Copilot Credits rather than being zero-rated (LIC-10).
+    > **Why this matters:** this is the test HR actually cares about, and it can only be done as real users. Same agent, same question, different answers, because SharePoint permissions and sensitivity labels are enforced at query time. Details: break-it C-03-d and C-03-e.
 
-18. As the learner, upload a file to see the difference between SharePoint and uploaded knowledge: **Knowledge > Add knowledge > Upload file**, upload `data/sharepoint/Harbourline-Hub/HR-Policies/Signed-Policy-Acknowledgement-Scan.pdf`. Break-it C-03-b uses it.
+17. As Tom (`nolic`), ask `How many days can I carry over?` and record what happens. Tom has no Copilot license, so his usage consumes Copilot Credits (LIC-10).
 
-### Part E: HLE Knowledge Bench (list, Operations content and scoping) (60 minutes)
+18. Back as yourself, add an uploaded file: **Knowledge > Add knowledge > Upload file**, `data/sharepoint/Harbourline-Hub/HR-Policies/Signed-Policy-Acknowledgement-Scan.pdf`. Break-it C-03-b uses it to compare uploaded and SharePoint knowledge.
 
-These experiments add content that does not belong in an HR agent, so use a scratch agent.
+### Part E: Where knowledge breaks (60 minutes)
 
-19. In `HLE-Dev`, create a second agent with **Create > New agent** (skip conversational setup):
-    - Name: `HLE Knowledge Bench`
+These experiments add content that doesn't belong in an HR agent, so use a scratch agent.
+
+19. In `HLE-Dev`, create **HLE Knowledge Bench** (**Create > New agent**, skip conversational setup):
     - Description: `Scratch agent for Lab 3 knowledge experiments. Deleted at the end of the lab.`
-    - Instructions: paste [solutions/lab-03/hle-knowledge-bench-instructions.txt](../../solutions/lab-03/hle-knowledge-bench-instructions.txt).
-    - Orchestration: Generative. General knowledge: Off. Authentication: Authenticate with Microsoft.
+    - Instructions: [solutions/lab-03/hle-knowledge-bench-instructions.txt](../../solutions/lab-03/hle-knowledge-bench-instructions.txt)
+    - Orchestration Generative, general knowledge Off, Authenticate with Microsoft.
 
-20. **SharePoint list.** Add the Vendors list as knowledge:
+20. **A list too big to search.** Add the Vendors list as knowledge:
 
     ```text
     https://<tenant>.sharepoint.com/sites/<Prefix>-Harbourline-Hub/Lists/Vendors
     ```
 
-    In the classic experience, adding a SharePoint list may appear under a different option (or only in the new experience), because the list-knowledge documentation in [reference/limits.md](../../reference/limits.md) comes from the new-experience docs (CS-K10). UI labels may differ; check Learn. If your tenant does not offer list knowledge in the classic experience, open the new experience for this step and record that you did. Test with break-it C-03-h.
+    List knowledge may appear under a different option, or only in the new experience (CS-K10); if so, use the new experience for this step and note it. Then run break-it C-03-h: vendors past row 2,048 can't be found.
 
-21. **Operations content.** Add the Operations Procedures library:
+21. **Facts the indexer can't read.** Add the Operations Procedures library:
 
     ```text
     https://<tenant>.sharepoint.com/sites/<Prefix>-Harbourline-Operations/Procedures
     ```
 
-    Test with break-it C-03-i (image-only slides in `Crew-Briefing-Deck.pptx`) and C-03-j (merged cells in `Transformer-Equipment-Specs.xlsx`).
+    Run break-it C-03-i (key values only in slide images) and C-03-j (merged cells in a spreadsheet).
 
-22. **Scoping.** Follow break-it C-03-k to compare a whole-site source with library sources, using the 1,200-file `Archive-Bulk` library. End with the Knowledge Bench scoped to the `Procedures` library and the `Vendors` list only.
+22. **Scope too wide.** Follow break-it C-03-k to compare a whole-site source with library sources using the 1,200-file `Archive-Bulk` library. Finish with the Knowledge Bench scoped to `Procedures` and `Vendors` only.
 
-23. Run the validation in [validate.md](validate.md), then work through [break-it.md](break-it.md), then [cleanup.md](cleanup.md).
+23. Run [validate.md](validate.md), work through the rest of [break-it.md](break-it.md), then [cleanup.md](cleanup.md).
+
+## Key takeaways
+
+You should now be able to explain these to a client:
+
+1. **Instructions control behaviour; SharePoint holds the facts.** Put sources, citation rules and conflict rules in instructions, and never paste policy values into them.
+2. **"Authenticate with Microsoft" is what makes an agent safe on SharePoint.** Answers are trimmed to what each person can open, sensitivity labels included. The maker's test pane can't show this; only testing as real users can.
+3. **In classic orchestration, topics beat knowledge.** A broad trigger phrase can silently replace a correct, cited answer. Generative orchestration chooses by description, so descriptions matter.
+4. **"It can't find it" usually means the indexer can't read it,** not that the agent is broken: files over the size limit, scans, facts inside images, merged cells, lists past the row window, or a scope so wide that the right file never ranks.
+5. **Uploaded files are visible to everyone who uses the agent** and can't be encrypted. Use SharePoint knowledge for anything permission-sensitive.
 
 ## Caveats this lab triggers
 
