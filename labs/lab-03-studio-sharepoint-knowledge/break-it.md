@@ -42,7 +42,9 @@ Use the test pane for learner tests. Use the persona's own sign-in (Teams or Mic
    ```
 3. Repeat after uploading the same PDF as a file (README step 18): **Knowledge > Add knowledge > Upload file**.
 
-**Symptom you will see.** Observe and record, once for the SharePoint source and once for the uploaded file. The correct value (every 24 months, next due March 2027) is visible only in the image. The expected symptom if no OCR happens is "not found" or an answer that cites a different document (for example the Code of Conduct, which has an annual attestation, a different rule). The uploaded-file result may differ: CS-K09 says images are not supported in uploaded files "except images embedded in PDFs", which this file is.
+**Symptom you will see.** Observe and record, once for the SharePoint source and once for the uploaded file. The correct value (every 24 months, next due March 2027) is visible only in the image. The expected symptom if no OCR happens is "not found" or an answer that cites a different document (for example the Code of Conduct, which has an annual attestation, a different rule). The uploaded-file result may differ: CS-K09 says images are not supported in uploaded files "except images embedded in PDFs", which this file is. **Observed in a course tenant on 2026-10-07:** the uploaded copy was not answered either, so neither path read the text in the image.
+
+**How to confirm the cause yourself.** Open the PDF and try to select a word or search for `ACK-2025-0457` (Cmd+F or Ctrl+F). If nothing can be selected or found, the file has no text layer, and the agent has nothing to index.
 
 **Root cause.** Knowledge indexing works on extracted text. A scan has no text layer. The claim that scanned PDFs are not OCR'd for knowledge comes from community answers only (CS-K13, UNVERIFIED). CS-K09 (SNIP) describes the uploaded-file image rule.
 
