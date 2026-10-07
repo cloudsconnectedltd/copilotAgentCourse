@@ -253,8 +253,13 @@ try {
     }
 }
 catch {
-    Write-Step "Automatic assignment failed: $($_.Exception.Message)" -Level Warn
-    Write-Step 'Common causes: the metered API is not set up for your app, the label has not propagated yet, or labels are not enabled for SharePoint files.' -Level Warn
+    if ($_.Exception.Message -match 'PaymentRequired|Payment Required') {
+        Write-Step 'Automatic assignment skipped: assignSensitivityLabel is a metered (paid) Graph API and your app has no billing set up. This is expected for most course tenants. The label and policy are in place; apply the label by hand with the steps below.' -Level Warn
+    }
+    else {
+        Write-Step "Automatic assignment failed: $($_.Exception.Message)" -Level Warn
+        Write-Step 'Common causes: the metered API is not set up for your app, the label has not propagated yet, or labels are not enabled for SharePoint files.' -Level Warn
+    }
     Write-Host $manualApply
 }
 
