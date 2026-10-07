@@ -42,11 +42,18 @@ Use the test pane for learner tests. Use the persona's own sign-in (Teams or Mic
    ```
 3. Repeat after uploading the same PDF as a file (README step 18): **Knowledge > Add knowledge > Upload file**.
 
-**Symptom you will see.** Observe and record, once for the SharePoint source and once for the uploaded file. The correct value (every 24 months, next due March 2027) is visible only in the image. The expected symptom if no OCR happens is "not found" or an answer that cites a different document (for example the Code of Conduct, which has an annual attestation, a different rule). The uploaded-file result may differ: CS-K09 says images are not supported in uploaded files "except images embedded in PDFs", which this file is. **Observed in a course tenant on 2026-10-07:** the uploaded copy was not answered either, so neither path read the text in the image.
+**Symptom you will see.** The agent does not return the fact from **either** source. The correct value (every 24 months, next due March 2027) is visible only in the image.
+
+| Source | Result (observed in a course tenant, 2026-10-07) |
+|---|---|
+| SharePoint copy in `HR-Policies` | No answer: "not found", or an answer that cites a different document (for example the Code of Conduct, whose annual attestation is a different rule) |
+| Same PDF uploaded to the agent (README step 18) | No answer either. Uploading the file does not make the image text readable. |
+
+Don't be misled by CS-K09: it says uploaded files support "images embedded in PDFs", which reads as if an uploaded scan might work. In practice the uploaded scan returned nothing.
 
 **How to confirm the cause yourself.** Open the PDF and try to select a word or search for `ACK-2025-0457` (Cmd+F or Ctrl+F). If nothing can be selected or found, the file has no text layer, and the agent has nothing to index.
 
-**Root cause.** Knowledge indexing works on extracted text. A scan has no text layer. The claim that scanned PDFs are not OCR'd for knowledge comes from community answers only (CS-K13, UNVERIFIED). CS-K09 (SNIP) describes the uploaded-file image rule.
+**Root cause.** Knowledge indexing works on extracted text, and a scan has no text layer. Neither SharePoint knowledge nor file upload ran OCR on this file in testing. No Microsoft Learn page states this (CS-K13 remains UNVERIFIED as a documented rule); the behaviour above is observed, not documented.
 
 **Fix.** Run OCR before publishing (for example, save the scan as a searchable PDF from your scanning tool) and replace the file. Keep the original image-only scan out of knowledge libraries, or store scans in a library the agent does not use.
 
