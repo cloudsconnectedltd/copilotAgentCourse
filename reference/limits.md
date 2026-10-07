@@ -75,7 +75,7 @@ Short URL bases:
 | CS-K10 | SharePoint lists as knowledge: up to 15 lists, 35,000 rows each, 120,000 rows in total; queries use the first 2,048 rows. | MCS agents-experience/knowledge-sharepoint-lists | SNIP (new-experience docs) | 3 |
 | CS-K11 | Dataverse knowledge: up to 15 tables per source. Glossary and synonym updates can take up to 15 minutes. | MCS knowledge-add-dataverse | SNIP | 4 |
 | CS-K12 | Public websites: 25 with generative orchestration, 4 with classic orchestration or a topic-level generative answers node. | MCS requirements-quotas | SNIP | 3 |
-| CS-K13 | Scanned or image-only PDFs are not OCR'd for knowledge. Observed in a course tenant on 2026-10-07: an image-only PDF returned no answer as SharePoint knowledge or as an uploaded file. | Community answers only; course observation | UNVERIFIED (not documented on Learn) | 3 |
+| CS-K13 | Scanned or image-only PDFs are not OCR'd for knowledge. Observed in a course tenant on 2026-10-07: an image-only PDF in SharePoint was first not answered (as SharePoint knowledge or as an uploaded file), then answered later the same day with image-only details, so text was extracted from the image in the background. Timing is not documented. | Community answers only; course observation | UNVERIFIED (not documented on Learn) | 3 |
 | CS-K14 | Total number of SharePoint URLs per agent. | Not found | UNVERIFIED | 3 |
 
 ## 4. Copilot Studio authoring, actions, triggers, multi-agent

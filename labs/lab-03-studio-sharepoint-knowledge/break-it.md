@@ -42,20 +42,25 @@ Use the test pane for learner tests. Use the persona's own sign-in (Teams or Mic
    ```
 3. Repeat after uploading the same PDF as a file (README step 18): **Knowledge > Add knowledge > Upload file**.
 
-**Symptom you will see.** The agent does not return the fact from **either** source. The correct value (every 24 months, next due March 2027) is visible only in the image.
+**Symptom you will see.** It depends on **when** you test and on the tenant. Record what you get each time. The correct value (every 24 months, next due March 2027) is visible only in the image.
 
-| Source | Result (observed in a course tenant, 2026-10-07) |
-|---|---|
-| SharePoint copy in `HR-Policies` | No answer: "not found", or an answer that cites a different document (for example the Code of Conduct, whose annual attestation is a different rule) |
-| Same PDF uploaded to the agent (README step 18) | No answer either. Uploading the file does not make the image text readable. |
+| When (course tenant, 2026-10-07) | Source | Result |
+|---|---|---|
+| First test | SharePoint copy in `HR-Policies` | No answer: "not found", or a citation of a different document (for example the Code of Conduct) |
+| First test | Same PDF uploaded to the agent (README step 18) | No answer |
+| Later the same day, after another PDF was added | SharePoint copy in `HR-Policies` (the original, unchanged file) | **Correct answer**, citing `Signed-Policy-Acknowledgement-Scan.pdf`, with details that exist only in the image (Form HR-F-009, Rev. 2024-11; Ontario; next due March 2027) |
 
-Don't be misled by CS-K09: it says uploaded files support "images embedded in PDFs", which reads as if an uploaded scan might work. In practice the uploaded scan returned nothing.
+The original file never gained a text layer (Cmd+F still finds nothing), so the service must have read the image itself: text was extracted from the picture on the Microsoft side, after the first test. Microsoft Learn does not document when or whether this happens for Copilot Studio knowledge, so treat it as tenant- and timing-dependent.
 
-**How to confirm the cause yourself.** Open the PDF and try to select a word or search for `ACK-2025-0457` (Cmd+F or Ctrl+F). If nothing can be selected or found, the file has no text layer, and the agent has nothing to index.
+**How to check what you're dealing with.** Open the PDF and search for `ACK-2025-0457` (Cmd+F or Ctrl+F) or try to select a word. If nothing is found, the file itself has no text layer. Whether the agent can still answer depends on whether, and when, the service extracts text from the image.
 
-**Root cause.** Knowledge indexing works on extracted text, and a scan has no text layer. Neither SharePoint knowledge nor file upload ran OCR on this file in testing. No Microsoft Learn page states this (CS-K13 remains UNVERIFIED as a documented rule); the behaviour above is observed, not documented.
+**Root cause.** Knowledge search works on extracted text. A scan has no text layer of its own, so it is answerable only if the service runs text recognition (OCR) on the image. In this tenant that happened, but not straight away, and not for the uploaded copy at the time of testing. No Learn page states when this happens (CS-K13 stays UNVERIFIED as a documented rule).
 
-**Fix.** Run OCR before publishing (for example, save the scan as a searchable PDF from your scanning tool) and replace the file. Keep the original image-only scan out of knowledge libraries, or store scans in a library the agent does not use.
+**What this teaches**
+1. **"Not found" right after content changes is not a final result.** Indexing and text extraction run in the background. Wait and re-test before concluding a file is unusable. Lab 7 meets the same effect with connector indexing (C-07-c).
+2. **Behaviour you can't control is behaviour you can't rely on.** The same file gave different results within one day. For a policy an auditor might check, don't depend on the service OCR-ing scans.
+
+**Fix.** Run OCR before publishing (for example, save the scan as a searchable PDF from your scanning tool) and replace the file, so the text is in the file itself and every path reads it the same way. Keep image-only scans out of knowledge libraries, or in a library the agent does not use. Then re-test after indexing has had time to catch up.
 
 **Doc link.** https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-file-upload (CS-K09). No Learn source exists for CS-K13.
 
