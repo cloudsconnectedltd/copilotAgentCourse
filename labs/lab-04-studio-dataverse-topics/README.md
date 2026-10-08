@@ -124,6 +124,8 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
     https://<tenant>.sharepoint.com/sites/<Prefix>-Harbourline-Hub/Lists/Vendors
     ```
 
+    If pasting the URL shows "This item is not currently supported. Add anyway?", the URL box in this experience accepts sites, libraries, folders and files but not list URLs. Select **Browse items** instead, open the Hub site and pick the **Vendors** list. If the picker does not show lists, list knowledge is not available in your experience yet (CS-K10): note it, skip this step and the Vendors questions, and skip break-it C-04-e. **Add anyway** adds the URL as an ordinary SharePoint search source, which does not read list rows as a table, so it does not test what this step is for.
+
     Description: `Harbourline vendor register: vendor name, VendorId, category, region, contract value, status, renewal date, primary contact and risk rating.`
 
 13. Test: `Who approves a CAD 80,000 operating expense?` (Director, `Approval-Matrix.docx`) and `Who is the primary contact for Lakeshore Arborist Collective, and should we use them?` (Genevieve Marchetti; Suspended, High risk).

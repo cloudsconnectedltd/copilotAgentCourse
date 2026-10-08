@@ -241,7 +241,7 @@ These experiments add content that doesn't belong in an HR agent, so use a scrat
     https://<tenant>.sharepoint.com/sites/<Prefix>-Harbourline-Hub/Lists/Vendors
     ```
 
-    List knowledge may appear under a different option, or only in the new experience (CS-K10); if so, use the new experience for this step and note it. Then run break-it C-03-h: vendors past row 2,048 can't be found.
+    If pasting the URL shows "This item is not currently supported. Add anyway?", use **Browse items** and pick the list instead. List knowledge may appear under a different option, or only in the new experience (CS-K10); if so, use the new experience for this step and note it. Then run break-it C-03-h: vendors past row 2,048 can't be found.
 
 21. **Facts the indexer can't read.** Add the Operations Procedures library:
 
