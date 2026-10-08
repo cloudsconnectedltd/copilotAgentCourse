@@ -4,7 +4,7 @@
 |---|---|
 | Build path | Copilot Studio (classic experience), environment `HLE-Dev` |
 | Estimated time | 3.5 hours |
-| Prerequisites | [Lab 3](../lab-03-studio-sharepoint-knowledge/README.md) (environment `HLE-Dev` exists; you know how to add knowledge and publish). Setup scripts [`02-provision-sites.ps1`](../../setup/02-provision-sites.ps1) and [`03-upload-content.ps1`](../../setup/03-upload-content.ps1) (Finance library and 2,600-row Vendors list). PowerShell 7 with the `Az.Accounts` module for [`data/dataverse/import-dataverse.ps1`](../../data/dataverse/import-dataverse.ps1). System Administrator or System Customizer in `HLE-Dev`. |
+| Prerequisites | [Lab 3](../lab-03-studio-sharepoint-knowledge/README.md) (environment `HLE-Dev` exists; you know how to add knowledge and publish). Setup scripts [`02-provision-sites.ps1`](../../setup/02-provision-sites.ps1) and [`03-upload-content.ps1`](../../setup/03-upload-content.ps1) (Finance library and 2,600-row Vendors list). PowerShell 7 and the Azure CLI (or the `Az.Accounts` module) for [`data/dataverse/import-dataverse.ps1`](../../data/dataverse/import-dataverse.ps1). System Administrator or System Customizer in `HLE-Dev`. |
 | Personas used | Learner (maker and main tester), Marcus Delaney (`tech`) for one environment-access test |
 | Status | GA. Contains UNVERIFIED limits: CS-A06 |
 | Limits referenced | [CS-K10, CS-K11, CS-A06, CS-A07, ENV-02, ENV-03](../../reference/limits.md) |
@@ -45,10 +45,11 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
 2. In PowerShell 7, from the repository root:
 
    ```powershell
-   Install-Module Az.Accounts -Scope CurrentUser   # once
-   Connect-AzAccount -TenantId <your-tenant-id>
+   az login --tenant <your-tenant-id> --allow-no-subscriptions   # Azure CLI, opens a browser
    ./data/dataverse/import-dataverse.ps1 -EnvironmentUrl https://<org>.crm.dynamics.com -Prefix HLE
    ```
+
+   The script gets its token from the Azure CLI when `az` is installed (the default). On macOS this avoids the Az PowerShell sign-in error "Interactive requests with mac broker enabled must be executed on the main thread". To use Az PowerShell instead: `Install-Module Az.Accounts -Scope CurrentUser`, `Connect-AzAccount -TenantId <your-tenant-id>`, then add `-AuthMode AzPowerShell` to the script.
 
    The script creates publisher `hleharbourline`, unmanaged solution `HLEHarbourlineOps`, tables `hle_Asset`, `hle_Crew`, `hle_WorkOrder`, the choice columns, the two lookups, and loads 1,200 assets, 60 crews and 3,000 work orders. It is safe to re-run. Details: [data/dataverse/schema.md](../../data/dataverse/schema.md).
 

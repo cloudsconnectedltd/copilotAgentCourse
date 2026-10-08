@@ -24,6 +24,10 @@
     Administrator in the environment. No Azure subscription is required; use Connect-AzAccount -TenantId
     <tenant> first if you have no subscriptions.
 
+    Alternatively (default when the az command is installed) the Azure CLI: run
+    az login --tenant <tenant> --allow-no-subscriptions, and the script calls
+    az account get-access-token --resource <EnvironmentUrl>. See -AuthMode.
+
     The token is refreshed automatically every 40 minutes during long imports.
 
 .PARAMETER EnvironmentUrl
@@ -43,6 +47,12 @@
 
 .PARAMETER SkipData
     Create or verify metadata only. Do not load rows.
+
+.PARAMETER AuthMode
+    How to get the Dataverse token. Auto (default) uses the Azure CLI when the az command is installed,
+    otherwise Az.Accounts. AzureCli: run 'az login --tenant <tenant> --allow-no-subscriptions' first; this
+    path avoids the macOS sign-in broker error "Interactive requests with mac broker enabled must be executed
+    on the main thread". AzPowerShell: Connect-AzAccount and Get-AzAccessToken.
 
 .PARAMETER Cleanup
     Delete all rows, then the three tables (work orders first), then the solution and, if this script
@@ -76,6 +86,9 @@ param(
 
     [switch]$SkipData,
 
+    [ValidateSet('Auto', 'AzureCli', 'AzPowerShell')]
+    [string]$AuthMode = 'Auto',
+
     [switch]$Cleanup
 )
 
@@ -100,8 +113,19 @@ function Get-DvToken {
     if ($script:Token -and ((Get-Date) - $script:TokenAcquired).TotalMinutes -lt 40) {
         return $script:Token
     }
+    $useCli = ($AuthMode -eq 'AzureCli') -or ($AuthMode -eq 'Auto' -and (Get-Command az -ErrorAction SilentlyContinue))
+    if ($useCli) {
+        if (-not (Get-Command az -ErrorAction SilentlyContinue)) { throw 'Azure CLI (az) not found. Install it, or use -AuthMode AzPowerShell.' }
+        $cliToken = & az account get-access-token --resource $EnvironmentUrl.TrimEnd('/') --query accessToken --output tsv 2>$null
+        if ($LASTEXITCODE -ne 0 -or -not $cliToken) {
+            throw 'Azure CLI could not get a Dataverse token. Run: az login --tenant <your tenant ID or domain> --allow-no-subscriptions, then re-run this script.'
+        }
+        $script:Token = ([string]$cliToken).Trim()
+        $script:TokenAcquired = Get-Date
+        return $script:Token
+    }
     if (-not (Get-Command Get-AzAccessToken -ErrorAction SilentlyContinue)) {
-        throw 'Az.Accounts is required. Run: Install-Module Az.Accounts -Scope CurrentUser'
+        throw 'Az.Accounts is required for -AuthMode AzPowerShell. Run: Install-Module Az.Accounts -Scope CurrentUser'
     }
     if ($null -eq (Get-AzTenant -ErrorAction SilentlyContinue)) {
         Connect-AzAccount | Out-Null
