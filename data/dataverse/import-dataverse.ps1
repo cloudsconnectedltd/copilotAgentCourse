@@ -230,7 +230,7 @@ function Invoke-DvBatch {
     $bytes = [System.Text.Encoding]::UTF8.GetBytes($sb.ToString())
     for ($attempt = 1; $attempt -le 6; $attempt++) {
         $resp = Invoke-WebRequest -Method POST -Uri ($ApiBase + '$batch') -SkipHttpErrorCheck `
-            -Headers (Get-DvHeaders -Extra @{ 'Prefer' = 'odata.continue-on-error'; 'If-None-Match' = 'null' }) `
+            -Headers (Get-DvHeaders -Extra @{ 'Prefer' = 'odata.continue-on-error' }) `
             -ContentType "multipart/mixed; boundary=`"$boundary`"" -Body $bytes
         $code = [int]$resp.StatusCode
         if ($code -eq 429 -or $code -eq 503) {
