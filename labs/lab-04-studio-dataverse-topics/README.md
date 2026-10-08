@@ -55,7 +55,7 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
 
 3. Verify: https://make.powerapps.com > environment `HLE-Dev` > **Tables > Asset** > search `TX-ON-10423`. You should see Kingston Service Centre, Condition Score 38, installed 1987.
 
-4. (Recommended for Lab 11.) In **Solutions**, open the menu on `HLEHarbourlineOps` and select **Set preferred solution**, so new components land in it. If your Copilot Studio version does not honor the preferred solution for agents, Lab 11 adds the agent to the solution by hand. Check Learn.
+4. (Recommended for Lab 11.) On the **Solutions** page, select **Set preferred solution** on the command bar at the top of the page (not on the solution's own menu), choose `HLEHarbourlineOps`, and apply, so new components land in it. If your Copilot Studio version does not honor the preferred solution for agents, Lab 11 adds the agent to the solution by hand. Check Learn.
 
 ### Part B: Create the agent (15 minutes)
 
@@ -82,7 +82,7 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
 
 ### Part C: Dataverse knowledge, synonyms and glossary (40 minutes)
 
-7. **Knowledge > Add knowledge > Dataverse**. Select the tables **Asset** (`hle_asset`), **Work Order** (`hle_workorder`) and **Crew** (`hle_crew`). That is 3 of the up to 15 tables allowed per source (CS-K11). Continue to the review step.
+7. **Knowledge > Add knowledge > Dataverse**. Select the tables **Asset** (`hle_asset`), **Work Order** (`hle_workorder`) and **Crew** (`hle_crew`). That is 3 of the up to 15 tables allowed per source (CS-K11). Keep all three in one source; Copilot Studio may name it after the tables (for example `Crew, Work Order, Asset`) until you rename it in step 8. Continue to the review step.
 
 8. On the synonyms step, add the column synonyms from [data/dataverse/schema.md section 6.1](../../data/dataverse/schema.md) (also in [solutions/lab-04/dataverse-synonyms-glossary.md](../../solutions/lab-04/dataverse-synonyms-glossary.md)), **except** the synonym `ticket number` on Work Order Number. Break-it C-04-d adds it later on purpose. Do not add any glossary entries yet. Name the source `Harbourline field data` with the description:
 
@@ -91,6 +91,8 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
    ```
 
    Add the source and wait until it shows as ready.
+
+   If you already added the source without this step, open it from the **Knowledge** tab (select its name) and set the name, description and synonyms there. If the edit view does not show synonyms, delete the source and add it again.
 
 9. In the test pane, run these baseline questions and write down the answers:
 
