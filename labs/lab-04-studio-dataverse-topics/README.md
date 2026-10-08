@@ -157,7 +157,17 @@ Use `<tenant>` for your SharePoint tenant name and `<Prefix>` for the course pre
 
 ### Part F: Topics with variables, slot filling and an adaptive card (60 minutes)
 
-Build each topic in the canvas using the node list below. If you prefer, create the topic, open **... > Open code editor**, and paste the YAML from [solutions/lab-04/topics](../../solutions/lab-04/topics/). Before pasting, replace the entity placeholders as described in [solutions/lab-04/README.md](../../solutions/lab-04/README.md), and compare the YAML with the code view of a topic you built in the canvas. The YAML schema could not be verified against Copilot Studio documentation.
+So far the agent answers from knowledge and decides for itself what to do. A **topic** is a conversation path you design: it asks fixed questions, stores the answers in **variables**, and controls what happens next. Use one when a task needs specific inputs in a specific order, like logging a request. You build three topics that show three skills:
+
+| Topic | What it teaches |
+|---|---|
+| `Check Asset Status` | **Slot filling**: if the user already typed an asset ID, the entity extracts it and the question is skipped |
+| `Log Field Request` | Several questions, a **condition** (safety message for Emergency) and an **adaptive card** that shows the collected values |
+| `Crew For Asset` | A **global variable** carries the asset ID from an earlier topic, so the agent does not ask again |
+
+**How to build a topic in the canvas:** **Topics > Add a topic > From blank**. Name it, then select the **Trigger** node and enter the description and trigger phrases. Select **+** under a node to add the next one: **Ask a question**, **Variable management > Set a variable value**, **Add a condition**, **Send a message**, or **Advanced > Generative answers**. Save often.
+
+**Shortcut (optional):** create the topic, open **... > Open code editor**, and paste the YAML from [solutions/lab-04/topics](../../solutions/lab-04/topics/) after replacing the entity placeholders described in [solutions/lab-04/README.md](../../solutions/lab-04/README.md). The YAML schema could not be verified against Copilot Studio documentation, so build at least the first topic by hand and compare its code view with the file.
 
 15. **Topic `Check Asset Status`** ([check-asset-status.yaml](../../solutions/lab-04/topics/check-asset-status.yaml))
     - Description (generative orchestration uses this): `Look up the current status, condition and open work orders of one specific asset when the user gives or asks about an asset ID such as TX-ON-10423.`
