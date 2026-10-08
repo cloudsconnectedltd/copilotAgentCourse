@@ -1,0 +1,545 @@
+{
+  "asset_count": 1200,
+  "crew_count": 60,
+  "wo_count": 3000,
+  "assets_by_region": {
+    "New York": 330,
+    "Ohio": 270,
+    "Ontario": 600
+  },
+  "assets_by_type": {
+    "Breaker": 95,
+    "Pole": 484,
+    "Recloser": 98,
+    "Voltage Regulator": 72,
+    "Switch": 134,
+    "Transformer": 317
+  },
+  "assets_by_status": {
+    "In Service": 1121,
+    "Out of Service": 47,
+    "Retired": 32
+  },
+  "assets_condition_below_30": 86,
+  "assets_condition_below_30_by_region": {
+    "New York": 24,
+    "Ohio": 19,
+    "Ontario": 43
+  },
+  "crews_by_region": {
+    "New York": 18,
+    "Ohio": 18,
+    "Ontario": 24
+  },
+  "crews_by_specialty": {
+    "Overhead lines": 15,
+    "Underground cable": 12,
+    "Substation": 10,
+    "Protection and control": 6,
+    "Storm response": 8,
+    "Vegetation management": 9
+  },
+  "wo_by_priority": {
+    "Deferred": 416,
+    "Routine": 1677,
+    "Emergency": 175,
+    "High": 732
+  },
+  "wo_by_status": {
+    "Cancelled": 190,
+    "Completed": 2433,
+    "On Hold": 132,
+    "Scheduled": 102,
+    "New": 56,
+    "In Progress": 87
+  },
+  "wo_by_region": {
+    "Ohio": 640,
+    "Ontario": 1509,
+    "New York": 851
+  },
+  "open_emergency": [
+    "WO-2026-01043 SW-OH-30110 Scheduled CREW-OH-07",
+    "WO-2026-01083 POLE-ON-12998 In Progress CREW-ON-20",
+    "WO-2026-01097 SW-ON-11936 In Progress CREW-ON-14",
+    "WO-2026-01099 POLE-NY-21057 In Progress CREW-NY-07"
+  ],
+  "open_wo_count": 377,
+  "open_wo_by_region": {
+    "Ontario": 183,
+    "Ohio": 82,
+    "New York": 112
+  },
+  "overdue_open_as_of_2026_09_30": 263,
+  "max_wo_per_asset_excluding_SW-OH-30110": 7,
+  "wo_per_planted_asset": {
+    "TX-ON-10423": 2,
+    "TX-OH-20871": 1,
+    "POLE-NY-20017": 3,
+    "SW-OH-30110": 9,
+    "POLE-ON-11250": 2,
+    "BRK-NY-24480": 2,
+    "RCL-ON-13307": 1,
+    "TX-OH-31902": 1,
+    "POLE-NY-26615": 1
+  },
+  "top_costs": [
+    [
+      1850000.0,
+      "WO-2026-00392"
+    ],
+    [
+      69030.0,
+      "WO-2025-01483"
+    ],
+    [
+      68567.5,
+      "WO-2026-00607"
+    ]
+  ],
+  "oldest_install_years": [
+    1958,
+    1962,
+    1963
+  ],
+  "lowest_condition_assets": [
+    [
+      5,
+      "POLE-NY-24554"
+    ],
+    [
+      5,
+      "POLE-ON-12302"
+    ],
+    [
+      7,
+      "TX-ON-12548"
+    ],
+    [
+      8,
+      "TX-NY-22896"
+    ],
+    [
+      9,
+      "BRK-ON-11028"
+    ]
+  ],
+  "crews_with_barehand": [
+    "CREW-OH-07"
+  ],
+  "crews_led_by_dana": [
+    "CREW-ON-09",
+    "CREW-ON-17"
+  ],
+  "cross_region_wos": [
+    "WO-2025-01423"
+  ],
+  "retired_assets_with_open_wo": [
+    "POLE-ON-11250"
+  ],
+  "wo_for_TX-ON-10423": [
+    "WO-2025-01280",
+    "WO-2026-00953"
+  ],
+  "wo_for_TX-OH-20871": [
+    "WO-2025-01181"
+  ],
+  "planted_wos": [
+    {
+      "WorkOrderNumber": "WO-2024-00197",
+      "Title": "SW fails to operate: SW-OH-30110",
+      "Description": "Motor operator on SW-OH-30110 (Lima) failed to open on SCADA command (occurrence 1). Reset control, cleaned contacts and tested three operations.",
+      "WorkType": "Corrective Repair",
+      "Priority": "High",
+      "Status": "Completed",
+      "AssetNumber": "SW-OH-30110",
+      "CrewCode": "CREW-OH-03",
+      "Region": "Ohio",
+      "OpenedOn": "2024-11-14",
+      "DueDate": "2024-11-21",
+      "CompletedOn": "2024-11-17",
+      "EstimatedHours": 6.0,
+      "ActualHours": 6.5,
+      "EstimatedCost": 990.0,
+      "Currency": "USD",
+      "_tag": "P-DV-04"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-00087",
+      "Title": "SW fails to operate: SW-OH-30110",
+      "Description": "Motor operator on SW-OH-30110 (Lima) failed to open on SCADA command (occurrence 2). Reset control, cleaned contacts and tested three operations.",
+      "WorkType": "Corrective Repair",
+      "Priority": "High",
+      "Status": "Completed",
+      "AssetNumber": "SW-OH-30110",
+      "CrewCode": "CREW-OH-03",
+      "Region": "Ohio",
+      "OpenedOn": "2025-01-22",
+      "DueDate": "2025-01-29",
+      "CompletedOn": "2025-01-25",
+      "EstimatedHours": 6.0,
+      "ActualHours": 6.5,
+      "EstimatedCost": 990.0,
+      "Currency": "USD",
+      "_tag": "P-DV-04"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-00209",
+      "Title": "Ten-year pole test and treat: POLE-ON-11250",
+      "Description": "Ground-line decay found on POLE-ON-11250 (Oshawa), remaining strength 58 percent. Recommend replacement.",
+      "WorkType": "Inspection",
+      "Priority": "Routine",
+      "Status": "Completed",
+      "AssetNumber": "POLE-ON-11250",
+      "CrewCode": "CREW-ON-06",
+      "Region": "Ontario",
+      "OpenedOn": "2025-02-17",
+      "DueDate": "2025-03-19",
+      "CompletedOn": "2025-03-04",
+      "EstimatedHours": 2.0,
+      "ActualHours": 2.0,
+      "EstimatedCost": 370.0,
+      "Currency": "CAD",
+      "_tag": "P-DV-06"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-00291",
+      "Title": "SW fails to operate: SW-OH-30110",
+      "Description": "Motor operator on SW-OH-30110 (Lima) failed to open on SCADA command (occurrence 3). Reset control, cleaned contacts and tested three operations.",
+      "WorkType": "Corrective Repair",
+      "Priority": "High",
+      "Status": "Completed",
+      "AssetNumber": "SW-OH-30110",
+      "CrewCode": "CREW-OH-01",
+      "Region": "Ohio",
+      "OpenedOn": "2025-03-09",
+      "DueDate": "2025-03-16",
+      "CompletedOn": "2025-03-12",
+      "EstimatedHours": 6.0,
+      "ActualHours": 6.5,
+      "EstimatedCost": 990.0,
+      "Currency": "USD",
+      "_tag": "P-DV-04"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-00639",
+      "Title": "SW fails to operate: SW-OH-30110",
+      "Description": "Motor operator on SW-OH-30110 (Lima) failed to open on SCADA command (occurrence 4). Reset control, cleaned contacts and tested three operations.",
+      "WorkType": "Corrective Repair",
+      "Priority": "High",
+      "Status": "Completed",
+      "AssetNumber": "SW-OH-30110",
+      "CrewCode": "CREW-OH-03",
+      "Region": "Ohio",
+      "OpenedOn": "2025-05-30",
+      "DueDate": "2025-06-06",
+      "CompletedOn": "2025-06-02",
+      "EstimatedHours": 6.0,
+      "ActualHours": 6.5,
+      "EstimatedCost": 990.0,
+      "Currency": "USD",
+      "_tag": "P-DV-04"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-00814",
+      "Title": "BRK SF6 pressure check: BRK-NY-24480",
+      "Description": "SF6 pressure on BRK-NY-24480 at 0.58 MPa, alarm at 0.55 MPa. Monitor monthly.",
+      "WorkType": "Inspection",
+      "Priority": "Routine",
+      "Status": "Completed",
+      "AssetNumber": "BRK-NY-24480",
+      "CrewCode": "CREW-NY-03",
+      "Region": "New York",
+      "OpenedOn": "2025-07-15",
+      "DueDate": "2025-08-14",
+      "CompletedOn": "2025-07-18",
+      "EstimatedHours": 2.0,
+      "ActualHours": 2.0,
+      "EstimatedCost": 330.0,
+      "Currency": "USD",
+      "_tag": "P-DV-07"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-00936",
+      "Title": "SW fails to operate: SW-OH-30110",
+      "Description": "Motor operator on SW-OH-30110 (Lima) failed to open on SCADA command (occurrence 5). Reset control, cleaned contacts and tested three operations.",
+      "WorkType": "Corrective Repair",
+      "Priority": "High",
+      "Status": "Completed",
+      "AssetNumber": "SW-OH-30110",
+      "CrewCode": "CREW-OH-03",
+      "Region": "Ohio",
+      "OpenedOn": "2025-08-12",
+      "DueDate": "2025-08-19",
+      "CompletedOn": "2025-08-15",
+      "EstimatedHours": 6.0,
+      "ActualHours": 6.5,
+      "EstimatedCost": 990.0,
+      "Currency": "USD",
+      "_tag": "P-DV-04"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-01181",
+      "Title": "Visual inspection of pole-mount TX: TX-OH-20871",
+      "Description": "Routine inspection of TX-OH-20871 (50 kVA pole-mount, pole P-51260, Lake Avenue at West 5th Street, Ashtabula). Primary bushing has minor surface tracking; wildlife guard present. Recommend cleaning at next planned outage.",
+      "WorkType": "Inspection",
+      "Priority": "Routine",
+      "Status": "Completed",
+      "AssetNumber": "TX-OH-20871",
+      "CrewCode": "CREW-OH-06",
+      "Region": "Ohio",
+      "OpenedOn": "2025-10-09",
+      "DueDate": "2025-11-08",
+      "CompletedOn": "2025-10-14",
+      "EstimatedHours": 2.0,
+      "ActualHours": 2.5,
+      "EstimatedCost": 330.0,
+      "Currency": "USD",
+      "_tag": "P-DV-03"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-01250",
+      "Title": "SW fails to operate: SW-OH-30110",
+      "Description": "Motor operator on SW-OH-30110 (Lima) failed to open on SCADA command (occurrence 6). Reset control, cleaned contacts and tested three operations.",
+      "WorkType": "Corrective Repair",
+      "Priority": "High",
+      "Status": "Completed",
+      "AssetNumber": "SW-OH-30110",
+      "CrewCode": "CREW-OH-01",
+      "Region": "Ohio",
+      "OpenedOn": "2025-10-27",
+      "DueDate": "2025-11-03",
+      "CompletedOn": "2025-10-30",
+      "EstimatedHours": 6.0,
+      "ActualHours": 6.5,
+      "EstimatedCost": 990.0,
+      "Currency": "USD",
+      "_tag": "P-DV-04"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-01280",
+      "Title": "Visual inspection of pole-mount TX: TX-ON-10423",
+      "Description": "Routine patrol inspection of TX-ON-10423 (25 kVA pole-mount, pole P-30912, Bath Road near Collins Bay Road, Kingston). Tank, bushings and lid gasket in good condition. No oil staining.",
+      "WorkType": "Inspection",
+      "Priority": "Routine",
+      "Status": "Completed",
+      "AssetNumber": "TX-ON-10423",
+      "CrewCode": "CREW-ON-03",
+      "Region": "Ontario",
+      "OpenedOn": "2025-11-03",
+      "DueDate": "2025-12-03",
+      "CompletedOn": "2025-11-20",
+      "EstimatedHours": 2.0,
+      "ActualHours": 2.0,
+      "EstimatedCost": 370.0,
+      "Currency": "CAD",
+      "_tag": "P-DV-01"
+    },
+    {
+      "WorkOrderNumber": "WO-2025-01423",
+      "Title": "Broken pole after ice storm: POLE-NY-26615",
+      "Description": "Ice storm Ulla: pole POLE-NY-26615 snapped at ground line on feeder ROC-7 near Rochester. Restored by Ontario crew CREW-ON-11 under the cross-border mutual assistance agreement. Replaced with 40 ft Class 3 pole.",
+      "WorkType": "Emergency Restoration",
+      "Priority": "Emergency",
+      "Status": "Completed",
+      "AssetNumber": "POLE-NY-26615",
+      "CrewCode": "CREW-ON-11",
+      "Region": "New York",
+      "OpenedOn": "2025-12-11",
+      "DueDate": "2025-12-12",
+      "CompletedOn": "2025-12-12",
+      "EstimatedHours": 12.0,
+      "ActualHours": 14.5,
+      "EstimatedCost": 6180.0,
+      "Currency": "USD",
+      "_tag": "P-DV-05"
+    },
+    {
+      "WorkOrderNumber": "WO-2026-00053",
+      "Title": "SW fails to operate: SW-OH-30110",
+      "Description": "Motor operator on SW-OH-30110 (Lima) failed to open on SCADA command (occurrence 7). Reset control, cleaned contacts and tested three operations.",
+      "WorkType": "Corrective Repair",
+      "Priority": "High",
+      "Status": "Completed",
+      "AssetNumber": "SW-OH-30110",
+      "CrewCode": "CREW-OH-03",
+      "Region": "Ohio",
+      "OpenedOn": "2026-01-16",
+      "DueDate": "2026-01-23",
+      "CompletedOn": "2026-01-19",
+      "EstimatedHours": 6.0,
+      "ActualHours": 6.5,
+      "EstimatedCost": 990.0,
+      "Currency": "USD",
+      "_tag": "P-DV-04"
+    },
+    {
+      "WorkOrderNumber": "WO-2026-00392",
+      "Title": "Replace 20 MVA station TX: TX-OH-31902",
+      "Description": "Station transformer TX-OH-31902 at Maumee Bay Substation (Toledo) failed its insulation power factor test and was removed from service. Replace with new 20 MVA unit (long-lead item, delivery expected 2026-11). Total approved budget USD 1,850,000 including mobile TX rental. Capital project CP-2026-117.",
+      "WorkType": "Replacement",
+      "Priority": "High",
+      "Status": "Scheduled",
+      "AssetNumber": "TX-OH-31902",
+      "CrewCode": "CREW-OH-01",
+      "Region": "Ohio",
+      "OpenedOn": "2026-04-07",
+      "DueDate": "2026-12-15",
+      "CompletedOn": "",
+      "EstimatedHours": 320.0,
+      "ActualHours": "",
+      "EstimatedCost": 1850000.0,
+      "Currency": "USD",
+      "_tag": "P-DV-10"
+    },
+    {
+      "WorkOrderNumber": "WO-2026-00490",
+      "Title": "SW fails to operate: SW-OH-30110",
+      "Description": "Motor operator on SW-OH-30110 (Lima) failed to open on SCADA command (occurrence 8). Reset control, cleaned contacts and tested three operations.",
+      "WorkType": "Corrective Repair",
+      "Priority": "High",
+      "Status": "Completed",
+      "AssetNumber": "SW-OH-30110",
+      "CrewCode": "CREW-OH-03",
+      "Region": "Ohio",
+      "OpenedOn": "2026-05-04",
+      "DueDate": "2026-05-11",
+      "CompletedOn": "2026-05-07",
+      "EstimatedHours": 6.0,
+      "ActualHours": 6.5,
+      "EstimatedCost": 990.0,
+      "Currency": "USD",
+      "_tag": "P-DV-04"
+    },
+    {
+      "WorkOrderNumber": "WO-2026-00603",
+      "Title": "BRK mechanism service: BRK-NY-24480",
+      "Description": "Mechanism service on 69 kV breaker BRK-NY-24480 at Mohawk Valley Substation is on hold awaiting a planned outage window. System control has offered the window of 2027-01-12 to 2027-01-15.",
+      "WorkType": "Preventive Maintenance",
+      "Priority": "Deferred",
+      "Status": "On Hold",
+      "AssetNumber": "BRK-NY-24480",
+      "CrewCode": "CREW-NY-03",
+      "Region": "New York",
+      "OpenedOn": "2026-06-02",
+      "DueDate": "2027-01-15",
+      "CompletedOn": "",
+      "EstimatedHours": 16.0,
+      "ActualHours": "",
+      "EstimatedCost": 2640.0,
+      "Currency": "USD",
+      "_tag": "P-DV-07"
+    },
+    {
+      "WorkOrderNumber": "WO-2026-00750",
+      "Title": "Ten-year pole test and treat: POLE-NY-20017",
+      "Description": "POLE-NY-20017 (Watertown, installed 1958, oldest pole in service) passed resistograph test with 71 percent remaining strength. Retreated at ground line. Next test due 2031.",
+      "WorkType": "Inspection",
+      "Priority": "Routine",
+      "Status": "Completed",
+      "AssetNumber": "POLE-NY-20017",
+      "CrewCode": "CREW-NY-01",
+      "Region": "New York",
+      "OpenedOn": "2026-07-08",
+      "DueDate": "2026-08-07",
+      "CompletedOn": "2026-07-10",
+      "EstimatedHours": 2.0,
+      "ActualHours": 2.5,
+      "EstimatedCost": 330.0,
+      "Currency": "USD",
+      "_tag": "P-DV-02"
+    },
+    {
+      "WorkOrderNumber": "WO-2026-00953",
+      "Title": "Infrared scan of TX connections: TX-ON-10423",
+      "Description": "Infrared scan of TX-ON-10423 on pole P-30912, Bath Road, Kingston: connections normal. Light oil film noted at the tank lid gasket. Monitor at next patrol; no action required yet.",
+      "WorkType": "Inspection",
+      "Priority": "High",
+      "Status": "Completed",
+      "AssetNumber": "TX-ON-10423",
+      "CrewCode": "CREW-ON-03",
+      "Region": "Ontario",
+      "OpenedOn": "2026-08-28",
+      "DueDate": "2026-09-04",
+      "CompletedOn": "2026-09-02",
+      "EstimatedHours": 3.0,
+      "ActualHours": 3.0,
+      "EstimatedCost": 555.0,
+      "Currency": "CAD",
+      "_tag": "P-DV-01"
+    },
+    {
+      "WorkOrderNumber": "WO-2026-01043",
+      "Title": "SW stuck open during restoration: SW-OH-30110",
+      "Description": "SW-OH-30110 (Lima) stuck open during feeder restoration on 2026-09-18; field crew used manual bypass. Ninth failure in 23 months. Engineering review of replacement requested.",
+      "WorkType": "Emergency Restoration",
+      "Priority": "Emergency",
+      "Status": "Scheduled",
+      "AssetNumber": "SW-OH-30110",
+      "CrewCode": "CREW-OH-07",
+      "Region": "Ohio",
+      "OpenedOn": "2026-09-18",
+      "DueDate": "2026-09-19",
+      "CompletedOn": "",
+      "EstimatedHours": 6.0,
+      "ActualHours": "",
+      "EstimatedCost": 990.0,
+      "Currency": "USD",
+      "_tag": "P-DV-04"
+    },
+    {
+      "WorkOrderNumber": "WO-2026-01057",
+      "Title": "Replace cracked crossarm: POLE-ON-11250",
+      "Description": "Crossarm on POLE-ON-11250 (Oshawa) cracked at the through-bolt. Crew to confirm isolation and complete LOTO. Note: asset record shows status Retired.",
+      "WorkType": "Corrective Repair",
+      "Priority": "Routine",
+      "Status": "In Progress",
+      "AssetNumber": "POLE-ON-11250",
+      "CrewCode": "CREW-ON-06",
+      "Region": "Ontario",
+      "OpenedOn": "2026-09-21",
+      "DueDate": "2026-10-21",
+      "CompletedOn": "",
+      "EstimatedHours": 6.0,
+      "ActualHours": "",
+      "EstimatedCost": 1110.0,
+      "Currency": "CAD",
+      "_tag": "P-DV-06"
+    },
+    {
+      "WorkOrderNumber": "WO-2026-01076",
+      "Title": "RCL lockout on OH line: RCL-ON-13307",
+      "Description": "RCL-ON-13307 locked out three times on the OH line section of feeder 44M7 near Barrie. Suspect tree contact on the OH conductors downstream. Patrol the ROW and report before reclosing.",
+      "WorkType": "Corrective Repair",
+      "Priority": "High",
+      "Status": "Scheduled",
+      "AssetNumber": "RCL-ON-13307",
+      "CrewCode": "CREW-ON-19",
+      "Region": "Ontario",
+      "OpenedOn": "2026-09-24",
+      "DueDate": "2026-10-01",
+      "CompletedOn": "",
+      "EstimatedHours": 8.0,
+      "ActualHours": "",
+      "EstimatedCost": 1480.0,
+      "Currency": "CAD",
+      "_tag": "P-DV-08"
+    }
+  ],
+  "choice_values": {
+    "hle_priority": {
+      "Emergency": 714800000,
+      "High": 714800001,
+      "Routine": 714800002,
+      "Deferred": 714800003
+    },
+    "hle_status": {
+      "New": 714800100,
+      "Scheduled": 714800101,
+      "In Progress": 714800102,
+      "On Hold": 714800103,
+      "Completed": 714800104,
+      "Cancelled": 714800105
+    }
+  }
+}

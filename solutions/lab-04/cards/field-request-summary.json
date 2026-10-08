@@ -1,0 +1,37 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Harbourline field request",
+      "weight": "Bolder",
+      "size": "Medium",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Draft only. Not yet sent to dispatch.",
+      "isSubtle": true,
+      "spacing": "None",
+      "wrap": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        { "title": "Asset", "value": "TX-ON-10423" },
+        { "title": "Priority", "value": "High" },
+        { "title": "Target", "value": "Due within 7 days" },
+        { "title": "Problem", "value": "Oil weeping from the tank lid gasket on pole P-30912, Bath Road near Collins Bay Road." }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Priority targets: Emergency next day, High 7 days, Routine 30 days, Deferred 120 days.",
+      "size": "Small",
+      "isSubtle": true,
+      "wrap": true
+    }
+  ]
+}

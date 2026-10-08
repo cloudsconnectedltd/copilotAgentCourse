@@ -1,0 +1,6 @@
+# Agents Toolkit build output and secrets
+appPackage/build/
+env/.env.*.user
+env/.env.local
+.localConfigs
+node_modules/

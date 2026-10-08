@@ -1,0 +1,151 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json",
+  "schema_version": "v2.4",
+  "name_for_human": "HLE Outage API",
+  "namespace": "hleoutage",
+  "description_for_human": "Harbourline outage status, crew dispatch and customer lookup (course data).",
+  "description_for_model": "Harbourline Energy Co. outage operations API for Ontario, New York and Ohio. Use getOutageStatus for current power outages, customers affected, cause, assigned crew and estimated restoration time. Use lookupCustomer to find a customer account by account number, last name or postal code. Use dispatchCrew only when the user asks to send a crew to an outage, after the user confirms outage ID, crew ID and priority.",
+  "logo_url": "color.png",
+  "contact_email": "course@harbourline.example",
+  "legal_info_url": "https://www.harbourline.example/terms",
+  "privacy_policy_url": "https://www.harbourline.example/privacy",
+  "functions": [
+    {
+      "name": "getOutageStatus",
+      "description": "Returns active electricity outages, largest first, with customers affected, cause, status, assigned crew and estimated restoration time. Filter by region (ON, NY, OH, region name or town) or by outage ID such as OUT-2026-0412.",
+      "states": {
+        "reasoning": {
+          "description": "`getOutageStatus` returns current Harbourline outages.",
+          "instructions": [
+            "If the user names an outage ID, pass only outageId.",
+            "If the user names a town or region, pass it as region.",
+            "Leave pageSize at the default of 10 unless the user asks for all active outages, then use 50.",
+            "Only set delayMs when the user explicitly asks for a delay test."
+          ]
+        },
+        "responding": {
+          "description": "`getOutageStatus` returns totalMatches, message and a results array of outages.",
+          "instructions": [
+            "If the response has an errorCode, explain it in plain language and do not invent outage details.",
+            "Give times in Eastern time with the date. If estimatedRestorationTime is null, say the outage is still being assessed.",
+            "If totalMatches is larger than the number of results, say how many more outages matched."
+          ]
+        }
+      },
+      "capabilities": {
+        "response_semantics": {
+          "data_path": "$.results",
+          "properties": {
+            "title": "$.outageId",
+            "subtitle": "$.municipality"
+          },
+          "static_template": {
+            "file": "adaptiveCards/getOutageStatus.json"
+          }
+        },
+        "security_info": {
+          "data_handling": [
+            "GetPrivateData"
+          ]
+        }
+      }
+    },
+    {
+      "name": "dispatchCrew",
+      "description": "Dispatches a Harbourline field crew to an active outage and returns a dispatch ID and estimated arrival time. The crew must be in the same region as the outage and on shift.",
+      "states": {
+        "reasoning": {
+          "description": "`dispatchCrew` creates a real dispatch record.",
+          "instructions": [
+            "Call it only after the user has confirmed the outage ID, crew ID and priority.",
+            "priority must be one of Low, Normal, High, Emergency.",
+            "Send notes as a single plain string of at most 500 characters."
+          ]
+        },
+        "responding": {
+          "description": "`dispatchCrew` returns the dispatch or a flat error body.",
+          "instructions": [
+            "A dispatch exists only if the response contains dispatchId. Then give the dispatch ID, crew lead and estimatedArrivalMinutes.",
+            "If the response contains errorCode (CREW_OFF_SHIFT, CREW_REGION_MISMATCH, OUTAGE_ALREADY_RESTORED, UNKNOWN_CREW, UNKNOWN_OUTAGE), say that no dispatch was created, explain why and suggest a next step."
+          ]
+        }
+      },
+      "capabilities": {
+        "confirmation": {
+          "type": "AdaptiveCard",
+          "title": "Dispatch a field crew",
+          "body": "This creates a crew dispatch in the Harbourline outage system. Continue?"
+        },
+        "security_info": {
+          "data_handling": [
+            "ResourceStateUpdate"
+          ]
+        }
+      }
+    },
+    {
+      "name": "lookupCustomer",
+      "description": "Finds Harbourline customer accounts by account number, last name or postal or ZIP code. Returns address, rate class, account status, balance, medical priority flag and current outage ID.",
+      "states": {
+        "reasoning": {
+          "description": "`lookupCustomer` returns customer accounts.",
+          "instructions": [
+            "Prefer accountNumber. If only a last name is given, ask for the postal or ZIP code.",
+            "Leave pageSize at the default of 5 unless the user asks for more, and never above 25."
+          ]
+        },
+        "responding": {
+          "description": "`lookupCustomer` returns totalMatches and a results array.",
+          "instructions": [
+            "Show only the fields the user asked for. Balances are CAD for Ontario and USD for New York and Ohio.",
+            "If currentOutageId is set and the user asks about power, call getOutageStatus with that outageId."
+          ]
+        }
+      },
+      "capabilities": {
+        "response_semantics": {
+          "data_path": "$.results",
+          "properties": {
+            "title": "$.accountNumber",
+            "subtitle": "$.municipality"
+          }
+        },
+        "security_info": {
+          "data_handling": [
+            "GetPrivateData"
+          ]
+        }
+      }
+    }
+  ],
+  "runtimes": [
+    {
+      "type": "OpenApi",
+      "auth": {
+        "type": "ApiKeyPluginVault",
+        "reference_id": "${{APIKEYAUTH_REGISTRATION_ID}}"
+      },
+      "spec": {
+        "url": "apiSpecificationFile/openapi.yaml",
+        "progress_style": "ShowUsageWithInputAndOutput"
+      },
+      "run_for_functions": [
+        "getOutageStatus",
+        "dispatchCrew",
+        "lookupCustomer"
+      ]
+    }
+  ],
+  "capabilities": {
+    "conversation_starters": [
+      {
+        "title": "Outage status",
+        "text": "What is the status of outage OUT-2026-0412?"
+      },
+      {
+        "title": "Dispatch",
+        "text": "Dispatch crew CREW-NY-04 to outage OUT-2026-0433 with High priority."
+      }
+    ]
+  }
+}

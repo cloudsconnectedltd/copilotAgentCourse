@@ -1,0 +1,49 @@
+# Topic: Crew For Asset (HLE Field Ops Assistant, Lab 4)
+#
+# Copilot Studio topic code view YAML. NOT VALIDATED: the Copilot Studio documentation was not
+# available when this course was built, and this file was not pasted into a live tenant.
+# Build the topic once in the canvas, open "... > Open code editor", and compare the structure
+# before pasting. Keep what your code view shows.
+#
+# Placeholders to replace:
+#   ENTITY_HLE_ASSET_ID  -> name code view shows for the custom regex entity "HLE Asset ID"
+#
+# This is the FIXED version for break-it C-04-b. It reads Global.LastAssetId, which
+# Check Asset Status and Log Field Request set. The broken version referenced Topic.AssetId,
+# which in this topic is a new, empty topic variable (topic variables do not cross topics).
+kind: AdaptiveDialog
+modelDescription: Tell the user which crews worked on, or are assigned to, the asset discussed earlier in the conversation.
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    displayName: Crew For Asset
+    triggerQueries:
+      - which crew worked on that asset
+      - who worked on this asset
+      - crew for this asset
+      - which crew is assigned to that asset
+
+  actions:
+    - kind: ConditionGroup
+      id: needAssetId
+      conditions:
+        - id: noAssetYet
+          condition: =IsBlank(Global.LastAssetId)
+          actions:
+            - kind: Question
+              id: askAssetId
+              alwaysPrompt: false
+              variable: init:Topic.AssetId
+              prompt: Which asset do you mean? Give the asset ID, for example TX-ON-10423.
+              entity: ENTITY_HLE_ASSET_ID
+
+            - kind: SetVariable
+              id: setLastAssetId
+              variable: Global.LastAssetId
+              value: =Topic.AssetId
+
+    # Limit Data sources to the "Harbourline field data" Dataverse knowledge source in the canvas.
+    - kind: SearchAndSummarizeContent
+      id: crewAnswer
+      userInput: ="List the work orders for asset " & Global.LastAssetId & " with work order number, status, assigned crew code and crew lead."

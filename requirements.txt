@@ -1,0 +1,5 @@
+# Python libraries for the data generators in tools/generate-data/ (setup/03-upload-content.ps1).
+# Install: pip install -r requirements.txt
+python-docx
+reportlab
+pillow

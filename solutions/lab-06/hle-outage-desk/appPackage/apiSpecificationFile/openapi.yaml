@@ -1,0 +1,446 @@
+openapi: 3.0.3
+# Copy of data/api/openapi-apikey.yaml for the Lab 6 Agents Toolkit project (HLE Outage Desk).
+# Only two things differ from the source file:
+#   1. This header comment.
+#   2. servers.url uses ${{OPENAPI_SERVER_URL}} from env/.env.dev (Agents Toolkit replaces it at provision).
+# If you regenerate the source with `npm run openapi`, copy it again and re-apply both changes.
+# API key scheme: X-API-Key header (ApiKeyPluginVault). Learn sources conflict on custom-header
+# API keys (limits.md DA-10 vs DA-11). If calls arrive without the key, switch ApiKeyAuth to
+#     type: http
+#     scheme: bearer
+# (see ../../variants/openapi.bearer-securityScheme.yaml) and provision again. The API accepts both.
+info:
+  title: Harbourline Outage Operations API
+  description: >-
+    Harbourline Energy Co. operations API for electricity outages in Ontario, New York and Ohio.
+    Use it to check current power outages and estimated restoration times, to dispatch a field
+    crew to an outage, and to look up a customer account by account number, last name or postal code.
+  version: 1.0.0
+servers:
+  # OPENAPI_SERVER_URL is set in env/.env.dev: your dev tunnel URL or Function App URL, without /api.
+  - url: ${{OPENAPI_SERVER_URL}}/api
+paths:
+  /outage-status:
+    get:
+      operationId: getOutageStatus
+      summary: Get current power outages and estimated restoration times
+      description: >-
+        Returns active electricity outages, largest first, with the number of customers affected,
+        cause, status, assigned crew and estimated restoration time (ETR). Use this when the user asks
+        whether there is a power outage, how many customers are out, when power will be restored,
+        or which crew is working an outage. Filter by region (ON, NY, OH, or a town such as Kingston)
+        or ask for one outage by its ID (for example OUT-2026-0412). Restored outages are excluded
+        unless includeRestored is true.
+      parameters:
+        - name: region
+          in: query
+          required: false
+          description: >-
+            Region code (ON, NY, OH), region name (Ontario, New York, Ohio) or municipality name
+            (for example Kingston, Syracuse, Toledo). Omit to search all regions.
+          schema:
+            type: string
+          example: Kingston
+        - name: outageId
+          in: query
+          required: false
+          description: Outage identifier in the form OUT-2026-0412. When provided, other filters are ignored.
+          schema:
+            type: string
+            pattern: '^OUT-\d{4}-\d{4}$'
+          example: OUT-2026-0412
+        - name: includeRestored
+          in: query
+          required: false
+          description: Set to true to include outages that are already restored. Defaults to false.
+          schema:
+            type: boolean
+            default: false
+        - name: pageSize
+          in: query
+          required: false
+          description: Maximum number of outages to return, 1 to 50. Defaults to 10.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+            default: 10
+        - name: delayMs
+          in: query
+          required: false
+          description: >-
+            Training only. Delays the response by this many milliseconds (capped at 180000) to
+            demonstrate client timeouts. Never set this unless the user explicitly asks for a delay test.
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 180000
+            default: 0
+      responses:
+        '200':
+          description: Matching outages, largest first. results holds at most pageSize items.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OutageList'
+              examples:
+                kingston:
+                  value:
+                    totalMatches: 1
+                    returnedCount: 1
+                    pageSize: 10
+                    customersAffectedTotal: 3214
+                    message: 'Outage OUT-2026-0412 in Kingston, ON: Crew On Site.'
+                    results:
+                      - outageId: OUT-2026-0412
+                        region: 'ON'
+                        regionName: Ontario
+                        municipality: Kingston
+                        status: Crew On Site
+                        cause: Tree contact on 44 kV feeder during high winds
+                        customersAffected: 3214
+                        startTime: '2026-09-30T06:42:00-04:00'
+                        estimatedRestorationTime: '2026-09-30T14:30:00-04:00'
+                        restoredTime: null
+                        assignedCrewId: CREW-ON-03
+                        feederId: KGN-44-F7
+                        lastUpdated: '2026-09-30T10:00:00-04:00'
+        '400':
+          description: A parameter is invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: No outage exists with the given outageId.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /crew-dispatch:
+    post:
+      operationId: dispatchCrew
+      summary: Dispatch a field crew to an outage
+      description: >-
+        Creates a crew dispatch that sends a Harbourline field crew to an active outage and returns
+        a dispatch ID and estimated arrival time. Use this only when the user asks to send, assign or
+        dispatch a crew. The crew must work in the same region as the outage (a CREW-ON crew for an
+        Ontario outage) and must not be off shift. Restored outages cannot receive a dispatch.
+        Confirm the outage ID, crew ID and priority with the user before calling.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DispatchRequest'
+            examples:
+              rochester:
+                value:
+                  outageId: OUT-2026-0433
+                  crewId: CREW-NY-04
+                  priority: High
+                  notes: Customer reports sparking at pole behind 415 Lyell Avenue.
+      responses:
+        '201':
+          description: Dispatch created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DispatchResult'
+        '400':
+          description: >-
+            Validation failed. errorCode is one of MISSING_FIELD, INVALID_FIELD, INVALID_JSON,
+            NESTED_VALUE_NOT_SUPPORTED, UNKNOWN_OUTAGE, UNKNOWN_CREW, CREW_REGION_MISMATCH, CREW_OFF_SHIFT.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: The outage is already restored, so no dispatch was created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /customer-lookup:
+    get:
+      operationId: lookupCustomer
+      summary: Look up a Harbourline customer account
+      description: >-
+        Finds customer accounts by account number (HLE-ACC-104233), last name, postal or ZIP code,
+        or a combination. Returns service address, rate class, account status, balance, whether the
+        customer is on the medical priority list, and the ID of any outage currently affecting the
+        account. Use this when the user asks about a specific customer or account. Prefer the account
+        number; if only a last name is given, also ask for the postal code to narrow the results.
+      parameters:
+        - name: accountNumber
+          in: query
+          required: false
+          description: Customer account number in the form HLE-ACC-104233 (the six digits alone are also accepted).
+          schema:
+            type: string
+          example: HLE-ACC-104233
+        - name: lastName
+          in: query
+          required: false
+          description: Customer last name, exact match, not case sensitive.
+          schema:
+            type: string
+          example: Okafor
+        - name: postalCode
+          in: query
+          required: false
+          description: Canadian postal code (K7L 3N6) or US ZIP code (13210). A leading prefix such as K7L also matches.
+          schema:
+            type: string
+          example: K7L 3N6
+        - name: pageSize
+          in: query
+          required: false
+          description: >-
+            Maximum number of accounts to return. Defaults to 5. Use the default unless the user asks
+            for more; values above 25 exceed what Copilot reads from one plugin response.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 500
+            default: 5
+        - name: page
+          in: query
+          required: false
+          description: Page number, starting at 1, when more accounts match than pageSize.
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+      responses:
+        '200':
+          description: Matching customer accounts. results holds at most pageSize items.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerList'
+        '400':
+          description: A parameter is invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Outage:
+      type: object
+      description: One electricity outage. Times are ISO 8601 in Eastern time.
+      properties:
+        outageId:
+          type: string
+          description: Outage identifier, for example OUT-2026-0412.
+        region:
+          type: string
+          description: Region code.
+          enum: ['ON', 'NY', 'OH']
+        regionName:
+          type: string
+          description: Region name (Ontario, New York or Ohio).
+        municipality:
+          type: string
+          description: Town or city where the outage is located.
+        status:
+          type: string
+          description: Restoration status.
+          enum: [Reported, Crew Assigned, Crew On Site, Restored]
+        cause:
+          type: string
+          description: Known or suspected cause.
+        customersAffected:
+          type: integer
+          description: Number of customer accounts without power.
+        startTime:
+          type: string
+          format: date-time
+          description: When the outage started.
+        estimatedRestorationTime:
+          type: string
+          format: date-time
+          nullable: true
+          description: Estimated restoration time (ETR). Null while the outage is still being assessed.
+        restoredTime:
+          type: string
+          format: date-time
+          nullable: true
+          description: When power was restored. Null for active outages.
+        assignedCrewId:
+          type: string
+          nullable: true
+          description: Crew currently assigned, for example CREW-ON-03. Null if no crew is assigned.
+        feederId:
+          type: string
+          description: Distribution feeder identifier.
+        lastUpdated:
+          type: string
+          format: date-time
+          description: When this record last changed.
+    OutageList:
+      type: object
+      properties:
+        totalMatches:
+          type: integer
+          description: Number of outages that matched before pageSize was applied.
+        returnedCount:
+          type: integer
+          description: Number of outages in results.
+        pageSize:
+          type: integer
+        customersAffectedTotal:
+          type: integer
+          description: Sum of customersAffected across the returned outages.
+        message:
+          type: string
+          description: Short plain-language summary of the result.
+        results:
+          type: array
+          maxItems: 50
+          items:
+            $ref: '#/components/schemas/Outage'
+    DispatchRequest:
+      type: object
+      description: Flat request body. Every field is a string.
+      required: [outageId, crewId, priority]
+      properties:
+        outageId:
+          type: string
+          description: ID of the active outage to send the crew to, for example OUT-2026-0433.
+        crewId:
+          type: string
+          description: ID of the crew to dispatch, for example CREW-NY-04. Must be in the same region as the outage.
+        priority:
+          type: string
+          description: Dispatch priority.
+          enum: [Low, Normal, High, Emergency]
+        notes:
+          type: string
+          maxLength: 500
+          description: Optional instructions for the crew, up to 500 characters.
+    DispatchResult:
+      type: object
+      properties:
+        dispatchId:
+          type: string
+          description: Dispatch identifier, for example DSP-20260930-0001.
+        status:
+          type: string
+          description: Always Dispatched for a new dispatch.
+        outageId:
+          type: string
+        crewId:
+          type: string
+        crewLead:
+          type: string
+          description: Name of the crew lead.
+        priority:
+          type: string
+        notes:
+          type: string
+        municipality:
+          type: string
+        region:
+          type: string
+        estimatedArrivalMinutes:
+          type: integer
+          description: Estimated minutes until the crew arrives on site.
+        createdAt:
+          type: string
+          format: date-time
+        createdBy:
+          type: string
+          description: Signed-in user principal name when Entra auth is on, otherwise anonymous.
+        message:
+          type: string
+          description: Plain-language confirmation to show the user.
+    Customer:
+      type: object
+      description: One customer account. All data is fictional.
+      properties:
+        accountNumber:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        businessName:
+          type: string
+          nullable: true
+          description: Business name for commercial accounts, otherwise null.
+        serviceAddress:
+          type: string
+        municipality:
+          type: string
+        postalCode:
+          type: string
+        region:
+          type: string
+          enum: ['ON', 'NY', 'OH']
+        regionName:
+          type: string
+        accountType:
+          type: string
+          enum: [Residential, Commercial]
+        rateClass:
+          type: string
+        accountStatus:
+          type: string
+          enum: [Active, Final Bill Issued, Disconnection Pending]
+        currentBalance:
+          type: number
+          description: Amount owing in local currency (CAD for Ontario, USD for New York and Ohio).
+        lastPaymentDate:
+          type: string
+          format: date
+        paperlessBilling:
+          type: boolean
+        medicalPriority:
+          type: boolean
+          description: True if the customer is registered for medical priority restoration.
+        currentOutageId:
+          type: string
+          nullable: true
+          description: ID of an outage currently affecting this account, or null.
+    CustomerList:
+      type: object
+      properties:
+        totalMatches:
+          type: integer
+        returnedCount:
+          type: integer
+        page:
+          type: integer
+        pageSize:
+          type: integer
+        message:
+          type: string
+        results:
+          type: array
+          description: At most pageSize accounts.
+          items:
+            $ref: '#/components/schemas/Customer'
+    Error:
+      type: object
+      description: Flat error body.
+      properties:
+        errorCode:
+          type: string
+          description: Machine-readable error code, for example CREW_REGION_MISMATCH.
+        message:
+          type: string
+          description: Plain-language explanation to show the user.
+        field:
+          type: string
+          nullable: true
+          description: The request field or parameter that caused the error, if any.
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: Harbourline course API key (the API_KEY app setting of the Function App).
+security:
+  - ApiKeyAuth: []
